@@ -185,6 +185,13 @@
   },
   "active": "99e6a5d43e88d657",
   "lastOpenFiles": [
+    "docs/mcp-design.md",
+    "mcp/evaluation.xml",
+    "mcp/README.md",
+    "mcp/__pycache__/repository.cpython-312.pyc",
+    "mcp/__pycache__/server.cpython-312.pyc",
+    "mcp/__pycache__",
+    "mcp/server.py",
     "mcp/repository.py",
     "mcp",
     "data/policies/healthy-oceans/page.md",
@@ -212,14 +219,7 @@
     "data/news/free-public-transport.md",
     "data/news/call-for-government-reversal-on-lng-terminal.md",
     "data/news/accelerating-ev-uptake.md",
-    "data/news",
     "data/policies/healthy-land/page.md",
-    "data/policy-assets/1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI.pdf",
-    "data/team/simondellabarca.md",
-    "data/team/sarahlucas.md",
-    "data/team/index.json",
-    "data/team",
-    "data/policies/pdf-index.json",
-    "data/policies/policy"
+    "data/team/simondellabarca.md"
   ]
 }

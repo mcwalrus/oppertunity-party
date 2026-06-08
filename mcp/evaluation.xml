@@ -1,0 +1,42 @@
+<evaluation>
+  <qa_pair>
+    <question>The Opportunity Party publishes detailed policy documents converted from official PDFs. One of their tax policies has two such documents: a "Policy Overview" and one other. What is the document_type of that second tax document?</question>
+    <answer>Policy Addendum</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Among the Opportunity Party's detailed policy documents, what month and year is the Tax Reset Policy Overview dated?</question>
+    <answer>May 2026</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Among the Opportunity Party's detailed policy documents, which policy's Policy Overview is dated June 2025? Give the policy name.</question>
+    <answer>Citizen's Voice</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>The Opportunity Party has a detailed policy document about energy dated February 2026. What is the name of that policy?</question>
+    <answer>Abundant Energy</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Searching the Opportunity Party content for "capital gains" returns a top-ranked policy. What is the slug of that policy?</question>
+    <answer>tax-reset</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>The Opportunity Party published a news statement about the situation in a specific territory in the Middle East. Which territory (one word)?</question>
+    <answer>Gaza</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>How many party-information sections (about / governance) does the Opportunity Party MCP server expose?</question>
+    <answer>2</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>How many detailed policy documents (PDF-derived, excluding placeholder/unknown rows) are available through the Opportunity Party MCP server?</question>
+    <answer>5</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>The Opportunity Party news section includes a submission about a budget statement for a particular year. What year is named in that budget policy statement submission?</question>
+    <answer>2026</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Among the Opportunity Party's detailed policy documents, which marine/ocean policy has a Policy Overview dated February 2026? Give the policy name.</question>
+    <answer>Healthy Oceans</answer>
+  </qa_pair>
+</evaluation>

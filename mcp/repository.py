@@ -208,43 +208,81 @@ def get_policy(slug: str, *, prefer_live: bool = True) -> dict:
 # --------------------------------------------------------------------------
 # Policy documents (PDF-derived overviews / addenda)
 # --------------------------------------------------------------------------
-def load_policy_documents() -> list[dict]:
-    """Return the listing of detailed policy documents converted from PDFs."""
+def _slugify_doc(text: str) -> str:
+    keep = "abcdefghijklmnopqrstuvwxyz0123456789- "
+    s = "".join(c if c in keep else "" for c in text.lower()).strip().replace(" ", "-")
+    while "--" in s:
+        s = s.replace("--", "-")
+    return s.strip("-")
+
+
+def _resolve_doc_path(output_file: str) -> Path | None:
+    """Resolve a pdf-index ``output_file`` (absolute or relative) to a real path."""
+    p = Path(output_file)
+    if p.is_absolute() and p.exists():
+        return p
+    # Relative to the policies cache directory.
+    candidate = DATA_DIR / "policies" / output_file
+    return candidate if candidate.exists() else None
+
+
+def _policy_document_entries() -> list[dict]:
+    """Build clean, de-duplicated policy-document entries from the PDF index.
+
+    The on-disk PDF index can carry messy directory names and absolute paths,
+    so we key each document by a stable id derived from its clean ``policy``
+    and ``document_type`` fields and resolve the markdown path defensively.
+    """
     index = _read_json("policies", "pdf-index.json")
     if not isinstance(index, list):
         return []
-    return [
-        {
-            "id": entry["output_file"].removeprefix("pdf-").removesuffix(".md"),
-            "title": entry.get("title", ""),
-            "policy": entry.get("policy", ""),
-            "date": entry.get("date", ""),
-            "document_type": entry.get("document_type", ""),
-            "source_file": entry.get("source_file", ""),
-        }
-        for entry in index
-    ]
+    entries: dict[str, dict] = {}
+    for entry in index:
+        policy = entry.get("policy", "") or "unknown"
+        if policy.lower() == "unknown":
+            continue  # skip junk/placeholder index rows
+        doc_type = entry.get("document_type", "")
+        doc_id = _slugify_doc(policy)
+        if doc_type:
+            doc_id += f"_{_slugify_doc(doc_type)}"
+        path = _resolve_doc_path(entry.get("output_file", ""))
+        if path is None:
+            continue
+        entries.setdefault(
+            doc_id,
+            {
+                "id": doc_id,
+                "title": entry.get("title", policy),
+                "policy": policy,
+                "date": entry.get("date", ""),
+                "document_type": doc_type,
+                "source_file": entry.get("source_file", ""),
+                "_path": str(path),
+            },
+        )
+    return list(entries.values())
+
+
+def load_policy_documents() -> list[dict]:
+    """Return the listing of detailed policy documents converted from PDFs."""
+    return [{k: v for k, v in e.items() if not k.startswith("_")} for e in _policy_document_entries()]
 
 
 def get_policy_document(doc_id: str) -> dict:
     """Return the full markdown of a converted policy document by id."""
-    filename = f"pdf-{doc_id}.md"
-    content = _read_markdown("policies", filename)
-    if content is None:
-        available = [d["id"] for d in load_policy_documents()]
+    entry = next((e for e in _policy_document_entries() if e["id"] == doc_id), None)
+    if entry is None:
+        available = [e["id"] for e in _policy_document_entries()]
         raise RepositoryError(
             f"Unknown policy document '{doc_id}'. "
             f"Available documents: {', '.join(available) or '(none cached)'}"
         )
-    meta = next(
-        (
-            d
-            for d in load_policy_documents()
-            if d["id"] == doc_id
-        ),
-        {},
-    )
-    return {"id": doc_id, **meta, "content": content, "source": "cache"}
+    try:
+        content = Path(entry["_path"]).read_text(encoding="utf-8")
+    except OSError as e:
+        raise RepositoryError(f"Could not read document '{doc_id}': {e}") from e
+    meta = {k: v for k, v in entry.items() if not k.startswith("_")}
+    return {**meta, "content": content, "source": "cache"}
 
 
 # --------------------------------------------------------------------------
