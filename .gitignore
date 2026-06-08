@@ -13,6 +13,8 @@ wheels/
 scraper.log
 
 # Obsidian vault metadata
+.claude/
+.pi/
 .obsidian/
 .Trash/
 *.md.bak
