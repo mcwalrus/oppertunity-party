@@ -19,5 +19,8 @@ scraper.log
 .Trash/
 *.md.bak
 
+# HTTP response cache (ephemeral, not worth tracking)
+data/.cache/
+
 # MCP (under development)
 mcp/
