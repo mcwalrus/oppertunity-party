@@ -16,3 +16,24 @@ pdfs: install
 # Open scraped data in Finder
 open:
     open data
+
+# Lint with ruff
+lint: install
+    uv run ruff check .
+
+# Lint and auto-fix with ruff
+lint-fix: install
+    uv run ruff check . --fix
+
+# Format with ruff
+fmt: install
+    uv run ruff format .
+
+# Type-check with ty
+typecheck: install
+    uv run ty check .
+
+# Run all quality checks (lint + typecheck)
+check: install
+    uv run ruff check .
+    uv run ty check .

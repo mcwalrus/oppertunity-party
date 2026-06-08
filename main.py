@@ -6,8 +6,11 @@ import argparse
 import logging
 import sys
 import time
+from collections.abc import Callable
+from typing import Any
 
 from scraper.client import DATA_DIR, clean_data
+from scraper.models import PartyInfo, PolicyPage
 from scraper.news import save_news, scrape_news
 from scraper.party_info import download_and_convert_party_pdfs, save_party_info, scrape_party_info
 from scraper.pdf_convert import convert_all_pdfs
@@ -24,8 +27,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# (label, scrape_fn, save_fn) — or None for non-scraping tasks
-SCRAPER_MAP = {
+# (label, scrape_fn, save_fn) — or None for non-scraping tasks.
+# Annotated loosely because this is a dispatch table: each (scrape, save) pair
+# is matched at runtime. Individual functions remain strongly typed.
+_ScraperEntry = tuple[str, Callable[[], list[Any]], Callable[[list[Any]], Any]]
+
+SCRAPER_MAP: dict[str, _ScraperEntry | None] = {
     "policies": ("policies", scrape_policies, save_policies),
     "team": ("team", scrape_team, save_team),
     "news": ("news", scrape_news, save_news),
@@ -78,25 +85,29 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
         totals[label] = len(items)
 
         # After scraping party-info, download and convert linked PDFs
-        if key == "party-info" and items:
+        if key == "party-info" and items and isinstance(items[0], PartyInfo):
             logger.info("--- Downloading party-information PDFs ---")
-            pdf_results = download_and_convert_party_pdfs(items)
+            party_pages = [p for p in items if isinstance(p, PartyInfo)]
+            pdf_results = download_and_convert_party_pdfs(party_pages)
             ok = sum(1 for r in pdf_results if r["status"] == "ok")
             failed = sum(1 for r in pdf_results if r["status"] in ("failed", "error"))
             logger.info("Party PDFs: %d converted, %d failed", ok, failed)
             totals["party PDFs"] = ok
 
         # After scraping policies, download PDFs and convert them
-        if key == "policies" and items:
+        if key == "policies" and items and isinstance(items[0], PolicyPage):
             # Migrate any existing PDFs that aren't in reference.json
             if not (DATA_DIR / "policy-assets" / "reference.json").exists():
                 migrate_existing_pdfs()
 
-            downloads = download_policy_pdfs(items)
+            policy_pages = [p for p in items if isinstance(p, PolicyPage)]
+            downloads = download_policy_pdfs(policy_pages)
             downloaded = sum(1 for r in downloads if r["status"] == "downloaded")
             skipped = sum(1 for r in downloads if r["status"] == "skipped_existing")
             failed = sum(1 for r in downloads if r["status"] == "failed")
-            logger.info("PDF downloads: %d downloaded, %d skipped, %d failed", downloaded, skipped, failed)
+            logger.info(
+                "PDF downloads: %d downloaded, %d skipped, %d failed", downloaded, skipped, failed
+            )
 
             # Then convert PDFs to markdown
             logger.info("--- Converting policy PDFs ---")

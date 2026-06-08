@@ -4,9 +4,14 @@ from __future__ import annotations
 
 import json
 import logging
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from markdownify import markdownify
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from bs4 import BeautifulSoup
 
 from .client import DATA_DIR, fetch_page, save_content
 from .models import PolicyPage
@@ -92,27 +97,33 @@ def save_policies(policies: list[PolicyPage]) -> dict[str, Path]:
         }
         for p in policies
     ]
-    json_path = save_content(output_dir, "index.json", json.dumps(json_data, indent=2, ensure_ascii=False))
+    json_path = save_content(
+        output_dir, "index.json", json.dumps(json_data, indent=2, ensure_ascii=False)
+    )
     saved["_index"] = json_path
 
     return saved
 
 
-def _extract_pdf_links(soup) -> list[str]:
+def _extract_pdf_links(soup: BeautifulSoup) -> list[str]:
     """Extract Google Drive and direct PDF download links from a policy page."""
     links = []
     for a_tag in soup.select("a[href]"):
         href = a_tag.get("href", "")
+        if not isinstance(href, str):
+            continue
         if "drive.google.com" in href or href.lower().endswith(".pdf"):
             links.append(href)
     return links
 
 
-def _discover_policy_links(soup) -> None:
+def _discover_policy_links(soup: BeautifulSoup) -> None:
     """Check the policy index page for any new links we don't know about."""
     links = soup.select("a[href]")
     for link in links:
         href = link.get("href", "")
+        if not isinstance(href, str):
+            continue
         if href.startswith("/policy/"):
             slug = href.replace("/policy/", "").strip("/")
             if slug and slug not in POLICY_SLUGS:
@@ -120,7 +131,7 @@ def _discover_policy_links(soup) -> None:
                 logger.info("Discovered new policy slug: %s", slug)
 
 
-def _extract_title(soup) -> str:
+def _extract_title(soup: BeautifulSoup) -> str:
     h1 = soup.find("h1")
     if h1:
         return h1.get_text(strip=True)
@@ -130,7 +141,7 @@ def _extract_title(soup) -> str:
     return "Unknown"
 
 
-def _extract_markdown(soup) -> str:
+def _extract_markdown(soup: BeautifulSoup) -> str:
     for selector in ["main", "[role='main']", ".page-content", "article"]:
         el = soup.select_one(selector)
         if el and len(el.get_text(strip=True)) > 100:

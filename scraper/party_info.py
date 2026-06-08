@@ -6,9 +6,14 @@ import json
 import logging
 import re
 import subprocess
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from markdownify import markdownify
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from bs4 import BeautifulSoup
 
 from .client import DATA_DIR, fetch_page, save_content
 from .models import PartyInfo
@@ -141,7 +146,9 @@ def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
                 if pdf_path:
                     md_text = _convert_party_pdf(pdf_path, label, url)
                     md_path = save_content(output_dir, f"{label}.md", md_text)
-                    results.append({"label": label, "url": url, "output": str(md_path), "status": "ok"})
+                    results.append(
+                        {"label": label, "url": url, "output": str(md_path), "status": "ok"}
+                    )
                     logger.info("Party PDF ready: %s -> %s", label, md_path.name)
                 else:
                     results.append({"label": label, "url": url, "status": "failed"})
@@ -163,9 +170,16 @@ def _download_party_pdf(label: str, url: str, output_dir: Path) -> Path | None:
 
     result = subprocess.run(
         [
-            "curl", "--silent", "--show-error", "--location", "--max-time", "60",
-            "--user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-            "--output", str(pdf_path),
+            "curl",
+            "--silent",
+            "--show-error",
+            "--location",
+            "--max-time",
+            "60",
+            "--user-agent",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+            "--output",
+            str(pdf_path),
             direct_url,
         ],
         capture_output=True,
@@ -213,7 +227,7 @@ def _make_gdrive_download_url(url: str) -> str:
     return url
 
 
-def _extract_pdf_links(soup) -> list[tuple[str, str]]:
+def _extract_pdf_links(soup: BeautifulSoup) -> list[tuple[str, str]]:
     """Extract (label, url) pairs for Google Drive PDFs linked from the page.
 
     Looks at each list item that contains a Google Drive file link and uses
@@ -230,16 +244,19 @@ def _extract_pdf_links(soup) -> list[tuple[str, str]]:
         raw_label = heading.get_text(strip=True) if heading else link.get_text(strip=True)
         label = raw_label.lower().replace(" ", "-")
         label = re.sub(r"[^a-z0-9-]", "", label).strip("-")
-        if label:
-            results.append((label, link["href"]))
+        raw_link_href = link.get("href", "")
+        if label and isinstance(raw_link_href, str):
+            results.append((label, raw_link_href))
     return results
 
 
-def _discover_sub_links(soup) -> dict[str, str]:
+def _discover_sub_links(soup: BeautifulSoup) -> dict[str, str]:
     """Find sub-page links on the party-information page."""
     sub_links: dict[str, str] = {}
     for a_tag in soup.select("a[href]"):
         href = a_tag.get("href", "")
+        if not isinstance(href, str):
+            continue
         text = a_tag.get_text(strip=True)
         if any(
             keyword in href.lower()
@@ -250,7 +267,7 @@ def _discover_sub_links(soup) -> dict[str, str]:
     return sub_links
 
 
-def _extract_content(soup) -> str:
+def _extract_content(soup: BeautifulSoup) -> str:
     for selector in ["main", "[role='main']", ".page-content", "article"]:
         el = soup.select_one(selector)
         if el and len(el.get_text(strip=True)) > 50:

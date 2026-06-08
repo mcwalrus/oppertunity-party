@@ -93,10 +93,7 @@ def convert_pdf(pdf_path: Path) -> dict:
     doc_type_slug = _slugify(header.get("document_type", ""))
 
     # Build output filename
-    if doc_type_slug:
-        output_file = f"pdf-{doc_type_slug}.md"
-    else:
-        output_file = "pdf-default.md"
+    output_file = f"pdf-{doc_type_slug}.md" if doc_type_slug else "pdf-default.md"
 
     # Save into the policy's directory
     policy_dir = DATA_DIR / "policies" / policy_slug
@@ -286,6 +283,6 @@ def _get_policy_slug_from_reference(filename: str) -> str | None:
         for entry in ref.get("downloads", {}).values():
             if Path(entry.get("filename", "")).name == filename:
                 return entry.get("policy_slug")
-    except (json.JSONDecodeError, IOError):
+    except (OSError, json.JSONDecodeError):
         pass
     return None

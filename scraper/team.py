@@ -5,9 +5,14 @@ from __future__ import annotations
 import json
 import logging
 import re
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from markdownify import markdownify
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from bs4 import BeautifulSoup, Tag
 
 from .client import DATA_DIR, fetch_page, save_content
 from .models import TeamMember
@@ -55,7 +60,9 @@ def scrape_team() -> list[TeamMember]:
                     content=content_md,
                 )
             )
-            logger.info("Scraped team member: %s (slug: %s, electorate: %s)", name, slug, electorate)
+            logger.info(
+                "Scraped team member: %s (slug: %s, electorate: %s)", name, slug, electorate
+            )
         except Exception as e:
             logger.error("Failed to scrape team member %s: %s", name, e)
 
@@ -101,7 +108,9 @@ def save_team(members: list[TeamMember]) -> dict[str, Path]:
         }
         for m in members
     ]
-    json_path = save_content(output_dir, "index.json", json.dumps(json_data, indent=2, ensure_ascii=False))
+    json_path = save_content(
+        output_dir, "index.json", json.dumps(json_data, indent=2, ensure_ascii=False)
+    )
     saved["_index"] = json_path
 
     index_md_path = save_content(output_dir, "INDEX.md", _format_team_index(members))
@@ -110,7 +119,7 @@ def save_team(members: list[TeamMember]) -> dict[str, Path]:
     return saved
 
 
-def _extract_member_links(soup) -> list[tuple[str, str]]:
+def _extract_member_links(soup: BeautifulSoup) -> list[tuple[str, str]]:
     """Extract candidate names and profile links from the team page.
 
     Opportunity Party uses /candidate-{slug} URLs for individual profiles.
@@ -120,7 +129,10 @@ def _extract_member_links(soup) -> list[tuple[str, str]]:
     seen: set[str] = set()
 
     for a_tag in soup.select("a[href]"):
-        href = a_tag.get("href", "")
+        raw_href = a_tag.get("href", "")
+        if not isinstance(raw_href, str):
+            continue
+        href: str = raw_href
         text = a_tag.get_text(strip=True)
 
         if href.startswith("/candidate-") and href not in seen and text:
@@ -144,18 +156,14 @@ def _extract_member_links(soup) -> list[tuple[str, str]]:
             else:
                 # Try to find the name from the first text node or <strong>
                 strong = a_tag.find("strong")
-                if strong:
-                    name = strong.get_text(strip=True)
-                else:
-                    # Use slug-derived name as fallback
-                    name = slug.replace("-", " ").title()
+                name = strong.get_text(strip=True) if strong else slug.replace("-", " ").title()
 
             links.append((name, href))
 
     return links
 
 
-def _extract_title(soup) -> str:
+def _extract_title(soup: BeautifulSoup) -> str:
     """Extract the page title / candidate name.
 
     Prefers the first h1 inside the main content container (to avoid picking
@@ -164,7 +172,7 @@ def _extract_title(soup) -> str:
     """
     import re as _re
 
-    def _h1_text(el) -> str:
+    def _h1_text(el: Tag) -> str:
         # Use separator=" " so adjacent child spans are joined with a space
         return _re.sub(r"\s{2,}", " ", el.get_text(separator=" ", strip=True))
 
@@ -184,7 +192,7 @@ def _extract_title(soup) -> str:
     return "Unknown"
 
 
-def _extract_role(soup) -> str:
+def _extract_role(soup: BeautifulSoup) -> str:
     """Extract the candidate's role (Party Leader / Deputy Leader / Candidate).
 
     Candidate pages carry a media-contact footer that reads e.g.
@@ -198,7 +206,11 @@ def _extract_role(soup) -> str:
         if "media contact" in heading.get_text(strip=True).lower():
             # Walk forward siblings for a non-empty text block
             for sibling in heading.next_siblings:
-                text = sibling.get_text(" ", strip=True) if hasattr(sibling, "get_text") else str(sibling).strip()
+                text = (
+                    sibling.get_text(" ", strip=True)
+                    if hasattr(sibling, "get_text")
+                    else str(sibling).strip()
+                )
                 if not text:
                     continue
                 # Classify role from the description
@@ -213,7 +225,7 @@ def _extract_role(soup) -> str:
     return "Candidate"
 
 
-def _extract_electorate(soup) -> str:
+def _extract_electorate(soup: BeautifulSoup) -> str:
     """Extract the electorate from a candidate page.
 
     Candidate pages have an all-uppercase ``<h4>`` element near the top of
@@ -234,7 +246,7 @@ def _extract_electorate(soup) -> str:
     return ""
 
 
-def _extract_member_content(soup) -> str:
+def _extract_member_content(soup: BeautifulSoup) -> str:
     for selector in ["main", "[role='main']", ".page-content", "article"]:
         el = soup.select_one(selector)
         if el and len(el.get_text(strip=True)) > 50:
@@ -244,7 +256,7 @@ def _extract_member_content(soup) -> str:
     return ""
 
 
-def _strip_email_links(el) -> None:
+def _strip_email_links(el: Tag) -> None:
     """Remove Cloudflare email-protection <a> tags from a BeautifulSoup element."""
     for a in el.find_all("a", href=re.compile(r"/cdn-cgi/l/email-protection")):
         a.decompose()
@@ -291,7 +303,7 @@ def _path_to_slug(path: str) -> str:
     slug = path.strip("/")
     # Strip the /candidate- prefix used for team member pages
     if slug.startswith("candidate-"):
-        slug = slug[len("candidate-"):]
+        slug = slug[len("candidate-") :]
     return slug
 
 
@@ -337,7 +349,7 @@ def _format_team_index(members: list[TeamMember]) -> str:
     lines = [
         "# Opportunity Party — Team & Candidates Index",
         "",
-        f"**Source**: [opportunity.org.nz/team](https://www.opportunity.org.nz/team)  ",
+        "**Source**: [opportunity.org.nz/team](https://www.opportunity.org.nz/team)  ",
         f"**Generated**: {now}",
         "",
         "---",
@@ -381,7 +393,7 @@ def _format_team_index(members: list[TeamMember]) -> str:
 
     # Full candidates table
     lines += [
-        "## All Candidates (A–Z)",
+        "## All Candidates (A-Z)",
         "",
         "| Name | Role | Electorate | Profile |",
         "|------|------|------------|---------|",

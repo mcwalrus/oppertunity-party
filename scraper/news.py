@@ -4,9 +4,14 @@ from __future__ import annotations
 
 import json
 import logging
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from markdownify import markdownify
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from bs4 import BeautifulSoup, Tag
 
 from .client import DATA_DIR, fetch_page, save_content
 from .models import NewsItem
@@ -71,12 +76,14 @@ def save_news(items: list[NewsItem]) -> dict[str, Path]:
         }
         for i in items
     ]
-    json_path = save_content(output_dir, "index.json", json.dumps(json_data, indent=2, ensure_ascii=False))
+    json_path = save_content(
+        output_dir, "index.json", json.dumps(json_data, indent=2, ensure_ascii=False)
+    )
     saved["_index"] = json_path
     return saved
 
 
-def _extract_article_links(soup) -> list[tuple[str, str, str]]:
+def _extract_article_links(soup: BeautifulSoup) -> list[tuple[str, str, str]]:
     """Extract article titles, URLs, and dates from the news listing page.
 
     Opportunity Party news articles live at root-level URLs with
@@ -88,13 +95,29 @@ def _extract_article_links(soup) -> list[tuple[str, str, str]]:
 
     # Known non-article root-level paths to skip
     SKIP_PREFIXES = (
-        "/policy", "/team", "/about", "/events", "/news", "/get-involved",
-        "/volunteer", "/join", "/donate", "/contact", "/party-information",
-        "/login", "/subscribe", "/meet-q", "/candidate-", "/cdn-cgi",
+        "/policy",
+        "/team",
+        "/about",
+        "/events",
+        "/news",
+        "/get-involved",
+        "/volunteer",
+        "/join",
+        "/donate",
+        "/contact",
+        "/party-information",
+        "/login",
+        "/subscribe",
+        "/meet-q",
+        "/candidate-",
+        "/cdn-cgi",
     )
 
     for a_tag in soup.select("a[href]"):
-        href = a_tag.get("href", "")
+        raw_href = a_tag.get("href", "")
+        if not isinstance(raw_href, str):
+            continue
+        href: str = raw_href
         title = a_tag.get_text(strip=True)
 
         # Must be a root-level path with underscores or hyphens (news slug pattern)
@@ -118,7 +141,7 @@ def _extract_article_links(soup) -> list[tuple[str, str, str]]:
     return articles
 
 
-def _find_nearby_date(a_tag) -> str:
+def _find_nearby_date(a_tag: Tag) -> str:
     """Look for a date near an article link."""
     parent = a_tag.parent
     for _ in range(3):
@@ -127,14 +150,15 @@ def _find_nearby_date(a_tag) -> str:
         for selector in ["time", ".date", ".posted-at", ".post-date", "[datetime]"]:
             date_el = parent.select_one(selector)
             if date_el:
-                dt = date_el.get("datetime", "") or date_el.get_text(strip=True)
+                raw_dt = date_el.get("datetime", "")
+                dt = raw_dt if isinstance(raw_dt, str) else date_el.get_text(strip=True)
                 if dt:
                     return dt
         parent = parent.parent
     return ""
 
 
-def _extract_article_content(soup) -> str:
+def _extract_article_content(soup: BeautifulSoup) -> str:
     for selector in ["main", "[role='main']", ".page-content", "article"]:
         el = soup.select_one(selector)
         if el and len(el.get_text(strip=True)) > 50:

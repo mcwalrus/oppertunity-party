@@ -41,7 +41,7 @@ def _load_reference() -> dict:
     if REFERENCE_FILE.exists():
         try:
             return json.loads(REFERENCE_FILE.read_text())
-        except (json.JSONDecodeError, IOError) as e:
+        except (OSError, json.JSONDecodeError) as e:
             logger.warning("Could not load reference.json: %s, starting fresh", e)
     return {"downloads": {}}
 
@@ -79,7 +79,12 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
         existing_path = POLICY_ASSETS_DIR / entry.get("filename", "")
         if existing_path.exists():
             logger.info("Skipping %s (already exists)", policy_slug)
-            return {"policy_slug": policy_slug, "url": url, "filename": str(existing_path.name), "status": "skipped_existing"}
+            return {
+                "policy_slug": policy_slug,
+                "url": url,
+                "filename": str(existing_path.name),
+                "status": "skipped_existing",
+            }
         logger.info("Re-downloading %s (file missing)", file_id)
 
     if file_id:
@@ -94,18 +99,38 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
 
     if dry_run:
         logger.info("[DRY RUN] Would download %s", url)
-        return {"policy_slug": policy_slug, "url": url, "filename": temp_filename, "status": "dry_run"}
+        return {
+            "policy_slug": policy_slug,
+            "url": url,
+            "filename": temp_filename,
+            "status": "dry_run",
+        }
 
     direct_url = _make_direct_download_url(url)
     content_type, effective_filename = None, None
 
     headers_file = POLICY_ASSETS_DIR / "_headers.tmp"
     result = subprocess.run(
-        ["curl", "--silent", "--show-error", "--location", "--max-time", "60",
-         "--user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-         "--write-out", "%{http_code}\n%{content_type}\n%{filename_effective}",
-         "--output", str(output_path), "-D", str(headers_file), direct_url],
-        capture_output=True, text=True, timeout=90,
+        [
+            "curl",
+            "--silent",
+            "--show-error",
+            "--location",
+            "--max-time",
+            "60",
+            "--user-agent",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+            "--write-out",
+            "%{http_code}\n%{content_type}\n%{filename_effective}",
+            "--output",
+            str(output_path),
+            "-D",
+            str(headers_file),
+            direct_url,
+        ],
+        capture_output=True,
+        text=True,
+        timeout=90,
     )
 
     lines = result.stdout.strip().split("\n")
@@ -129,11 +154,26 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
 
             headers_file.unlink(missing_ok=True)
             result = subprocess.run(
-                ["curl", "--silent", "--show-error", "--location", "--max-time", "120",
-                 "--user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-                 "--write-out", "%{http_code}\n%{content_type}\n%{filename_effective}",
-                 "--output", str(output_path), "-D", str(headers_file), retry_url],
-                capture_output=True, text=True, timeout=150,
+                [
+                    "curl",
+                    "--silent",
+                    "--show-error",
+                    "--location",
+                    "--max-time",
+                    "120",
+                    "--user-agent",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+                    "--write-out",
+                    "%{http_code}\n%{content_type}\n%{filename_effective}",
+                    "--output",
+                    str(output_path),
+                    "-D",
+                    str(headers_file),
+                    retry_url,
+                ],
+                capture_output=True,
+                text=True,
+                timeout=150,
             )
 
             lines = result.stdout.strip().split("\n")
@@ -148,9 +188,19 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
     if not output_path.exists() or output_path.stat().st_size == 0:
         error_msg = result.stderr or "Empty response"
         logger.error("Failed to download %s: %s", url, error_msg)
-        return {"policy_slug": policy_slug, "url": url, "filename": temp_filename, "status": "failed", "error": error_msg}
+        return {
+            "policy_slug": policy_slug,
+            "url": url,
+            "filename": temp_filename,
+            "status": "failed",
+            "error": error_msg,
+        }
 
-    actual_filename = effective_filename if effective_filename and effective_filename.endswith(".pdf") else temp_filename
+    actual_filename = (
+        effective_filename
+        if effective_filename and effective_filename.endswith(".pdf")
+        else temp_filename
+    )
     if actual_filename != temp_filename:
         real_path = POLICY_ASSETS_DIR / actual_filename
         if not real_path.exists():
@@ -168,7 +218,12 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
     reference["downloads"][key] = entry
 
     logger.info("Downloaded %s -> %s (%d bytes)", policy_slug, actual_filename, entry["size_bytes"])
-    return {"policy_slug": policy_slug, "url": url, "filename": actual_filename, "status": "downloaded"}
+    return {
+        "policy_slug": policy_slug,
+        "url": url,
+        "filename": actual_filename,
+        "status": "downloaded",
+    }
 
 
 def migrate_existing_pdfs() -> None:
