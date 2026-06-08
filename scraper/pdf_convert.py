@@ -1,10 +1,11 @@
 """Convert Opportunity Party policy PDFs to structured markdown.
 
-Uses pdftotext (poppler) for text extraction, then parses the
-consistent header format and page footers to produce clean markdown.
+Uses pymupdf4llm for text extraction — produces structured markdown with
+headings, reflowed paragraphs, and real tables, with no system dependencies
+(pure-Python; no poppler required).
 
 Each PDF has:
-  - A header block: Date, Policy, Document Type (key-value pairs separated by blanks)
+  - A header block: Date, Policy, Document Type (bold values on one line)
   - Body content with bullet lists, section headings, tables
   - Page footers: "Opportunity Party  <Section>  Page N"
 
@@ -16,8 +17,9 @@ from __future__ import annotations
 import json
 import logging
 import re
-import subprocess
 from pathlib import Path
+
+import pymupdf4llm
 
 from .client import DATA_DIR, save_content
 
@@ -26,10 +28,14 @@ logger = logging.getLogger(__name__)
 POLICY_ASSETS_DIR = DATA_DIR / "pdfs"
 REFERENCE_FILE = POLICY_ASSETS_DIR / "reference.json"
 
-# Regex for the header key-value format: "Date                February 2026"
-HEADER_FIELD_RE = re.compile(r"^(Date|Policy|Document Type)\s{2,}(.+)$")
-# Regex for page footer: "Opportunity Party   Tax   Page 3"
-PAGE_FOOTER_RE = re.compile(r"^Opportunity\s+Party\s+")
+# Header fields are emitted by pymupdf4llm as bold values on a single line:
+# "Date **February 2026** Policy **Abundant Energy** Document Type **...**"
+HEADER_FIELD_RE = re.compile(r"(Date|Policy|Document Type)\s+\*\*(.+?)\*\*")
+# Page footer: "Opportunity Party   Tax   Page 3"  (may be bold after extraction)
+PAGE_FOOTER_RE = re.compile(r"^Opportunity\s+Party\b")
+PAGE_NUMBER_RE = re.compile(r"^Page\s+\d+\s*$")
+# Picture placeholders inserted by pymupdf4llm
+PICTURE_RE = re.compile(r"^\s*\**==>\s*picture.*<==\**\s*$")
 
 
 def convert_all_pdfs() -> list[dict]:
@@ -80,10 +86,9 @@ def convert_pdf(pdf_path: Path) -> dict:
 
     Saves output into data/policies/{slug}/{output_file} based on filename pattern.
     """
-    raw_text = extract_text(pdf_path)
-    header, body_start = parse_header(raw_text)
-    body = extract_body(raw_text, body_start)
-    body_md = format_body(body)
+    raw_md = _extract_raw_markdown(pdf_path)
+    header = parse_header(raw_md)
+    body_md = _clean_body(raw_md)
     markdown = format_markdown(header, body_md, pdf_path)
 
     # Try to get policy_slug from reference.json first (for downloaded PDFs)
@@ -110,108 +115,56 @@ def convert_pdf(pdf_path: Path) -> dict:
     }
 
 
-def extract_text(pdf_path: Path) -> str:
-    """Extract text from a PDF using pdftotext with layout preservation."""
-    result = subprocess.run(
-        ["pdftotext", "-layout", str(pdf_path), "-"],
-        capture_output=True,
-        text=True,
-        timeout=30,
-    )
-    if result.returncode != 0:
-        raise RuntimeError(f"pdftotext failed for {pdf_path}: {result.stderr}")
-    return result.stdout
+def _extract_raw_markdown(pdf_path: Path) -> str:
+    """Return raw markdown from pymupdf4llm (no post-processing)."""
+    return pymupdf4llm.to_markdown(str(pdf_path), show_progress=False)
 
 
-def parse_header(raw_text: str) -> tuple[dict, int]:
-    """Parse the header block from raw pdftext output.
+def parse_header(raw_md: str) -> dict[str, str]:
+    """Pull Date / Policy / Document Type out of the bold header line(s).
 
-    Header fields (Date, Policy, Document Type) are key-value pairs
-    separated by multiple spaces, with blank lines between them.
-    We scan until we've seen all three or hit the first content line.
-
-    Returns (header_dict, line_index_where_body_starts).
+    pymupdf4llm renders the header as:
+      Date **February 2026** Policy **Abundant Energy** Document Type **Policy Overview**
     """
-    lines = raw_text.split("\n")
     header: dict[str, str] = {}
-    body_start = 0
-
-    for i, line in enumerate(lines):
-        m = HEADER_FIELD_RE.match(line)
-        if m:
-            key = m.group(1).lower().replace(" ", "_")
-            header[key] = m.group(2).strip()
-            body_start = i + 1
-        elif line.strip() and header and not HEADER_FIELD_RE.match(line):
-            # First non-blank, non-header line — body starts here
-            body_start = i
-            break
-
-    # Skip blank lines between header and body content
-    while body_start < len(lines) and not lines[body_start].strip():
-        body_start += 1
-
-    return header, body_start
+    for key, value in HEADER_FIELD_RE.findall(raw_md):
+        header[key.lower().replace(" ", "_")] = value.strip()
+    return header
 
 
-def extract_body(raw_text: str, body_start: int) -> list[str]:
-    """Extract body lines, stripping page footers and header cruft."""
-    lines = raw_text.split("\n")
-    body_lines: list[str] = []
+def _clean_body(raw_md: str) -> str:
+    """Strip artifacts from pymupdf4llm output and return clean body markdown.
 
-    for line in lines[body_start:]:
-        # Skip page footer lines: "Opportunity Party   Tax   Page 3"
-        if PAGE_FOOTER_RE.match(line.strip()):
-            continue
-        body_lines.append(line)
-
-    return body_lines
-
-
-def format_body(body_lines: list[str]) -> str:
-    """Convert body lines into clean markdown.
-
-    Handles:
-    - Bullet points (• → -)
-    - Sub-bullet indentation
-    - Collapse excessive blank lines
+    Removes:
+      1. Picture placeholders  (**==> picture ... <==**)
+      2. Page footers / standalone page numbers (de-bolded before matching)
+      3. The one-line header block already captured by parse_header()
     """
-    output: list[str] = []
-    prev_blank = False
-
-    for line in body_lines:
+    out: list[str] = []
+    for line in raw_md.split("\n"):
         stripped = line.strip()
 
-        # Skip consecutive blank lines (max 1 blank line between paragraphs)
-        if not stripped:
-            if not prev_blank:
-                output.append("")
-                prev_blank = True
+        # 1. Picture placeholders
+        if PICTURE_RE.match(stripped):
             continue
 
-        prev_blank = False
-
-        # Convert bullet characters to markdown bullets
-        if stripped.startswith("•") or stripped.startswith("·"):
-            indent = len(line) - len(line.lstrip())
-            bullet_text = stripped[1:].strip()
-            if indent > 4:
-                output.append(f"  - {bullet_text}")
-            else:
-                output.append(f"- {bullet_text}")
+        # 2. Page footers / numbers — strip bold markers before matching
+        bare = stripped.strip("*").strip()
+        if PAGE_FOOTER_RE.match(bare) or PAGE_NUMBER_RE.match(bare):
             continue
 
-        output.append(line)
+        # 3. Header line (already captured into front-matter table)
+        if HEADER_FIELD_RE.search(stripped) and stripped.startswith("Date"):
+            continue
 
-    text = "\n".join(output)
+        out.append(line.rstrip())
 
-    # Collapse 3+ consecutive newlines to 2
-    text = re.sub(r"\n{3,}", "\n\n", text)
-
+    text = "\n".join(out)
+    text = re.sub(r"\n{3,}", "\n\n", text)  # collapse excessive blank lines
     return text.strip()
 
 
-def format_markdown(header: dict, body_md: str, pdf_path: Path) -> str:
+def format_markdown(header: dict[str, str], body_md: str, pdf_path: Path) -> str:
     """Format header + body into a well-structured markdown document."""
     policy_name = header.get("policy", "")
     doc_type = header.get("document_type", "")
@@ -272,7 +225,6 @@ def _slug_from_filename(filename: str) -> str:
 
 def _get_policy_slug_from_reference(filename: str) -> str | None:
     """Look up the policy_slug for a PDF from reference.json.
-
 
     Returns the policy_slug if found, None otherwise.
     """

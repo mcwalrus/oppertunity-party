@@ -1,50 +1,5 @@
 [
   {
-    "source_file": "1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI.pdf",
-    "title": "Abundant Energy",
-    "policy": "Abundant Energy",
-    "policy_slug": "abundant-energy",
-    "date": "February 2026",
-    "document_type": "Policy Overview",
-    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/abundant-energy/pdf-policy-overview.md"
-  },
-  {
-    "source_file": "116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L.pdf",
-    "title": "Citizen's Voice",
-    "policy": "Citizen's Voice",
-    "policy_slug": "citizens-voice",
-    "date": "June 2025",
-    "document_type": "Policy Overview",
-    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/citizens-voice/pdf-policy-overview.md"
-  },
-  {
-    "source_file": "1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B.pdf",
-    "title": "Tax Reset",
-    "policy": "Tax Reset",
-    "policy_slug": "tax-reset",
-    "date": "May 2026",
-    "document_type": "Policy Overview",
-    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/tax-reset/pdf-policy-overview.md"
-  },
-  {
-    "source_file": "1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq.pdf",
-    "title": "Healthy Oceans",
-    "policy": "Healthy Oceans",
-    "policy_slug": "healthy-oceans",
-    "date": "February 2026",
-    "document_type": "Policy Overview",
-    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/healthy-oceans/pdf-policy-overview.md"
-  },
-  {
-    "source_file": "1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW.pdf",
-    "title": "Tax Reset",
-    "policy": "Tax Reset",
-    "policy_slug": "tax-reset",
-    "date": "May 2026",
-    "document_type": "Policy Addendum",
-    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/tax-reset/pdf-policy-addendum.md"
-  },
-  {
     "source_file": "MakingZeroTheHero-Summary-Report.pdf",
     "title": "healthy-land",
     "policy": "",
@@ -64,8 +19,8 @@
   },
   {
     "source_file": "Opportunity_Policy_Citizens Voice.pdf",
-    "title": "Citizen's Voice",
-    "policy": "Citizen's Voice",
+    "title": "Citizen’s Voice",
+    "policy": "Citizen’s Voice",
     "policy_slug": "citizens-voice",
     "date": "June 2025",
     "document_type": "Policy Overview",
@@ -97,5 +52,23 @@
     "date": "May 2026",
     "document_type": "Policy Addendum",
     "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/tax-reset/pdf-policy-addendum.md"
+  },
+  {
+    "source_file": "charter.pdf",
+    "title": "charter",
+    "policy": "",
+    "policy_slug": "charter",
+    "date": "",
+    "document_type": "",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/charter/pdf-default.md"
+  },
+  {
+    "source_file": "constitution.pdf",
+    "title": "constitution",
+    "policy": "",
+    "policy_slug": "constitution",
+    "date": "",
+    "document_type": "",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/constitution/pdf-default.md"
   }
 ]

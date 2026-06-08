@@ -2,7 +2,6 @@
 name = "opportunity-scraper"
 version = "0.1.0"
 description = "Scraper and MCP server for the Opportunity Party website"
-# System dependency: brew install poppler  (provides pdftotext for PDF conversion)
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -12,6 +11,7 @@ dependencies = [
     "lxml>=6.1.1",
     "markdownify>=1.2.2",
     "mcp>=1.27.2",
+    "pymupdf4llm>=1.27.2.3",
 ]
 
 [dependency-groups]

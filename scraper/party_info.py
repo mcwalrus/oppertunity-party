@@ -9,6 +9,7 @@ import subprocess
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+import pymupdf4llm
 from markdownify import markdownify
 
 if TYPE_CHECKING:
@@ -265,16 +266,8 @@ def _is_valid_pdf(path: Path) -> bool:
 
 def _convert_party_pdf(pdf_path: Path, label: str, source_url: str) -> str:
     """Extract text from a PDF and format as plain markdown."""
-    result = subprocess.run(
-        ["pdftotext", "-layout", str(pdf_path), "-"],
-        capture_output=True,
-        text=True,
-        timeout=30,
-    )
-    if result.returncode != 0:
-        raise RuntimeError(f"pdftotext failed for {pdf_path.name}: {result.stderr}")
-
-    text = re.sub(r"\n{3,}", "\n\n", result.stdout).strip()
+    raw = pymupdf4llm.to_markdown(str(pdf_path), show_progress=False)
+    text = re.sub(r"\n{3,}", "\n\n", raw).strip()
     title = label.replace("-", " ").title()
     return f"# {title}\n\n> **Source**: {source_url}\n\n{text}\n"
 
