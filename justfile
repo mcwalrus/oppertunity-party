@@ -43,7 +43,7 @@ check: install
 # resolved against https://www.opportunity.org.nz via .markdown-link-check.json).
 validate:
     @echo "Running markdown-link-check on scraped data..."
-    @find data -name '*.md' | sort | xargs -I{} markdown-link-check --config .markdown-link-check.json {}
+    @find data -name '*.md' | sort | xargs -I{} npx --yes markdown-link-check --config .markdown-link-check.json {}
 
 # Wire lefthook into .git/hooks (run once after cloning)
 hooks-install:
