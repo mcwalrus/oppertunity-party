@@ -1,9 +1,10 @@
-# NetraGhimire
+# Netra Ghimire
 
-**Role**: Netra Ghimire
+**Role**: Candidate
+**Electorate**: Palmerston North
 
 > **URL**: https://www.opportunity.org.nz/candidate-netra-ghimire
-> **Scraped**: 2026-06-08T16:04:53.033857
+> **Scraped**: 2026-06-08T16:20:15.303974
 
 ![Meet Netra - Candidate for Opportunity (Palmerston North)](https://assets.nationbuilder.com/garethmorgan/pages/12632/features/original/IMG_0646_-_Netra_Ghimire.jpg?1779876331)
 

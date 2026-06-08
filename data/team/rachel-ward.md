@@ -1,9 +1,10 @@
-# RachelWard
+# Rachel Ward
 
-**Role**: Rachel Ward
+**Role**: Candidate
+**Electorate**: Tukituki
 
 > **URL**: https://www.opportunity.org.nz/candidate-rachel-ward
-> **Scraped**: 2026-06-08T16:05:12.555132
+> **Scraped**: 2026-06-08T16:20:28.197104
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9929/features/original/1000028925_%283%29_%281%29.jpg?1773954563)
 

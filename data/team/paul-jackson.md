@@ -1,9 +1,10 @@
-# PaulJackson
+# Paul Jackson
 
-**Role**: Paul Jackson
+**Role**: Candidate
+**Electorate**: Epsom
 
 > **URL**: https://www.opportunity.org.nz/candidate-paul-jackson
-> **Scraped**: 2026-06-08T16:04:55.375344
+> **Scraped**: 2026-06-08T16:20:16.753997
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12897/features/original/PXL_20260517_001029872.PORTRAIT_%281%29_-_Paul_Jackson_%281%29.jpg?1779967311)
 

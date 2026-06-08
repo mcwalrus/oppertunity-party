@@ -1,9 +1,10 @@
-# EdenSkipper
+# Eden Skipper
 
-**Role**: Eden Skipper (Ngāi Tahu)
+**Role**: Candidate
+**Electorate**: Christchurch Central
 
 > **URL**: https://www.opportunity.org.nz/candidate-eden-skipper
-> **Scraped**: 2026-06-08T16:05:08.127380
+> **Scraped**: 2026-06-08T16:20:25.569045
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9873/features/original/Eden_skipper_2_edit_%281%29.jpg?1773826058)
 

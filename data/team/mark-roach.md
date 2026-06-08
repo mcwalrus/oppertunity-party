@@ -1,9 +1,10 @@
-# MarkRoach
+# Mark Roach
 
-**Role**: Mark Roach
+**Role**: Candidate
+**Electorate**: Waitākere
 
 > **URL**: https://www.opportunity.org.nz/candidate-mark-roach
-> **Scraped**: 2026-06-08T16:05:06.680146
+> **Scraped**: 2026-06-08T16:20:23.076463
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9870/features/original/Mark_Roach-3LS1.jpg?1773653583)
 

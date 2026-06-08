@@ -1,9 +1,10 @@
-# CailSmith
+# Cail Smith
 
-**Role**: Cail Smith
+**Role**: Candidate
+**Electorate**: East Cape
 
 > **URL**: https://www.opportunity.org.nz/candidate-cail-smith
-> **Scraped**: 2026-06-08T16:05:09.227212
+> **Scraped**: 2026-06-08T16:20:26.310891
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9926/features/original/cail_smith__standing__opportunity_1_%281%29.jpg?1774164665)
 

@@ -1,9 +1,10 @@
-# MichaelCarter
+# Michael Carter
 
-**Role**: Michael Carter
+**Role**: Candidate
+**Electorate**: Tauranga
 
 > **URL**: https://www.opportunity.org.nz/candidate-michael-carter
-> **Scraped**: 2026-06-08T16:04:51.000985
+> **Scraped**: 2026-06-08T16:20:13.835832
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9930/features/original/Michael_Carter_Landscaper_%281%29_%281%29.jpg?1773916065)
 

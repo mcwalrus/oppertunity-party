@@ -1,9 +1,10 @@
-# JamieAttenborough
+# Jamie Attenborough
 
-**Role**: Jamie Attenborough
+**Role**: Candidate
+**Electorate**: Mt Roskill
 
 > **URL**: https://www.opportunity.org.nz/candidate-jamie-attenborough
-> **Scraped**: 2026-06-08T16:04:48.441319
+> **Scraped**: 2026-06-08T16:20:12.439847
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12666/features/original/IMG_6711_-_Jamie_Attenborough.jpg?1779878639)
 

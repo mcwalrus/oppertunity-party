@@ -1,9 +1,10 @@
-# JohanChang
+# Johan Chang
 
-**Role**: Johan Chang
+**Role**: Candidate
+**Electorate**: Auckland Central
 
 > **URL**: https://www.opportunity.org.nz/candidate-johan-chang
-> **Scraped**: 2026-06-08T16:04:51.473299
+> **Scraped**: 2026-06-08T16:20:14.195289
 
 ![Meet Johan - Candidate for Opportunity (Auckland Central)](https://assets.nationbuilder.com/garethmorgan/pages/12634/features/original/DSC00628-HDR_-_Johan_Chang_%281%29.jpg?1780096806)
 

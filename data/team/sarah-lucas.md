@@ -1,9 +1,10 @@
-# SarahLucas
+# Sarah Lucas
 
-**Role**: Sarah Lucas
+**Role**: Candidate
+**Electorate**: New Plymouth
 
 > **URL**: https://www.opportunity.org.nz/candidate-sarah-lucas
-> **Scraped**: 2026-06-08T16:05:01.429989
+> **Scraped**: 2026-06-08T16:20:18.619037
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9872/features/original/IMG_20250513_094635_-_Sarah_Lucas_-_People_Place_Future_%281%29.jpg?1773738192)
 

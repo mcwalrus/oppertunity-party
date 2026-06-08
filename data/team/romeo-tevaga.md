@@ -1,9 +1,10 @@
-# RomeoTevaga
+# Romeo Tevaga
 
-**Role**: Romeo Tevaga
+**Role**: Candidate
+**Electorate**: Upper Harbour
 
 > **URL**: https://www.opportunity.org.nz/candidate-romeo-tevaga
-> **Scraped**: 2026-06-08T16:05:10.970182
+> **Scraped**: 2026-06-08T16:20:27.448124
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9936/features/original/94e34c1c-2a64-4ba8-aaea-230f55551011_-_Romeo_Tevaga.jpg?1780097340)
 

@@ -1,9 +1,10 @@
-# KevinHuang
+# Kevin Huang
 
-**Role**: Kevin Huang
+**Role**: Candidate
+**Electorate**: Pakuranga
 
 > **URL**: https://www.opportunity.org.nz/candidate-kevin-huang
-> **Scraped**: 2026-06-08T16:04:54.880505
+> **Scraped**: 2026-06-08T16:20:16.392067
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9932/features/original/Kevin_Huangphoto_%281%29.jpg?1780268918)
 

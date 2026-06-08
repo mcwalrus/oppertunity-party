@@ -23,9 +23,10 @@ class TeamMember:
     """A team member / candidate entry."""
 
     name: str
-    role: str = ""
+    role: str = ""  # e.g. "Party Leader", "Deputy Leader", "Candidate"
     url: str = ""
     slug: str = ""  # derived from URL path, e.g. "daniel-eb" from /candidate-daniel-eb
+    electorate: str = ""  # NZ electorate the candidate is contesting, e.g. "Mt. Albert"
     content: str = ""
     scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
 

@@ -1,9 +1,10 @@
-# DerrickPaull
+# Derrick Paull
 
-**Role**: Derrick Paull
+**Role**: Candidate
+**Electorate**: Maungakiekie
 
 > **URL**: https://www.opportunity.org.nz/candidate-derrick-paull
-> **Scraped**: 2026-06-08T16:05:04.346543
+> **Scraped**: 2026-06-08T16:20:20.957624
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9861/features/original/260313.Opportunity_Profile_%281%29.jpg?1777104237)
 

@@ -1,9 +1,10 @@
-# JessicaHammond
+# Jessica Hammond
 
-**Role**: Jessica Hammond
+**Role**: Candidate
+**Electorate**: Wellington North
 
 > **URL**: https://www.opportunity.org.nz/candidate-jessica-hammond
-> **Scraped**: 2026-06-08T16:04:47.971262
+> **Scraped**: 2026-06-08T16:20:12.069594
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9867/features/original/Jessica-Hammond-Hero-1_%281%29.jpg?1773893830)
 

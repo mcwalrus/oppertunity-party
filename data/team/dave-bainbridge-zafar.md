@@ -1,9 +1,10 @@
-# DaveBainbridge-Zafar
+# Dave Bainbridge-Zafar
 
-**Role**: About Dave
+**Role**: Candidate
+**Electorate**: Dunedin
 
 > **URL**: https://www.opportunity.org.nz/candidate-dave-bainbridge-zafar
-> **Scraped**: 2026-06-08T16:04:49.148539
+> **Scraped**: 2026-06-08T16:20:12.809041
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9762/features/original/Dave_Bainbridge-Zafar_-_Photo_-_Dave_%281%29.jpg?1773826523)
 

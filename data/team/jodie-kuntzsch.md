@@ -1,9 +1,10 @@
-# JodieKuntzsch
+# Jodie Kuntzsch
 
-**Role**: Jodie Kuntzsch
+**Role**: Candidate
+**Electorate**: Nelson
 
 > **URL**: https://www.opportunity.org.nz/candidate-jodie-kuntzsch
-> **Scraped**: 2026-06-08T16:04:58.986045
+> **Scraped**: 2026-06-08T16:20:17.495499
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12698/features/original/Jodie_Kuntzsch_landscape_on_vessel_-_Jodie_Kuntzsch_%281%29.png?1779880935)
 

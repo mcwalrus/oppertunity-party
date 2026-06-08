@@ -1,9 +1,10 @@
-# KaylaKingdon-Bebb
+# Dr. Kayla Kingdon-Bebb
 
-**Role**: Dr. Kayla Kingdon-Bebb
+**Role**: Candidate
+**Electorate**: Wellington Bays
 
 > **URL**: https://www.opportunity.org.nz/candidate-kayla-kingdon-bebb
-> **Scraped**: 2026-06-08T16:04:47.514482
+> **Scraped**: 2026-06-08T16:20:11.698206
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9868/features/original/Kayla_Kingdon-Bebb__full.jpg?1773653330)
 

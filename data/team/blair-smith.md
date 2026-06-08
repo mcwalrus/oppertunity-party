@@ -1,9 +1,10 @@
-# BlairSmith
+# Blair Smith
 
-**Role**: Blair Smith
+**Role**: Candidate
+**Electorate**: Hamilton West
 
 > **URL**: https://www.opportunity.org.nz/candidate-blair-smith
-> **Scraped**: 2026-06-08T16:05:08.707996
+> **Scraped**: 2026-06-08T16:20:25.934626
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12533/features/original/IMG_6689_-_Blair_Smith.jpg?1779706042)
 

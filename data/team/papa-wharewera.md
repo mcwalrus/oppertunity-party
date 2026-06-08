@@ -1,9 +1,10 @@
-# PāpāWharewera
+# Kaperiere "Pāpā" Wharewera
 
-**Role**: Kaperiere "Pāpā" Wharewera
+**Role**: Candidate
+**Electorate**: Waiariki
 
 > **URL**: https://www.opportunity.org.nz/candidate-papa-wharewera
-> **Scraped**: 2026-06-08T16:05:14.058208
+> **Scraped**: 2026-06-08T16:20:28.583975
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9935/features/original/TeWha%CC%84nauWharewera-TeKaha-60_-_Papa_Wharewera_%281%29.jpg?1780377909)
 

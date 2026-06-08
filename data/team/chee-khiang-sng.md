@@ -1,9 +1,10 @@
-# Chee-Khiang (CK)Sng
+# Chee-Khiang (CK) Sng
 
-**Role**: Chee-Khiang (CK) Sng
+**Role**: Candidate
+**Electorate**: Kāpiti
 
 > **URL**: https://www.opportunity.org.nz/candidate-chee-khiang-sng
-> **Scraped**: 2026-06-08T16:05:09.737509
+> **Scraped**: 2026-06-08T16:20:26.699817
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12733/features/original/CKsng-Landscape_%281%29.jpg?1779883034)
 

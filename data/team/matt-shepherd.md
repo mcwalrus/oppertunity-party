@@ -1,9 +1,10 @@
-# MattShepherd
+# Matt Shepherd
 
-**Role**: Matt Shepherd
+**Role**: Candidate
+**Electorate**: Wairarapa
 
 > **URL**: https://www.opportunity.org.nz/candidate-matt-shepherd
-> **Scraped**: 2026-06-08T16:05:07.693983
+> **Scraped**: 2026-06-08T16:20:25.216210
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9934/features/original/unnamed_%281%29_%281%29.jpg?1773912807)
 

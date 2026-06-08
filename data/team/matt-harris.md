@@ -1,9 +1,10 @@
-# MattHarris
+# Matt Harris
 
-**Role**: Matt Harris
+**Role**: Candidate
+**Electorate**: Rangitata
 
 > **URL**: https://www.opportunity.org.nz/candidate-matt-harris
-> **Scraped**: 2026-06-08T16:04:53.592044
+> **Scraped**: 2026-06-08T16:20:15.662482
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12731/features/original/IMG_9842_-_Matthew_Harris.jpg?1779882054)
 

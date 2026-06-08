@@ -1,9 +1,10 @@
-# HollyKnill
+# Holly Knill
 
-**Role**: Holly Knill
+**Role**: Candidate
+**Electorate**: North Shore
 
 > **URL**: https://www.opportunity.org.nz/candidate-holly-knill
-> **Scraped**: 2026-06-08T16:04:58.298335
+> **Scraped**: 2026-06-08T16:20:17.112005
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9866/features/original/HKnill_ferry_Mar26_1.jpg?1773653481)
 

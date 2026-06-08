@@ -1,9 +1,10 @@
-# BiancaBeebe
+# Bianca Beebe
 
-**Role**: Donate to our Party Vote Campaign in Southland
+**Role**: Candidate
+**Electorate**: Southland
 
 > **URL**: https://www.opportunity.org.nz/candidate-bianca-beebe
-> **Scraped**: 2026-06-08T16:04:50.541281
+> **Scraped**: 2026-06-08T16:20:13.151857
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12038/features/original/DSC_1138_edited_%282%29.jpg?1778666145)
 

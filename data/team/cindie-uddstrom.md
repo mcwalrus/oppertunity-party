@@ -1,9 +1,10 @@
-# CindieUddstrom
+# Cindie Uddstrom
 
-**Role**: Cindie Uddstrom
+**Role**: Candidate
+**Electorate**: West Coast-Tasman
 
 > **URL**: https://www.opportunity.org.nz/candidate-cindie-uddstrom
-> **Scraped**: 2026-06-08T16:05:12.117402
+> **Scraped**: 2026-06-08T16:20:27.822126
 
 ![Meet Cindie - Candidate for Opportunity (West Coast-Tasman)]()
 

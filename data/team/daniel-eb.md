@@ -1,9 +1,10 @@
-# Daniel EbDeputy Leader
+# Daniel Eb
 
-**Role**: Daniel Eb
+**Role**: Deputy Leader
+**Electorate**: Kaipara Ki Mahurangi
 
 > **URL**: https://www.opportunity.org.nz/candidate-daniel-eb
-> **Scraped**: 2026-06-08T16:04:47.014589
+> **Scraped**: 2026-06-08T16:20:11.302176
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9874/features/original/op-auckland-west-candidations-20260419-73_%281%29.jpg?1779874182)
 

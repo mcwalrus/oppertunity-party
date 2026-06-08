@@ -1,9 +1,10 @@
-# HelenTait
+# Helen Tait
 
-**Role**: Helen Tait
+**Role**: Candidate
+**Electorate**: Waitaki
 
 > **URL**: https://www.opportunity.org.nz/candidate-helen-tait
-> **Scraped**: 2026-06-08T16:05:10.313154
+> **Scraped**: 2026-06-08T16:20:27.079019
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9865/features/original/Helen_Tait_Portrait_with_Roys_Peak.jpg?1773653459)
 

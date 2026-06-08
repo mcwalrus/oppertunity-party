@@ -1,9 +1,10 @@
-# SimonDellaBarca
+# Simon DellaBarca
 
-**Role**: Simon DellaBarca
+**Role**: Candidate
+**Electorate**: Whangārei
 
 > **URL**: https://www.opportunity.org.nz/candidate-simon-dellabarca
-> **Scraped**: 2026-06-08T16:04:52.020141
+> **Scraped**: 2026-06-08T16:20:14.558569
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12668/features/original/simon-dellabarca-landscape1_-_Simon_D_%281%29.jpg?1779880074)
 

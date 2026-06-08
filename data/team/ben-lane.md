@@ -1,9 +1,10 @@
-# BenLane
+# Ben Lane
 
-**Role**: Ben Lane
+**Role**: Candidate
+**Electorate**: Māngere
 
 > **URL**: https://www.opportunity.org.nz/candidate-ben-lane
-> **Scraped**: 2026-06-08T16:04:59.805832
+> **Scraped**: 2026-06-08T16:20:17.854767
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12865/features/original/BL_landscape_-_B_Lane.jpg?1779966755)
 

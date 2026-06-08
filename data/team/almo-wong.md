@@ -1,9 +1,10 @@
-# AlmoWong
+# Almo Wong
 
-**Role**: Almo Wong
+**Role**: Candidate
+**Electorate**: Henderson
 
 > **URL**: https://www.opportunity.org.nz/candidate-almo-wong
-> **Scraped**: 2026-06-08T16:05:14.669325
+> **Scraped**: 2026-06-08T16:20:29.914892
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9862/features/original/Almo_Wong_-_IMG_2337.jpg?1773652716)
 

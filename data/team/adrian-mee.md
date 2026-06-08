@@ -1,9 +1,10 @@
-# AdrianMee
+# Adrian Mee
 
-**Role**: Adrian Mee
+**Role**: Candidate
+**Electorate**: Selwyn
 
 > **URL**: https://www.opportunity.org.nz/candidate-adrian-mee
-> **Scraped**: 2026-06-08T16:05:03.810131
+> **Scraped**: 2026-06-08T16:20:20.264472
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12503/features/original/Adrian_Mee_-_May_2026_%283_of_6%29_-_Adrian_Mee_%281%29.jpg?1779705036)
 

@@ -1,9 +1,10 @@
-# CodyMarsh
+# Cody Marsh
 
-**Role**: Cody Marsh
+**Role**: Candidate
+**Electorate**: Northcote
 
 > **URL**: https://www.opportunity.org.nz/candidate-cody-marsh
-> **Scraped**: 2026-06-08T16:05:02.762697
+> **Scraped**: 2026-06-08T16:20:19.344420
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9893/features/original/Cody_Marsh_%281%29.jpg?1773826449)
 

@@ -1,9 +1,10 @@
-# Qiulae (Q) WongParty Leader
+# Qiulae (Q) Wong
 
-**Role**: Qiulae (Q) Wong
+**Role**: Party Leader
+**Electorate**: Mt Albert
 
 > **URL**: https://www.opportunity.org.nz/candidate-qiulae-wong
-> **Scraped**: 2026-06-08T16:04:46.552945
+> **Scraped**: 2026-06-08T16:20:10.789473
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12830/features/original/Copy_of_Copy_of_opportunitiy-grey-lynn-festival-20251122-30_%281%29.jpg?1779947810)
 

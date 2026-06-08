@@ -1,9 +1,10 @@
-# BenWylie-van-Eerd
+# Ben Wylie-van Eerd
 
-**Role**: Ben Wylie-van Eerd
+**Role**: Candidate
+**Electorate**: Hutt South
 
 > **URL**: https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd
-> **Scraped**: 2026-06-08T16:05:15.180923
+> **Scraped**: 2026-06-08T16:20:30.852312
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9863/features/original/Ben_Wylie-van_Eerd_-_Benjamin_Wylie-van_Eerd_%281%29.jpg?1773653519)
 

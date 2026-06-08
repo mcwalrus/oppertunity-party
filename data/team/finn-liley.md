@@ -1,9 +1,10 @@
-# FinnLiley
+# Finn Liley
 
-**Role**: Finn Liley
+**Role**: Candidate
+**Electorate**: Rotorua
 
 > **URL**: https://www.opportunity.org.nz/candidate-finn-liley
-> **Scraped**: 2026-06-08T16:05:00.713258
+> **Scraped**: 2026-06-08T16:20:18.237736
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9864/features/original/Finn_Liley_Landscape.jpg?1773653444)
 

@@ -1,9 +1,10 @@
-# SamPlummer
+# Sam Plummer
 
-**Role**: Sam Plummer
+**Role**: Candidate
+**Electorate**: Taupō
 
 > **URL**: https://www.opportunity.org.nz/candidate-sam-plummer
-> **Scraped**: 2026-06-08T16:05:05.653972
+> **Scraped**: 2026-06-08T16:20:21.704771
 
 ![Meet Sam - Candidate for Opportunity (Taupō)](https://assets.nationbuilder.com/garethmorgan/pages/9894/features/original/Sam_Plummer_willows_landscape_%281%29.jpg?1775106722)
 

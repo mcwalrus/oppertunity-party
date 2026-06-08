@@ -1,9 +1,10 @@
-# MathewPhillips
+# Mathew Phillips
 
-**Role**: Mathew Phillips
+**Role**: Candidate
+**Electorate**: Taieri
 
 > **URL**: https://www.opportunity.org.nz/candidate-mathew-phillips
-> **Scraped**: 2026-06-08T16:05:05.146485
+> **Scraped**: 2026-06-08T16:20:21.324330
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9871/features/original/MPhillips_Plain_%28flipped_to_right_aligned%29.jpg?1773653394)
 

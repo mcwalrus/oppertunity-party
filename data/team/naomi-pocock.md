@@ -1,9 +1,10 @@
-# NaomiPocock
+# Dr. Naomi Pocock
 
-**Role**: Dr. Naomi Pocock
+**Role**: Candidate
+**Electorate**: Hamilton East
 
 > **URL**: https://www.opportunity.org.nz/candidate-naomi-pocock
-> **Scraped**: 2026-06-08T16:05:06.121556
+> **Scraped**: 2026-06-08T16:20:22.629802
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9895/features/original/IMG_1146_%281%29.jpg?1774328027)
 

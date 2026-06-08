@@ -1,9 +1,10 @@
-# EvanFrench
+# Evan French
 
-**Role**: Evan French
+**Role**: Candidate
+**Electorate**: Glendene
 
 > **URL**: https://www.opportunity.org.nz/candidate-evan-french
-> **Scraped**: 2026-06-08T16:04:52.543831
+> **Scraped**: 2026-06-08T16:20:14.912196
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9931/features/original/mt-albert-bbq-20260314-25_%282%29.jpg?1773918111)
 

@@ -1,9 +1,10 @@
-# AdamMacRae-Martin
+# Adam MacRae-Martin
 
-**Role**: Adam MacRae-Martin
+**Role**: Candidate
+**Electorate**: Ōtāhuhu
 
 > **URL**: https://www.opportunity.org.nz/candidate-adam-macrae-martin
-> **Scraped**: 2026-06-08T16:05:02.296338
+> **Scraped**: 2026-06-08T16:20:18.987431
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9860/features/original/Adam_MacRae-Martin_Landscape_Business_Casual.jpg?1773653628)
 

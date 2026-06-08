@@ -1,9 +1,10 @@
-# LukeRoss
+# Luke Ross
 
-**Role**: Luke Ross
+**Role**: Candidate
+**Electorate**: Remutaka
 
 > **URL**: https://www.opportunity.org.nz/candidate-luke-ross
-> **Scraped**: 2026-06-08T16:05:07.152755
+> **Scraped**: 2026-06-08T16:20:23.455704
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9928/features/original/LR-Website-Banner_%281%29.jpg?1773823674)
 

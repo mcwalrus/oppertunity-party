@@ -1,9 +1,10 @@
-# SachaHaskell
+# Sacha Haskell
 
-**Role**: Sacha Haskell
+**Role**: Candidate
+**Electorate**: Tāmaki
 
 > **URL**: https://www.opportunity.org.nz/candidate-sacha-haskell
-> **Scraped**: 2026-06-08T16:04:54.401199
+> **Scraped**: 2026-06-08T16:20:16.031284
 
 ![Meet Q - Leader of Opportunity]()
 

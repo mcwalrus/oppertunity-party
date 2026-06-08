@@ -1,9 +1,10 @@
-# RobertMason
+# Robert Mason
 
-**Role**: Robert Mason
+**Role**: Candidate
+**Electorate**: Kenepuru
 
 > **URL**: https://www.opportunity.org.nz/candidate-robert-mason
-> **Scraped**: 2026-06-08T16:05:03.320854
+> **Scraped**: 2026-06-08T16:20:19.864735
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12500/features/original/robertmason_%281%29.jpg?1779702687)
 
