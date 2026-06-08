@@ -3,7 +3,7 @@
 **Role**: Daniel Eb
 
 > **URL**: https://www.opportunity.org.nz/candidate-daniel-eb
-> **Scraped**: 2026-06-08T12:41:48.087759
+> **Scraped**: 2026-06-08T13:25:54.449758
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9874/features/original/op-auckland-west-candidations-20260419-73_%281%29.jpg?1779874182)
 
@@ -37,7 +37,7 @@ Dan is motivated to stand by a strong sense of responsibility to New Zealand and
 
 Candidate for Opportunity (Kaipara ki Mahurangi) and Deputy Leader
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#377356595e525b1972557758474758454342595e434e1958455019594d)
+[Email: [email protected]](/cdn-cgi/l/email-protection#92d6f3fcfbf7febcd7f0d2fde2e2fde0e6e7fcfbe6ebbcfde0f5bcfce8)
 
 ## Donate to our Party Vote Campaign in Kaipara ki Mahurangi
 

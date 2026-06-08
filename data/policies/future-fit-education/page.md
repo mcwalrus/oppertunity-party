@@ -1,7 +1,7 @@
 # Future-fit Education
 
 > **URL**: https://www.opportunity.org.nz/future_fit_education
-> **Scraped**: 2026-06-08T12:41:42.175814
+> **Scraped**: 2026-06-08T13:25:48.355111
 
 ![Future fit Education](https://assets.nationbuilder.com/garethmorgan/pages/9135/features/original/Education.png?1771489828)
 

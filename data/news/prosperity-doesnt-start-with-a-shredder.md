@@ -1,7 +1,7 @@
 # Prosperity doesn’t start with a shredder
 
 > **URL**: https://www.opportunity.org.nz/prosperity_doesn_t_start_with_a_shredder
-> **Scraped**: 2026-06-08T12:42:12.531664
+> **Scraped**: 2026-06-08T13:26:26.336692
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/12302/features/original/sulthan-auliya-ErhbdNvVmz4-unsplash.jpg?1779340015)](/prosperity_doesn_t_start_with_a_shredder)
 

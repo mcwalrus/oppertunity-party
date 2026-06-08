@@ -3,7 +3,7 @@
 **Role**: Mathew Phillips
 
 > **URL**: https://www.opportunity.org.nz/candidate-mathew-phillips
-> **Scraped**: 2026-06-08T12:42:02.441271
+> **Scraped**: 2026-06-08T13:26:11.909854
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9871/features/original/MPhillips_Plain_%28flipped_to_right_aligned%29.jpg?1773653394)
 
@@ -41,7 +41,7 @@ He stands for a government that restores genuine opportunity and gives Kiwis the
 
 Candidate for Opportunity (Taieri)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#2964485d414c5e07794140454540595a69465959465b5d5c47405d5007465b4e074753)
+[Email: [email protected]](/cdn-cgi/l/email-protection#6825091c000d1f46380001040401181b28071818071a1c1d06011c1146071a0f460612)
 
 ## Donate to our Party Vote Campaign in Taieri
 

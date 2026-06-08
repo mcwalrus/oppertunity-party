@@ -3,7 +3,7 @@
 **Role**: Evan French
 
 > **URL**: https://www.opportunity.org.nz/candidate-evan-french
-> **Scraped**: 2026-06-08T12:41:52.625445
+> **Scraped**: 2026-06-08T13:25:59.805036
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9931/features/original/mt-albert-bbq-20260314-25_%282%29.jpg?1773918111)
 
@@ -37,7 +37,7 @@ Evan is motivated by seeing the loss of hope in his peers for New Zealand's futu
 
 Candidate for Opportunity (Glendene)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#98ddeef9f6b6deeafdf6fbf0d8f7e8e8f7eaecedf6f1ece1b6f7eaffb6f6e2)
+[Email: [email protected]](/cdn-cgi/l/email-protection#9fdae9fef1b1d9edfaf1fcf7dff0efeff0edebeaf1f6ebe6b1f0edf8b1f1e5)
 
 ## Donate to our Party Vote Campaign in Glendene
 

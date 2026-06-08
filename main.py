@@ -11,6 +11,7 @@ from scraper.client import DATA_DIR, clean_data
 from scraper.news import save_news, scrape_news
 from scraper.party_info import save_party_info, scrape_party_info
 from scraper.pdf_convert import convert_all_pdfs
+from scraper.pdf_download import download_policy_pdfs, migrate_existing_pdfs
 from scraper.policies import save_policies, scrape_policies
 from scraper.team import save_team, scrape_team
 
@@ -75,6 +76,23 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
         items = scrape_fn()
         save_fn(items)
         totals[label] = len(items)
+
+        # After scraping policies, download PDFs and convert them
+        if key == "policies" and items:
+            # Migrate any existing PDFs that aren't in reference.json
+            if not (DATA_DIR / "policy-assets" / "reference.json").exists():
+                migrate_existing_pdfs()
+
+            downloads = download_policy_pdfs(items)
+            downloaded = sum(1 for r in downloads if r["status"] == "downloaded")
+            skipped = sum(1 for r in downloads if r["status"] == "skipped_existing")
+            failed = sum(1 for r in downloads if r["status"] == "failed")
+            logger.info("PDF downloads: %d downloaded, %d skipped, %d failed", downloaded, skipped, failed)
+
+            # Then convert PDFs to markdown
+            logger.info("--- Converting policy PDFs ---")
+            pdf_results = convert_all_pdfs()
+            totals["policy PDFs"] = len(pdf_results)
 
     elapsed = time.time() - start
     summary = ", ".join(f"{v} {k}" for k, v in totals.items())

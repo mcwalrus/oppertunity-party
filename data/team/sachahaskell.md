@@ -3,7 +3,7 @@
 **Role**: Sacha Haskell
 
 > **URL**: https://www.opportunity.org.nz/candidate-sacha-haskell
-> **Scraped**: 2026-06-08T12:41:55.290788
+> **Scraped**: 2026-06-08T13:26:01.260109
 
 ![Meet Q - Leader of Opportunity]()
 
@@ -46,7 +46,7 @@ Above all, she believes politics should be about service, integrity, and creatin
 
 Candidate for Opportunity (Tāmaki)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#683b090b00094620091b030d040428071818071a1c1d06011c1146071a0f460612)
+[Email: [email protected]](/cdn-cgi/l/email-protection#fcaf9d9f949dd2b49d8f97999090bc938c8c938e888992958885d2938e9bd29286)
 
 ## Donate to our Party Vote Campaign in Tāmaki
 

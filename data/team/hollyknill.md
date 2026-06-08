@@ -3,7 +3,7 @@
 **Role**: Holly Knill
 
 > **URL**: https://www.opportunity.org.nz/candidate-holly-knill
-> **Scraped**: 2026-06-08T12:41:57.153326
+> **Scraped**: 2026-06-08T13:26:04.641438
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9866/features/original/HKnill_ferry_Mar26_1.jpg?1773653481)
 
@@ -41,7 +41,7 @@ She is standing for Opportunity because New Zealand has the talent and resources
 
 Candidate for Opportunity (North Shore)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#723a1d1e1e0b5c391c1b1e1e321d02021d0006071c1b060b5c1d00155c1c08)
+[Email: [email protected]](/cdn-cgi/l/email-protection#0a42656666732441646366664a657a7a65787e7f64637e732465786d246470)
 
 ## Donate to our Party Vote Campaign in North Shore
 

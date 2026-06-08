@@ -1,7 +1,7 @@
 # Inter-generational Infrastructure
 
 > **URL**: https://www.opportunity.org.nz/intergenerational_infrastructure
-> **Scraped**: 2026-06-08T12:41:44.616582
+> **Scraped**: 2026-06-08T13:25:50.403512
 
 ![Intergenerational Infrastructure](https://assets.nationbuilder.com/garethmorgan/pages/9141/features/original/Infrastructure.png?1771490460)
 

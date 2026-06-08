@@ -1,7 +1,7 @@
 # Honouring Te Tiriti
 
 > **URL**: https://www.opportunity.org.nz/honouring_te_tiriti
-> **Scraped**: 2026-06-08T12:41:41.744064
+> **Scraped**: 2026-06-08T13:25:47.439513
 
 ![Honouring Te Tiriti](https://assets.nationbuilder.com/garethmorgan/pages/9142/features/original/Ti_Tiriti.png?1771490507)
 

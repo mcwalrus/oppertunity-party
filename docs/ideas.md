@@ -4,6 +4,7 @@ Ideas for later:
 - [ ] Pull information from policy discussion outside website. I.e substack.
 - [ ] MCP concept.
 
+DO
 
 
 

@@ -1,7 +1,7 @@
 # Q's reflections from Waitangi
 
 > **URL**: https://www.opportunity.org.nz/5_reflections_from_waitangi
-> **Scraped**: 2026-06-08T12:42:17.334841
+> **Scraped**: 2026-06-08T13:26:33.821373
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/8738/features/original/Q_Waitangi.jpg?1770337943)](/5_reflections_from_waitangi)
 

@@ -1,7 +1,7 @@
 # Free Public Transport
 
 > **URL**: https://www.opportunity.org.nz/free_public_transport
-> **Scraped**: 2026-06-08T12:42:13.953363
+> **Scraped**: 2026-06-08T13:26:27.938228
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/10553/features/original/aleza-van-der-werff-a6xyHkP9-XA-unsplash.jpg?1775701258)](/free_public_transport)
 

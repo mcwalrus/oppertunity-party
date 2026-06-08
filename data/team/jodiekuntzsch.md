@@ -3,7 +3,7 @@
 **Role**: Jodie Kuntzsch
 
 > **URL**: https://www.opportunity.org.nz/candidate-jodie-kuntzsch
-> **Scraped**: 2026-06-08T12:41:57.636737
+> **Scraped**: 2026-06-08T13:26:06.481758
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12698/features/original/Jodie_Kuntzsch_landscape_on_vessel_-_Jodie_Kuntzsch_%281%29.png?1779880935)
 
@@ -35,7 +35,7 @@ When not campaigning, you’ll find her trying out new recipes on harsh critics 
 
 Candidate for Opportunity (Nelson)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#3b71545f525e15704e554f414858537b544b4b54494f4e55524f421554495c155541)
+[Email: [email protected]](/cdn-cgi/l/email-protection#62280d060b074c29170c161811010a220d12120d1016170c0b161b4c0d10054c0c18)
 
 ## Donate to our Party Vote Campaign in Nelson
 

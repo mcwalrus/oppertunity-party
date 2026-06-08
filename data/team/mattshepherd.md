@@ -3,7 +3,7 @@
 **Role**: Matt Shepherd
 
 > **URL**: https://www.opportunity.org.nz/candidate-matt-shepherd
-> **Scraped**: 2026-06-08T12:42:04.754944
+> **Scraped**: 2026-06-08T13:26:15.962211
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9934/features/original/unnamed_%281%29_%281%29.jpg?1773912807)
 
@@ -41,7 +41,7 @@ Matt knows we can do better for our children and build a better future for all K
 
 Candidate for Opportunity (Wairarapa)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#014c6075752f5269647169647365416e71716e7375746f6875782f6e73662f6f7b)
+[Email: [email protected]](/cdn-cgi/l/email-protection#cd80acb9b9e39ea5a8bda5a8bfa98da2bdbda2bfb9b8a3a4b9b4e3a2bfaae3a3b7)
 
 ## Donate to our Party Vote Campaign in Wairarapa
 

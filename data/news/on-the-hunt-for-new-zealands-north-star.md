@@ -1,7 +1,7 @@
 # On the hunt for New Zealand’s North Star
 
 > **URL**: https://www.opportunity.org.nz/on_the_hunt_for_new_zealand_s_north_star
-> **Scraped**: 2026-06-08T12:42:18.701481
+> **Scraped**: 2026-06-08T13:26:35.315313
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/8178/features/original/OpportunityLeader_Qiulae_Wong_3.jpg?1766285627)
 

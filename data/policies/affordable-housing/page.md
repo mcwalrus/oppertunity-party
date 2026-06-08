@@ -1,7 +1,7 @@
 # Affordable Housing
 
 > **URL**: https://www.opportunity.org.nz/affordable_housing
-> **Scraped**: 2026-06-08T12:41:45.071005
+> **Scraped**: 2026-06-08T13:25:50.931036
 
 ![Affordable Housing](https://assets.nationbuilder.com/garethmorgan/pages/9139/features/original/Housing.png?1771490341)
 

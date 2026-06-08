@@ -1,7 +1,7 @@
 # The Pray and Delay Budget
 
 > **URL**: https://www.opportunity.org.nz/the_pray_and_delay_budget
-> **Scraped**: 2026-06-08T12:42:11.048011
+> **Scraped**: 2026-06-08T13:26:24.423479
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/13061/features/original/Screenshot_2026-05-28_163000_-_Copy.jpg?1780309465)](/the_pray_and_delay_budget)
 

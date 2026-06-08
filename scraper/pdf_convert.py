@@ -24,6 +24,7 @@ from .client import DATA_DIR, save_content
 logger = logging.getLogger(__name__)
 
 POLICY_ASSETS_DIR = DATA_DIR / "policy-assets"
+REFERENCE_FILE = POLICY_ASSETS_DIR / "reference.json"
 
 # Regex for the header key-value format: "Date                February 2026"
 HEADER_FIELD_RE = re.compile(r"^(Date|Policy|Document Type)\s{2,}(.+)$")
@@ -32,7 +33,10 @@ PAGE_FOOTER_RE = re.compile(r"^Opportunity\s+Party\s+")
 
 
 def convert_all_pdfs() -> list[dict]:
-    """Find all PDFs in policy-assets and convert them to markdown."""
+    """Find all PDFs in policy-assets and convert them to markdown.
+
+    Output is organized into subdirectories under data/policies/{slug}/.
+    """
     if not POLICY_ASSETS_DIR.exists():
         logger.warning("No policy-assets directory found")
         return []
@@ -45,7 +49,7 @@ def convert_all_pdfs() -> list[dict]:
         try:
             entry = convert_pdf(pdf_path)
             results.append(entry)
-            logger.info("Converted: %s → %s", pdf_path.name, entry["output_file"])
+            logger.info("Converted: %s -> %s", pdf_path.name, entry["output_file"])
         except Exception as e:
             logger.error("Failed to convert %s: %s", pdf_path.name, e)
 
@@ -55,6 +59,7 @@ def convert_all_pdfs() -> list[dict]:
             "source_file": r["source_file"],
             "title": r["title"],
             "policy": r["policy"],
+            "policy_slug": r["policy_slug"],
             "date": r["date"],
             "document_type": r["document_type"],
             "output_file": r["output_file"],
@@ -71,30 +76,40 @@ def convert_all_pdfs() -> list[dict]:
 
 
 def convert_pdf(pdf_path: Path) -> dict:
-    """Convert a single policy PDF to markdown and save it."""
+    """Convert a single policy PDF to markdown and save it.
+
+    Saves output into data/policies/{slug}/{output_file} based on filename pattern.
+    """
     raw_text = extract_text(pdf_path)
     header, body_start = parse_header(raw_text)
     body = extract_body(raw_text, body_start)
     body_md = format_body(body)
     markdown = format_markdown(header, body_md, pdf_path)
 
-    # Build output filename: pdf-{policy-slug}_{document-type-slug}.md
-    policy_slug = _slugify(header.get("policy", "unknown"))
+    # Try to get policy_slug from reference.json first (for downloaded PDFs)
+    policy_slug = _get_policy_slug_from_reference(pdf_path.name)
+    if not policy_slug:
+        policy_slug = _slug_from_filename(pdf_path.name)
     doc_type_slug = _slugify(header.get("document_type", ""))
-    if doc_type_slug:
-        output_file = f"pdf-{policy_slug}_{doc_type_slug}.md"
-    else:
-        output_file = f"pdf-{policy_slug}.md"
 
-    save_content(DATA_DIR / "policies", output_file, markdown)
+    # Build output filename
+    if doc_type_slug:
+        output_file = f"pdf-{doc_type_slug}.md"
+    else:
+        output_file = "pdf-default.md"
+
+    # Save into the policy's directory
+    policy_dir = DATA_DIR / "policies" / policy_slug
+    save_content(policy_dir, output_file, markdown)
 
     return {
         "source_file": pdf_path.name,
         "title": header.get("policy", policy_slug),
         "policy": header.get("policy", ""),
+        "policy_slug": policy_slug,
         "date": header.get("date", ""),
         "document_type": header.get("document_type", ""),
-        "output_file": output_file,
+        "output_file": str(policy_dir / output_file),
     }
 
 
@@ -227,12 +242,49 @@ def format_markdown(header: dict, body_md: str, pdf_path: Path) -> str:
 def _slugify(text: str) -> str:
     """Convert text to a filesystem-friendly slug."""
     slug = text.lower().strip()
-    # Replace apostrophes and special chars
     slug = slug.replace("'", "")
-    # Keep only alphanumeric, hyphens, spaces
     slug = re.sub(r"[^a-z0-9\- ]", "", slug)
     slug = slug.replace(" ", "-")
-    # Collapse multiple hyphens
     while "--" in slug:
         slug = slug.replace("--", "-")
     return slug.strip("-")
+
+
+def _slug_from_filename(filename: str) -> str:
+    """Derive policy slug from PDF filename (fallback when not in reference.json).
+
+    Handles patterns:
+    - Opportunity_Abundant Energy_Policy Overview.pdf -> abundant-energy
+    - Opportunity_Tax Reset_Transition Plan.pdf -> tax-reset
+    - _migrated_{filename} -> derive from the original filename
+    - Any other pattern -> unknown
+    """
+    # Skip migration prefix
+    name = filename.replace("_migrated_", "").replace(".pdf", "")
+    name = name.replace("Opportunity_", "")
+    parts = name.split("_")
+    if parts and parts[0]:
+        slug = parts[0].lower().replace(" ", "-").strip("-")
+        # Skip if it looks like a Google Drive file ID (very long alphanumeric)
+        if len(slug) > 30 or not any(c.isalpha() for c in slug):
+            return "unknown"
+        return slug
+    return "unknown"
+
+
+def _get_policy_slug_from_reference(filename: str) -> str | None:
+    """Look up the policy_slug for a PDF from reference.json.
+
+
+    Returns the policy_slug if found, None otherwise.
+    """
+    if not REFERENCE_FILE.exists():
+        return None
+    try:
+        ref = json.loads(REFERENCE_FILE.read_text())
+        for entry in ref.get("downloads", {}).values():
+            if entry.get("filename") == filename:
+                return entry.get("policy_slug")
+    except (json.JSONDecodeError, IOError):
+        pass
+    return None

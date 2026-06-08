@@ -1,7 +1,7 @@
 # Healthy People
 
 > **URL**: https://www.opportunity.org.nz/healthy_people
-> **Scraped**: 2026-06-08T12:41:43.727904
+> **Scraped**: 2026-06-08T13:25:49.380062
 
 ![Healthy People](https://assets.nationbuilder.com/garethmorgan/pages/9101/features/original/Healthy_People.png?1771487940)
 

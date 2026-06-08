@@ -3,7 +3,7 @@
 **Role**: Finn Liley
 
 > **URL**: https://www.opportunity.org.nz/candidate-finn-liley
-> **Scraped**: 2026-06-08T12:41:58.795971
+> **Scraped**: 2026-06-08T13:26:07.560356
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9864/features/original/Finn_Liley_Landscape.jpg?1773653444)
 
@@ -43,7 +43,7 @@ Finn is standing for the Opportunity Party as they are the only party who are wi
 
 Candidate for Opportunity (Rotorua)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#581e313636761431343d2118372828372a2c2d36312c2176372a3f763622)
+[Email: [email protected]](/cdn-cgi/l/email-protection#67210e0909492b0e0b021e2708171708151312090e131e4908150049091d)
 
 ## Donate to our Party Vote Campaign in Rotorua
 

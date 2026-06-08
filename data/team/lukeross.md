@@ -3,7 +3,7 @@
 **Role**: Luke Ross
 
 > **URL**: https://www.opportunity.org.nz/candidate-luke-ross
-> **Scraped**: 2026-06-08T12:42:04.299352
+> **Scraped**: 2026-06-08T13:26:14.479151
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9928/features/original/LR-Website-Banner_%281%29.jpg?1773823674)
 
@@ -37,7 +37,7 @@ Luke recently purchased his first home in Silverstream, with his partner Alice a
 
 Candidate for Opportunity (Remutaka)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#6e221b050b403c011d1d2e011e1e011c1a1b00071a1740011c09400014)
+[Email: [email protected]](/cdn-cgi/l/email-protection#337f4658561d615c4040735c43435c4147465d5a474a1d5c41541d5d49)
 
 ## Donate to our Party Vote Campaign in Remutaka
 

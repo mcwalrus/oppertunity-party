@@ -1,7 +1,7 @@
 # Smart on Crime
 
 > **URL**: https://www.opportunity.org.nz/smart_on_crime
-> **Scraped**: 2026-06-08T12:41:45.507478
+> **Scraped**: 2026-06-08T13:25:51.740353
 
 ![Smart on Crime](https://assets.nationbuilder.com/garethmorgan/pages/9134/features/original/pexels-ekaterina-bolovtsova-6077447_1.jpg?1771550265)
 

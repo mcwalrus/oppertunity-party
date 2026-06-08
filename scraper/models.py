@@ -14,6 +14,7 @@ class PolicyPage:
     title: str
     url: str
     content: str = ""
+    pdf_downloads: list[str] = field(default_factory=list)
     scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
 
 

@@ -1,7 +1,7 @@
 # Statement on the Fisheries Amendment Bill
 
 > **URL**: https://www.opportunity.org.nz/statement_on_the_fisheries_amendment_bill
-> **Scraped**: 2026-06-08T12:42:14.858212
+> **Scraped**: 2026-06-08T13:26:29.378815
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/10091/features/original/mathieu-le-roux-6_HqvY1E7NI-unsplash.jpg?1774233703)](/statement_on_the_fisheries_amendment_bill)
 

@@ -49,15 +49,17 @@ def scrape_policies() -> list[PolicyPage]:
         try:
             soup = fetch_page(path)
             title = _extract_title(soup)
+            pdf_links = _extract_pdf_links(soup)
             content_md = _extract_markdown(soup)
             policy = PolicyPage(
                 slug=slug,
                 title=title,
                 url=f"https://www.opportunity.org.nz{path}",
                 content=content_md,
+                pdf_downloads=pdf_links,
             )
             policies.append(policy)
-            logger.info("Scraped policy: %s", title)
+            logger.info("Scraped policy: %s (%d PDF links)", title, len(pdf_links))
         except Exception as e:
             logger.error("Failed to scrape policy %s: %s", slug, e)
 
@@ -65,17 +67,19 @@ def scrape_policies() -> list[PolicyPage]:
 
 
 def save_policies(policies: list[PolicyPage]) -> dict[str, Path]:
-    """Save each policy to its own markdown file and a combined JSON."""
+    """Save each policy into its own directory under data/policies/{slug}/."""
     output_dir = DATA_DIR / "policies"
     saved: dict[str, Path] = {}
 
     for policy in policies:
+        policy_dir = output_dir / policy.slug
         md_path = save_content(
-            output_dir,
-            f"{policy.slug}.md",
+            policy_dir,
+            "page.md",
             _format_policy_md(policy),
         )
         saved[policy.slug] = md_path
+        logger.debug("Saved %s/page.md", policy.slug)
 
     json_data = [
         {
@@ -83,6 +87,7 @@ def save_policies(policies: list[PolicyPage]) -> dict[str, Path]:
             "title": p.title,
             "url": p.url,
             "content": p.content,
+            "pdf_downloads": p.pdf_downloads,
             "scraped_at": p.scraped_at,
         }
         for p in policies
@@ -91,6 +96,16 @@ def save_policies(policies: list[PolicyPage]) -> dict[str, Path]:
     saved["_index"] = json_path
 
     return saved
+
+
+def _extract_pdf_links(soup) -> list[str]:
+    """Extract Google Drive and direct PDF download links from a policy page."""
+    links = []
+    for a_tag in soup.select("a[href]"):
+        href = a_tag.get("href", "")
+        if "drive.google.com" in href or href.lower().endswith(".pdf"):
+            links.append(href)
+    return links
 
 
 def _discover_policy_links(soup) -> None:

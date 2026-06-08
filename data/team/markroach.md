@@ -3,7 +3,7 @@
 **Role**: Mark Roach
 
 > **URL**: https://www.opportunity.org.nz/candidate-mark-roach
-> **Scraped**: 2026-06-08T12:42:03.845653
+> **Scraped**: 2026-06-08T13:26:13.704525
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9870/features/original/Mark_Roach-3LS1.jpg?1773653583)
 
@@ -39,7 +39,7 @@ Outside politics, Mark enjoys playing music, attending gigs and being out and ab
 
 Candidate for Opportunity (Waitākere)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#2865495a43067a47494b4068475858475a5c5d46415c5106475a4f064652)
+[Email: [email protected]](/cdn-cgi/l/email-protection#9dd0fceff6b3cff2fcfef5ddf2ededf2efe9e8f3f4e9e4b3f2effab3f3e7)
 
 ## Donate to our Party Vote Campaign in Waitākere
 

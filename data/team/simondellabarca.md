@@ -3,7 +3,7 @@
 **Role**: Simon DellaBarca
 
 > **URL**: https://www.opportunity.org.nz/candidate-simon-dellabarca
-> **Scraped**: 2026-06-08T12:41:52.030914
+> **Scraped**: 2026-06-08T13:25:58.979232
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12668/features/original/simon-dellabarca-landscape1_-_Simon_D_%281%29.jpg?1779880074)
 
@@ -35,7 +35,7 @@ Outside of politics, Simon is happiest surfing, riding bikes and enjoying family
 
 Candidate for Opportunity (Whangārei)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#53003a3e3c3d7d17363f3f321132213032133c23233c2127263d3a272a7d3c21347d3d29)
+[Email: [email protected]](/cdn-cgi/l/email-protection#75261c181a1b5b31101919143714071614351a05051a0701001b1c010c5b1a07125b1b0f)
 
 ## Donate to our Party Vote Campaign in Whangārei
 

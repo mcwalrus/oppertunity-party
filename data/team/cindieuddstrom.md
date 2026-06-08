@@ -3,7 +3,7 @@
 **Role**: Cindie Uddstrom
 
 > **URL**: https://www.opportunity.org.nz/candidate-cindie-uddstrom
-> **Scraped**: 2026-06-08T12:42:08.329520
+> **Scraped**: 2026-06-08T13:26:20.301204
 
 ![Meet Cindie - Candidate for Opportunity (West Coast-Tasman)]()
 
@@ -37,7 +37,7 @@ As a third-generation Coaster, Cindie knows the value of knowledge 'at the coal-
 
 Candidate for Opportunity (West Coast-Tasman)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#febd97909a979bd0ab9a9a8d8a8c9193be918e8e918c8a8b90978a87d0918c99d09084)
+[Email: [email protected]](/cdn-cgi/l/email-protection#d497bdbab0bdb1fa81b0b0a7a0a6bbb994bba4a4bba6a0a1babda0adfabba6b3fabaae)
 
 ## Donate to our Party Vote Campaign in West Cost - Tasman
 

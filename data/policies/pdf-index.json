@@ -1,42 +1,101 @@
 [
   {
+    "source_file": "1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI.pdf",
+    "title": "Abundant Energy",
+    "policy": "Abundant Energy",
+    "policy_slug": "1-qmkap3ci8",
+    "date": "February 2026",
+    "document_type": "Policy Overview",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/1-qmkap3ci8/pdf-policy-overview.md"
+  },
+  {
+    "source_file": "116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L.pdf",
+    "title": "Citizen's Voice",
+    "policy": "Citizen's Voice",
+    "policy_slug": "116yio6j2",
+    "date": "June 2025",
+    "document_type": "Policy Overview",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/116yio6j2/pdf-policy-overview.md"
+  },
+  {
+    "source_file": "1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B.pdf",
+    "title": "Tax Reset",
+    "policy": "Tax Reset",
+    "policy_slug": "unknown",
+    "date": "May 2026",
+    "document_type": "Policy Overview",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/unknown/pdf-policy-overview.md"
+  },
+  {
+    "source_file": "1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq.pdf",
+    "title": "Healthy Oceans",
+    "policy": "Healthy Oceans",
+    "policy_slug": "unknown",
+    "date": "February 2026",
+    "document_type": "Policy Overview",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/unknown/pdf-policy-overview.md"
+  },
+  {
+    "source_file": "1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW.pdf",
+    "title": "Tax Reset",
+    "policy": "Tax Reset",
+    "policy_slug": "unknown",
+    "date": "May 2026",
+    "document_type": "Policy Addendum",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/unknown/pdf-policy-addendum.md"
+  },
+  {
+    "source_file": "MakingZeroTheHero-Summary-Report.pdf",
+    "title": "unknown",
+    "policy": "",
+    "policy_slug": "unknown",
+    "date": "",
+    "document_type": "",
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/unknown/pdf-default.md"
+  },
+  {
     "source_file": "Opportunity_Policy_Abundant Energy.pdf",
     "title": "Abundant Energy",
     "policy": "Abundant Energy",
+    "policy_slug": "policy",
     "date": "February 2026",
     "document_type": "Policy Overview",
-    "output_file": "pdf-abundant-energy_policy-overview.md"
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/policy/pdf-policy-overview.md"
   },
   {
     "source_file": "Opportunity_Policy_Citizens Voice.pdf",
     "title": "Citizen's Voice",
     "policy": "Citizen's Voice",
+    "policy_slug": "policy",
     "date": "June 2025",
     "document_type": "Policy Overview",
-    "output_file": "pdf-citizens-voice_policy-overview.md"
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/policy/pdf-policy-overview.md"
   },
   {
     "source_file": "Opportunity_Policy_Healthy Oceans.pdf",
     "title": "Healthy Oceans",
     "policy": "Healthy Oceans",
+    "policy_slug": "policy",
     "date": "February 2026",
     "document_type": "Policy Overview",
-    "output_file": "pdf-healthy-oceans_policy-overview.md"
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/policy/pdf-policy-overview.md"
   },
   {
     "source_file": "Opportunity_Tax Reset_Policy Overview.pdf",
     "title": "Tax Reset",
     "policy": "Tax Reset",
+    "policy_slug": "tax-reset",
     "date": "May 2026",
     "document_type": "Policy Overview",
-    "output_file": "pdf-tax-reset_policy-overview.md"
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/tax-reset/pdf-policy-overview.md"
   },
   {
     "source_file": "Opportunity_Tax Reset_Transition Plan.pdf",
     "title": "Tax Reset",
     "policy": "Tax Reset",
+    "policy_slug": "tax-reset",
     "date": "May 2026",
     "document_type": "Policy Addendum",
-    "output_file": "pdf-tax-reset_policy-addendum.md"
+    "output_file": "/Users/max.collier/Projects/Max/vault/oppertunity-party/data/policies/tax-reset/pdf-policy-addendum.md"
   }
 ]

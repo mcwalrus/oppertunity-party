@@ -1,7 +1,7 @@
 # Meet the first Opportunity candidates
 
 > **URL**: https://www.opportunity.org.nz/meet_the_opportunity_candidates
-> **Scraped**: 2026-06-08T12:42:14.426676
+> **Scraped**: 2026-06-08T13:26:28.838207
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/10157/features/original/654206668_1463030065188080_5681147117333456519_n.jpg?1774389999)](/meet_the_opportunity_candidates)
 

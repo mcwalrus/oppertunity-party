@@ -3,7 +3,7 @@
 **Role**: Dr. Kayla Kingdon-Bebb
 
 > **URL**: https://www.opportunity.org.nz/candidate-kayla-kingdon-bebb
-> **Scraped**: 2026-06-08T12:41:48.542949
+> **Scraped**: 2026-06-08T13:25:54.923102
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9868/features/original/Kayla_Kingdon-Bebb__full.jpg?1773653330)
 
@@ -39,7 +39,7 @@ Kayla is driven by a strong ethic of community service and, having found herself
 
 Candidate for Opportunity (Wellington Bays)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#bcf7ddc5d0dd92f7d5d2dbd8d3d291fed9dedefcd3ccccd3cec8c9d2d5c8c592d3cedb92d2c6)
+[Email: [email protected]](/cdn-cgi/l/email-protection#c18aa0b8ada0ef8aa8afa6a5aeafec83a4a3a381aeb1b1aeb3b5b4afa8b5b8efaeb3a6efafbb)
 
 ## Donate to our Party Vote Campaign in Wellington Bays
 

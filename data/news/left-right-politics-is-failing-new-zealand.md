@@ -1,7 +1,7 @@
 # Left-right politics is failing New Zealand
 
 > **URL**: https://www.opportunity.org.nz/_left_right_politics_is_failing_new_zealand
-> **Scraped**: 2026-06-08T12:42:12.070156
+> **Scraped**: 2026-06-08T13:26:25.743840
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/12566/features/original/QUOTE_%2824%29.jpg?1779854939)](/_left_right_politics_is_failing_new_zealand)
 

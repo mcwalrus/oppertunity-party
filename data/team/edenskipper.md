@@ -3,7 +3,7 @@
 **Role**: Eden Skipper (Ngāi Tahu)
 
 > **URL**: https://www.opportunity.org.nz/candidate-eden-skipper
-> **Scraped**: 2026-06-08T12:42:05.215711
+> **Scraped**: 2026-06-08T13:26:16.414522
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9873/features/original/Eden_skipper_2_edit_%281%29.jpg?1773826058)
 
@@ -39,7 +39,7 @@ Given the recent mood changes in the economy, he feels Christchurch City and Can
 
 Candidate for Opportunity (Christchurch Central)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#89ccedece7a7dae2e0f9f9ecfbc9e6f9f9e6fbfdfce7e0fdf0a7e6fbeea7e7f3)
+[Email: [email protected]](/cdn-cgi/l/email-protection#125776777c3c41797b62627760527d62627d6066677c7b666b3c7d60753c7c68)
 
 ## Donate to our Party Vote Campaign in Christchurch Central
 

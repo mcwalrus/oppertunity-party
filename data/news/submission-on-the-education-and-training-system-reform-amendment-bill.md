@@ -1,7 +1,7 @@
 # Submission on The Education and Training (System Reform) Amendment Bill
 
 > **URL**: https://www.opportunity.org.nz/education_and_training_system_reform_amendment_bill
-> **Scraped**: 2026-06-08T12:42:18.238764
+> **Scraped**: 2026-06-08T13:26:34.814852
 
 ## Submission on The Education and Training (System Reform) Amendment Bill
 

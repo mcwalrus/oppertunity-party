@@ -1,7 +1,7 @@
 # Abundant Energy
 
 > **URL**: https://www.opportunity.org.nz/abundant-energy
-> **Scraped**: 2026-06-08T12:41:38.618179
+> **Scraped**: 2026-06-08T13:25:44.620560
 
 ![Abundant Energy](https://assets.nationbuilder.com/garethmorgan/pages/9144/features/original/curtis-hystad-GWWr3hKc7cU-unsplash_1_%283%29.png?1771494988)
 

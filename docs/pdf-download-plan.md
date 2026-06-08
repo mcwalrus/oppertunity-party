@@ -1,10 +1,10 @@
-# Plan: Automated PDF Download as Part of Scrape
+# Plan: Automated PDF Download + Organized Policy Storage
 
 ## Problem
 
-Policy PDFs in `data/policy-assets/` are currently downloaded manually. The download links (Google Drive URLs) are embedded in the policy pages on the website. When running `just scrape`, PDFs are **not** fetched — only the web pages are scraped, and then any PDFs already sitting in `policy-assets/` are converted to markdown.
+1. **PDFs not downloaded automatically**: Policy PDFs in `data/policy-assets/` are currently downloaded manually. When running `just scrape`, PDFs are **not** fetched — only the web pages are scraped, and then any PDFs already sitting in `policy-assets/` are converted to markdown. A fresh scrape on a new machine produces no PDF-derived content until someone manually downloads the PDFs.
 
-This means a fresh scrape on a new machine produces no PDF-derived content until someone manually downloads the PDFs.
+2. **Flat output structure**: Converted PDFs are dropped as loose markdown files in `data/policies/` alongside the HTML-sourced policy files. This makes it harder to see what content came from where, especially for policies like `tax-reset` that have multiple PDF documents.
 
 ## Current Flow
 
@@ -13,7 +13,9 @@ This means a fresh scrape on a new machine produces no PDF-derived content until
 2. convert_all_pdfs()    → reads pre-existing PDFs from data/policy-assets/, converts to .md
 ```
 
-The missing step: **downloading the PDFs that `convert_all_pdfs()` depends on**.
+The missing steps:
+- **Downloading PDFs** that `convert_all_pdfs()` depends on
+- **Organizing output** so each policy's files are grouped together
 
 ## Where the Links Come From
 
@@ -40,90 +42,61 @@ Some policies (e.g. affordable-housing, climate-action) don't currently have PDF
    └─ also extracts Google Drive PDF links from each page (from BeautifulSoup before markdownify)
 2. download_policy_pdfs()  → NEW: downloads PDFs from extracted links → data/policy-assets/
 3. convert_all_pdfs()     → reads PDFs from data/policy-assets/, converts to .md
+   └─ output organized by policy slug in data/policies/{slug}/
 ```
+
+## Output Structure
+
+After implementation, `data/policies/` will look like:
+
+```
+data/policies/
+├── index.json                    # Combined index of all policies
+├── abundant-energy/
+│   ├── page.md                   # HTML-sourced content
+│   ├── policy-overview.pdf       # Downloaded source PDF (if available)
+│   └── policy-overview.md        # PDF converted to markdown
+├── healthy-oceans/
+│   ├── page.md
+│   └── ...
+├── tax-reset/
+│   ├── page.md
+│   ├── policy-overview.pdf
+│   ├── policy-overview.md
+│   ├── policy-addendum.pdf       # e.g. transition plan
+│   └── policy-addendum.md
+└── ... (one directory per policy)
+```
+
+**Note**: Single-file policies can remain flat if preferred, but the slug directory should still exist with at least `page.md`.
 
 ## Implementation Plan
 
-### 1. Add `pdf_downloads` field to `PolicyPage` model
+### 1. `scraper/models.py` — Already Done
 
-In `scraper/models.py`, add an optional list of download URLs to `PolicyPage`:
+`PolicyPage` already has the `pdf_downloads: list[str]` field.
 
-```python
-pdf_downloads: list[str] = field(default_factory=list)
-```
+### 2. `scraper/policies.py` — Already Done
 
-### 2. Extract PDF links during policy scraping
-
-In `scraper/policies.py`, modify `_extract_markdown()` or add a new `_extract_pdf_links()` function that runs **before** markdownify on the BeautifulSoup object. Look for `<a>` tags linking to Google Drive (or other file hosts):
-
-```python
-def _extract_pdf_links(soup) -> list[str]:
-    """Extract Google Drive download links from a policy page."""
-    links = []
-    for a_tag in soup.select("a[href]"):
-        href = a_tag.get("href", "")
-        if "drive.google.com" in href or href.endswith(".pdf"):
-            links.append(href)
-    return links
-```
-
-This should be called on the raw `soup` **before** any decomposition, so we don't lose links.
+PDF link extraction is already implemented with `_extract_pdf_links()`.
 
 ### 3. Create `scraper/pdf_download.py`
 
-New module that handles downloading PDFs:
+New module that handles downloading PDFs and managing the reference registry.
+
+**Key responsibilities:**
+
+- **Convert Google Drive URLs**: Transform `/file/d/FILE_ID/view` URLs into direct download URLs
+- **Skip existing**: Check `data/policy-assets/reference.json` to avoid re-downloading
+- **Save with meaningful names**: Derive filename from the URL or Content-Disposition header
+- **Update reference**: Track each download with source URL, policy slug, file ID, timestamp
 
 ```python
-def download_policy_pdfs(policies: list[PolicyPage]) -> list[Path]:
-    """Download all PDFs from policy page download links."""
-    ...
+def download_policy_pdfs(policies: list[PolicyPage], dry_run: bool = False) -> list[dict]:
+    """Download PDFs from policy page links, returning download metadata."""
 ```
 
-Key responsibilities:
-
-- **Google Drive URL conversion**: Transform `/file/d/FILE_ID/view` URLs into direct download URLs: `https://drive.google.com/uc?export=download&id=FILE_ID`
-- **Skip already-downloaded files**: Check if the target file already exists in `data/policy-assets/` (by Google Drive file ID)
-- **Download via curl**: Use the existing `subprocess.run(["curl", ...])` pattern from `client.py`
-- **Handle large files / virus scan warnings**: Google Drive shows an interstitial for large files. Use `curl -L` (follow redirects) and potentially handle the confirm=XXX token in the response
-- **Name files sensibly**: Use the policy slug + document description to name the PDF, or fall back to extracting the filename from the response headers
-
-### 4. Update `main.py` pipeline
-
-Insert the download step between scraping and PDF conversion:
-
-```python
-SCRAPER_MAP = {
-    "policies": ("policies", scrape_policies, save_policies),
-    "pdfs": None,  # Will be handled in sequence
-    ...
-}
-
-def run_scrapers(...):
-    ...
-    # After scraping policies, download any PDFs
-    if "policies" in selected:
-        download_policy_pdfs(policies_scraped)
-
-    # Then convert PDFs
-    convert_all_pdfs()
-```
-
-### 5. Update `client.py`'s `clean_data()`
-
-Currently `clean_data()` preserves the entire `policy-assets/` directory. This should still be the default, but we might want an option to also clear downloaded PDFs on a full `--clean` reset.
-
-### 6. Save a reference file
-
-After downloading, save `data/policy-assets/reference.json` mapping each PDF to:
-
-- Source URL (Google Drive link)
-- Policy slug it came from
-- Download timestamp
-- File size
-
-This replaces the need for a manual `reference.md` and serves as the source of truth for where each PDF came from.
-
-## Google Drive Download Details
+### 4. Google Drive URL Handling
 
 Google Drive URLs come in this form:
 
@@ -131,21 +104,21 @@ Google Drive URLs come in this form:
 https://drive.google.com/file/d/FILE_ID/view?usp=drive_link
 ```
 
-Direct download URL:
+**Direct download URL:**
 
 ```
 https://drive.google.com/uc?export=download&id=FILE_ID
 ```
 
-For files over ~100MB, Google Drive returns an HTML page with a virus scan warning and a `confirm=TOKEN` parameter. The download flow then becomes:
+**For files over ~100MB:** Google Drive shows an interstitial with a `confirm=TOKEN` parameter. The download flow handles this automatically:
 
 1. Request `uc?export=download&id=FILE_ID`
-2. If response is HTML (virus scan warning), extract the `confirm=TOKEN` and `uuid=UUID` from the form
+2. If response is HTML (virus scan warning), extract `confirm=TOKEN` and `uuid=UUID`
 3. Re-request with `confirm=TOKEN&uuid=UUID` added
 
-For the policy PDFs (which are likely <5MB each), the simple download URL should work. We should still handle the virus scan interstitial as a fallback.
+For the policy PDFs (likely <5MB each), the simple download URL should work. Handle the virus scan as a fallback.
 
-## curl Command Pattern
+### 5. `curl` Download Pattern
 
 ```bash
 curl \
@@ -158,29 +131,140 @@ curl \
   "https://drive.google.com/uc?export=download&id=FILE_ID"
 ```
 
-## File Naming Convention
+### 6. Reference Registry (`data/policy-assets/reference.json`)
 
-Name the downloaded PDFs consistently. Options:
+A JSON file tracking all downloadable PDFs:
 
-1. **Keep original Google Drive filename** (from Content-Disposition header) — most portable
-2. **Derive from policy slug** — e.g. `abundant-energy_policy-overview.pdf`
-3. **Hybrid** — prefix with policy slug for sortability
 
-Recommendation: **Option 1** for backwards compatibility (matching existing files like `Opportunity_Policy_Abundant Energy.pdf`), with the reference JSON mapping providing the structured metadata.
+```json
+{
+  "downloads": {
+    "FILE_ID_1": {
+      "source_url": "https://drive.google.com/file/d/FILE_ID_1/view?usp=drive_link",
+      "policy_slug": "abundant-energy",
+      "filename": "1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B.pdf",
+      "downloaded_at": "2026-06-08T12:00:00Z",
+      "size_bytes": 2644730
+    }
+  }
+}
+```
 
-## Edge Cases
+This file serves as:
+- **Idempotency source**: Check if file ID already exists before downloading
+- **Audit trail**: Exactly where each PDF came from
+- **Manual override**: Users can add entries manually to skip a download
 
-- **Policy with no PDF link**: Skip gracefully, log info
-- **PDF already downloaded**: Check by file ID in reference JSON, skip if file still exists
-- **Download fails**: Log error, continue — don't block the rest of the pipeline
-- **New PDF link appears on a policy page**: Automatically discovered and downloaded on next scrape
-- **Multiple PDF links per policy** (e.g. tax-reset has 2): Handle each link separately
-- **Link points to non-Google-Drive host**: Support generic PDF URL downloads too (any `*.pdf` URL)
+### 7. File Naming Convention
 
-## Testing
+Downloaded PDFs are named by their Google Drive file ID (without extension) to:
+- Avoid conflicts when Google Drive uses generic names like "Opportunity_Policy_Abundant Energy.pdf"
+- Ensure deterministic naming based on content, not title changes
 
-1. Run `just scrape` on a clean `data/` directory (minus policy-assets)
-2. Verify PDFs appear in `data/policy-assets/`
-3. Verify `reference.json` is created with correct mappings
-4. Verify markdown conversion still works (`pdf-*.md` files created)
-5. Run again — verify already-downloaded PDFs are skipped (idempotent)
+After download, rename if the original has a meaningful name in Content-Disposition.
+
+### 8. Update `scraper/policies.py` — Output to Slug Directories
+
+Modify `save_policies()` to write each policy's page.md into its own directory:
+
+```python
+def save_policies(policies: list[PolicyPage]) -> dict[str, Path]:
+    output_dir = DATA_DIR / "policies"
+    saved: dict[str, Path] = {}
+
+    for policy in policies:
+        policy_dir = output_dir / policy.slug
+        md_path = save_content(
+            policy_dir,
+            "page.md",
+            _format_policy_md(policy),
+        )
+        saved[policy.slug] = md_path
+    # ... rest unchanged
+```
+
+### 9. Update `scraper/pdf_convert.py` — Output to Slug Directories
+
+Modify `convert_pdf()` to write markdown into the policy's directory:
+
+```python
+def convert_pdf(pdf_path: Path, policy_slug: str) -> dict:
+    # ... same extraction logic ...
+    
+    policy_dir = DATA_DIR / "policies" / policy_slug
+    save_content(policy_dir, output_file, markdown)
+    # ...
+```
+
+Also update `convert_all_pdfs()` to pass the policy slug derived from the filename pattern (`Opportunity_{Policy}_{DocType}.pdf`).
+
+### 10. Update `main.py` — Integrate PDF Downloads
+
+Insert the download step between scraping and PDF conversion:
+
+```python
+from scraper.pdf_download import download_policy_pdfs
+
+def run_scrapers(...):
+    # ...
+    for key, entry in selected.items():
+        if key == "policies":
+            # First scrape policies
+            policies = scrape_policies()
+            save_policies(policies)
+            
+            # Then download any PDFs
+            downloads = download_policy_pdfs(policies)
+            logger.info("Downloaded %d PDFs", len(downloads))
+            
+            # Then convert PDFs to markdown
+            results = convert_all_pdfs()
+            totals["policy PDFs"] = len(results)
+        elif entry is None:
+            # PDF conversion only (no web scraping)
+            results = convert_all_pdfs()
+            totals["policy PDFs"] = len(results)
+        else:
+            label, scrape_fn, save_fn = entry
+            items = scrape_fn()
+            save_fn(items)
+            totals[label] = len(items)
+```
+
+### 11. Update `scraper/client.py` — Reconcile Filenames
+
+After a successful download, compare the new file's name with reference.json.
+If we downloaded `{file_id}.pdf` but Google Drive sent it as `Opportunity_Policy_Abundant Energy.pdf`:
+
+1. Get the Content-Disposition header to extract original filename
+2. Rename the file to the original name (preserving the extension)
+3. Update `reference.json` with the new filename
+
+This preserves backward compatibility with existing conversion logic.
+
+## Idempotency (Repeatable Scrape)
+
+The download step is fully idempotent:
+
+1. Before downloading, check `reference.json` for each file ID
+2. If file ID exists and file is present on disk, skip
+3. If file ID exists but file is missing, re-download
+4. If file ID doesn't exist, download and add to reference
+5. If policy has no PDF links, skip gracefully
+6. If download fails, log error and continue (don't block the pipeline)
+
+**Verification:** Running `just scrape` twice should:
+- First run: Download all missing PDFs
+- Second run: Skip all PDFs (already downloaded), regenerate markdown from existing files
+
+## Migration / Backward Compatibility
+
+For existing `data/policy-assets/` content:
+
+1. Scan existing PDFs on first run
+2. For each existing PDF without a reference.json entry, generate one with:
+   - `source_url`: null (unknown)
+   - `downloaded_at`: file mtime
+   - `filename`: current filename
+
+2. After migration, existing PDFs are tracked in reference.json just like new downloads.

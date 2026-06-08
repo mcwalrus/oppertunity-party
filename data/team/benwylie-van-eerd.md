@@ -3,7 +3,7 @@
 **Role**: Ben Wylie-van Eerd
 
 > **URL**: https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd
-> **Scraped**: 2026-06-08T12:42:10.135122
+> **Scraped**: 2026-06-08T13:26:23.190832
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9863/features/original/Ben_Wylie-van_Eerd_-_Benjamin_Wylie-van_Eerd_%281%29.jpg?1773653519)
 
@@ -39,7 +39,7 @@ Outside of work and politics, Ben can be found walking the beautiful tracks of T
 
 Candidate for Opportunity (Hutt South)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#094b6c67275e7065606c247f68674c6c7b6d49667979667b7d7c67607d7027667b6e276773)
+[Email: [email protected]](/cdn-cgi/l/email-protection#eba98e85c5bc9287828ec69d8a85ae8e998fab849b9b84999f9e85829f92c584998cc58591)
 
 ## Donate to our Party Vote Campaign in Hutt South
 

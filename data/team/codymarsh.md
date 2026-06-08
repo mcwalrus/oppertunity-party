@@ -3,7 +3,7 @@
 **Role**: Cody Marsh
 
 > **URL**: https://www.opportunity.org.nz/candidate-cody-marsh
-> **Scraped**: 2026-06-08T12:42:00.393058
+> **Scraped**: 2026-06-08T13:26:08.933646
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9893/features/original/Cody_Marsh_%281%29.jpg?1773826449)
 
@@ -35,7 +35,7 @@ Cody looks forward to continuing to serve the people of Northcote electorate as 
 
 Candidate for Opportunity (Northcote)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#8dcee2e9f4a3c0ecfffee5cde2fdfde2fff9f8e3e4f9f4a3e2ffeaa3e3f7)
+[Email: [email protected]](/cdn-cgi/l/email-protection#397a565d401774584b4a5179564949564b4d4c57504d4017564b5e175743)
 
 ## Donate to our Party Vote Campaign in Northcote
 

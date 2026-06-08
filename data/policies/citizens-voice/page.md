@@ -1,7 +1,7 @@
 # Citizens' Voice
 
 > **URL**: https://www.opportunity.org.nz/citizens-voice
-> **Scraped**: 2026-06-08T12:41:39.552838
+> **Scraped**: 2026-06-08T13:25:45.601006
 
 ![About Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9068/features/original/citizens-voice-hero.jpg?1771461757)
 

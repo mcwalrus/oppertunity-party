@@ -1,7 +1,7 @@
 # Accelerating EV uptake
 
 > **URL**: https://www.opportunity.org.nz/accelerating_ev_uptake
-> **Scraped**: 2026-06-08T12:42:13.021028
+> **Scraped**: 2026-06-08T13:26:26.866695
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/12137/features/original/chuttersnap-xJLsHl0hIik-unsplash.jpg?1778977806)](/accelerating_ev_uptake)
 

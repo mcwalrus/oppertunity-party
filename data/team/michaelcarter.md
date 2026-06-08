@@ -3,7 +3,7 @@
 **Role**: Michael Carter
 
 > **URL**: https://www.opportunity.org.nz/candidate-michael-carter
-> **Scraped**: 2026-06-08T12:41:50.929966
+> **Scraped**: 2026-06-08T13:25:57.974912
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9930/features/original/Michael_Carter_Landscaper_%281%29_%281%29.jpg?1773916065)
 
@@ -35,7 +35,7 @@ Michael is motivated to stand for the Tauranga electorate and encourage younger 
 
 Candidate for Opportunity (Tauranga)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#a6ebcfc5cec7c3ca88e5c7d4d2c3d4e6c9d6d6c9d4d2d3c8cfd2df88c9d4c188c8dc)
+[Email: [email protected]](/cdn-cgi/l/email-protection#3f72565c575e5a53117c5e4d4b5a4d7f504f4f504d4b4a51564b4611504d58115145)
 
 ## Donate to our Party Vote Campaign in Tauranga
 

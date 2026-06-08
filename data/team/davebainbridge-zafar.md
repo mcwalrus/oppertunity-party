@@ -3,7 +3,7 @@
 **Role**: About Dave
 
 > **URL**: https://www.opportunity.org.nz/candidate-dave-bainbridge-zafar
-> **Scraped**: 2026-06-08T12:41:49.939768
+> **Scraped**: 2026-06-08T13:25:57.035998
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9762/features/original/Dave_Bainbridge-Zafar_-_Photo_-_Dave_%281%29.jpg?1773826523)
 
@@ -39,7 +39,7 @@ With his wonderful wife, their two doggies and four alpacas, Dunedin is home. An
 
 Candidate for Opportunity (Dunedin)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#81c5e0f7e8e5afc3e0e8efe3f3e8e5e6e4acdbe0e7e0f3c1eef1f1eef3f5f4efe8f5f8afeef3e6afeffb)
+[Email: [email protected]](/cdn-cgi/l/email-protection#145075627d703a56757d7a76667d707371394e75727566547b64647b6660617a7d606d3a7b66733a7a6e)
 
 ## Donate to our Party Vote Campaign in Dunedin
 

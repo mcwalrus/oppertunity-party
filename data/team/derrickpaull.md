@@ -3,7 +3,7 @@
 **Role**: Derrick Paull
 
 > **URL**: https://www.opportunity.org.nz/candidate-derrick-paull
-> **Scraped**: 2026-06-08T12:42:01.762552
+> **Scraped**: 2026-06-08T13:26:10.478202
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9861/features/original/260313.Opportunity_Profile_%281%29.jpg?1777104237)
 
@@ -43,7 +43,7 @@ Derrick’s relationship with Opportunity began in 2017, when he worked on Fishe
 
 Candidate for Opportunity (Maungakiekie)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#703415020219131b5e2011051c1c301f00001f0204051e1904095e1f02175e1e0a)
+[Email: [email protected]](/cdn-cgi/l/email-protection#dc98b9aeaeb5bfb7f28cbda9b0b09cb3acacb3aea8a9b2b5a8a5f2b3aebbf2b2a6)
 
 ## Donate to our Party Vote Campaign in Maungakiekie
 

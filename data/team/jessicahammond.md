@@ -3,7 +3,7 @@
 **Role**: Jessica Hammond
 
 > **URL**: https://www.opportunity.org.nz/candidate-jessica-hammond
-> **Scraped**: 2026-06-08T12:41:49.003648
+> **Scraped**: 2026-06-08T13:25:55.515519
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9867/features/original/Jessica-Hammond-Hero-1_%281%29.jpg?1773893830)
 
@@ -37,7 +37,7 @@ Jessica stood as a candidate for Opportunity in the 2017, 2020 and 2023 election
 
 Candidate for Opportunity (Wellington North)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#f0ba958383999391deb8919d9d9f9e94b09f80809f8284859e998489de9f8297de9e8a)
+[Email: [email protected]](/cdn-cgi/l/email-protection#da90bfa9a9b3b9bbf492bbb7b7b5b4be9ab5aaaab5a8aeafb4b3aea3f4b5a8bdf4b4a0)
 
 ## Donate to our Party Vote Campaign in Wellington North
 
