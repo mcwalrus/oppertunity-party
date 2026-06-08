@@ -57,7 +57,4 @@ docstring-code-format = true
 # ty — type checker
 # ---------------------------------------------------------------------------
 [tool.ty]
-
-[tool.ty.rules]
-# All rules default to "error"; list any you want to downgrade.
-unknown-argument = "warn"
+# All rules default to "error"; no downgrades — keep pre-commit strict.

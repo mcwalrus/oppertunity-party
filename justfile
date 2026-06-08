@@ -31,12 +31,12 @@ fmt: install
 
 # Type-check with ty
 typecheck: install
-    uv run ty check .
+    uv run ty check --error-on-warning .
 
 # Run all quality checks (lint + typecheck)
 check: install
     uv run ruff check .
-    uv run ty check .
+    uv run ty check --error-on-warning .
 
 # Validate all scraped markdown files with markdown-link-check
 # Checks that every link in data/**/*.md resolves (external URLs + relative paths

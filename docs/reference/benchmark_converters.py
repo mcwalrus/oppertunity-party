@@ -59,7 +59,7 @@ def via_pymupdf4llm(pdf: Path) -> str:
 
 
 def via_markitdown(pdf: Path) -> str:
-    from markitdown import MarkItDown
+    from markitdown import MarkItDown  # ty: ignore[unresolved-import]
 
     return MarkItDown().convert(str(pdf)).text_content
 
@@ -67,9 +67,14 @@ def via_markitdown(pdf: Path) -> str:
 def via_docling(pdf: Path) -> str:
     # Requires model download (HuggingFace) -> will fail offline. OCR disabled
     # because these PDFs already carry a real text layer.
-    from docling.datamodel.base_models import InputFormat
-    from docling.datamodel.pipeline_options import PdfPipelineOptions
-    from docling.document_converter import DocumentConverter, PdfFormatOption
+    from docling.datamodel.base_models import InputFormat  # ty: ignore[unresolved-import]
+    from docling.datamodel.pipeline_options import (  # ty: ignore[unresolved-import]
+        PdfPipelineOptions,
+    )
+    from docling.document_converter import (  # ty: ignore[unresolved-import]
+        DocumentConverter,
+        PdfFormatOption,
+    )
 
     opts = PdfPipelineOptions()
     opts.do_ocr = False
