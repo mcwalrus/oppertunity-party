@@ -113,7 +113,7 @@ def save_team(members: list[TeamMember]) -> dict[str, Path]:
     )
     saved["_index"] = json_path
 
-    index_md_path = save_content(output_dir, "INDEX.md", _format_team_index(members))
+    index_md_path = save_content(output_dir, "team.md", _format_team_index(members))
     saved["_index_md"] = index_md_path
 
     return saved

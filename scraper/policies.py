@@ -80,11 +80,11 @@ def save_policies(policies: list[PolicyPage]) -> dict[str, Path]:
         policy_dir = output_dir / policy.slug
         md_path = save_content(
             policy_dir,
-            "page.md",
+            f"{policy.slug}.md",
             _format_policy_md(policy),
         )
         saved[policy.slug] = md_path
-        logger.debug("Saved %s/page.md", policy.slug)
+        logger.debug("Saved %s/%s.md", policy.slug, policy.slug)
 
     json_data = [
         {

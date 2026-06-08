@@ -30,6 +30,17 @@ just fmt          # ruff format
 just validate     # markdown-link-check on all data/**/*.md
 ```
 
+## Obsidian Graph Naming
+
+<!-- Obsidian graph view labels nodes by filename (without extension). Generic names like
+     INDEX or page make every node look identical in the graph. All output markdown files
+     MUST use a descriptive, content-specific filename:
+     - Section index files: named after the section (e.g. team/team.md, not team/INDEX.md)
+     - Per-item files inside a slug directory: named after the slug
+       (e.g. policies/tax-reset/tax-reset.md, not policies/tax-reset/page.md)
+     When adding new scrapers, follow this pattern — never use generic names like INDEX.md,
+     page.md, or index.md for human-readable markdown output. -->
+
 ## Quality Gates
 
 ```bash
