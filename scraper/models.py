@@ -32,17 +32,6 @@ class TeamMember:
 
 
 @dataclass
-class NewsItem:
-    """A news article / media release scraped from the website."""
-
-    title: str
-    url: str = ""
-    date: str = ""  # YYYY-MM-DD or datetime string
-    content: str = ""
-    scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
-
-
-@dataclass
 class BlogPost:
     """A blog post / media release entry."""
 

@@ -9,9 +9,10 @@ import time
 from collections.abc import Callable
 from typing import Any
 
+from scraper.blog_posts import save_blog_posts, scrape_blog_posts
 from scraper.client import DATA_DIR, clean_data
+from scraper.events import save_events, scrape_events
 from scraper.models import PartyInfo, PolicyPage
-from scraper.news import save_news, scrape_news
 from scraper.party_info import download_and_convert_party_pdfs, save_party_info, scrape_party_info
 from scraper.pdf_convert import convert_all_pdfs
 from scraper.pdf_download import download_policy_pdfs, migrate_existing_pdfs
@@ -35,7 +36,8 @@ _ScraperEntry = tuple[str, Callable[[], list[Any]], Callable[[list[Any]], Any]]
 SCRAPER_MAP: dict[str, _ScraperEntry | None] = {
     "policies": ("policies", scrape_policies, save_policies),
     "team": ("team", scrape_team, save_team),
-    "news": ("news", scrape_news, save_news),
+    "blog": ("blog posts", scrape_blog_posts, save_blog_posts),
+    "events": ("events", scrape_events, save_events),
     "party-info": ("party information", scrape_party_info, save_party_info),
     "pdfs": None,
 }

@@ -1,0 +1,18 @@
+**Title**: Policy & Pints with Kayla Kingdon-Bebb
+**Date**: 2026-06-13
+
+**Location**: Double Vision Brewing - Miramar, Wellington, New Zealand
+**URL**: https://www.opportunity.org.nz/policy_and_pints_with_kayla
+**Scraped**: 2026-06-08T17:22:15.728915
+
+**When**: June 13, 2026 at  2:00pm · 2 hrs
+**Venue**: Double Vision Brewing - Miramar
+**Address**: 128A Unit E, Park Road, Miramar, Wellington 6022, New Zealand
+
+Are you Opportunity-curious? Or perhaps you'd like to learn more about our campaign for the Party Vote in Wellington Bays?
+
+Join me for a pint at DvB Miramar this coming Saturday 13 June between 2 and 4pm for a chat about all things policy!
+
+It will also be a chance to meet some of our wonderful campaign team, and to learn how you can get involved in our efforts to make history this coming November.
+
+I look forward to seeing you there!
