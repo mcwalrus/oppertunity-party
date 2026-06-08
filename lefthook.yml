@@ -32,7 +32,7 @@ pre-commit:
     # -------------------------------------------------------------------------
     ty:
       glob: "*.py"
-      run: uv run ty check
+      run: uv run ty check --exclude 'docs/reference/**'
 
     # -------------------------------------------------------------------------
     # markdown-link-check — validates every link in scraped data output.

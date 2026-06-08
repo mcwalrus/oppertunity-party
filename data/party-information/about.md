@@ -1,7 +1,7 @@
 # About
 
 > **URL**: https://www.opportunity.org.nz/about
-> **Scraped**: 2026-06-08T17:33:36.903578
+> **Scraped**: 2026-06-08T17:39:12.087958
 
 ## We stand for opportunity for every Kiwi.
 

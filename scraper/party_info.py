@@ -6,13 +6,12 @@ import json
 import logging
 import re
 import subprocess
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 from markdownify import markdownify
 
 if TYPE_CHECKING:
-    from pathlib import Path
-
     from bs4 import BeautifulSoup
 
 from .client import DATA_DIR, fetch_page, save_content
@@ -130,8 +129,11 @@ def save_party_info(pages: list[PartyInfo]) -> dict[str, Path]:
 def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
     """Download and convert PDFs linked from party-information pages.
 
-    PDFs (Charter, Constitution, Code of Conduct) are saved to
-    data/party-information/ alongside the scraped markdown files.
+    PDFs (Charter, Constitution, Code of Conduct) are downloaded via
+    gdown (handles Google Drive auth), converted with pdftotext, and
+    saved to data/party-information/.  The converted text is then
+    injected back into party-information.md as embedded sections so the
+    content is queryable in one place.
     """
     output_dir = DATA_DIR / "party-information"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -142,12 +144,31 @@ def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
             continue
         for label, url in page.pdf_downloads:
             try:
+                # If the converted markdown already exists, skip download+conversion
+                md_path = output_dir / f"{label}.md"
+                if md_path.exists() and md_path.stat().st_size > 0:
+                    results.append(
+                        {
+                            "label": label,
+                            "url": url,
+                            "output": str(md_path),
+                            "status": "ok",
+                        }
+                    )
+                    logger.info("Party PDF already converted: %s", md_path.name)
+                    continue
+
                 pdf_path = _download_party_pdf(label, url, output_dir)
                 if pdf_path:
                     md_text = _convert_party_pdf(pdf_path, label, url)
                     md_path = save_content(output_dir, f"{label}.md", md_text)
                     results.append(
-                        {"label": label, "url": url, "output": str(md_path), "status": "ok"}
+                        {
+                            "label": label,
+                            "url": url,
+                            "output": str(md_path),
+                            "status": "ok",
+                        }
                     )
                     logger.info("Party PDF ready: %s -> %s", label, md_path.name)
                 else:
@@ -156,46 +177,49 @@ def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
                 logger.error("Failed to process party PDF %s: %s", label, e)
                 results.append({"label": label, "url": url, "status": "error", "error": str(e)})
 
+    # Embed converted content back into party-information.md
+    if results:
+        _inject_pdf_content(output_dir, results)
+
     return results
 
 
 def _download_party_pdf(label: str, url: str, output_dir: Path) -> Path | None:
-    """Download a Google Drive PDF to output_dir; return local path or None."""
+    """Download a Google Drive PDF via gdown CLI; return local path or None.
+
+    Runs gdown as a subprocess with a hard timeout so a broken/private
+    Drive link never hangs the whole scraper indefinitely.
+    """
     pdf_path = output_dir / f"{label}.pdf"
     if pdf_path.exists() and pdf_path.stat().st_size > 0:
         logger.info("Skipping %s (already downloaded)", label)
         return pdf_path
 
-    direct_url = _make_gdrive_download_url(url)
+    file_id = _extract_gdrive_file_id(url)
+    if not file_id:
+        logger.error("Could not extract Google Drive file ID from %s", url)
+        return None
 
-    result = subprocess.run(
-        [
-            "curl",
-            "--silent",
-            "--show-error",
-            "--location",
-            "--max-time",
-            "60",
-            "--user-agent",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-            "--output",
-            str(pdf_path),
-            direct_url,
-        ],
-        capture_output=True,
-        text=True,
-        timeout=90,
-    )
-
-    if not pdf_path.exists() or pdf_path.stat().st_size == 0:
-        logger.error("Download failed for %s (%s): %s", label, url, result.stderr)
+    try:
+        subprocess.run(
+            ["uv", "run", "gdown", file_id, "-O", str(pdf_path)],
+            capture_output=True,
+            timeout=90,
+            check=False,
+        )
+    except subprocess.TimeoutExpired:
+        logger.warning("gdown timed out for %s — skipping", label)
         pdf_path.unlink(missing_ok=True)
         return None
 
+    if not pdf_path.exists() or pdf_path.stat().st_size == 0:
+        pdf_path.unlink(missing_ok=True)
+        logger.error("gdown download failed for %s (%s)", label, url)
+        return None
+
     # Verify it's actually a PDF (not an HTML error/interstitial page)
-    content_start = pdf_path.read_bytes()[:4]
-    if content_start != b"%PDF":
-        logger.warning("Got non-PDF response for %s — skipping (may need manual download)", label)
+    if pdf_path.read_bytes()[:4] != b"%PDF":
+        logger.warning("Got non-PDF response for %s — removing", label)
         pdf_path.unlink(missing_ok=True)
         return None
 
@@ -219,12 +243,43 @@ def _convert_party_pdf(pdf_path: Path, label: str, source_url: str) -> str:
     return f"# {title}\n\n> **Source**: {source_url}\n\n{text}\n"
 
 
-def _make_gdrive_download_url(url: str) -> str:
-    """Convert a Google Drive preview/view URL to a direct download URL."""
+def _extract_gdrive_file_id(url: str) -> str | None:
+    """Extract the file ID from a Google Drive URL."""
     m = re.search(r"/file/d/([a-zA-Z0-9_-]+)", url)
-    if m:
-        return f"https://drive.google.com/uc?export=download&id={m.group(1)}"
-    return url
+    return m.group(1) if m else None
+
+
+def _inject_pdf_content(output_dir: Path, results: list[dict]) -> None:
+    """Embed converted PDF sections back into party-information.md.
+
+    Appends each successfully converted document as a titled section
+    separated by horizontal rules so the content is queryable in one
+    place.  Re-running is idempotent: previously injected sections are
+    stripped before the new ones are appended.
+    """
+    party_md_path = output_dir / "party-information.md"
+    if not party_md_path.exists():
+        logger.warning("party-information.md not found; skipping PDF injection")
+        return
+
+    current = party_md_path.read_text()
+
+    # Strip any previously injected PDF sections (sentinel: first "---\n\n## " after a blank line)
+    sentinel = "\n\n---\n\n## "
+    cut_pos = current.find(sentinel)
+    base_content = current[:cut_pos].rstrip() if cut_pos != -1 else current.rstrip()
+
+    # Append each successfully converted PDF as its own section
+    sections: list[str] = [base_content]
+    for r in results:
+        if r.get("status") != "ok":
+            continue
+        pdf_md = Path(r["output"]).read_text().strip()
+        sections.append(f"\n\n---\n\n{pdf_md}")
+
+    party_md_path.write_text("".join(sections) + "\n")
+    injected = len(sections) - 1
+    logger.info("Injected %d PDF section(s) into party-information.md", injected)
 
 
 def _extract_pdf_links(soup: BeautifulSoup) -> list[tuple[str, str]]:

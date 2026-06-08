@@ -152,7 +152,7 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
 def _download_gdrive(file_id: str, url: str, policy_slug: str, key: str, reference: dict) -> dict:
     """Download a Google Drive file via gdown (handles auth + proper filename)."""
     try:
-        import gdown  # type: ignore
+        import gdown
     except ImportError:
         logger.error("gdown not installed — run: uv add gdown")
         return {
@@ -167,7 +167,7 @@ def _download_gdrive(file_id: str, url: str, policy_slug: str, key: str, referen
     tmp = POLICY_ASSETS_DIR / f"_tmp_{file_id}.pdf"
     tmp.unlink(missing_ok=True)
 
-    downloaded = gdown.download(id=file_id, output=str(tmp), quiet=False, fuzzy=True)
+    downloaded = gdown.download(id=file_id, output=str(tmp), quiet=False)
     if not downloaded or not tmp.exists() or tmp.stat().st_size == 0:
         tmp.unlink(missing_ok=True)
         return {
