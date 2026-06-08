@@ -1,0 +1,64 @@
+# BenWylie-van-Eerd
+
+**Role**: Ben Wylie-van Eerd
+
+> **URL**: https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd
+> **Scraped**: 2026-06-08T12:01:01.414357
+
+![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9863/features/original/Ben_Wylie-van_Eerd_-_Benjamin_Wylie-van_Eerd_%281%29.jpg?1773653519)
+
+#### HUTT SOUTH
+
+# Ben Wylie-van Eerd
+
+#### HUTT SOUTH
+
+# Ben Wylie-van Eerd
+
+“Opportunity is a party which is bold about facing big challenges, serious about facing up to the evidence, and optimistic about building a better future. Unless we view the future with hope and with a shared plan, we will continue to struggle. The opportunity exists for us to change how we improve our lives into the next decades.”
+
+## **Ben Wylie-van Eerd**
+
+Ben is a career scientist with experience working in New Zealand and the Netherlands, and an active workplace union delegate. 
+
+He’s passionate about looking after people in the workplace, and strengthening the New Zealand science system so that our businesses and industries can compete better on the world stage. 
+
+Science and innovation can lead the way in improving New Zealand’s poor productivity, and helping our people to prosper. 
+
+Ben’s interest in politics began with a growing frustration at the cost of rent and housing as a young student. 
+
+Ben has led union members through organisational change and sat on the PSA’s national science committee to ensure the voices of our scientists are heard in the ongoing reforms of our science system. He has a talent for finding common ground and making deals that are a win for all parties. 
+
+Outside of work and politics, Ben can be found walking the beautiful tracks of Te Awa Kairangi and beyond, participating (and occasionally teaching) in his taekwon-do club, and enjoying a good board game.
+
+![](https://assets.nationbuilder.com/garethmorgan/pages/9863/attachments/original/1773647876/Ben_Wylie-van_Eerd_-_Benjamin_Wylie-van_Eerd.jpg?1773647876)
+
+##### Media Contact
+
+ **Ben Wylie-van Eerd** 
+
+Candidate for Opportunity (Hutt South)
+
+[Email: [email protected]](/cdn-cgi/l/email-protection#94d6f1fabac3edf8fdf1b9e2f5fad1f1e6f0d4fbe4e4fbe6e0e1fafde0edbafbe6f3bafaee)
+
+## Donate to our Party Vote Campaign in Hutt South
+
+### Select an amount
+
+$25
+
+$50
+
+$100
+
+$250
+
+$500
+
+$1,000
+
+Other
+
+[Custom Donation](hutt-south-donations "Donate a custom amount")
+
+[Back to Candidates](/opportunity-candidates)

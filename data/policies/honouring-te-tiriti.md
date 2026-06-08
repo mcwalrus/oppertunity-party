@@ -1,0 +1,66 @@
+# Honouring Te Tiriti
+
+> **URL**: https://www.opportunity.org.nz/honouring_te_tiriti
+> **Scraped**: 2026-06-08T12:00:23.412704
+
+![Honouring Te Tiriti](https://assets.nationbuilder.com/garethmorgan/pages/9142/features/original/Ti_Tiriti.png?1771490507)
+
+# Honouring Te Tiriti
+
+**Opportunity takes the responsibility of the Crown as a Treaty partner seriously.**
+
+That means taking protection of taonga and redress of historical
+wrongs seriously. To live up to this responsibility, Opportunity
+will:
+
+* Repeal the Treaty Principles Bill and Marine and Coastal Area
+  (Takutai Moana) Amendment Bill if these are passed.
+* Include Aotearoa history, including Te Tiriti, at all levels of the
+  education system.
+* Support growth in the numbers of qualified te reo teachers, to
+  ensure a place for te reo education at school.
+* Support devolution of services — backed by real resources and
+  autonomy — in key areas where outcomes are unequal, especially
+  health and justice.
+* Support the equitable conclusion of remaining Treaty settlement
+  processes.
+
+Interested to see the detailed policy at launch? Sign-up for
+[Opportunity news and updates](https://www.opportunity.org.nz/subscribe).
+
+### Check out more policies
+
+[![](https://assets.nationbuilder.com/garethmorgan/pages/9068/attachments/original/1771477557/democracy.png?1771477557)
+
+Clean Up
+Politics](/clean_up_politics)
+[![](https://assets.nationbuilder.com/garethmorgan/pages/9068/attachments/original/1771477557/mountain.png?1771477557)
+
+Honouring
+Te Tiriti](/honouring_te_tiriti)
+[![](https://assets.nationbuilder.com/garethmorgan/pages/9068/attachments/original/1771477558/reform.png?1771477558)
+
+Tax
+Reset](/tax-reset)
+[![](https://assets.nationbuilder.com/garethmorgan/pages/9068/attachments/original/1771477556/forests.png?1771477556)
+
+Healthy
+Land](/healthy_land)
+
+## Get Involved
+
+* ### Volunteer
+
+  Pitch in and help make the vision reality.
+
+  [VOLUNTEER](volunteer)
+* ### Join
+
+  Stand beside other Kiwis with the courage to change.
+
+  [JOIN](join)
+* ### Donate
+
+  Every dollar brings real change closer.
+
+  [DONATE](donate)
