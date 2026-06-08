@@ -8,15 +8,10 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9872/features/original/IMG_20250513_094635_-_Sarah_Lucas_-_People_Place_Future_%281%29.jpg?1773738192)
 
-#### NEW PLYMOUTH
-
-# Sarah Lucas
-
 “I’m standing because New Zealand needs leadership that is collaborative, practical, and
 evidence-based — leadership that builds a stronger, fairer country for the next generation.”
 
-## **Sarah Lucas**
-
+## About
 Sarah Lucas is standing in the New Plymouth electorate because she feels New Zealand needs more capable, future-focused leadership and better long-term decision making.
 
 She lives with her husband and their three teenage sons, and is a small business owner and manufacturer. Running a business has taught her the realities of costs, regulation, and the resilience required to build something from the ground up. 

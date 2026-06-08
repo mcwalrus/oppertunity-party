@@ -8,14 +8,9 @@
 
 ![Meet Netra - Candidate for Opportunity (Palmerston North)](https://assets.nationbuilder.com/garethmorgan/pages/12632/features/original/IMG_0646_-_Netra_Ghimire.jpg?1779876331)
 
-#### PALMERSTON NORTH
-
-# Netra Ghimire
-
 "New Zealand doesn’t need more political division and short-term thinking. We have the people, resources, knowledge and spirit to lead the world - what we need now is empowered communities, and long-term leadership that unlocks our full potential."
 
-## **Netra Ghimire**
-
+## About
 Born and raised in a refugee camp in Nepal until the age of 11, Netra is proud to now call New Zealand home. His journey has been shaped by the kindness of everyday Kiwis he has met and a deep desire to give back to the country that gave his family a fresh start.
 
 Netra is a high school teacher of Social Studies, Physical Education, and Financial Literacy, as well as a proud husband and father to an energetic two-year-old. Like many young families, stepping into home ownership opened his eyes to the real pressures everyday New Zealanders are facing - balancing mortgages, childcare, bills, and the rising cost of living despite working hard and spending responsibly.

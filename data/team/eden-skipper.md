@@ -1,4 +1,4 @@
-S# Eden Skipper
+# Eden Skipper
 
 **Role**: Candidate
 **Electorate**: Christchurch Central
@@ -8,14 +8,9 @@ S# Eden Skipper
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9873/features/original/Eden_skipper_2_edit_%281%29.jpg?1773826058)
 
-#### CHRISTCHURCH CENTRAL
-
-# Eden Skipper
-
 “I’m a big believer in Opportunity, as I’m convinced that together we can be a political catalyst and steady voice of reason in Aotearoa. Let’s have sound policy based on evidence and community voice, and our country and people can be much better off.”
 
-## **Eden Skipper (Ngāi Tahu)**
-
+## About
 [Eden](https://www.linkedin.com/in/eden-skipper-80965086/) works in environmental restoration and indigenous development.
 
 Born and raised in Banks Peninsula, Eden resides in Christchurch Central following his OE to London. 

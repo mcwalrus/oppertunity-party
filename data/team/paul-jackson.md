@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12897/features/original/PXL_20260517_001029872.PORTRAIT_%281%29_-_Paul_Jackson_%281%29.jpg?1779967311)
 
-#### EPSOM
-
-# Paul Jackson
-
 “Long term planning is critical in business, and the same applies to government – cross-party commitments to infrastructure, and eliminating policy see-saws that hinder our development.”
 
-## **Paul Jackson**
-
+## About
 Born and raised in Auckland, [Paul](https://www.linkedin.com/in/pdjnzl/) completed conjoint commerce and science degrees at The University of Auckland, majoring in operations and supply chain management.
 
 Paul has spent his career in logistics, and has always been passionate about Kiwi businesses, while carrying the same passion for New Zealand as a whole – punching above its weight globally. Exposure to global events has given Paul significant experience with chokepoints having far-reaching consequences, and has developed his ability to strategically forecast and achieve optimal commercial outcomes.

@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9862/features/original/Almo_Wong_-_IMG_2337.jpg?1773652716)
 
-#### HENDERSON
-
-# Almo Wong
-
 “I bring a commitment to listening to people, and being a voice for common sense and real change. I’m passionate about ensuring that future generations receive a solid education, that local businesses can grow, and infrastructure spending is efficient and expansive.”
 
-## **Almo Wong**
-
+## About
 [Almo](https://www.instagram.com/almowong.opportunity/) is an Aotearoa New Zealand born Kiwi Chinese who is a proud Westie.
 
 He grew up in West Auckland having served as a volunteer first responder with Hato Hone St John Ambulance and more recently as an active Justice of the Peace.

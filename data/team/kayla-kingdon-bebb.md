@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9868/features/original/Kayla_Kingdon-Bebb__full.jpg?1773653330)
 
-#### WELLINGTON BAYS
-
-# Dr. Kayla Kingdon-Bebb
-
 “Like so many New Zealanders, I’m tired of divisive, performative politics taking priority over issues that actually matter to us. The biggest challenges we face: child poverty, growing inequality, climate change, the alarming loss of our native biodiversity, our infrastructure deficit – these cannot be resolved in a single term of government. They require courage, consensus, and a willingness to look beyond ourselves over multiple terms. That’s exactly what Opportunity will bring to the table.”
 
-## **Dr. Kayla Kingdon-Bebb**
-
+## About
 [Kayla Kingdon-Bebb](https://www.linkedin.com/in/kaylakingdonbebb/) is a well-known environmental policy leader and advocate. She believes Aotearoa’s most crucial (and undervalued) asset is nature – and has a particular interest in seeing our [ocean and fisheries](https://www.theguardian.com/world/2025/jun/10/new-zealand-is-failing-to-protect-its-vast-ocean-resources-we-owe-it-to-the-world-to-act) restored to a state of health and abundance.
 
 Prior to joining WWF-New Zealand (“the pandas, not the wrestlers”) as Chief Executive, Kayla served in New Zealand’s public service – first at the Ministry for the Environment, and subsequently as Director of Policy for the Department of Conservation.

@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9861/features/original/260313.Opportunity_Profile_%281%29.jpg?1777104237)
 
-#### MAUNGAKIEKIE
-
-# Derrick Paull
-
 “In a world increasingly focused on ideological silos that determine the outcomes for nations, Opportunity Party provides sensible, evidence-based policy that transcends ideology and party politics. Our country needs balanced, logical policy-making, and that’s why I choose to invest in the success of the Opportunity Party in 2026. Together we can build a stronger, sustainable future for our country.”
 
-## **Derrick Paull**
-
+## About
 Derrick is a dad, business owner, barbecue champion, former magazine editor and passionate fisher based in Tāmaki Makaurau Auckland.
 
 Born on Auckland’s North Shore, Derrick spent his youth in and on the water, enjoying the marine environment Aotearoa New Zealand has to offer. 

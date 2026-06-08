@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9867/features/original/Jessica-Hammond-Hero-1_%281%29.jpg?1773893830)
 
-#### WELLINGTON NORTH
-
-# Jessica Hammond
-
 “I’m completely out of patience with tinkering and bandaid solutions. Our country can be dramatically better - but only if we choose to do better things.”
 
-## **Jessica Hammond**
-
+## About
 Jessica is a Wellington-born public servant who has worked on policy issues ranging from transport infrastructure and health and disability legislation to Māori economic development. 
 
 She takes public service seriously, and little makes her angrier than politicians treating parliament as a game, or as a means to personal gain.

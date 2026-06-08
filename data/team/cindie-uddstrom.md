@@ -8,14 +8,9 @@
 
 ![Meet Cindie - Candidate for Opportunity (West Coast-Tasman)]()
 
-#### WEST COAST-TASMAN
-
-# Cindie Uddstrom
-
 "Every person deserves the opportunity to be their best version of themselves."
 
-## **Cindie Uddstrom**
-
+## About
 Cindie is a Greymouth-born business owner with a background in IT and manufacturing. She studied Information Technology at Tai Poutini Polytechnic before moving to Wellington to build a career in computer networking. After ten successful years in the industry, she returned home to take over her father’s fibreglass manufacturing business, growing it into a national supplier of high-quality fibreglass products.
 
 Cindie remains actively involved in the equestrian community. She is treasurer of the Grey Valley Riding Club and advocates for recreational access and road safety for riders. In her downtime, she enjoys spending time with her horse, Sox, and cares for orphaned ducklings and other birds during spring and summer for the local SPCA.

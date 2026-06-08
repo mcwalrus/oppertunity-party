@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12865/features/original/BL_landscape_-_B_Lane.jpg?1779966755)
 
-#### MĀNGERE
-
-# Ben Lane
-
 “New Zealand’s best days are still ahead of us, but only if we start thinking longer term.”
 
-## **Ben Lane**
-
+## About
 Ben Lane has spent more than 20 years working across tourism and commercial leadership roles in New Zealand and overseas, including more than a decade in the New Zealand tourism industry. He currently works in a senior international tourism leadership role while based in Auckland.
 
 Through his work across New Zealand, Australia, the United States and Canada, Ben has seen both the enormous potential of New Zealand and the growing challenges the country faces, from housing affordability, infrastructure pressure, productivity and environmental decline through to the increasingly short-term nature of politics.

@@ -8,10 +8,6 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9762/features/original/Dave_Bainbridge-Zafar_-_Photo_-_Dave_%281%29.jpg?1773826523)
 
-#### DUNEDIN
-
-# Dave Bainbridge-Zafar
-
 “I never planned on getting into politics, but I care about this country — and the future we’re building — and I’m frustrated with all the pointless bickering and policy u-turns. I want to see practical, evidence-based decisions and long-term thinking over short-term point-scoring. Let’s just get on with the job of making things better for New Zealanders.”
 
 ## About Dave

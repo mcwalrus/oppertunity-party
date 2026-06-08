@@ -8,17 +8,12 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12503/features/original/Adrian_Mee_-_May_2026_%283_of_6%29_-_Adrian_Mee_%281%29.jpg?1779705036)
 
-#### SELWYN
-
-# Adrian Mee
-
 “Using health terms, our current political system is sick and our democracy is unhealthy.
 The Opportunity Party needs your support to make things better for all New Zealanders.
 Opportunity, putting the Pulse back into Politics and the Heartbeat back into New Zealand!
 ”
 
-## **Adrian Mee**
-
+## About
 Adrian Mee was born in Christchurch.
 
 He has worked in healthcare for  over 40 years. For the majority of this time he has worked as a medical laboratory scientist, with roles in Christchurch, New Plymouth, Palmerston North and also Oxford (UK). He has also worked for a number of years as an infection control advisor for a District Health Board. Adrian, because of his science background, likes the evidence-based policies of the Opportunity Party. Adrian is also a small business owner, who through his own personal experience acknowledges that the current economic environment is a challenging time for small business.

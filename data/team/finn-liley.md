@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9864/features/original/Finn_Liley_Landscape.jpg?1773653444)
 
-#### ROTORUA
-
-# Finn Liley
-
 “Having grown up in Rotorua, I recognise the importance of safeguarding and nurturing our natural environment. It is our future, and must be consistently prioritised in decision-making. Additionally, we must advocate for a green economy that promotes growth and development while still protecting our surroundings. I am standing to ensure that this is a high priority for any future government.”
 
-## **Finn Liley**
-
+## About
 Finn was born and raised in Rotorua, where he developed a strong interest in environmental and conservation issues.
 
  

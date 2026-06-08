@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9931/features/original/mt-albert-bbq-20260314-25_%282%29.jpg?1773918111)
 
-#### GLENDENE
-
-# Evan French
-
 "New Zealand's environment and culture is too beautiful to be ruined or to be forced to flee from. That's why I'm fighting for New Zealand's future."
 
-## **Evan French**
-
+## About
 Evan is a recent University of Auckland graduate who is passionate about youth engagement in politics, and turning our Emissions Trading Scheme from an unwieldy club to a sharp sword for cutting our carbon emissions.
 
 A self professed "huge nerd". Evan has grown up in Auckland and has been passionate about using numbers to understand the world since he was very young. He believes in using strong evidence-based analysis to create a world that is more sustainable and just for people. Before joining Opportunity, he studied Math and Ecology at the University of Auckland, with a goal to research climate modelling and understanding the future of climate research and response.

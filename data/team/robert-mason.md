@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12500/features/original/robertmason_%281%29.jpg?1779702687)
 
-#### KENEPURU
-
-# Robert Mason
-
 “New Zealand is my home: an amazing country with wonderful people - it just deserves a better effort from those who claim to govern us. A wasted vote is a vote for the established parties with a vested interest in the status quo. Only a vote for Opportunity can bring about the lasting change New Zealand needs.”
 
-## Robert Mason
-
+## About
 Born in the UK, Robert arrived on these shores 23 years ago and fell in love with New Zealand immediately. After a career in publishing and advertising, he retrained as a secondary school teacher and has taught at a wide variety of schools across the Wellington region. He is passionate about building an educational landscape that is free of ideology and inequality, and which nurtures young people so they can thrive and succeed, wherever their talents and passions might take them.
 
   

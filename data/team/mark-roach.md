@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9870/features/original/Mark_Roach-3LS1.jpg?1773653583)
 
-#### WAITĀKERE
-
-# Mark Roach
-
 "I’m standing for Opportunity this election because I want to help build a more optimistic future for Aotearoa New Zealand. One driven by smart policy cultural vitality social equity innovation and long-term nation-building beyond the pettiness of short-term politics."
 
-## **Mark Roach**
-
+## About
 Mark is a small business owner, who has specialised in music ecosystem consultancy and design for 30 years. He enjoys building and maintaining structural support for independent music [creators, entrepreneurs, and small businesses.](https://www.musichall.co.nz/)
 
 Mark was raised in South Auckland, lived his early adulthood in Central Auckland, and is now a proud Westie living in vibrant New Lynn.

@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9863/features/original/Ben_Wylie-van_Eerd_-_Benjamin_Wylie-van_Eerd_%281%29.jpg?1773653519)
 
-#### HUTT SOUTH
-
-# Ben Wylie-van Eerd
-
 “Opportunity is a party which is bold about facing big challenges, serious about facing up to the evidence, and optimistic about building a better future. Unless we view the future with hope and with a shared plan, we will continue to struggle. The opportunity exists for us to change how we improve our lives into the next decades.”
 
-## **Ben Wylie-van Eerd**
-
+## About
 Ben is a career scientist with experience working in New Zealand and the Netherlands, and an active workplace union delegate. 
 
 He’s passionate about looking after people in the workplace, and strengthening the New Zealand science system so that our businesses and industries can compete better on the world stage. 

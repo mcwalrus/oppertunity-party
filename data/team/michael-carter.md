@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9930/features/original/Michael_Carter_Landscaper_%281%29_%281%29.jpg?1773916065)
 
-#### TAURANGA
-
-# Michael Carter
-
 “With a creative and practical mindset, I aim to make a positive difference to people and the environment through future-focused policies.”
 
-## **Michael Carter**
-
+## About
 With a background in Architecture, Michael Carter is passionate about the built and natural environments, and is a strong advocate for sustainable & resilient development that benefits future generations.
 
 Michael grew up in Christchurch but now calls Tauranga home with his wife and dog. Completing a Master of Architecture degree at Auckland University, he has worked in Architecture for over 9 years and knows how to come up with creative solutions to solve problems in a holistic way. He understands the importance of alternative transport options, and how they can be used as a tool to increase the connectivity between and within urban centres, which can enhance the lives of people living in them.

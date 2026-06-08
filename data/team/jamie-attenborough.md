@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12666/features/original/IMG_6711_-_Jamie_Attenborough.jpg?1779878639)
 
-#### MT ROSKILL
-
-# Jamie Attenborough
-
 “Our political and economic system is no longer working for us. We need Opportunity’s vision to build a new path forward.”
 
-## **Jamie Attenborough**
-
+## About
 Jamie was born in London and was raised in Johannesburg, South Africa. After completing his Honours in Molecular and Cell Biology, he moved to Auckland with his family in 2018. Jamie studied a Masters in Bioscience Enterprise at the University of Auckland.
 
 Jamie is passionate about getting smart ideas out of the lab and into the real world. For the last 6 years, he has worked in various roles in Auckland’s buzzing health technology sector, culminating in his current job working in quality systems management. 

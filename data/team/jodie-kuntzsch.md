@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12698/features/original/Jodie_Kuntzsch_landscape_on_vessel_-_Jodie_Kuntzsch_%281%29.png?1779880935)
 
-#### NELSON
-
-# Jodie Kuntzsch
-
 “I stepped into politics because I want a future where Kiwi kids look back and say, *‘They did right by us'*.”
 
-## **Jodie Kuntzsch**
-
+## About
 For Jodie Kuntzsch, it’s always been about bringing people together—backing communities and ideas that deserve the chance to grow.
 
 With more than 20 years’ experience across the seafood and aquaculture sectors, Jodie has worked at the intersection of industry, innovation, and sustainability in Aotearoa and around the world. From helping ideas get off the ground to supporting industries to grow and adapt, she’s focused on turning potential into reality. Before joining Opportunity, she led the formation of Moananui, connecting ocean-based businesses and innovators so they could go further, together.

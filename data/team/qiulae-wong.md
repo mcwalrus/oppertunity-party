@@ -8,16 +8,11 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12830/features/original/Copy_of_Copy_of_opportunitiy-grey-lynn-festival-20251122-30_%281%29.jpg?1779947810)
 
-#### MT ALBERT
-
-# Qiulae (Q) Wong
-
 “I think this election feels really different in terms of the New Zealand public’s frustration and impatience and the lack of vision for a real change for this country.   
   
 The Opportunity Party is painting a really clear, inspiring picture for the future of New Zealand, and I think that’s something that Kiwis will want to get behind.”
 
-## **Qiulae (Q) Wong**
-
+## About
 Qiulae’s roots are proudly in One Tree Hill in Auckland. After studying law and politics, she stepped into the world of human rights, disability inclusion, ethical fashion, climate and purpose-driven business.
 
 Throughout her career, Qiulae has built companies, scaled global movements and supported major brands like Vivienne Westwood and Stella McCartney to shift towards long-term, sustainable business models.

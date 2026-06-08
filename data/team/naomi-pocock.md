@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9895/features/original/IMG_1146_%281%29.jpg?1774328027)
 
-#### HAMILTON EAST
-
-# Dr. Naomi Pocock
-
 "I’ve been inspired by Qiulae to step up for Opportunity again — for my kids, for your kids, and for the future we all share. I want to help bring a party into Parliament that will stop the political flip‑flop and work with both sides to move New Zealand forward. Opportunity will put the environment and our communities at every decision‑making table, treat every taxpayer dollar with care, and invest in the things that genuinely build a better future for all of us."
 
-## **Dr. Naomi Pocock**
-
+## About
 Tēnā koutou. Ko Aotearoa te wā kāinga. Ko Taranaki te wā kāinga ōku tīpuna. Ko Waipā te tūrangawaewae. Ko Pākehā te iwi. Ko Naomi ahau.
 
 Dr Naomi Pocock has a varied background, with corporate experience at Hewlett Packard (HP) and Ernst & Young (EY) in New Zealand and Europe. She set up and sold a sports business in Ireland, has taught at the University of Waikato, is a life member of her local playcentre, and has been delivering climate and planetary health workshops to councils, business, community groups and students. She is a published author of research based on her PhD thesis, entitled “Concepts of home for returned long-term travellers.”

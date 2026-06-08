@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9871/features/original/MPhillips_Plain_%28flipped_to_right_aligned%29.jpg?1773653394)
 
-#### TAIERI
-
-# Mathew Phillips
-
 "Hard work used to be enough to get ahead. Now it’s barely enough to get by. I’m standing to change that."
 
-## **Mathew Phillips**
-
+## About
 [Mathew](https://www.linkedin.com/in/mathew-phillips-016ab73b5/) is an electrical engineer, finance specialist, and young father working in Dunedin’s insurance sector.
 
 Born into a Taranaki dairy farming family and experiencing hardship early in life, Mathew knows first-hand how vulnerable our families can be when the chips are down. 

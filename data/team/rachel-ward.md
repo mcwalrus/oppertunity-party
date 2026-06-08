@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9929/features/original/1000028925_%283%29_%281%29.jpg?1773954563)
 
-#### TUKITUKI
-
-# Rachel Ward
-
 “Currently, political choices are being made on our behalf that are gutting the very environment we need to thrive and short-changing our future generations. It doesn’t have to be this way. Together we can bring a fresh voice to parliament - led by real kiwis that have joined forces to offer pragmatic, innovative solutions for our future. That movement is Opportunity – come and join us.”
 
-## **Rachel Ward**
-
+## About
 Rachel Ward stands as the Opportunity Party’s candidate for Tukituki, embodying a new generation of leadership that recognises that we don’t have to be satisfied by the current political status quo. “Everyone I speak to is united in their frustration of the pettiness, sheer inefficiency and flip-flopping of the current New Zealand political environment. Change with a long view is needed to not only fuel our national prosperity, but to restore and protect the very environmental foundations that support our Kiwi way of life, wellbeing and economy. Politics shouldn’t feel out of your control – when times are tough we can forget that we have the power to create change. If the people give Opportunity their support, we will use that power for good. This election, the stakes are too high not to make a stand. This is why I am running.”
 
 Rachel was born and raised in Upper Hutt, but these days is a busy Hawke’s Bay local, juggling the joys and challenges of being a mum to two energetic daughters, and shares in the daily realities faced by many kiwis as a homeowner, ratepayer, and small business owner. Coming from an ecological and animal behaviour background (with a BSc Zoology/Ecology and PGDipSc from Massey University), Rachel has founded and run a successful animal behaviour consultancy in Australia, specialising in parrot behaviour and conservation. Since returning to New Zealand in 2018, she has embraced a wider scope and has focused on restoring whole ecosystems and managing endangered species populations as General Manager of one of the country’s largest wildlife sanctuaries. In this role she’s always championing innovative, pragmatic and business savvy approaches to the environmental challenges we face —working on the ground with volunteers, hapū and iwi, landowners, and the wider community to deliver real outcomes for our environment. 

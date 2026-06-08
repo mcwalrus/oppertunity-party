@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9936/features/original/94e34c1c-2a64-4ba8-aaea-230f55551011_-_Romeo_Tevaga.jpg?1780097340)
 
-#### UPPER HARBOUR
-
-# Romeo Tevaga
-
 "Our values, our culture and our people are our strength. Being able to draw upon these to do something different for a country our size is a huge competitive advantage. It’s no surprise we were once the world’s social laboratory — pioneering bold democratic and social reforms that shaped global progress. I believe we can do it again - showing the world a new way of investing in people, innovation and the environment that builds a stronger society and an enduring economy."
 
-## **Romeo Tevaga**
-
+## About
 Romeo brings extensive public service and community engagement experience, with a strong passion for working at the intersection of people, policy, and meaningful change.
 
 Auckland born and raised, Romeo developed an early appreciation for the challenges faced by low-income households through his family’s humble beginnings. Encouraged by parents who valued education as a pathway out of hardship, he graduated from the University of Auckland with degrees in Law, Arts, and postgraduate Honours in Development Studies. During his studies, he led a community homework centre and worked in school outreach across regional New Zealand, strengthening his belief that opportunity should not be limited by geography or background.

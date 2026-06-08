@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9866/features/original/HKnill_ferry_Mar26_1.jpg?1773653481)
 
-#### NORTH SHORE
-
-# Holly Knill
-
 “I’ve spent my career helping organisations develop and execute strategy to deliver real results. Through my recent research into how AI could transform New Zealand’s productivity, I realised our biggest challenge isn’t ideas — it’s execution. Over the past 30 years, our politics has too often produced ‘more of the same’ short-term thinking rather than real change. It’s no surprise many Kiwis feel they’re falling behind or leaving the country in search of opportunity. We deserve better. It’s time to stop talking about change and start delivering it.”
 
-## **Holly Knill**
-
+## About
 Holly is standing for The Opportunity Party because New Zealand deserves practical, evidence-based leadership and the courage to build a next-generation economy which works for all Kiwis.
 
 Bred in Wellington, educated in Auckland and refined across telecommunications, media and technology companies around the world, Holly has spent more than two decades leading growth and product innovation in fast-changing industries.

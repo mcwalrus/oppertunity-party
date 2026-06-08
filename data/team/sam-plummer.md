@@ -8,17 +8,12 @@
 
 ![Meet Sam - Candidate for Opportunity (Taupō)](https://assets.nationbuilder.com/garethmorgan/pages/9894/features/original/Sam_Plummer_willows_landscape_%281%29.jpg?1775106722)
 
-#### TAUPŌ
-
-# Sam Plummer
-
 “I spent years working in international development and trumpeting the way we do
 things in NZ. It was disappointing to return and find that we’ve lost our way. We need
 some new thinking focused on what democracy is all about – the best interests of our
 families, communities and environment.”
 
-## **Sam Plummer**
-
+## About
 Sam has seen the world from many perspectives. Raised on a beef and cropping farm in Central Hawkes Bay, Sam completing a university degree and worked in organisational development roles across both public and private sectors in New Zealand.
 
 A transformative experience as a VSA volunteer in Cambodia led Sam to spend 15 years across Southeast Asia, working with international development agencies and NGOs on projects spanning democratic governance, public sector reform, health, and poverty reduction. These experiences strengthened his commitment to transparent, inclusive decision-making and the empowerment of communities.

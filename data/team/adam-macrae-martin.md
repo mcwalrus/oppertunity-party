@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9860/features/original/Adam_MacRae-Martin_Landscape_Business_Casual.jpg?1773653628)
 
-#### ŌTĀHUHU
-
-# Adam MacRae-Martin
-
 “My motivation comes from wanting to reshape our economy and democracy to make both work for everyone. This will create a future for Aotearoa New Zealand that my daughter and the next generation can be proud to inherit."
 
-## **Adam MacRae-Martin**
-
+## About
 Adam wants to create a world in which every family has the opportunity for a good life, no matter what brought them to the diverse Ōtāhuhu electorate.
 
 Born and bred in Auckland, Adam has worked in three very different industries. He spent time in the public sector working as a Case Manager for Work and Income in South Auckland, in the hospitality industry overseas in Orlando (USA) at theme park resorts, and has created a 20-year career in the retail industry focused on delivering value, innovation and productivity. 

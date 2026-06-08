@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12731/features/original/IMG_9842_-_Matthew_Harris.jpg?1779882054)
 
-#### RANGITATA
-
-# Matt Harris
-
 “Progress depends on our willingness to think differently. I’m standing because I believe New Zealand needs more evidence‑based, long‑term decision‑making, and less of the short-term ping-pong politics that leads to poor outcomes. We need to focus on what actually works and what improves everyday life for people.”
 
-## **Matt Harris**
-
+## About
 Matt Harris is the Opportunity candidate for Rangitata. He has lived in Mid Canterbury since 2012 and has a long-standing connection to the area through extended family, work, and community life.
 
 Matt brings over 30 years of professional experience since completing his engineering degree, working across technology, infrastructure, and complex systems. His career has focused on improving how systems perform in the real world - aligning stakeholders, managing trade-offs, and ensuring decisions based on data lead to practical outcomes.

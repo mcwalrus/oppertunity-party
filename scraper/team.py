@@ -316,6 +316,58 @@ def _name_to_slug(name: str) -> str:
     return slug.strip("-")[:60]
 
 
+def _strip_redundant_name_headings(md: str, name: str, electorate: str) -> str:
+    """Strip repeated name/electorate headings already captured in file metadata.
+
+    Candidate profile pages embed the electorate (as ``#### ELECTORATE``) and
+    the candidate name (as ``# Name`` and ``## **Name**``) inside the page body.
+    Since these are already rendered as structured metadata at the top of the
+    file, this function removes the redundant occurrences:
+
+    - Removes the ``#### ELECTORATE`` heading.
+    - Removes the repeated ``# Name`` heading (keeps the first/file-title one).
+    - Replaces ``## **Name**`` / ``## Name`` / ``## **Name (suffix)**`` bio
+      section headers with ``## About``.
+    """
+    # Strip the #### ELECTORATE heading (already in **Electorate** metadata)
+    if electorate:
+        md = re.sub(
+            rf"(?m)^####\s+{re.escape(electorate.upper())}\s*\n+",
+            "",
+            md,
+        )
+
+    # Strip repeated # Name headings — keep only the first (file title)
+    if name:
+        first_seen = False
+
+        def _drop_after_first(m: re.Match) -> str:  # type: ignore[type-arg]
+            nonlocal first_seen
+            if not first_seen:
+                first_seen = True
+                return m.group(0)
+            return ""
+
+        md = re.sub(
+            rf"(?m)^#\s+\*{{0,2}}{re.escape(name)}\*{{0,2}}\s*\n+",
+            _drop_after_first,
+            md,
+        )
+
+    # Replace ## **Name** / ## Name / ## **Name (suffix)** with ## About
+    # but leave headings already starting with "About" untouched.
+    if name:
+        md = re.sub(
+            rf"(?m)^##\s+\*{{0,2}}{re.escape(name)}(?:\s+\([^)]*\))?\*{{0,2}}\s*$",
+            "## About",
+            md,
+        )
+
+    # Tidy up any excess blank lines introduced by the removals
+    md = re.sub(r"\n{3,}", "\n\n", md)
+    return md.strip()
+
+
 def _format_member_md(member: TeamMember) -> str:
     lines = [f"# {member.name}", ""]
     if member.role:
@@ -324,12 +376,13 @@ def _format_member_md(member: TeamMember) -> str:
         lines.append(f"**Electorate**: {member.electorate}")
     if member.role or member.electorate:
         lines.append("")
+    content = _strip_redundant_name_headings(member.content, member.name, member.electorate or "")
     lines.extend(
         [
             f"> **URL**: {member.url}",
             f"> **Scraped**: {member.scraped_at}",
             "",
-            member.content,
+            content,
         ]
     )
     return "\n".join(lines) + "\n"

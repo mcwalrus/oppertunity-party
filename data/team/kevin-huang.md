@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9932/features/original/Kevin_Huangphoto_%281%29.jpg?1780268918)
 
-#### PAKURANGA
-
-# Kevin Huang
-
 “It would be my genuine pleasure to engage with my fellow New Zealanders and, together, build a future for our families, our community, and our country — a future we all wish to see.”
 
-## **Kevin Huang**
-
+## About
 Kevin Huang is an Aotearoa New Zealand–born Kiwi Chinese who is proud to call Pakuranga home. He was born and raised in Pakuranga and has witnessed the growth and transformation of the East Auckland community over the years. Growing up locally gave him a strong appreciation for the diverse communities and the real-world challenges facing families, from healthcare access to cost-of-living pressures.
 
 He has a professional background as a clinical pharmacist, working across both hospital and community settings. Through his work, he has collaborated closely with healthcare teams, contributed to system improvements, and supported better patient outcomes across a diverse population.

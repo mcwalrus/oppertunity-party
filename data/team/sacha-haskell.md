@@ -8,15 +8,10 @@
 
 ![Meet Q - Leader of Opportunity]()
 
-#### TĀMAKI
-
-# Sacha Haskell
-
 “The future of New Zealand can be bright, but we are a nation stagnating from short term political ping pong - with no plan, in a rapidly changing environment.
 Opportunity provide innovative, fresh, long term thinking and are clear on how to create a more productive, affordable and inclusive New Zealand - creating opportunities for future generations. Use your vote to create change for good."
 
-## **Sacha Haskell**
-
+## About
 Sacha Haskell is a proven executive leader, former police detective, and community advocate with more than two decades of leadership experience across government, infrastructure, finance, sport, culture and community development.
 
 She has held senior executive roles with organisations including FIFA, New Zealand Rugby, Te Papa, Rabobank, Fletcher Building, and local government organisations across New Zealand.

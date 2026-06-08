@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12533/features/original/IMG_6689_-_Blair_Smith.jpg?1779706042)
 
-#### HAMILTON WEST
-
-# Blair Smith
-
 “The decisions made in Wellington show up in the lives of ordinary Kiwis every day. I have seen enough to know we can do better. It's time for a change”
 
-## **Blair Smith**
-
+## About
 Blair Smith is a Critical Care Paramedic based in Hamilton, working on the frontline of the New Zealand health system for fifteen years. He has worked across the country, from Christchurch to Timaru, Whangarei to Hamilton, seeing firsthand what happens when the system fails the people it is meant to serve.
 
 Growing up with dyslexia, Blair knows what it is like to navigate systems that were not designed with you in mind. It is something that shaped how he thinks, how he works, and why he cares deeply about building something better for the people who are too often left behind.

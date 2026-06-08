@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9934/features/original/unnamed_%281%29_%281%29.jpg?1773912807)
 
-#### WAIRARAPA
-
-# Matt Shepherd
-
 “I heard the saying *“Society grows great when good men and women plant trees in whose shade they know they shall never sit”* when I was about 15 years old. Even if I didn't fully understand it at the time, it was formative. It resonated with me then, and it resonates with me today. Lets build something together!"
 
-## **Matt Shepherd**
-
+## About
 Matt Shepherd has spent his adult life serving Kiwis — and now he wants to get to know the people of the Wairarapa.
 
 Growing up in Lower Hutt, Matt's early passion for cooking led him to his first career: At 17 he moved to Auckland and spent the next six years as a chef in the Royal New Zealand Navy. He served aboard some of New Zealand's most storied vessels, including an Antarctic voyage on HMNZS Otago (penguins are hilarious up close!) and multinational exercises aboard HMAS Canberra during RIMPAC. The Navy gave him discipline, resilience, and a foundation he still draws on today.

@@ -8,10 +8,6 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12038/features/original/DSC_1138_edited_%282%29.jpg?1778666145)
 
-#### SOUTHLAND
-
-# Bianca Beebe
-
 “New Zealand is the perfect place to build a truly sovereign, solarpunk future.”
 
 Bianca Beebe is a public health researcher and labour organiser whose work focuses on an empirical study of law to understand (and change) how regulatory regimes affect people’s material conditions. Her policy development centers groups frequently cast to the margins of society because that is where she finds the greatest disparity between what a policy is *supposed* to do and what the evidence says it actually causes. One of the things that drew her to Opportunity Party was the fourth value in the constitution: “Efficacy–we are our results.” Bianca wants all of government to operate with that sense of accountability.

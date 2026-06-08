@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9874/features/original/op-auckland-west-candidations-20260419-73_%281%29.jpg?1779874182)
 
-#### KAIPARA KI MAHURANGI
-
-# Daniel Eb
-
 “New Zealand welcomed my family and offered me an urban-rural upbringing that continues to define my life. I’m standing to pay back those gifts through service.”
 
-## **Daniel Eb**
-
+## About
 [Dan](https://www.linkedin.com/in/daniel-eb/) works to transition Aotearoa New Zealand to a just, regenerative food system.
 
 Born in South Africa and with roots in both Auckland and Kaipara, Dan founded a communications agency to help tell stories about rural innovation, community building and nature-positive farming. Before joining Opportunity, he launched Open Farms - a national open farm day to reconnect urban Kiwis with the land - and authored a Nuffield scholarship report: [The Home Paddock: A strategy for values-led redesign of NZ’s domestic food system](https://ruralleaders.co.nz/wp-content/uploads/2022/11/The-Home-Paddock_Nuffield-NZ-2021_Daniel-Eb.pdf).

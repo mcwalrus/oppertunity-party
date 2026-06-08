@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9865/features/original/Helen_Tait_Portrait_with_Roys_Peak.jpg?1773653459)
 
-#### WAITAKI
-
-# Helen Tait
-
 “Like many New Zealanders, I’m tired of the time and effort wasted by our current politicians in bickering, in blaming the opposition, and in short term thinking, focused only on reelection. I have committed to Opportunity because I believe that the party’s values and policies offer a positive base on which to develop our country.”
 
-## **Helen Tait**
-
+## About
 Helen Tait grew up in Christchurch, graduating from Canterbury University, before completing a post grad diploma in Library and Information Science.
 
   

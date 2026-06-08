@@ -8,14 +8,9 @@
 
 ![Meet Johan - Candidate for Opportunity (Auckland Central)](https://assets.nationbuilder.com/garethmorgan/pages/12634/features/original/DSC00628-HDR_-_Johan_Chang_%281%29.jpg?1780096806)
 
-#### AUCKLAND CENTRAL
-
-# Johan Chang
-
 “My family and I were welcomed to this country by an amazing community with kindness and grace. I’m standing in this election because I want everyone to feel the same charity once afforded to me, and to make sure that no New Zealander is left behind by political decisions that don't feel like it’s been made with their best interest at heart.”
 
-## **Johan Chang**
-
+## About
 Born in Taiwan and raised in Birkenhead, Johan Chang has been calling Auckland home since 1995.
 
 After returning from his Asia OE in 2012, Johan completed a PgDip in Journalism at AUT and dove headfirst into the world of technology and business journalism. His work exposed him to a wide-ranging spectrum of ideas from across the business and tech sectors, allowing him to see how innovation and the classic no.8-wire mentality held by Kiwis can benefit the people of Aotearoa and drive business success.

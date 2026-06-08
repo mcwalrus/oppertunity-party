@@ -8,14 +8,9 @@
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9928/features/original/LR-Website-Banner_%281%29.jpg?1773823674)
 
-#### REMUTAKA
-
-# Luke Ross
-
 “We need to change our approach. The way we live is out of balance with our natural environment. Our collective focus is faltering under an oversaturated and stretched media environment, we’re overworked and we’re disconnected from our local communities. Politics needs a refresh. It’s exciting to think how we could use evidence-based, rational thinking to make our lives better.”
 
-## **Luke Ross**
-
+## About
 Luke is a Wellington local with eight years of experience working in the screen and TV industry. He obtained a Bachelor of Broadcasting Communications in 2018 and has worked for numerous post-production facilities across New Zealand and the United Kingdom. In 2022, Luke moved back to Wellington and worked as a video producer at the Parliamentary Service, and then the Wellington City Council. During this time, he's run his own business as a certified post-production trainer. Luke is a teacher at heart. He loves explaining, discussing and debating complex topics at length, whether that is the latest post-production trend or the latest policy from the Beehive.
 
 *”My superpower is my optimism”*, Luke says. *"I never take myself too seriously, and this helps me bridge the gap with people who have different perspectives.”*
