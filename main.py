@@ -46,7 +46,7 @@ ALL_TARGETS = list(SCRAPER_MAP.keys())
 def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> None:
     """Run selected scrapers and save results into data/.
 
-    After web scraping, also converts any PDFs in policy-assets/ to markdown.
+    After web scraping, also converts any PDFs in data/pdfs/ to markdown.
     """
     start = time.time()
 
@@ -97,7 +97,7 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
         # After scraping policies, download PDFs and convert them
         if key == "policies" and items and isinstance(items[0], PolicyPage):
             # Migrate any existing PDFs that aren't in reference.json
-            if not (DATA_DIR / "policy-assets" / "reference.json").exists():
+            if not (DATA_DIR / "pdfs" / "reference.json").exists():
                 migrate_existing_pdfs()
 
             policy_pages = [p for p in items if isinstance(p, PolicyPage)]
@@ -132,7 +132,7 @@ def main() -> None:
     parser.add_argument(
         "--clean",
         action="store_true",
-        help="Clear data/ directory before scraping (preserves policy-assets/)",
+        help="Clear data/ directory before scraping (preserves pdfs/)",
     )
     args = parser.parse_args()
     run_scrapers(args.targets or None, clean=args.clean)

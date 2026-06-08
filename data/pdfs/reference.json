@@ -5,77 +5,93 @@
       "policy_slug": "abundant-energy",
       "filename": "Opportunity_Policy_Abundant Energy.pdf",
       "downloaded_at": "2026-06-08T11:34:34.428963",
-      "size_bytes": 2644730
+      "size_bytes": 2644730,
+      "md5": "21f2d2b1cfd09154cf957d36583d398a"
     },
     "_migrated_Opportunity_Policy_Citizens Voice.pdf": {
       "source_url": null,
       "policy_slug": "citizens-voice",
       "filename": "Opportunity_Policy_Citizens Voice.pdf",
       "downloaded_at": "2026-06-08T11:34:34.424670",
-      "size_bytes": 791804
+      "size_bytes": 791804,
+      "md5": "20fb0c2f35aa22437aa4aab124e3ac8b"
     },
     "_migrated_Opportunity_Policy_Healthy Oceans.pdf": {
       "source_url": null,
       "policy_slug": "healthy-oceans",
       "filename": "Opportunity_Policy_Healthy Oceans.pdf",
       "downloaded_at": "2026-06-08T11:34:34.426878",
-      "size_bytes": 2432818
+      "size_bytes": 2432818,
+      "md5": "19e14118500eaf9b07fee85cc87670b6"
     },
     "_migrated_Opportunity_Tax Reset_Policy Overview.pdf": {
       "source_url": null,
       "policy_slug": "tax-reset",
       "filename": "Opportunity_Tax Reset_Policy Overview.pdf",
       "downloaded_at": "2026-06-08T11:34:34.431347",
-      "size_bytes": 2612559
+      "size_bytes": 2612559,
+      "md5": "fc8468013fd76290eaf91fb77829a70f"
     },
     "_migrated_Opportunity_Tax Reset_Transition Plan.pdf": {
       "source_url": null,
       "policy_slug": "tax-reset",
       "filename": "Opportunity_Tax Reset_Transition Plan.pdf",
       "downloaded_at": "2026-06-08T11:34:34.429878",
-      "size_bytes": 69374
+      "size_bytes": 69374,
+      "md5": "f48a50ca98071175dca0e1d045250ed3"
     },
     "1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq": {
       "source_url": "https://drive.google.com/file/d/1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq/view?usp=drive_link",
       "policy_slug": "healthy-oceans",
-      "filename": "1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq.pdf",
+      "filename": "Opportunity_Policy_Healthy Oceans.pdf",
       "downloaded_at": "2026-06-08T13:22:51.520532",
-      "size_bytes": 2432818
+      "size_bytes": 2432818,
+      "md5": "19e14118500eaf9b07fee85cc87670b6",
+      "note": "canonical filename; GDrive slug was a duplicate"
     },
     "1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI": {
       "source_url": "https://drive.google.com/file/d/1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI/view?usp=drive_link",
       "policy_slug": "abundant-energy",
-      "filename": "1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI.pdf",
+      "filename": "Opportunity_Policy_Abundant Energy.pdf",
       "downloaded_at": "2026-06-08T13:22:54.850327",
-      "size_bytes": 2644730
+      "size_bytes": 2644730,
+      "md5": "21f2d2b1cfd09154cf957d36583d398a",
+      "note": "canonical filename; GDrive slug was a duplicate"
     },
     "116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L": {
       "source_url": "https://drive.google.com/file/d/116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L/view?usp=drive_link",
       "policy_slug": "citizens-voice",
-      "filename": "116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L.pdf",
+      "filename": "Opportunity_Policy_Citizens Voice.pdf",
       "downloaded_at": "2026-06-08T13:22:57.647456",
-      "size_bytes": 791804
+      "size_bytes": 791804,
+      "md5": "20fb0c2f35aa22437aa4aab124e3ac8b",
+      "note": "canonical filename; GDrive slug was a duplicate"
     },
     "1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B": {
       "source_url": "https://drive.google.com/file/d/1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B/view?usp=drive_link",
       "policy_slug": "tax-reset",
-      "filename": "1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B.pdf",
+      "filename": "Opportunity_Tax Reset_Policy Overview.pdf",
       "downloaded_at": "2026-06-08T13:23:00.888364",
-      "size_bytes": 2612559
+      "size_bytes": 2612559,
+      "md5": "fc8468013fd76290eaf91fb77829a70f",
+      "note": "canonical filename; GDrive slug was a duplicate"
     },
     "1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW": {
       "source_url": "https://drive.google.com/file/d/1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW/view?usp=drive_link",
       "policy_slug": "tax-reset",
-      "filename": "1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW.pdf",
+      "filename": "Opportunity_Tax Reset_Transition Plan.pdf",
       "downloaded_at": "2026-06-08T13:23:03.573176",
-      "size_bytes": 69374
+      "size_bytes": 69374,
+      "md5": "f48a50ca98071175dca0e1d045250ed3",
+      "note": "canonical filename; GDrive slug was a duplicate"
     },
     "https://www.scionresearch.com/__data/assets/pdf_file/0003/80607/MakingZeroTheHero-Summary-Report.pdf": {
       "source_url": "https://www.scionresearch.com/__data/assets/pdf_file/0003/80607/MakingZeroTheHero-Summary-Report.pdf",
       "policy_slug": "healthy-land",
       "filename": "MakingZeroTheHero-Summary-Report.pdf",
       "downloaded_at": "2026-06-08T13:25:52.024317",
-      "size_bytes": 309800
+      "size_bytes": 309800,
+      "md5": "603178c669dc66d2082d76417e0faf80"
     }
   }
 }

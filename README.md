@@ -20,7 +20,7 @@ just scrape
 | Directory | Contents |
 |-----------|----------|
 | `data/policies/` | Policy pages and PDF-derived documents |
-| `data/policy-assets/` | Downloaded PDF files |
+| `data/pdfs/` | Downloaded PDF files |
 | `data/team/` | Candidate and team profiles |
 | `data/news/` | Media releases and news articles |
 | `data/party-information/` | About pages, constitution, rules |

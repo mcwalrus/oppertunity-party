@@ -23,7 +23,7 @@ from .client import DATA_DIR, save_content
 
 logger = logging.getLogger(__name__)
 
-POLICY_ASSETS_DIR = DATA_DIR / "policy-assets"
+POLICY_ASSETS_DIR = DATA_DIR / "pdfs"
 REFERENCE_FILE = POLICY_ASSETS_DIR / "reference.json"
 
 # Regex for the header key-value format: "Date                February 2026"
@@ -33,12 +33,12 @@ PAGE_FOOTER_RE = re.compile(r"^Opportunity\s+Party\s+")
 
 
 def convert_all_pdfs() -> list[dict]:
-    """Find all PDFs in policy-assets and convert them to markdown.
+    """Find all PDFs in data/pdfs and convert them to markdown.
 
     Output is organized into subdirectories under data/policies/{slug}/.
     """
     if not POLICY_ASSETS_DIR.exists():
-        logger.warning("No policy-assets directory found")
+        logger.warning("No data/pdfs directory found")
         return []
 
     pdfs = sorted(POLICY_ASSETS_DIR.glob("*.pdf"))

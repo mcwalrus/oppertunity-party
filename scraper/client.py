@@ -27,16 +27,16 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 
 def clean_data() -> None:
-    """Remove all scraped data, preserving the policy-assets folder."""
+    """Remove all scraped data, preserving the pdfs folder."""
     if DATA_DIR.exists():
         for child in DATA_DIR.iterdir():
-            if child.name == "policy-assets":
+            if child.name == "pdfs":
                 continue
             if child.is_dir():
                 shutil.rmtree(child)
             else:
                 child.unlink()
-        logger.info("Cleaned data directory (preserved policy-assets)")
+        logger.info("Cleaned data directory (preserved pdfs)")
 
 
 def fetch_html(path: str) -> str:
