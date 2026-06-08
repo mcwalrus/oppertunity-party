@@ -31,7 +31,7 @@ Done well. the transition would avoid excessive inflationary impacts or other ec
 
 ## **Overview of a possible Tax Reset implementation pathway**
 
-||**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
+|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
 |---|---|---|---|---|---|---|---|---|---|
 ||**CI/New tax**|**LVT**|||**Contributions**||**Tax exemption**|||
 |**Year**|**% of population**|**Urban land rate**<br>**applied**|**Rural land rate**<br>**applied**|**Simplifed**<br>**expected**<br>**reduction in**<br>**land values**|**Employee**|**Employer**|**Employer**|**Employee**|**Fund Income**|
