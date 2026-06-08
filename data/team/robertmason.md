@@ -3,7 +3,7 @@
 **Role**: Robert Mason
 
 > **URL**: https://www.opportunity.org.nz/candidate-robert-mason
-> **Scraped**: 2026-06-08T12:00:44.401815
+> **Scraped**: 2026-06-08T12:42:00.860354
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12500/features/original/robertmason_%281%29.jpg?1779702687)
 
@@ -37,7 +37,7 @@ When he’s not pushing his political barrow, Robert enjoys playing darts over a
 
 Candidate for Opportunity (Kenepuru)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#55073a373027217b1834263a3b153a25253a2721203b3c212c7b3a27327b3b2f)
+[Email: [email protected]](/cdn-cgi/l/email-protection#5e0c313c3b2c2a70133f2d31301e312e2e312c2a2b30372a2770312c39703024)
 
 ## Donate to our Party Vote Campaign in Kenepuru
 

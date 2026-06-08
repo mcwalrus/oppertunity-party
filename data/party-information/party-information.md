@@ -1,7 +1,7 @@
 # Party Information
 
 > **URL**: https://www.opportunity.org.nz/party-information
-> **Scraped**: 2026-06-08T12:01:18.240470
+> **Scraped**: 2026-06-08T12:42:20.158732
 
 ## Party Information
 

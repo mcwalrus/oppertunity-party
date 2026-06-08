@@ -3,7 +3,7 @@
 **Role**: Almo Wong
 
 > **URL**: https://www.opportunity.org.nz/candidate-almo-wong
-> **Scraped**: 2026-06-08T12:01:00.945290
+> **Scraped**: 2026-06-08T12:42:09.626153
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9862/features/original/Almo_Wong_-_IMG_2337.jpg?1773652716)
 
@@ -41,7 +41,7 @@ He was drawn to the party because he is passionate about a fairer New Zealand wh
 
 Candidate for Opportunity (Henderson)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#753419181a5b221a1b12351a05051a0701001b1c010c5b1a07125b1b0f)
+[Email: [email protected]](/cdn-cgi/l/email-protection#0a4b666765245d65646d4a657a7a65787e7f64637e732465786d246470)
 
 ## Donate to our Party Vote Campaign in Henderson
 

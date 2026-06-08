@@ -3,7 +3,7 @@
 **Role**: Matt Harris
 
 > **URL**: https://www.opportunity.org.nz/candidate-matt-harris
-> **Scraped**: 2026-06-08T12:00:36.731799
+> **Scraped**: 2026-06-08T12:41:54.862869
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12731/features/original/IMG_9842_-_Matthew_Harris.jpg?1779882054)
 
@@ -35,7 +35,7 @@ Matt lives at Lake Hood with his family. His wife works in the health sector, an
 
 Candidate for Opportunity (Rangitata)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#c588a4b1b1eb8da4b7b7acb685aab5b5aab7b1b0abacb1bcebaab7a2ebabbf)
+[Email: [email protected]](/cdn-cgi/l/email-protection#3875594c4c1670594a4a514b78574848574a4c4d56514c4116574a5f165642)
 
 ## Donate to our Party Vote Campaign in Rangitata
 

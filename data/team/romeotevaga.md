@@ -3,7 +3,7 @@
 **Role**: Romeo Tevaga
 
 > **URL**: https://www.opportunity.org.nz/candidate-romeo-tevaga
-> **Scraped**: 2026-06-08T12:00:58.746959
+> **Scraped**: 2026-06-08T12:42:07.889950
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9936/features/original/94e34c1c-2a64-4ba8-aaea-230f55551011_-_Romeo_Tevaga.jpg?1780097340)
 
@@ -45,7 +45,7 @@ Family remains central to Romeo’s life and values. As a proud Kiwi Samoan, he 
 
 Candidate for Opportunity (Upper Harbour)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#9eccf1f3fbf1b0cafbe8fff9ffdef1eeeef1eceaebf0f7eae7b0f1ecf9b0f0e4)
+[Email: [email protected]](/cdn-cgi/l/email-protection#e3b18c8e868ccdb78695828482a38c93938c9197968d8a979acd8c9184cd8d99)
 
 ## Donate to our Party Vote Campaign in Upper Harbour
 

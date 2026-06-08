@@ -3,7 +3,7 @@
 **Role**: Qiulae (Q) Wong
 
 > **URL**: https://www.opportunity.org.nz/candidate-qiulae-wong
-> **Scraped**: 2026-06-08T12:00:28.864552
+> **Scraped**: 2026-06-08T12:41:47.613884
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12830/features/original/Copy_of_Copy_of_opportunitiy-grey-lynn-festival-20251122-30_%281%29.jpg?1779947810)
 
@@ -39,7 +39,7 @@ After a career supporting businesses to lead where it matters, Q is now leading 
 
 Party Leader & Candidate for Opportunity (Mt. Albert)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#3e6f574b525f5b10695150597e514e4e514c4a4b50574a4710514c59105044)
+[Email: [email protected]](/cdn-cgi/l/email-protection#47162e322b262269102829200728373728353332292e333e6928352069293d)
 
 ## Donate to our Party Vote Campaign in Mt Albert
 

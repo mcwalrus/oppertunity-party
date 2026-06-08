@@ -3,7 +3,7 @@
 **Role**: Sarah Lucas
 
 > **URL**: https://www.opportunity.org.nz/candidate-sarah-lucas
-> **Scraped**: 2026-06-08T12:00:42.809751
+> **Scraped**: 2026-06-08T12:41:59.293726
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9872/features/original/IMG_20250513_094635_-_Sarah_Lucas_-_People_Place_Future_%281%29.jpg?1773738192)
 
@@ -40,7 +40,7 @@ Outside of work she spends as much time outdoors as she can - she loves trails, 
 
 Candidate for Opportunity (New Plymouth)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#085b697a696026447d6b697b48677878677a7c7d66617c7126677a6f266672)
+[Email: [email protected]](/cdn-cgi/l/email-protection#194a786b787137556c7a786a59766969766b6d6c77706d6037766b7e377763)
 
 ## Donate to our Party Vote Campaign in New Plymouth
 

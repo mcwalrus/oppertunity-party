@@ -10,6 +10,7 @@ import time
 from scraper.client import DATA_DIR, clean_data
 from scraper.news import save_news, scrape_news
 from scraper.party_info import save_party_info, scrape_party_info
+from scraper.pdf_convert import convert_all_pdfs
 from scraper.policies import save_policies, scrape_policies
 from scraper.team import save_team, scrape_team
 
@@ -22,16 +23,23 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# (label, scrape_fn, save_fn) — or None for non-scraping tasks
 SCRAPER_MAP = {
     "policies": ("policies", scrape_policies, save_policies),
     "team": ("team", scrape_team, save_team),
     "news": ("news", scrape_news, save_news),
     "party-info": ("party information", scrape_party_info, save_party_info),
+    "pdfs": None,
 }
+
+ALL_TARGETS = list(SCRAPER_MAP.keys())
 
 
 def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> None:
-    """Run selected scrapers and save results into data/."""
+    """Run selected scrapers and save results into data/.
+
+    After web scraping, also converts any PDFs in policy-assets/ to markdown.
+    """
     start = time.time()
 
     if clean:
@@ -44,17 +52,25 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
         unknown = set(targets) - set(SCRAPER_MAP)
         if unknown:
             logger.error("Unknown scraper targets: %s", unknown)
-            logger.info("Available: %s", ", ".join(SCRAPER_MAP))
+            logger.info("Available: %s", ", ".join(ALL_TARGETS))
             sys.exit(1)
     else:
         selected = SCRAPER_MAP
 
     logger.info("=== Starting Opportunity Party scraper ===")
     logger.info("Output directory: %s", DATA_DIR)
-    logger.info("Targets: %s", ", ".join(selected) if selected else "all")
+    logger.info("Targets: %s", ", ".join(selected))
 
     totals = {}
-    for key, (label, scrape_fn, save_fn) in selected.items():
+    for key, entry in selected.items():
+        if entry is None:
+            # PDF conversion (no web scraping)
+            logger.info("--- Converting policy PDFs ---")
+            results = convert_all_pdfs()
+            totals["policy PDFs"] = len(results)
+            continue
+
+        label, scrape_fn, save_fn = entry
         logger.info("--- Scraping %s ---", label)
         items = scrape_fn()
         save_fn(items)
@@ -67,12 +83,12 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Scrape the Opportunity Party website",
+        description="Scrape the Opportunity Party website and convert policy PDFs",
     )
     parser.add_argument(
         "targets",
         nargs="*",
-        choices=list(SCRAPER_MAP),
+        choices=ALL_TARGETS,
         help="Scraper targets to run (default: all)",
     )
     parser.add_argument(

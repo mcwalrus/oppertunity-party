@@ -3,7 +3,7 @@
 **Role**: Johan Chang
 
 > **URL**: https://www.opportunity.org.nz/candidate-johan-chang
-> **Scraped**: 2026-06-08T12:00:34.234272
+> **Scraped**: 2026-06-08T12:41:51.362262
 
 ![Meet Johan - Candidate for Opportunity (Auckland Central)](https://assets.nationbuilder.com/garethmorgan/pages/12634/features/original/DSC00628-HDR_-_Johan_Chang_%281%29.jpg?1780096806)
 
@@ -39,7 +39,7 @@ In his spare time, Johan can be found at the local bouldering gym, telling fanta
 
 Candidate for Opportunity (Auckland Central)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#e1ab8e89808fcfa289808f86a18e91918e9395948f889598cf8e9386cf8f9b)
+[Email: [email protected]](/cdn-cgi/l/email-protection#e6ac898e8788c8a58e878881a689969689949293888f929fc8899481c8889c)
 
 ## Donate to our Party Vote Campaign in Auckland Central
 

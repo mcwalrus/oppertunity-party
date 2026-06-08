@@ -3,7 +3,7 @@
 **Role**: Blair Smith
 
 > **URL**: https://www.opportunity.org.nz/candidate-blair-smith
-> **Scraped**: 2026-06-08T12:00:51.242537
+> **Scraped**: 2026-06-08T12:42:06.021878
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12533/features/original/IMG_6689_-_Blair_Smith.jpg?1779706042)
 
@@ -37,7 +37,7 @@ Blair is standing for the Opportunity Party in Hamilton West because he believes
 
 Candidate for Opportunity (Hamilton West)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#a2e0cec3cbd08cf1cfcbd6cae2cdd2d2cdd0d6d7cccbd6db8ccdd0c58cccd8)
+[Email: [email protected]](/cdn-cgi/l/email-protection#e3a18f828a91cdb08e8a978ba38c93938c9197968d8a979acd8c9184cd8d99)
 
 ## Donate to our Party Vote Campaign in Hamilton West
 

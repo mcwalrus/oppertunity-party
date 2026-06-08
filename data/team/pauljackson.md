@@ -3,7 +3,7 @@
 **Role**: Paul Jackson
 
 > **URL**: https://www.opportunity.org.nz/candidate-paul-jackson
-> **Scraped**: 2026-06-08T12:00:40.178869
+> **Scraped**: 2026-06-08T12:41:56.602612
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12897/features/original/PXL_20260517_001029872.PORTRAIT_%281%29_-_Paul_Jackson_%281%29.jpg?1779967311)
 
@@ -35,7 +35,7 @@ In his spare time, you can find Paul running, riding, reading, and spending qual
 
 Candidate for Opportunity (Epsom)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#f9a9988c95d7b3989a928a9697b9968989968b8d8c97908d80d7968b9ed79783)
+[Email: [email protected]](/cdn-cgi/l/email-protection#6939081c054723080a021a060729061919061b1d1c07001d1047061b0e470713)
 
 ## Donate to our Party Vote Campaign in Epsom
 

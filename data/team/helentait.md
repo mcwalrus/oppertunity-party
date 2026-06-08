@@ -3,7 +3,7 @@
 **Role**: Helen Tait
 
 > **URL**: https://www.opportunity.org.nz/candidate-helen-tait
-> **Scraped**: 2026-06-08T12:00:58.076606
+> **Scraped**: 2026-06-08T12:42:07.456826
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9865/features/original/Helen_Tait_Portrait_with_Roys_Peak.jpg?1773653459)
 
@@ -49,7 +49,7 @@ Her ambition is to see Opportunity taking on a role in influencing — and in ti
 
 Candidate for Opportunity (Waitaki)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#e5ad8089808bcbb1848c91a58a95958a9791908b8c919ccb8a9782cb8b9f)
+[Email: [email protected]](/cdn-cgi/l/email-protection#eea68b828b80c0ba8f879aae819e9e819c9a9b80879a97c0819c89c08094)
 
 ## Donate to our Party Vote Campaign in Waitaki
 

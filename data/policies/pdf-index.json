@@ -1,0 +1,42 @@
+[
+  {
+    "source_file": "Opportunity_Policy_Abundant Energy.pdf",
+    "title": "Abundant Energy",
+    "policy": "Abundant Energy",
+    "date": "February 2026",
+    "document_type": "Policy Overview",
+    "output_file": "pdf-abundant-energy_policy-overview.md"
+  },
+  {
+    "source_file": "Opportunity_Policy_Citizens Voice.pdf",
+    "title": "Citizen's Voice",
+    "policy": "Citizen's Voice",
+    "date": "June 2025",
+    "document_type": "Policy Overview",
+    "output_file": "pdf-citizens-voice_policy-overview.md"
+  },
+  {
+    "source_file": "Opportunity_Policy_Healthy Oceans.pdf",
+    "title": "Healthy Oceans",
+    "policy": "Healthy Oceans",
+    "date": "February 2026",
+    "document_type": "Policy Overview",
+    "output_file": "pdf-healthy-oceans_policy-overview.md"
+  },
+  {
+    "source_file": "Opportunity_Tax Reset_Policy Overview.pdf",
+    "title": "Tax Reset",
+    "policy": "Tax Reset",
+    "date": "May 2026",
+    "document_type": "Policy Overview",
+    "output_file": "pdf-tax-reset_policy-overview.md"
+  },
+  {
+    "source_file": "Opportunity_Tax Reset_Transition Plan.pdf",
+    "title": "Tax Reset",
+    "policy": "Tax Reset",
+    "date": "May 2026",
+    "document_type": "Policy Addendum",
+    "output_file": "pdf-tax-reset_policy-addendum.md"
+  }
+]

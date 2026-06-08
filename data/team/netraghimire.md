@@ -3,7 +3,7 @@
 **Role**: Netra Ghimire
 
 > **URL**: https://www.opportunity.org.nz/candidate-netra-ghimire
-> **Scraped**: 2026-06-08T12:00:35.911951
+> **Scraped**: 2026-06-08T12:41:53.744799
 
 ![Meet Netra - Candidate for Opportunity (Palmerston North)](https://assets.nationbuilder.com/garethmorgan/pages/12632/features/original/IMG_0646_-_Netra_Ghimire.jpg?1779876331)
 
@@ -37,7 +37,7 @@ He believes NZ already has everything it needs to thrive -  what we need now is
 
 Candidate for Opportunity (Palmerston North)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#96d8f3e2e4f7b8d1fefffbffe4f3d6f9e6e6f9e4e2e3f8ffe2efb8f9e4f1b8f8ec)
+[Email: [email protected]](/cdn-cgi/l/email-protection#bbf5decfc9da95fcd3d2d6d2c9defbd4cbcbd4c9cfced5d2cfc295d4c9dc95d5c1)
 
 ## Donate to our Party Vote Campaign in Palmerston North
 

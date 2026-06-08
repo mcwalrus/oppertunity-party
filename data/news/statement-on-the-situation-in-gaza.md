@@ -1,7 +1,7 @@
 # Statement on the situation in Gaza
 
 > **URL**: https://www.opportunity.org.nz/situation_in_gaza
-> **Scraped**: 2026-06-08T12:01:16.044053
+> **Scraped**: 2026-06-08T12:42:19.225542
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/6989/features/original/1.jpg?1769681791)
 

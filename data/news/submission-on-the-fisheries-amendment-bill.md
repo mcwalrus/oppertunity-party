@@ -1,7 +1,7 @@
 # Submission on the Fisheries Amendment Bill
 
 > **URL**: https://www.opportunity.org.nz/submission_on_the_fisheries_amendment_bill
-> **Scraped**: 2026-06-08T12:01:07.356595
+> **Scraped**: 2026-06-08T12:42:13.497112
 
 ## Submission on the Fisheries Amendment Bill
 

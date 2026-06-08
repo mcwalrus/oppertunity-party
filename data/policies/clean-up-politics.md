@@ -1,7 +1,7 @@
 # Clean up Politics
 
 > **URL**: https://www.opportunity.org.nz/clean_up_politics
-> **Scraped**: 2026-06-08T12:00:22.823578
+> **Scraped**: 2026-06-08T12:41:41.064001
 
 ![Clean up Politics](https://assets.nationbuilder.com/garethmorgan/pages/9143/features/original/Clean_Up_Politics.png?1771490547)
 

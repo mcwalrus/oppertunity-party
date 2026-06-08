@@ -1,7 +1,7 @@
 # Healthy Land
 
 > **URL**: https://www.opportunity.org.nz/healthy_land
-> **Scraped**: 2026-06-08T12:00:24.438649
+> **Scraped**: 2026-06-08T12:41:42.685628
 
 ![Healthy Land](https://assets.nationbuilder.com/garethmorgan/pages/9137/features/original/Healthy_Land.png?1771490233)
 

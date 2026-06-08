@@ -1,7 +1,7 @@
 # Call for Government reversal on LNG terminal
 
 > **URL**: https://www.opportunity.org.nz/call_for_government_reversal_on_lng_terminal
-> **Scraped**: 2026-06-08T12:01:09.984392
+> **Scraped**: 2026-06-08T12:42:15.894614
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/9497/features/original/LNG_tanker.jpg?1772507349)](/call_for_government_reversal_on_lng_terminal)
 

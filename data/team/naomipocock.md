@@ -3,7 +3,7 @@
 **Role**: Dr. Naomi Pocock
 
 > **URL**: https://www.opportunity.org.nz/candidate-naomi-pocock
-> **Scraped**: 2026-06-08T12:00:47.955468
+> **Scraped**: 2026-06-08T12:42:03.347532
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9895/features/original/IMG_1146_%281%29.jpg?1774328027)
 
@@ -35,7 +35,7 @@ Naomi enjoys playing sports with her children, speaks fluent German, is embarkin
 
 Candidate for Opportunity (Hamilton East)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#400e212f2d296e102f232f232b002f30302f3234352e2934396e2f32276e2e3a)
+[Email: [email protected]](/cdn-cgi/l/email-protection#82cce3edefebacd2ede1ede1e9c2edf2f2edf0f6f7ecebf6fbacedf0e5acecf8)
 
 ## Donate to our Party Vote Campaign in Hamilton East
 

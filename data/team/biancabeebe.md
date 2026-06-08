@@ -3,7 +3,7 @@
 **Role**: Donate to our Party Vote Campaign in Southland
 
 > **URL**: https://www.opportunity.org.nz/candidate-bianca-beebe
-> **Scraped**: 2026-06-08T12:00:32.737750
+> **Scraped**: 2026-06-08T12:41:50.464103
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12038/features/original/DSC_1138_edited_%282%29.jpg?1778666145)
 
@@ -31,7 +31,7 @@ As an unabashed nerd and sci-fi speculative fiction devotee, Bianca is here to b
 
 Candidate for Opportunity (Southland)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#b4f6ddd5dad7d59af6d1d1d6d1f4dbc4c4dbc6c0c1daddc0cd9adbc6d39adace)
+[Email: [email protected]](/cdn-cgi/l/email-protection#c785aea6a9a4a6e985a2a2a5a287a8b7b7a8b5b3b2a9aeb3bee9a8b5a0e9a9bd)
 
 ## Donate to our Party Vote Campaign in Southland
 

@@ -3,7 +3,7 @@
 **Role**: Chee-Khiang (CK) Sng
 
 > **URL**: https://www.opportunity.org.nz/candidate-chee-khiang-sng
-> **Scraped**: 2026-06-08T12:00:57.598716
+> **Scraped**: 2026-06-08T12:42:06.933824
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12733/features/original/CKsng-Landscape_%281%29.jpg?1779883034)
 
@@ -35,7 +35,7 @@ Outside of politics, CK enjoys reading, travelling and photography. He also love
 
 Candidate for Opportunity (Kāpiti)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#edaea6c3be838aad829d9d829f999883849994c3829f8ac38397)
+[Email: [email protected]](/cdn-cgi/l/email-protection#d4979ffa87bab394bba4a4bba6a0a1babda0adfabba6b3fabaae)
 
 ## Donate to our Party Vote Campaign in Kāpiti
 

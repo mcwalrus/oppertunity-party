@@ -3,7 +3,7 @@
 **Role**: Jamie Attenborough
 
 > **URL**: https://www.opportunity.org.nz/candidate-jamie-attenborough
-> **Scraped**: 2026-06-08T12:00:31.202454
+> **Scraped**: 2026-06-08T12:41:49.471924
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12666/features/original/IMG_6711_-_Jamie_Attenborough.jpg?1779878639)
 
@@ -39,7 +39,7 @@ Jamie moved to Mt Roskill in 2024 and lives with his husband after getting marri
 
 Candidate for Opportunity (Mt. Roskill)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#95dff4f8fcf0bbd4e1e1f0fbf7fae7fae0f2fdd5fae5e5fae7e1e0fbfce1ecbbfae7f2bbfbef)
+[Email: [email protected]](/cdn-cgi/l/email-protection#612b000c08044f201515040f030e130e140609210e11110e1315140f0815184f0e13064f0f1b)
 
 ## Donate to our Party Vote Campaign in Mt. Roskill
 

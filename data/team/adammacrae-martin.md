@@ -3,7 +3,7 @@
 **Role**: Adam MacRae-Martin
 
 > **URL**: https://www.opportunity.org.nz/candidate-adam-macrae-martin
-> **Scraped**: 2026-06-08T12:00:43.382492
+> **Scraped**: 2026-06-08T12:41:59.881270
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9860/features/original/Adam_MacRae-Martin_Landscape_Business_Casual.jpg?1773653628)
 
@@ -37,7 +37,7 @@ He has volunteered across community sport, refereeing, umpiring, and coaching ac
 
 Candidate for Opportunity (Ōtāhuhu)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#92d3f6f3ffbcdff3f1c0f3f7bfdff3e0e6fbfcd2fde2e2fde0e6e7fcfbe6ebbcfde0f5bcfce8)
+[Email: [email protected]](/cdn-cgi/l/email-protection#29684d48440764484a7b484c0464485b5d404769465959465b5d5c47405d5007465b4e074753)
 
 ## Donate to our Party Vote Campaign in Ōtāhuhu
 

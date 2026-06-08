@@ -1,7 +1,7 @@
 # Productivity Unleashed
 
 > **URL**: https://www.opportunity.org.nz/productivity-unleashed
-> **Scraped**: 2026-06-08T12:00:21.216218
+> **Scraped**: 2026-06-08T12:41:39.069450
 
 ![Productivity Unleashed](https://assets.nationbuilder.com/garethmorgan/pages/9140/features/original/7c6d4a85856a-Chaise_Taylor___River_3_%281%29_2.png?1771495801)
 

@@ -1,7 +1,7 @@
 # The State of the Nation
 
 > **URL**: https://www.opportunity.org.nz/the-state-of-the-nation
-> **Scraped**: 2026-06-08T12:01:12.273249
+> **Scraped**: 2026-06-08T12:42:16.851578
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9333/features/original/Qiulae_7955_1.png?1772141595)
 

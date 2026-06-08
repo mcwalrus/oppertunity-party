@@ -3,7 +3,7 @@
 **Role**: Sam Plummer
 
 > **URL**: https://www.opportunity.org.nz/candidate-sam-plummer
-> **Scraped**: 2026-06-08T12:00:47.282963
+> **Scraped**: 2026-06-08T12:42:02.920334
 
 ![Meet Sam - Candidate for Opportunity (Taupō)](https://assets.nationbuilder.com/garethmorgan/pages/9894/features/original/Sam_Plummer_willows_landscape_%281%29.jpg?1775106722)
 
@@ -40,7 +40,7 @@ When not reflecting on the possibilities of a more empowered society, Sam can be
 
 Candidate for Opportunity (Taupō)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#742715195a24180119191106341b04041b0600011a1d000d5a1b06135a1a0e)
+[Email: [email protected]](/cdn-cgi/l/email-protection#f6a5979bd8a69a839b9b9384b699868699848283989f828fd8998491d8988c)
 
 ## Donate to our Party Vote Campaign in Taupō
 

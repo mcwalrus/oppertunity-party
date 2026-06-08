@@ -3,7 +3,7 @@
 **Role**: Ben Lane
 
 > **URL**: https://www.opportunity.org.nz/candidate-ben-lane
-> **Scraped**: 2026-06-08T12:00:41.849583
+> **Scraped**: 2026-06-08T12:41:58.336862
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12865/features/original/BL_landscape_-_B_Lane.jpg?1779966755)
 
@@ -37,7 +37,7 @@ Ben lives in Auckland with his wife and three children, and believes New Zealand
 
 Candidate for Opportunity (Māngere)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#0b496e6525476a656e4b647b7b64797f7e65627f722564796c256571)
+[Email: [email protected]](/cdn-cgi/l/email-protection#0547606b2b49646b60456a75756a7771706b6c717c2b6a77622b6b7f)
 
 ## Donate to our Party Vote Campaign in Māngere
 

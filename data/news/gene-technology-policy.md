@@ -1,7 +1,7 @@
 # Gene Technology Policy
 
 > **URL**: https://www.opportunity.org.nz/gene_technology_policy
-> **Scraped**: 2026-06-08T12:01:03.347348
+> **Scraped**: 2026-06-08T12:42:11.579736
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/12797/features/original/warren-umoh--qycBqByWIY-unsplash.jpg?1779946192)](/gene_technology_policy)
 

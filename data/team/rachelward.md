@@ -3,7 +3,7 @@
 **Role**: Rachel Ward
 
 > **URL**: https://www.opportunity.org.nz/candidate-rachel-ward
-> **Scraped**: 2026-06-08T12:00:59.709883
+> **Scraped**: 2026-06-08T12:42:08.750816
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9929/features/original/1000028925_%283%29_%281%29.jpg?1773954563)
 
@@ -43,7 +43,7 @@ For Rachel, Hawke’s Bay isn’t just a place to live—it’s where she’s in
 
 Candidate for Opportunity (Tukituki)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#0f5d6e6c676a6321586e7d6b4f607f7f607d7b7a61667b7621607d68216175)
+[Email: [email protected]](/cdn-cgi/l/email-protection#3f6d5e5c575a5311685e4d5b7f504f4f504d4b4a51564b4611504d58115145)
 
 ## Donate to our Party Vote Campaign in Tukituki
 

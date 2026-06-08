@@ -1,7 +1,7 @@
 # Tax Reset
 
 > **URL**: https://www.opportunity.org.nz/tax-reset
-> **Scraped**: 2026-06-08T12:00:22.359902
+> **Scraped**: 2026-06-08T12:41:40.384125
 
 ![hero](https://assets.nationbuilder.com/garethmorgan/pages/11543/attachments/original/1778041383/Opp-TaxReset-Hero-v2.jpg?1778041383)
 

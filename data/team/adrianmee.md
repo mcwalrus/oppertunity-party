@@ -3,7 +3,7 @@
 **Role**: Adrian Mee
 
 > **URL**: https://www.opportunity.org.nz/candidate-adrian-mee
-> **Scraped**: 2026-06-08T12:00:45.428841
+> **Scraped**: 2026-06-08T12:42:01.292399
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/12503/features/original/Adrian_Mee_-_May_2026_%283_of_6%29_-_Adrian_Mee_%281%29.jpg?1779705036)
 
@@ -46,7 +46,7 @@ On a lighter note, he is also known for his Dad jokes and puns.
 
 Candidate for Opportunity (Selwyn)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#adecc9dfc4ccc383e0c8c8edc2ddddc2dfd9d8c3c4d9d483c2dfca83c3d7)
+[Email: [email protected]](/cdn-cgi/l/email-protection#99d8fdebf0f8f7b7d4fcfcd9f6e9e9f6ebedecf7f0ede0b7f6ebfeb7f7e3)
 
 ## Donate to our Party Vote Campaign in Selwyn
 

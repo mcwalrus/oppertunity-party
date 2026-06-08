@@ -3,7 +3,7 @@
 **Role**: Kevin Huang
 
 > **URL**: https://www.opportunity.org.nz/candidate-kevin-huang
-> **Scraped**: 2026-06-08T12:00:39.665570
+> **Scraped**: 2026-06-08T12:41:55.745953
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9932/features/original/Kevin_Huangphoto_%281%29.jpg?1780268918)
 
@@ -33,7 +33,7 @@ Kevin joined The Opportunity Party driven by a belief in pragmatic, forward-thin
 
 Candidate for Opportunity (Pakuranga)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#81cae4f7e8efafc9f4e0efe6c1eef1f1eef3f5f4efe8f5f8afeef3e6afeffb)
+[Email: [email protected]](/cdn-cgi/l/email-protection#440f21322d2a6a0c31252a23042b34342b3630312a2d303d6a2b36236a2a3e)
 
 ## Donate to our Party Vote Campaign in Waiariki
 

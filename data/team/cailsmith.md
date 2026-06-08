@@ -3,7 +3,7 @@
 **Role**: Cail Smith
 
 > **URL**: https://www.opportunity.org.nz/candidate-cail-smith
-> **Scraped**: 2026-06-08T12:00:52.903660
+> **Scraped**: 2026-06-08T12:42:06.488478
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9926/features/original/cail_smith__standing__opportunity_1_%281%29.jpg?1774164665)
 
@@ -33,7 +33,7 @@ Cail is standing to bring practical leadership, community insight, and long‑te
 
 Candidate for Opportunity (East Cape)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#7b381a1217552816120f133b140b0b14090f0e15120f025514091c551501)
+[Email: [email protected]](/cdn-cgi/l/email-protection#a8ebc9c1c486fbc5c1dcc0e8c7d8d8c7dadcddc6c1dcd186c7dacf86c6d2)
 
 ## Donate to our Party Vote Campaign in East Cape
 

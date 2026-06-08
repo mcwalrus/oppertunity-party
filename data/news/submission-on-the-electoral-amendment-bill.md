@@ -1,7 +1,7 @@
 # Submission on the Electoral Amendment Bill
 
 > **URL**: https://www.opportunity.org.nz/electoral_amendment_bill_submission
-> **Scraped**: 2026-06-08T12:01:17.783150
+> **Scraped**: 2026-06-08T12:42:19.694455
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/6990/features/original/leroy-de-thierry-Bt9y47d1e6k-unsplash_%281%29_1_.jpg?1756198049)](/)
 

@@ -8,7 +8,7 @@ default:    # list recipes
 install:
     uv sync
 
-# Scrape everything into data/
+# Scrape everything + convert PDFs into data/
 scrape: install
     uv run python main.py --clean
 
@@ -23,6 +23,10 @@ scrape-team: install
 # Scrape only news articles
 scrape-news: install
     uv run python main.py news
+
+# Convert policy PDFs to markdown
+pdfs: install
+    uv run python main.py pdfs
 
 # Scrape only party information pages
 scrape-party-info: install

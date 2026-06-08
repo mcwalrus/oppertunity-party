@@ -1,7 +1,7 @@
 # Submission on the Budget Policy Statement 2026
 
 > **URL**: https://www.opportunity.org.nz/submission_on_the_budget_policy_statement_2026
-> **Scraped**: 2026-06-08T12:01:11.417168
+> **Scraped**: 2026-06-08T12:42:16.365441
 
 ## Submission on the Budget Policy Statement 2026
 

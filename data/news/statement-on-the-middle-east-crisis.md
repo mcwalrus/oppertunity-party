@@ -1,7 +1,7 @@
 # Statement on the Middle East Crisis
 
 > **URL**: https://www.opportunity.org.nz/statement_on_middle_east_crisis
-> **Scraped**: 2026-06-08T12:01:09.512408
+> **Scraped**: 2026-06-08T12:42:15.440380
 
 [![](https://assets.nationbuilder.com/garethmorgan/pages/9464/features/original/Untitled_design_%2825%29.jpg?1772506419)](/statement_on_middle_east_crisis)
 

@@ -3,7 +3,7 @@
 **Role**: Kaperiere "Pāpā" Wharewera
 
 > **URL**: https://www.opportunity.org.nz/candidate-papa-wharewera
-> **Scraped**: 2026-06-08T12:01:00.274764
+> **Scraped**: 2026-06-08T12:42:09.192562
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9935/features/original/TeWha%CC%84nauWharewera-TeKaha-60_-_Papa_Wharewera_%281%29.jpg?1780377909)
 
@@ -33,7 +33,7 @@ Pāpā values integrity, transparency, and accountability. He knows trust is ear
 
 Candidate for Opportunity (Waiariki)
 
-[Email: [email protected]](/cdn-cgi/l/email-protection#b8e8d9c8d996efd0d9caddcfddcad9f8d7c8c8d7cacccdd6d1ccc196d7cadf96d6c2)
+[Email: [email protected]](/cdn-cgi/l/email-protection#d787b6a7b6f980bfb6a5b2a0b2a5b697b8a7a7b8a5a3a2b9bea3aef9b8a5b0f9b9ad)
 
 ## Donate to our Party Vote Campaign in Waiariki
 
