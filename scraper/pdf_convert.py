@@ -259,13 +259,14 @@ def _slug_from_filename(filename: str) -> str:
     - _migrated_{filename} -> derive from the original filename
     - Any other pattern -> unknown
     """
-    # Skip migration prefix
+    # Strip migration prefix and extension
     name = filename.replace("_migrated_", "").replace(".pdf", "")
-    name = name.replace("Opportunity_", "")
+    # Strip "Opportunity_" brand prefix, then "Policy_" category prefix
+    name = name.replace("Opportunity_", "").replace("Policy_", "")
     parts = name.split("_")
     if parts and parts[0]:
         slug = parts[0].lower().replace(" ", "-").strip("-")
-        # Skip if it looks like a Google Drive file ID (very long alphanumeric)
+        # Reject Google Drive-style file IDs (long alphanumeric strings)
         if len(slug) > 30 or not any(c.isalpha() for c in slug):
             return "unknown"
         return slug
@@ -283,7 +284,7 @@ def _get_policy_slug_from_reference(filename: str) -> str | None:
     try:
         ref = json.loads(REFERENCE_FILE.read_text())
         for entry in ref.get("downloads", {}).values():
-            if entry.get("filename") == filename:
+            if Path(entry.get("filename", "")).name == filename:
                 return entry.get("policy_slug")
     except (json.JSONDecodeError, IOError):
         pass

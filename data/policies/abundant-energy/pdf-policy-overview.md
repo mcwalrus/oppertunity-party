@@ -5,7 +5,7 @@
 | Date | February 2026 |
 | Policy | Abundant Energy |
 | Document Type | Policy Overview |
-| Source | `1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI.pdf` |
+| Source | `Opportunity_Policy_Abundant Energy.pdf` |
 
 Abundant Energy
 New Zealand is an energy-rich country that behaves as

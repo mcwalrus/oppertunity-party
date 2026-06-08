@@ -57,21 +57,3 @@ Reset](/tax-reset)
 
 Healthy
 Land](/healthy_land)
-
-## Get Involved
-
-* ### Volunteer
-
-  Pitch in and help make the vision reality.
-
-  [VOLUNTEER](volunteer)
-* ### Join
-
-  Stand beside other Kiwis with the courage to change.
-
-  [JOIN](join)
-* ### Donate
-
-  Every dollar brings real change closer.
-
-  [DONATE](donate)

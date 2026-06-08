@@ -12,5 +12,10 @@ wheels/
 # Scraper logs
 scraper.log
 
+# Obsidian vault metadata
+.obsidian/
+.Trash/
+*.md.bak
+
 # MCP (under development)
 mcp/

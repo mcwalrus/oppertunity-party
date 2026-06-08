@@ -1,16 +1,3 @@
-
-/tech-doc-review https://www.opportunity.org.nz/
-
-Can you provide a structure of the paths across the website? 
-
-I want to understand what information can be learnt from the party publicly.
-
-## Claude:
-
-I'll map out the site structure for opportunity.org.nz (The Opportunities Party / TOP). Let me start with the sitemap, which is the standard way to get a complete path inventory, then check the navigation.
-
-Note: you invoked `/tech-doc-review`, but that skill is for building a mental model of a *technology's* architecture from its docs. What you're describing — mapping site paths and surfacing what's publicly learnable — is a site-structure recon task, so I'll handle it directly rather than through that skill.I need to search first before fetching. Let me do that.Now let me fetch the homepage to map the navigation, and pull the known internal pages.Good — I have a comprehensive view from the homepage. Let me pull the policy page to enumerate the full policy set, since several policy paths are referenced.I've mapped the site from its navigation and policy index. Here's the public path structure of opportunity.org.nz, followed by what it reveals about the party.
-
 ## Site path structure
 
 ```
@@ -67,8 +54,3 @@ The site runs on **NationBuilder**, the campaign-CMS platform widely used by pol
 They use **Google Tag Manager** (container `GTM-5M8XMTND`) for analytics/marketing tags, and **Cloudflare** in front of the site (the email-protection endpoint). NationBuilder also implies a built-in supporter CRM behind the public pages: the homepage embeds a signup form capturing name, email, tertiary institution, student ID, and an under-30 "Young Opportunity" flag — so they're segmenting supporters by age and student status for organising purposes.
 
 Their full off-site presence is linked in the footer: Facebook, Instagram, LinkedIn, TikTok, X, and YouTube (all under `opportunity`/`opportunitynz` handles), plus a media section linking coverage from NBR, TVNZ, The Spinoff, Stuff, NZ Herald, and RNZ.
-
-A couple of caveats on completeness: this structure is derived from the public navigation and the policy index, which together cover the linked pages, but it won't capture orphan pages (live URLs with no inbound links), anything behind `/login`, or individual event/news/candidate sub-pages, which are generated dynamically. If you want the genuinely exhaustive list, the next step would be to pull `robots.txt` and `sitemap.xml` directly — those are the authoritative path inventories a NationBuilder site publishes. Want me to go after those?
-
----
-

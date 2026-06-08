@@ -160,7 +160,7 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
     entry = {
         "source_url": url,
         "policy_slug": policy_slug,
-        "filename": actual_filename,
+        "filename": Path(actual_filename).name,
         "downloaded_at": datetime.now().isoformat(),
         "size_bytes": output_path.stat().st_size,
     }

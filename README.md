@@ -32,8 +32,7 @@ Makes policy documents easy to find and search. Run `just scrape` anytime to pul
 ## Refreshing content
 
 ```bash
-just scrape      # wipe and re-scrape everything
-just scrape-policies   # just policies
-just scrape-news      # just news
-just pdfs         # re-convert PDFs without scraping
+just scrape   # scrape everything
+just pdfs     # re-convert PDFs without re-scraping
+just open     # open data in Finder
 ```

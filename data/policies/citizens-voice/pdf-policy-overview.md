@@ -5,7 +5,7 @@
 | Date | June 2025 |
 | Policy | Citizen's Voice |
 | Document Type | Policy Overview |
-| Source | `116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L.pdf` |
+| Source | `Opportunity_Policy_Citizens Voice.pdf` |
 
 Direct democracy
 Right now, big decisions are often made without fully hearing
