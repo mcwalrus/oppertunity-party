@@ -1,63 +1,39 @@
-# Opportunity Party Scraper
+# Opportunity Party Policy Tracker
 
-Scrapes the [Opportunity Party](https://www.opportunity.org.nz) website and converts
-policy PDFs to structured markdown. Output is stored under `data/` and exposed via
-an MCP server for LLM consumption.
+Tools for learning about and tracking the New Zealand [Opportunity Party](https://www.opportunity.org.nz) current policies.
 
-## System requirements
+## What this does
 
-Before running, install the following system tools:
+This repo scrapes content from opportunity.org.nz and stores it locally as searchable markdown.
 
-```bash
-brew install poppler   # provides pdftotext, used for PDF → text conversion
-```
-
-Python 3.12+ is also required.
-
-## Setup
+## Quick start
 
 ```bash
-uv sync
+brew install poppler just uv  # required tools
+just                         # see all commands
+just install
+just scrape
 ```
 
-## Usage
+## The data
 
-Run all scrapers:
+| Directory | Contents |
+|-----------|----------|
+| `data/policies/` | Policy pages and PDF-derived documents |
+| `data/policy-assets/` | Downloaded PDF files |
+| `data/team/` | Candidate and team profiles |
+| `data/news/` | Media releases and news articles |
+| `data/party-information/` | About pages, constitution, rules |
+
+## Why
+
+Makes policy documents easy to find and search. Run `just scrape` anytime to pull the latest content.
+
+## Refreshing content
 
 ```bash
-uv run python main.py
+just scrape      # wipe and re-scrape everything
+just scrape-policies   # just policies
+just scrape-news      # just news
+just pdfs         # re-convert PDFs without scraping
 ```
-
-Run specific targets:
-
-```bash
-uv run python main.py policies team news party-info pdfs
-```
-
-`--clean` wipes `data/` before running (preserves `data/policy-assets/`):
-
-```bash
-uv run python main.py --clean
-```
-
-## How it works
-
-| Target | What it does |
-|--------|-------------|
-| `policies` | Scrapes policy pages, downloads PDFs from Google Drive, converts PDFs to markdown via `pdftotext` |
-| `team` | Scrapes team / candidate pages |
-| `news` | Scrapes news and media releases |
-| `party-info` | Scrapes about / party information pages |
-| `pdfs` | Re-converts already-downloaded PDFs without re-scraping |
-
-PDF conversion uses `pdftotext -layout` (from poppler) to preserve the layout of
-the party's policy documents, then strips running headers/footers and formats the
-body as clean markdown under `data/policies/{slug}/`.
-
-## MCP server
-
-```bash
-uv run python -m mcp.server
-```
-
-See `mcp/README.md` for available tools.

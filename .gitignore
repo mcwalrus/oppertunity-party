@@ -11,3 +11,6 @@ wheels/
 
 # Scraper logs
 scraper.log
+
+# MCP (under development)
+mcp/
