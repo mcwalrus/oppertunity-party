@@ -11,7 +11,6 @@ from scraper.client import DATA_DIR, clean_data
 from scraper.news import save_news, scrape_news
 from scraper.party_info import save_party_info, scrape_party_info
 from scraper.pdf_convert import convert_all_pdfs
-from scraper.pdf_convert_docling import convert_all_pdfs_docling
 from scraper.pdf_download import download_policy_pdfs, migrate_existing_pdfs
 from scraper.policies import save_policies, scrape_policies
 from scraper.team import save_team, scrape_team
@@ -67,12 +66,9 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
     for key, entry in selected.items():
         if entry is None:
             # PDF conversion (no web scraping)
-            logger.info("--- Converting policy PDFs (pdftotext -> data/) ---")
+            logger.info("--- Converting policy PDFs ---")
             results = convert_all_pdfs()
             totals["policy PDFs"] = len(results)
-            logger.info("--- Converting policy PDFs (docling -> staging/) ---")
-            docling_results = convert_all_pdfs_docling()
-            totals["policy PDFs (docling)"] = len(docling_results)
             continue
 
         label, scrape_fn, save_fn = entry
@@ -93,13 +89,10 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
             failed = sum(1 for r in downloads if r["status"] == "failed")
             logger.info("PDF downloads: %d downloaded, %d skipped, %d failed", downloaded, skipped, failed)
 
-            # Then convert PDFs to markdown with both converters
-            logger.info("--- Converting policy PDFs (pdftotext -> data/) ---")
+            # Then convert PDFs to markdown
+            logger.info("--- Converting policy PDFs ---")
             pdf_results = convert_all_pdfs()
             totals["policy PDFs"] = len(pdf_results)
-            logger.info("--- Converting policy PDFs (docling -> staging/) ---")
-            docling_results = convert_all_pdfs_docling()
-            totals["policy PDFs (docling)"] = len(docling_results)
 
     elapsed = time.time() - start
     summary = ", ".join(f"{v} {k}" for k, v in totals.items())

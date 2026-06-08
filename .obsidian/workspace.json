@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "data/policies/policy/pdf-policy-overview.md",
+                "file": "data/policies/1-qmkap3ci8/pdf-policy-overview.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "data/policies/policy/pdf-policy-overview.md",
+                "file": "data/policies/1-qmkap3ci8/pdf-policy-overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "data/policies/policy/pdf-policy-overview.md",
+                "file": "data/policies/1-qmkap3ci8/pdf-policy-overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "data/policies/policy/pdf-policy-overview.md",
+                "file": "data/policies/1-qmkap3ci8/pdf-policy-overview.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -183,23 +183,32 @@
       "bases:Create new base": false
     }
   },
-  "active": "99e6a5d43e88d657",
+  "active": "5fab22e12300260e",
   "lastOpenFiles": [
+    "staging/policies/116yio6j2/pdf-policy-overview.md",
+    "staging/policies/policy/pdf-policy-overview.md",
+    "staging/policies/tax-reset/pdf-policy-overview.md",
+    "staging/policies/tax-reset/pdf-policy-addendum.md",
+    "staging/policies/unknown/pdf-policy-overview.md",
+    "staging/policies/unknown/pdf-policy-addendum.md",
+    "staging/policies/unknown/pdf-default.md",
+    "data/policies/policy/pdf-policy-overview.md",
+    "__pycache__/main.cpython-312.pyc",
+    "staging/policies/pdf-index.json",
+    "staging/policies/tax-reset",
+    "staging/policies/policy",
+    "staging/policies/unknown",
+    "staging/policies/116yio6j2",
+    "staging/policies/1-qmkap3ci8/pdf-policy-overview.md",
+    "staging/policies/1-qmkap3ci8",
+    "staging/policies",
+    "staging",
+    "scraper/__pycache__/pdf_convert_docling.cpython-312.pyc",
     "docs/mcp-design.md",
-    "mcp/evaluation.xml",
     "mcp/README.md",
-    "mcp/__pycache__/repository.cpython-312.pyc",
-    "mcp/__pycache__/server.cpython-312.pyc",
-    "mcp/__pycache__",
-    "mcp/server.py",
-    "mcp/repository.py",
-    "mcp",
     "data/policies/healthy-oceans/page.md",
     "data/party-information/party-information.md",
-    "data/party-information/index.json",
     "data/party-information/about.md",
-    "data/party-information",
-    "data/news/index.json",
     "data/news/submission-on-the-electoral-amendment-bill.md",
     "data/news/statement-on-the-situation-in-gaza.md",
     "data/news/on-the-hunt-for-new-zealands-north-star.md",
@@ -211,15 +220,6 @@
     "data/news/submission-on-the-fisheries-amendment-bill.md",
     "data/news/submission-on-the-budget-policy-statement-2026.md",
     "data/news/statement-on-the-middle-east-crisis.md",
-    "data/news/statement-on-the-fisheries-amendment-bill.md",
-    "data/news/prosperity-doesnt-start-with-a-shredder.md",
-    "data/news/meet-the-first-opportunity-candidates.md",
-    "data/news/left-right-politics-is-failing-new-zealand.md",
-    "data/news/gene-technology-policy.md",
-    "data/news/free-public-transport.md",
-    "data/news/call-for-government-reversal-on-lng-terminal.md",
-    "data/news/accelerating-ev-uptake.md",
-    "data/policies/healthy-land/page.md",
-    "data/team/simondellabarca.md"
+    "data/news/statement-on-the-fisheries-amendment-bill.md"
   ]
 }
