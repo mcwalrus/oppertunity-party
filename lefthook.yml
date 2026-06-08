@@ -33,3 +33,12 @@ pre-commit:
     ty:
       glob: "*.py"
       run: uv run ty check
+
+    # -------------------------------------------------------------------------
+    # markdown-link-check — validates every link in scraped data output.
+    # Runs once per staged file (the tool only accepts one file at a time).
+    # Relative links resolve against https://www.opportunity.org.nz via config.
+    # -------------------------------------------------------------------------
+    markdown-link-check:
+      glob: "data/**/*.md"
+      run: for f in {staged_files}; do npx --yes markdown-link-check --config .markdown-link-check.json "$f" || exit 1; done

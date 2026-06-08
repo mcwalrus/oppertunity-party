@@ -6,18 +6,14 @@
   "fallbackRetryDelay": "5s",
   "aliveStatusCodes": [200, 206],
   "ignorePatterns": [
-    { "pattern": "^#", "comment": "Ignore bare fragment anchors" },
-    { "pattern": "^mailto:", "comment": "Ignore mailto links" }
+    { "pattern": "^#",      "comment": "Bare fragment anchors" },
+    { "pattern": "^mailto:", "comment": "mailto links" },
+    { "pattern": "^/",      "comment": "Root-relative paths (NationBuilder navigation) cannot be resolved from a local file; absolute URLs in the scraped metadata header are checked instead" }
   ],
   "httpHeaders": [
     {
-      "urls": ["https://www.opportunity.org.nz"],
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (compatible; markdown-link-check/3)"
-      }
-    },
-    {
-      "urls": ["https://assets.nationbuilder.com"],
+      "urls": ["https://", "http://", "/"],
+      "comment": "Apply a browser-like UA to all requests so NationBuilder doesn't 400 them",
       "headers": {
         "User-Agent": "Mozilla/5.0 (compatible; markdown-link-check/3)"
       }
