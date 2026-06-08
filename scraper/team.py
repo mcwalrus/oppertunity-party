@@ -16,26 +16,12 @@ logger = logging.getLogger(__name__)
 
 
 def scrape_team() -> list[TeamMember]:
-    """Scrape the team page and individual candidate profile pages."""
-    members: list[TeamMember] = []
+    """Scrape the team page and individual candidate profile pages.
 
-    # Scrape the leader profile first
-    try:
-        leader_soup = fetch_page("/meet-q")
-        leader_name = _extract_title(leader_soup)
-        leader_content = _extract_member_content(leader_soup)
-        members.append(
-            TeamMember(
-                name=leader_name,
-                slug="meet-q",
-                role="Party Leader",
-                url="https://www.opportunity.org.nz/meet-q",
-                content=leader_content,
-            )
-        )
-        logger.info("Scraped leader: %s", leader_name)
-    except Exception as e:
-        logger.error("Failed to scrape leader page: %s", e)
+    Note: The /meet-q page (party leader) is scraped by party_info.py and
+    saved under data/party-information/, not here.
+    """
+    members: list[TeamMember] = []
 
     # Scrape the team listing page
     try:
@@ -77,9 +63,22 @@ def scrape_team() -> list[TeamMember]:
 
 
 def save_team(members: list[TeamMember]) -> dict[str, Path]:
-    """Save team data to markdown files and JSON index."""
+    """Save team data to markdown files and JSON index.
+
+    Also removes the stale data/team/meet-q.md file if it exists, since
+    /meet-q is now managed by party_info.py under data/party-information/.
+    """
     output_dir = DATA_DIR / "team"
     saved: dict[str, Path] = {}
+
+    # Remove stale meet-q.md that may have been created by a previous scrape
+    stale = output_dir / "meet-q.md"
+    if stale.exists():
+        stale.unlink()
+        logger.info("Removed stale data/team/meet-q.md (now lives in data/party-information/)")
+    stale_pdf = output_dir / "meet-q.pdf"
+    if stale_pdf.exists():
+        stale_pdf.unlink()
 
     for member in members:
         slug = member.slug or _name_to_slug(member.name)
@@ -252,7 +251,7 @@ def _strip_email_links(el) -> None:
 
 
 def _clean_markdown(md: str) -> str:
-    """Remove donation sections and email-protection links from markdown."""
+    """Remove donation sections, email-protection links, and duplicate headings."""
     # Belt-and-suspenders: strip any remaining Cloudflare email-protection links
     # (handles nested brackets in link text, e.g. [Email: [email@protected]](url))
     md = re.sub(
@@ -274,6 +273,14 @@ def _clean_markdown(md: str) -> str:
     cut = md.find("\x00DONATE_CUT")
     if cut != -1:
         md = md[:cut]
+    # Deduplicate consecutive identical heading blocks.
+    # Candidate pages render the electorate + name heading twice (hero + body).
+    # e.g. "#### ELECTORATE\n\n# Name\n\n#### ELECTORATE\n\n# Name\n\n" → one copy.
+    md = re.sub(
+        r"((?:#{1,6} [^\n]+\n\n){1,3})\1",
+        r"\1",
+        md,
+    )
     # Tidy up trailing whitespace and excess blank lines
     md = re.sub(r"\n{3,}", "\n\n", md)
     return md.rstrip()

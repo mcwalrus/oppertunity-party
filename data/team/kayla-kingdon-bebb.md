@@ -12,10 +12,6 @@
 
 # Dr. Kayla Kingdon-Bebb
 
-#### WELLINGTON BAYS
-
-# Dr. Kayla Kingdon-Bebb
-
 “Like so many New Zealanders, I’m tired of divisive, performative politics taking priority over issues that actually matter to us. The biggest challenges we face: child poverty, growing inequality, climate change, the alarming loss of our native biodiversity, our infrastructure deficit – these cannot be resolved in a single term of government. They require courage, consensus, and a willingness to look beyond ourselves over multiple terms. That’s exactly what Opportunity will bring to the table.”
 
 ## **Dr. Kayla Kingdon-Bebb**

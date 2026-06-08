@@ -12,10 +12,6 @@
 
 # Cindie Uddstrom
 
-#### WEST COAST-TASMAN
-
-# Cindie Uddstrom
-
 "Every person deserves the opportunity to be their best version of themselves."
 
 ## **Cindie Uddstrom**

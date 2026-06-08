@@ -12,10 +12,6 @@
 
 # Mark Roach
 
-#### WAITĀKERE
-
-# Mark Roach
-
 "I’m standing for Opportunity this election because I want to help build a more optimistic future for Aotearoa New Zealand. One driven by smart policy cultural vitality social equity innovation and long-term nation-building beyond the pettiness of short-term politics."
 
 ## **Mark Roach**

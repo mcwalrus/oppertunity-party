@@ -12,10 +12,6 @@
 
 # Netra Ghimire
 
-#### PALMERSTON NORTH
-
-# Netra Ghimire
-
 "New Zealand doesn’t need more political division and short-term thinking. We have the people, resources, knowledge and spirit to lead the world - what we need now is empowered communities, and long-term leadership that unlocks our full potential."
 
 ## **Netra Ghimire**

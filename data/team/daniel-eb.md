@@ -12,10 +12,6 @@
 
 # Daniel Eb
 
-#### KAIPARA KI MAHURANGI
-
-# Daniel Eb
-
 “New Zealand welcomed my family and offered me an urban-rural upbringing that continues to define my life. I’m standing to pay back those gifts through service.”
 
 ## **Daniel Eb**

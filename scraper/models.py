@@ -50,4 +50,5 @@ class PartyInfo:
     section: str
     url: str
     content: str = ""
+    pdf_downloads: list[tuple[str, str]] = field(default_factory=list)  # [(label, url), ...]
     scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())

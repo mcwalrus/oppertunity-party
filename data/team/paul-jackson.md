@@ -12,10 +12,6 @@
 
 # Paul Jackson
 
-#### EPSOM
-
-# Paul Jackson
-
 “Long term planning is critical in business, and the same applies to government – cross-party commitments to infrastructure, and eliminating policy see-saws that hinder our development.”
 
 ## **Paul Jackson**

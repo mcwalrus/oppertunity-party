@@ -12,10 +12,6 @@
 
 # Chee-Khiang (CK) Sng
 
-#### KĀPITI
-
-# Chee-Khiang (CK) Sng
-
 “We need to restore the promise of a fair go, that everyone willing and able has the opportunity to build a life of dignity and security. And when life deals unfair blows, we stand together to support those in need. This is my purpose. A better New Zealand will be my legacy.”
 
 ## **Chee-Khiang (CK) Sng**

@@ -12,10 +12,6 @@
 
 # Helen Tait
 
-#### WAITAKI
-
-# Helen Tait
-
 “Like many New Zealanders, I’m tired of the time and effort wasted by our current politicians in bickering, in blaming the opposition, and in short term thinking, focused only on reelection. I have committed to Opportunity because I believe that the party’s values and policies offer a positive base on which to develop our country.”
 
 ## **Helen Tait**

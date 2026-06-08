@@ -9,7 +9,7 @@ import time
 
 from scraper.client import DATA_DIR, clean_data
 from scraper.news import save_news, scrape_news
-from scraper.party_info import save_party_info, scrape_party_info
+from scraper.party_info import download_and_convert_party_pdfs, save_party_info, scrape_party_info
 from scraper.pdf_convert import convert_all_pdfs
 from scraper.pdf_download import download_policy_pdfs, migrate_existing_pdfs
 from scraper.policies import save_policies, scrape_policies
@@ -76,6 +76,15 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
         items = scrape_fn()
         save_fn(items)
         totals[label] = len(items)
+
+        # After scraping party-info, download and convert linked PDFs
+        if key == "party-info" and items:
+            logger.info("--- Downloading party-information PDFs ---")
+            pdf_results = download_and_convert_party_pdfs(items)
+            ok = sum(1 for r in pdf_results if r["status"] == "ok")
+            failed = sum(1 for r in pdf_results if r["status"] in ("failed", "error"))
+            logger.info("Party PDFs: %d converted, %d failed", ok, failed)
+            totals["party PDFs"] = ok
 
         # After scraping policies, download PDFs and convert them
         if key == "policies" and items:

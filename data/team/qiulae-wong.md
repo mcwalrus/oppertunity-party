@@ -12,10 +12,6 @@
 
 # Qiulae (Q) Wong
 
-#### MT ALBERT
-
-# Qiulae (Q) Wong
-
 “I think this election feels really different in terms of the New Zealand public’s frustration and impatience and the lack of vision for a real change for this country.   
   
 The Opportunity Party is painting a really clear, inspiring picture for the future of New Zealand, and I think that’s something that Kiwis will want to get behind.”

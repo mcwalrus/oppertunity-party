@@ -12,10 +12,6 @@
 
 # Simon DellaBarca
 
-#### WHANGĀREI
-
-# Simon DellaBarca
-
 “New Zealand is one of the best countries on the planet, but the settings are wrong, and Northlanders know it. Opportunity’s modern, fit-for-purpose policies can help everyday Kiwis and local businesses actually grow the way we should.”
 
 ## **Simon DellaBarca**

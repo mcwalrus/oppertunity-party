@@ -12,10 +12,6 @@
 
 # Finn Liley
 
-#### ROTORUA
-
-# Finn Liley
-
 “Having grown up in Rotorua, I recognise the importance of safeguarding and nurturing our natural environment. It is our future, and must be consistently prioritised in decision-making. Additionally, we must advocate for a green economy that promotes growth and development while still protecting our surroundings. I am standing to ensure that this is a high priority for any future government.”
 
 ## **Finn Liley**

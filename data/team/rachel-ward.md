@@ -12,10 +12,6 @@
 
 # Rachel Ward
 
-#### TUKITUKI
-
-# Rachel Ward
-
 “Currently, political choices are being made on our behalf that are gutting the very environment we need to thrive and short-changing our future generations. It doesn’t have to be this way. Together we can bring a fresh voice to parliament - led by real kiwis that have joined forces to offer pragmatic, innovative solutions for our future. That movement is Opportunity – come and join us.”
 
 ## **Rachel Ward**

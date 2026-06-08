@@ -12,10 +12,6 @@
 
 # Ben Wylie-van Eerd
 
-#### HUTT SOUTH
-
-# Ben Wylie-van Eerd
-
 “Opportunity is a party which is bold about facing big challenges, serious about facing up to the evidence, and optimistic about building a better future. Unless we view the future with hope and with a shared plan, we will continue to struggle. The opportunity exists for us to change how we improve our lives into the next decades.”
 
 ## **Ben Wylie-van Eerd**

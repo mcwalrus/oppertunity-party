@@ -12,10 +12,6 @@
 
 # Jessica Hammond
 
-#### WELLINGTON NORTH
-
-# Jessica Hammond
-
 “I’m completely out of patience with tinkering and bandaid solutions. Our country can be dramatically better - but only if we choose to do better things.”
 
 ## **Jessica Hammond**

@@ -12,10 +12,6 @@
 
 # Adam MacRae-Martin
 
-#### ŌTĀHUHU
-
-# Adam MacRae-Martin
-
 “My motivation comes from wanting to reshape our economy and democracy to make both work for everyone. This will create a future for Aotearoa New Zealand that my daughter and the next generation can be proud to inherit."
 
 ## **Adam MacRae-Martin**

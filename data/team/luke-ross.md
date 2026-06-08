@@ -12,10 +12,6 @@
 
 # Luke Ross
 
-#### REMUTAKA
-
-# Luke Ross
-
 “We need to change our approach. The way we live is out of balance with our natural environment. Our collective focus is faltering under an oversaturated and stretched media environment, we’re overworked and we’re disconnected from our local communities. Politics needs a refresh. It’s exciting to think how we could use evidence-based, rational thinking to make our lives better.”
 
 ## **Luke Ross**

@@ -12,10 +12,6 @@
 
 # Ben Lane
 
-#### MĀNGERE
-
-# Ben Lane
-
 “New Zealand’s best days are still ahead of us, but only if we start thinking longer term.”
 
 ## **Ben Lane**

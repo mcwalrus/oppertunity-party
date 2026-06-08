@@ -12,10 +12,6 @@
 
 # Matt Harris
 
-#### RANGITATA
-
-# Matt Harris
-
 “Progress depends on our willingness to think differently. I’m standing because I believe New Zealand needs more evidence‑based, long‑term decision‑making, and less of the short-term ping-pong politics that leads to poor outcomes. We need to focus on what actually works and what improves everyday life for people.”
 
 ## **Matt Harris**

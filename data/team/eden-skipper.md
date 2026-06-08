@@ -1,4 +1,4 @@
-# Eden Skipper
+S# Eden Skipper
 
 **Role**: Candidate
 **Electorate**: Christchurch Central
@@ -7,10 +7,6 @@
 > **Scraped**: 2026-06-08T16:20:25.569045
 
 ![Meet Q - Leader of Opportunity](https://assets.nationbuilder.com/garethmorgan/pages/9873/features/original/Eden_skipper_2_edit_%281%29.jpg?1773826058)
-
-#### CHRISTCHURCH CENTRAL
-
-# Eden Skipper
 
 #### CHRISTCHURCH CENTRAL
 

@@ -12,10 +12,6 @@
 
 # Holly Knill
 
-#### NORTH SHORE
-
-# Holly Knill
-
 “I’ve spent my career helping organisations develop and execute strategy to deliver real results. Through my recent research into how AI could transform New Zealand’s productivity, I realised our biggest challenge isn’t ideas — it’s execution. Over the past 30 years, our politics has too often produced ‘more of the same’ short-term thinking rather than real change. It’s no surprise many Kiwis feel they’re falling behind or leaving the country in search of opportunity. We deserve better. It’s time to stop talking about change and start delivering it.”
 
 ## **Holly Knill**

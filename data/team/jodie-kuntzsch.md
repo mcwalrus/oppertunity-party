@@ -12,10 +12,6 @@
 
 # Jodie Kuntzsch
 
-#### NELSON
-
-# Jodie Kuntzsch
-
 “I stepped into politics because I want a future where Kiwi kids look back and say, *‘They did right by us'*.”
 
 ## **Jodie Kuntzsch**

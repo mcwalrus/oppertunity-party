@@ -12,10 +12,6 @@
 
 # Mathew Phillips
 
-#### TAIERI
-
-# Mathew Phillips
-
 "Hard work used to be enough to get ahead. Now it’s barely enough to get by. I’m standing to change that."
 
 ## **Mathew Phillips**
