@@ -1,4 +1,4 @@
-# 
+# Constitution
 
 | Field | Value |
 |-------|-------|
@@ -107,8 +107,6 @@
 |Schedule 1 – Summary of member input methods...............31||
 |Schedule 2 - Contact details.................................................... 32||
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **1. Formation**
 
 ## **Name and establishment**
@@ -151,8 +149,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
    - 2.6.2 Prioritise long-term outcomes over short-lived wins.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 - 2.6.3 Ensure economic eiciency is subject to both societal wellbeing and environmental sustainability.
 
 - 2.6.4 Measure eectiveness by influence on policies enacted, rather than by words we speak or actions we take.
@@ -191,8 +187,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 3.3 Members of the Party are any persons who have fulfilled the requirements of rule 3.1, have not had their membership refused or cancelled under rule 3.2, and have not ceased to be a member under rule 3.9.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **Register of members**
 
 - 3.4 The Secretary will keep and maintain a register of members of the Party in which will be entered the full name, residential address, email address, telephone number, and date of entry of the name of each member.
@@ -227,8 +221,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 3.11 A member who has resigned or been expelled from the Party will cease to hold themselves out as a member of the Party, will return to the Party all material produced by the Party (including any membership certificate, handbooks and manuals), will immediately cease use of any IT systems or platforms they may have been granted access to as a member, and will directly destroy any records of login credentials to any such IT systems or platforms.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **Readmission of former members**
 
 - 3.12 Any former member may apply for readmission as a member in the manner prescribed for admission of new members.
@@ -258,8 +250,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
    - 4.1.3 to receive notice of disclosures of interests by oicers of the Party; and
 
    - 4.1.4 to consider and vote on any item of business contained in the notice of meeting.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 - 4.2 The meeting may also transact any special business determined by the board of which notice is given in accordance with these rules.
 
@@ -295,8 +285,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
    - 4.10.2 contains details of the proposed item of business suitable to adequately present it at a general meeting,
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
    - 4.10.3 is in alignment with the Charter, and
 
    - 4.10.4 is received by the board not less than 18 days prior to the date fixed for any general meeting of the Party.
@@ -324,8 +312,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 - 4.17 General meetings of the Party will be chaired by the chairperson of the board or by any other person selected for this role by the board.
 
 - 4.18 The chairperson of a general meeting may direct that any person who is not entitled to be present at the general meeting, or who is obstructing the business of the general meeting, behaving in a disorderly manner, being abusive, or failing to abide by the directions of the chairperson of the general meeting, be removed from the general meeting.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **Adjournment of meetings**
 
@@ -357,8 +343,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 4.26 If at least five members entitled to vote at a general meeting that is held in-person demand a poll on a question that is to be decided at the meeting, the chairperson of
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 the meeting must comply with that demand. The demand may be made before a show of hands or immediately after the chairperson of the meeting’s declaration on a show of hands. In the laer case, the poll overrides the show of hands.
 
 - 4.27 A poll that is demanded on a question of an adjournment must be taken immediately. Any other poll must be taken before the close of the meeting.
@@ -386,8 +370,6 @@ the meeting must comply with that demand. The demand may be made before a show o
 - 5.5 An oicer who is interested in a maer relating to the Party must cease involvement in the interested maer and, as soon as practicable after becoming aware of the interest, disclose the interest to the board or its delegate. The disclosure must include details of the nature and extent of the interest, including its monetary value if it can be quantified.
 
 - 5.6 The board or its delegate must enter details of any disclosed interests into an interests register.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 - 5.7 The board may make any directions to an interested oicer it sees fit, including whether and to what extent the oicer may continue any involvement in the maer. Where the interested oicer is a board member, they must step out of and must not vote on any deliberations in relation to directions to be made by the board regarding the maer.
 
@@ -423,8 +405,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 5.12 A vote to remove an oicer must be recorded in a wrien notice of the board, and the removal of any oicer will be eective from any date specified in the wrien notice.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **6. Board**
 
 ## **Board to govern the Party**
@@ -457,8 +437,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 6.8 Elected board members will have terms of three years.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 - 6.9 Where an elected board member’s term is expiring, an election for that position should be held prior to the expiration of the siing elected board member’s term.
 
 - 6.10 Any member may stand as a candidate for election as an elected board member by self-nomination to the Selection Commiee. Self-nominations must be open for at least three weeks. Any self-nomination must be accompanied by any material prescribed by the Selection Commiee including at least:
@@ -482,8 +460,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 - 6.13 The candidate or candidates who receive the most votes in the electronic ballot will be elected as an elected board member or elected board members.
 
 - 6.14 No error made by the Selection Commiee or the board or anyone else will invalidate the election process.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **Appointed board members**
 
@@ -515,8 +491,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 6.22 The board will meet at such intervals and in physical and/or electronic manner as the board determines. The chairperson or any two members of the board may convene a meeting. Adequate notice of a meeting must be given to members of the board. The
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 notice must specify the place and/or manner, date and time of the meeting and the nature of business to be transacted at it.
 
 - 6.23 The Secretary and Treasurer may aend meetings of the board as required but are not entitled to vote at meetings of the board.
@@ -540,8 +514,6 @@ notice must specify the place and/or manner, date and time of the meeting and th
 ## **Voting at a board meeting**
 
 - 6.29 Board members should strive to reach consensus on questions that are to be decided at a board meeting. If consensus cannot reasonably be reached, the question will be decided on a show of hands. Unless a poll is demanded in accordance with rule 6.31, a declaration by the chairperson that a resolution has been carried, carried unanimously, carried by a particular majority or lost, plus an
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 entry to that eect in the minute book of the Party, is evidence of the fact, without proof of the number or proportion of the votes recorded for and against that resolution.
 
@@ -568,8 +540,6 @@ entry to that eect in the minute book of the Party, is evidence of the fact, 
 ## **Indemnity**
 
 - 6.36 The members of the board and any commiee or other delegate appointed under these rules will at all times be held indemnified by the Party from and against all claims, acts, proceedings and damages made, suered or sustained by a board or
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 commiee member or other delegate as a result of their carrying out in good faith the requirements of the board, commiee, or the Party.
 
@@ -609,8 +579,6 @@ commiee member or other delegate as a result of their carrying out in good fa
 
 - 6.40 The board must establish and maintain a satisfactory system of control of the Party’s accounting records.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 - 6.41 The accounting records must be kept in wrien form or in a form or manner that is easily accessible and convertible into wrien form. The accounting records must be kept for the current accounting period and for the last seven completed accounting periods of the Party.
 
 ## **7. Secretary**
@@ -640,8 +608,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
       - c) authorising electoral advertising; and d) making general election expense returns; and
 
    - 7.3.4 complete such other duties as the board may determine from time to time.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **8. Electorate candidates**
 
@@ -674,8 +640,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 - 8.7 Electorate Candidate selections may be subsequently revoked where the board determines doing so is in the best interests of the Party. The process of selecting Electorate Candidates will be at the discretion of the board and any decisions made by the board will be final.
 
 .
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **9. Party List**
 
@@ -711,8 +675,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 10.3 The Party Leader must be a member of the Party.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 - 10.4 The Party Leader will be appointed and may be removed by a seventy five percent majority vote of the board.
 
 ## **11. Caucus**
@@ -745,8 +707,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 11.8 Only the Party Leader and elected representatives will have voting rights on any maers to be decided by Caucus. If votes on a maer are tied, the Party Leader is entitled to exercise a second or casting vote.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **12. Policy Commiee**
 
 ## **Policy Commiee mandate**
@@ -772,8 +732,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 - 12.9 A chairperson of the Policy Commiee will be appointed from within the members of the Policy Commiee by majority vote of the members of the Policy Commiee, and may sit as chairperson for a term not exceeding two years. The chairperson of the Policy Commiee must not be the Party Leader.
 
 - 12.10 In considering candidates for appointment to the Policy Commiee, the board must give primary consideration to any relevant expertise.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 - 12.11 The board may remove a member of the Policy Commiee at any time where the board determines their removal to be in the best interests of the Party.
 
@@ -802,8 +760,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 ## **Exclusion of liability**
 
 - 12.19 The Policy Commiee members will not be liable to the Party or its members, or in respect of any act, maer or thing done, or suered in good faith in pursuance of their role, notwithstanding any irregularity.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **Indemnity**
 
@@ -837,8 +793,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 14.3 The board or any complaints commiee may make a complaint involving an allegation against a member of the Party or an oicer by giving the member of the Party or the oicer notice in writing that:
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
    - 14.3.1 states that the Party is starting a procedure for resolving a dispute under these rules; and
 
    - 14.3.2 sets out the allegation to which the dispute relates.
@@ -862,8 +816,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 ## **Dispute involving members of the board**
 
 - 14.10 If a dispute arises between two members of the board, the members must seek to resolve the dispute in good faith and in accordance with and with the purpose of furthering the Charter, with the assistance of the chairperson.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 - 14.11 If the members cannot resolve the dispute in accordance with rule 14.10, the other members of the board may determine the outcome, and this decision will be final and binding.
 
@@ -899,8 +851,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 14.15 A person may not act as a decision maker in relation to a dispute if two or more members of the board or a complaints commiee consider that there are reasonable grounds to believe that the person may not be impartial or able to consider the maer without a predetermined view.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **15. Bylaws**
 
 - 15.1 The board may enact bylaws that may amend or clarify these rules. Any bylaws must not be inconsistent with these rules.
@@ -928,8 +878,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 - 16.6 Any amendments to these rules will take eect from the date of registration with the Registrar of Incorporated Societies.
 
 - 16.7 No addition to, deletion from or alteration these rules shall be made which would allow the personal financial gain of any individuals, except for reasonable remuneration for services provided. The provisions and eect of this clause shall not be removed from these rules, and shall be included and implied into any amendment or replacement of these rules.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **17. Miscellaneous**
 
@@ -965,8 +913,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 - 17.9 If the Party is wound up, the surplus assets after payment of all debts, costs and liabilities will be disposed of in accordance with the terms of a resolution passed at a
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 meeting of the board called for that purpose. The surplus assets or funds must be given or transferred to some other not-for-profit organisation within New Zealand having objectives similar to those of the Party.
 
 - 17.10 No portion of the assets or the funds of the Party may be transferred directly to any member or members of the Party.
@@ -992,8 +938,6 @@ meeting of the board called for that purpose. The surplus assets or funds must b
 - 17.15 A notice or other document sent by post is to be treated as having been given to the person at the time the leer would have been delivered in the ordinary course of the post.
 
 - 17.16 A notice or other document sent by email is to be treated as having been given to the person at the time the email was successfully sent to the person.
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
 
 ## **18. Definitions and interpretation**
 
@@ -1035,8 +979,6 @@ Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 202
 
 **Selection Commiee** means a commiee appointed by the board in accordance with rule 6.7.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **Schedule 1 – Summary of member input methods**
 
 This schedule provides a non-binding summary of the mechanisms available in the rules for how the Party is accountable to members, including the mechanisms for members to provide their input, to hold the Party accountable to the rules, and to request information from the Party.
@@ -1069,8 +1011,6 @@ Changes to these rules are to be decided by vote of members as provided in rule 
 
 Members of the Party may at any time call a special general meeting as provided in rule 4.6, and may require an item of business to be transacted at a general meeting as provided in rule 4.11.
 
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026
-
 ## **Schedule 2 - Contact details**
 
 This schedule provides contact details for members under the rules.
@@ -1080,5 +1020,3 @@ Secretary: secretary@opportunity.org.nz
 Board: board@opportunity.org.nz
 
 Policy commiee: policy@opportunity.org.nz
-
-Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026

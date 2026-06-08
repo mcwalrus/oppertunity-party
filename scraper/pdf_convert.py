@@ -31,8 +31,12 @@ REFERENCE_FILE = POLICY_ASSETS_DIR / "reference.json"
 # Header fields are emitted by pymupdf4llm as bold values on a single line:
 # "Date **February 2026** Policy **Abundant Energy** Document Type **...**"
 HEADER_FIELD_RE = re.compile(r"(Date|Policy|Document Type)\s+\*\*(.+?)\*\*")
-# Page footer: "Opportunity Party   Tax   Page 3"  (may be bold after extraction)
-PAGE_FOOTER_RE = re.compile(r"^Opportunity\s+Party\b")
+# Page footer patterns:
+#   "Opportunity Party   Tax   Page 3"  (policy PDFs)
+#   "Constitution and Rules of Opportunity Party   |   Version 6.0   |   22 March 2026"
+PAGE_FOOTER_RE = re.compile(
+    r"(?:^Opportunity\s+Party\b|Constitution and Rules of Opportunity Party\s*\|)"
+)
 PAGE_NUMBER_RE = re.compile(r"^Page\s+\d+\s*$")
 # Picture placeholders inserted by pymupdf4llm
 PICTURE_RE = re.compile(r"^\s*\**==>\s*picture.*<==\**\s*$")
@@ -89,12 +93,13 @@ def convert_pdf(pdf_path: Path) -> dict:
     raw_md = _extract_raw_markdown(pdf_path)
     header = parse_header(raw_md)
     body_md = _clean_body(raw_md)
-    markdown = format_markdown(header, body_md, pdf_path)
 
-    # Try to get policy_slug from reference.json first (for downloaded PDFs)
+    # Resolve slug first — needed for title fallback
     policy_slug = _get_policy_slug_from_reference(pdf_path.name)
     if not policy_slug:
         policy_slug = _slug_from_filename(pdf_path.name)
+
+    markdown = format_markdown(header, body_md, pdf_path, policy_slug=policy_slug)
     doc_type_slug = _slugify(header.get("document_type", ""))
 
     # Build output filename
@@ -106,7 +111,7 @@ def convert_pdf(pdf_path: Path) -> dict:
 
     return {
         "source_file": pdf_path.name,
-        "title": header.get("policy", policy_slug),
+        "title": header.get("policy") or policy_slug.replace("-", " ").title(),
         "policy": header.get("policy", ""),
         "policy_slug": policy_slug,
         "date": header.get("date", ""),
@@ -164,7 +169,9 @@ def _clean_body(raw_md: str) -> str:
     return text.strip()
 
 
-def format_markdown(header: dict[str, str], body_md: str, pdf_path: Path) -> str:
+def format_markdown(
+    header: dict[str, str], body_md: str, pdf_path: Path, policy_slug: str = ""
+) -> str:
     """Format header + body into a well-structured markdown document."""
     policy_name = header.get("policy", "")
     doc_type = header.get("document_type", "")
@@ -172,6 +179,13 @@ def format_markdown(header: dict[str, str], body_md: str, pdf_path: Path) -> str
         title = f"{policy_name} — {doc_type}"
     else:
         title = policy_name
+    # Fall back to a human-readable slug when the PDF has no structured header
+    if not title:
+        title = (
+            policy_slug.replace("-", " ").title()
+            if policy_slug
+            else pdf_path.stem.replace("_", " ").replace("-", " ").title()
+        )
 
     lines = [
         f"# {title}",
