@@ -30,7 +30,7 @@ def scrape_team() -> list[TeamMember]:
 
     # Scrape the team listing page
     try:
-        soup = fetch_page("/team")
+        soup = fetch_page("/team", category="team")
     except Exception as e:
         logger.error("Failed to fetch team page: %s", e)
         return members
@@ -40,7 +40,7 @@ def scrape_team() -> list[TeamMember]:
 
     for name, path in member_links:
         try:
-            member_soup = fetch_page(path)
+            member_soup = fetch_page(path, category="team")
             # Use the candidate's own page h1 as the authoritative name
             page_name = _extract_title(member_soup)
             if page_name and page_name not in ("Unknown", ""):

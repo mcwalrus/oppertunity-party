@@ -45,14 +45,14 @@ def scrape_policies() -> list[PolicyPage]:
 
     # First get the policy index to discover any new slugs
     try:
-        index_soup = fetch_page("/policy")
+        index_soup = fetch_page("/policy", category="policies")
         _discover_policy_links(index_soup)
     except Exception:
         logger.warning("Could not fetch policy index, using known slugs")
 
     for slug, path in POLICY_SLUGS.items():
         try:
-            soup = fetch_page(path)
+            soup = fetch_page(path, category="policies")
             title = _extract_title(soup)
             pdf_links = _extract_pdf_links(soup)
             content_md = _extract_markdown(soup)

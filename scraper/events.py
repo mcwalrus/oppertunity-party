@@ -37,7 +37,7 @@ def scrape_events() -> list[EventItem]:
     items: list[EventItem] = []
 
     try:
-        soup = fetch_page(EVENTS_URL_PATH)
+        soup = fetch_page(EVENTS_URL_PATH, category="events")
     except Exception as exc:
         logger.error("Failed to fetch events page: %s", exc)
         return items
@@ -119,7 +119,7 @@ def _parse_event_card(card: Tag) -> EventItem | None:
     description = ""
     if event_date and event_date >= datetime.now().strftime("%Y-%m-%d"):
         try:
-            event_soup = fetch_page(url_path)
+            event_soup = fetch_page(url_path, category="events")
             description = _extract_event_description(event_soup)
         except Exception as exc:
             logger.warning("Could not fetch event detail %s: %s", url_path, exc)

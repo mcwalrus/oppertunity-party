@@ -1,9 +1,7 @@
 # Meet Q
 
-**Role**: Party Leader
-
 > **URL**: https://www.opportunity.org.nz/meet-q
-> **Scraped**: 2026-06-08T16:20:09.517856
+> **Scraped**: 2026-06-08T17:33:37.606902
 
 ## About Q
 

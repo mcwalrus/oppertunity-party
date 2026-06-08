@@ -28,7 +28,7 @@ def scrape_blog_posts(max_posts: int = 50) -> list[BlogPost]:
     items: list[BlogPost] = []
 
     try:
-        rss_xml = fetch_html(RSS_URL_PATH)
+        rss_xml = fetch_html(RSS_URL_PATH, category="blog")
     except Exception as e:
         logger.error("Failed to fetch blog RSS: %s", e)
         return items
@@ -38,7 +38,7 @@ def scrape_blog_posts(max_posts: int = 50) -> list[BlogPost]:
 
     for title, url_path, pub_date, author in feed_items[:max_posts]:
         try:
-            article_soup = fetch_page(url_path)
+            article_soup = fetch_page(url_path, category="blog")
             content_md = _extract_article_content(article_soup)
 
             items.append(

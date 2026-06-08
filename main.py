@@ -10,7 +10,8 @@ from collections.abc import Callable
 from typing import Any
 
 from scraper.blog_posts import save_blog_posts, scrape_blog_posts
-from scraper.client import DATA_DIR, clean_data
+from scraper.cache import CATEGORY_TTL
+from scraper.client import DATA_DIR, clean_data, configure_cache
 from scraper.events import save_events, scrape_events
 from scraper.models import PartyInfo, PolicyPage
 from scraper.party_info import download_and_convert_party_pdfs, save_party_info, scrape_party_info
@@ -45,12 +46,39 @@ SCRAPER_MAP: dict[str, _ScraperEntry | None] = {
 ALL_TARGETS = list(SCRAPER_MAP.keys())
 
 
-def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> None:
+def run_scrapers(
+    targets: list[str] | None = None,
+    *,
+    clean: bool = False,
+    force_refresh: bool = False,
+    refresh_categories: list[str] | None = None,
+) -> None:
     """Run selected scrapers and save results into data/.
 
     After web scraping, also converts any PDFs in data/pdfs/ to markdown.
+
+    Parameters
+    ----------
+    targets:
+        Scraper targets to run (default: all).
+    clean:
+        Clear the ``data/`` directory before scraping (preserves ``pdfs/``
+        and ``.cache/``).
+    force_refresh:
+        Bypass the HTTP cache for *all* categories — every URL is fetched
+        live from the website regardless of when it was last cached.
+    refresh_categories:
+        Bypass the cache only for the named categories (e.g.
+        ``["blog", "events"]``).  All other categories continue to serve
+        cached responses.
     """
     start = time.time()
+
+    # Initialise the HTTP cache before any network activity
+    cache = configure_cache(
+        force_refresh=force_refresh,
+        refresh_categories=refresh_categories,
+    )
 
     if clean:
         clean_data()
@@ -119,11 +147,33 @@ def run_scrapers(targets: list[str] | None = None, *, clean: bool = False) -> No
     elapsed = time.time() - start
     summary = ", ".join(f"{v} {k}" for k, v in totals.items())
     logger.info("=== Done in %.1fs: %s ===", elapsed, summary)
+    logger.info("=== %s ===", cache.summary_line())
 
 
 def main() -> None:
+    # Build a readable list of category TTLs for the help text
+    _ttl_help = ", ".join(
+        f"{cat}={ttl // 3600}h" if ttl >= 3600 else f"{cat}={ttl // 60}m"
+        for cat, ttl in CATEGORY_TTL.items()
+        if cat != "default"
+    )
+
     parser = argparse.ArgumentParser(
         description="Scrape the Opportunity Party website and convert policy PDFs",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "Cache TTLs by category (default TTL=12h):\n"
+            f"  {_ttl_help}\n\n"
+            "Examples:\n"
+            "  # Normal run — serve from cache if fresh\n"
+            "  python main.py\n\n"
+            "  # Force-refresh everything\n"
+            "  python main.py --force-refresh\n\n"
+            "  # Force-refresh only blog and events\n"
+            "  python main.py --refresh-categories blog events\n\n"
+            "  # Run only the team scraper, force-refresh its cache\n"
+            "  python main.py team --refresh-categories team\n"
+        ),
     )
     parser.add_argument(
         "targets",
@@ -134,10 +184,67 @@ def main() -> None:
     parser.add_argument(
         "--clean",
         action="store_true",
-        help="Clear data/ directory before scraping (preserves pdfs/)",
+        help="Clear data/ directory before scraping (preserves pdfs/ and .cache/)",
     )
+
+    refresh_group = parser.add_mutually_exclusive_group()
+    refresh_group.add_argument(
+        "--force-refresh",
+        action="store_true",
+        help="Bypass the HTTP cache for all categories — re-fetch every URL from the website",
+    )
+    refresh_group.add_argument(
+        "--refresh-categories",
+        nargs="+",
+        metavar="CATEGORY",
+        choices=list(CATEGORY_TTL.keys()),
+        help=(
+            "Bypass the cache for specific categories only "
+            f"(choices: {', '.join(c for c in CATEGORY_TTL if c != 'default')})"
+        ),
+    )
+
+    parser.add_argument(
+        "--cache-stats",
+        action="store_true",
+        help="Print cache entry counts per category and exit (no scraping)",
+    )
+
     args = parser.parse_args()
-    run_scrapers(args.targets or None, clean=args.clean)
+
+    if args.cache_stats:
+        _print_cache_stats()
+        return
+
+    run_scrapers(
+        args.targets or None,
+        clean=args.clean,
+        force_refresh=args.force_refresh,
+        refresh_categories=args.refresh_categories,
+    )
+
+
+def _print_cache_stats() -> None:
+    """Print a summary of the current HTTP cache state and exit."""
+    from scraper.client import get_cache
+
+    cache = get_cache()
+    stats = cache.stats()
+    print("HTTP cache contents:")
+    print(f"  Location : {DATA_DIR / '.cache'}")
+    total = 0
+    for cat, ttl in CATEGORY_TTL.items():
+        if cat == "default":
+            continue
+        count = stats.get(cat, 0)
+        ttl_str = f"{ttl // 3600}h" if ttl >= 3600 else f"{ttl // 60}m"
+        print(f"  {cat:<15} {count:>4} entries  (TTL {ttl_str})")
+        total += count
+    other = sum(v for k, v in stats.items() if k not in CATEGORY_TTL and not k.startswith("_"))
+    if other:
+        print(f"  {'other':<15} {other:>4} entries")
+        total += other
+    print(f"  {'TOTAL':<15} {total:>4} entries")
 
 
 if __name__ == "__main__":

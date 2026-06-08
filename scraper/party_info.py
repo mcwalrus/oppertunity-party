@@ -27,7 +27,7 @@ def scrape_party_info() -> list[PartyInfo]:
 
     # Scrape the main party-information page
     try:
-        soup = fetch_page("/party-information")
+        soup = fetch_page("/party-information", category="party-info")
         content_md = _extract_content(soup)
         pdf_links = _extract_pdf_links(soup)
 
@@ -45,7 +45,7 @@ def scrape_party_info() -> list[PartyInfo]:
         sub_links = _discover_sub_links(soup)
         for section_name, path in sub_links.items():
             try:
-                sub_soup = fetch_page(path)
+                sub_soup = fetch_page(path, category="party-info")
                 sub_content = _extract_content(sub_soup)
                 pages.append(
                     PartyInfo(
@@ -63,7 +63,7 @@ def scrape_party_info() -> list[PartyInfo]:
 
     # Scrape the about page
     try:
-        about_soup = fetch_page("/about")
+        about_soup = fetch_page("/about", category="party-info")
         about_content = _extract_content(about_soup)
         pages.append(
             PartyInfo(
@@ -78,7 +78,7 @@ def scrape_party_info() -> list[PartyInfo]:
 
     # Scrape the /meet-q leader page (party-level page, not a candidate profile)
     try:
-        meet_q_soup = fetch_page("/meet-q")
+        meet_q_soup = fetch_page("/meet-q", category="party-info")
         meet_q_content = _extract_content(meet_q_soup)
         pages.append(
             PartyInfo(
