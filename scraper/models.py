@@ -33,13 +33,38 @@ class TeamMember:
 
 @dataclass
 class NewsItem:
-    """A news / media release entry."""
+    """A news article / media release scraped from the website."""
 
     title: str
     url: str = ""
-    date: str = ""
+    date: str = ""  # YYYY-MM-DD or datetime string
+    content: str = ""
+    scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
+
+
+@dataclass
+class BlogPost:
+    """A blog post / media release entry."""
+
+    title: str
+    url: str = ""
+    date: str = ""  # YYYY-MM-DD
     excerpt: str = ""
     content: str = ""
+    author: str = ""
+    scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
+
+
+@dataclass
+class EventItem:
+    """An event entry."""
+
+    title: str
+    url: str = ""
+    date: str = ""  # YYYY-MM-DD
+    time: str = ""  # e.g. "6:00pm"
+    location: str = ""
+    description: str = ""
     scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
 
 

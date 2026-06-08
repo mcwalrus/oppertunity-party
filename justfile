@@ -37,3 +37,15 @@ typecheck: install
 check: install
     uv run ruff check .
     uv run ty check .
+
+# Validate all scraped markdown files with markdown-link-check
+# Checks that every link in data/**/*.md resolves (external URLs + relative paths
+# resolved against https://www.opportunity.org.nz via .markdown-link-check.json).
+validate:
+    @echo "Running markdown-link-check on scraped data..."
+    @find data -name '*.md' | sort | xargs -I{} markdown-link-check --config .markdown-link-check.json {}
+
+# Install pre-commit hooks into .git/hooks
+hooks-install:
+    pre-commit install
+    @echo "Pre-commit hooks installed."

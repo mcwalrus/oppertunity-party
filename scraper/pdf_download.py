@@ -78,7 +78,7 @@ def _load_reference() -> dict:
     if REFERENCE_FILE.exists():
         try:
             return json.loads(REFERENCE_FILE.read_text())
-        except (json.JSONDecodeError, IOError) as e:
+        except (OSError, json.JSONDecodeError) as e:
             logger.warning("Could not load reference.json: %s — starting fresh", e)
     return {"downloads": {}}
 
@@ -132,7 +132,12 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
         existing_path = POLICY_ASSETS_DIR / existing.get("filename", "")
         if existing_path.exists():
             logger.info("Skipping %s (already at %s)", key, existing["filename"])
-            return {"policy_slug": policy_slug, "url": url, "filename": existing["filename"], "status": "skipped"}
+            return {
+                "policy_slug": policy_slug,
+                "url": url,
+                "filename": existing["filename"],
+                "status": "skipped",
+            }
 
     if dry_run:
         logger.info("[DRY RUN] Would download %s", url)
@@ -147,10 +152,16 @@ def _download_single(url: str, policy_slug: str, reference: dict, dry_run: bool 
 def _download_gdrive(file_id: str, url: str, policy_slug: str, key: str, reference: dict) -> dict:
     """Download a Google Drive file via gdown (handles auth + proper filename)."""
     try:
-        import gdown  # type: ignore[import]
+        import gdown  # type: ignore
     except ImportError:
         logger.error("gdown not installed — run: uv add gdown")
-        return {"policy_slug": policy_slug, "url": url, "filename": "", "status": "failed", "error": "gdown not installed"}
+        return {
+            "policy_slug": policy_slug,
+            "url": url,
+            "filename": "",
+            "status": "failed",
+            "error": "gdown not installed",
+        }
 
     # Download into a temp file so we can hash-check before committing
     tmp = POLICY_ASSETS_DIR / f"_tmp_{file_id}.pdf"
@@ -159,7 +170,13 @@ def _download_gdrive(file_id: str, url: str, policy_slug: str, key: str, referen
     downloaded = gdown.download(id=file_id, output=str(tmp), quiet=False, fuzzy=True)
     if not downloaded or not tmp.exists() or tmp.stat().st_size == 0:
         tmp.unlink(missing_ok=True)
-        return {"policy_slug": policy_slug, "url": url, "filename": "", "status": "failed", "error": "gdown returned no file"}
+        return {
+            "policy_slug": policy_slug,
+            "url": url,
+            "filename": "",
+            "status": "failed",
+            "error": "gdown returned no file",
+        }
 
     digest = _file_md5(tmp)
     canonical = _canonical_for_hash(digest, reference)
@@ -200,19 +217,39 @@ def _download_direct(url: str, policy_slug: str, key: str, reference: dict) -> d
     output_path = POLICY_ASSETS_DIR / filename
 
     result = subprocess.run(
-        ["curl", "--silent", "--show-error", "--location", "--max-time", "60",
-         "--user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-         "--output", str(output_path), url],
-        capture_output=True, text=True, timeout=90,
+        [
+            "curl",
+            "--silent",
+            "--show-error",
+            "--location",
+            "--max-time",
+            "60",
+            "--user-agent",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+            "--output",
+            str(output_path),
+            url,
+        ],
+        capture_output=True,
+        text=True,
+        timeout=90,
     )
 
     if not output_path.exists() or output_path.stat().st_size == 0:
-        return {"policy_slug": policy_slug, "url": url, "filename": filename, "status": "failed", "error": result.stderr}
+        return {
+            "policy_slug": policy_slug,
+            "url": url,
+            "filename": filename,
+            "status": "failed",
+            "error": result.stderr,
+        }
 
     digest = _file_md5(output_path)
     canonical = _canonical_for_hash(digest, reference)
     if canonical and canonical != filename:
-        logger.info("Direct download %s matches existing %s — removing duplicate", filename, canonical)
+        logger.info(
+            "Direct download %s matches existing %s — removing duplicate", filename, canonical
+        )
         output_path.unlink()
         filename = canonical
 

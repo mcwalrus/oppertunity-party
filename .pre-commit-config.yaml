@@ -1,0 +1,41 @@
+# Pre-commit hooks — run automatically on `git commit`.
+# Install once with: just hooks-install   (or: pre-commit install)
+# Run manually on all files: pre-commit run --all-files
+#
+# All hooks use `uv run` so they share the project's .venv — no separate
+# pre-commit environments are downloaded from the internet.
+
+repos:
+  - repo: local
+    hooks:
+      # -----------------------------------------------------------------------
+      # ruff — fast linter (isort, pyupgrade, bugbear, pyflakes, …)
+      # Auto-fixes what it can; fails the commit if unfixable issues remain.
+      # -----------------------------------------------------------------------
+      - id: ruff
+        name: ruff (lint)
+        entry: uv run ruff check --fix --exit-non-zero-on-fix
+        language: system
+        types: [python]
+        require_serial: false
+
+      # -----------------------------------------------------------------------
+      # ruff-format — opinionated, deterministic code formatter
+      # -----------------------------------------------------------------------
+      - id: ruff-format
+        name: ruff (format)
+        entry: uv run ruff format
+        language: system
+        types: [python]
+        require_serial: false
+
+      # -----------------------------------------------------------------------
+      # ty — static type checker (Astral's fast type-checker, the lint-checker)
+      # Checks the whole project graph, not just staged files.
+      # -----------------------------------------------------------------------
+      - id: ty
+        name: ty (type-check)
+        entry: uv run ty check
+        language: system
+        types: [python]
+        pass_filenames: false

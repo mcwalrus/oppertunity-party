@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://www.opportunity.org.nz",
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 2,
+  "fallbackRetryDelay": "5s",
+  "aliveStatusCodes": [200, 206],
+  "ignorePatterns": [
+    { "pattern": "^#", "comment": "Ignore bare fragment anchors" },
+    { "pattern": "^mailto:", "comment": "Ignore mailto links" }
+  ],
+  "httpHeaders": [
+    {
+      "urls": ["https://www.opportunity.org.nz"],
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (compatible; markdown-link-check/3)"
+      }
+    },
+    {
+      "urls": ["https://assets.nationbuilder.com"],
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (compatible; markdown-link-check/3)"
+      }
+    }
+  ]
+}
