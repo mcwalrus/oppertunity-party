@@ -34,7 +34,7 @@ BASE_URL = "https://www.opportunity.org.nz"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # All scraped data goes here
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = PROJECT_ROOT / "data" / "campaign" / "website"
 
 # ---------------------------------------------------------------------------
 # Cache singleton
