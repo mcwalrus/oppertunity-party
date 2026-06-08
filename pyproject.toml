@@ -15,7 +15,6 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "pre-commit>=4.2.0",
     "ruff>=0.15.16",
     "ty>=0.0.44",
 ]

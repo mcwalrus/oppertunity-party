@@ -45,7 +45,7 @@ validate:
     @echo "Running markdown-link-check on scraped data..."
     @find data -name '*.md' | sort | xargs -I{} markdown-link-check --config .markdown-link-check.json {}
 
-# Install pre-commit hooks into .git/hooks
+# Wire lefthook into .git/hooks (run once after cloning)
 hooks-install:
-    pre-commit install
-    @echo "Pre-commit hooks installed."
+    lefthook install
+    @echo "Git hooks installed via lefthook."

@@ -1,0 +1,35 @@
+# Lefthook — Git hook manager (https://github.com/evilmartians/lefthook)
+# Install hooks once with: just hooks-install   (or: lefthook install)
+# Run manually:            lefthook run pre-commit
+#
+# Lefthook is installed as a standalone binary (brew install lefthook).
+# No package.json or node_modules required.
+
+pre-commit:
+  parallel: false   # run in sequence so ruff-lint runs before ruff-format
+
+  commands:
+    # -------------------------------------------------------------------------
+    # ruff lint — fast linter (isort, pyupgrade, bugbear, pyflakes, …)
+    # Auto-fixes what it can; stages the fixed files; fails on unfixable issues.
+    # -------------------------------------------------------------------------
+    ruff-lint:
+      glob: "*.py"
+      run: uv run ruff check --fix --exit-non-zero-on-fix {staged_files}
+      stage_fixed: true   # re-stage files ruff auto-modified
+
+    # -------------------------------------------------------------------------
+    # ruff format — opinionated, deterministic formatter
+    # -------------------------------------------------------------------------
+    ruff-format:
+      glob: "*.py"
+      run: uv run ruff format {staged_files}
+      stage_fixed: true   # re-stage reformatted files
+
+    # -------------------------------------------------------------------------
+    # ty — static type checker (the lint-checker; Astral's fast type-checker)
+    # Checks the whole project; ty doesn't accept individual file paths.
+    # -------------------------------------------------------------------------
+    ty:
+      glob: "*.py"
+      run: uv run ty check
