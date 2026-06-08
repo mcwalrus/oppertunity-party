@@ -126,17 +126,20 @@ def save_party_info(pages: list[PartyInfo]) -> dict[str, Path]:
     return saved
 
 
+PARTY_PDF_DIR = DATA_DIR / "pdfs"
+
+
 def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
     """Download and convert PDFs linked from party-information pages.
 
-    PDFs (Charter, Constitution, Code of Conduct) are downloaded via
-    gdown (handles Google Drive auth), converted with pdftotext, and
-    saved to data/party-information/.  The converted text is then
-    injected back into party-information.md as embedded sections so the
-    content is queryable in one place.
+    Raw PDFs are cached to data/pdfs/ (alongside policy PDFs).
+    Converted markdown is saved to data/party-information/ and the text
+    is injected back into party-information.md so everything is
+    queryable in one place.
     """
     output_dir = DATA_DIR / "party-information"
     output_dir.mkdir(parents=True, exist_ok=True)
+    PARTY_PDF_DIR.mkdir(parents=True, exist_ok=True)
     results: list[dict] = []
 
     for page in pages:
@@ -158,7 +161,7 @@ def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
                     logger.info("Party PDF already converted: %s", md_path.name)
                     continue
 
-                pdf_path = _download_party_pdf(label, url, output_dir)
+                pdf_path = _download_party_pdf(label, url, PARTY_PDF_DIR)
                 if pdf_path:
                     md_text = _convert_party_pdf(pdf_path, label, url)
                     md_path = save_content(output_dir, f"{label}.md", md_text)
@@ -184,13 +187,14 @@ def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:
     return results
 
 
-def _download_party_pdf(label: str, url: str, output_dir: Path) -> Path | None:
-    """Download a Google Drive PDF via gdown CLI; return local path or None.
+def _download_party_pdf(label: str, url: str, pdf_dir: Path) -> Path | None:
+    """Download a Google Drive PDF to pdf_dir; return local path or None.
 
-    Runs gdown as a subprocess with a hard timeout so a broken/private
-    Drive link never hangs the whole scraper indefinitely.
+    Tries gdown first (handles auth/confirmation pages); falls back to
+    curl (direct export URL) if gdown cannot reach the network.  A hard
+    timeout prevents a broken or private link hanging the scraper.
     """
-    pdf_path = output_dir / f"{label}.pdf"
+    pdf_path = pdf_dir / f"{label}.pdf"
     if pdf_path.exists() and pdf_path.stat().st_size > 0:
         logger.info("Skipping %s (already downloaded)", label)
         return pdf_path
@@ -200,31 +204,63 @@ def _download_party_pdf(label: str, url: str, output_dir: Path) -> Path | None:
         logger.error("Could not extract Google Drive file ID from %s", url)
         return None
 
+    # --- attempt 1: gdown (handles Drive auth & confirmation pages) ---
     try:
         subprocess.run(
             ["uv", "run", "gdown", file_id, "-O", str(pdf_path)],
+            capture_output=True,
+            timeout=30,
+            check=False,
+        )
+    except subprocess.TimeoutExpired:
+        logger.warning("gdown timed out for %s — trying curl fallback", label)
+        pdf_path.unlink(missing_ok=True)
+
+    if _is_valid_pdf(pdf_path):
+        logger.info("Downloaded %s via gdown (%d bytes)", label, pdf_path.stat().st_size)
+        return pdf_path
+
+    pdf_path.unlink(missing_ok=True)
+
+    # --- attempt 2: curl with direct export URL ---
+    logger.info("Falling back to curl for %s", label)
+    direct_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    try:
+        subprocess.run(
+            [
+                "curl",
+                "--silent",
+                "--show-error",
+                "--location",
+                "--max-time",
+                "60",
+                "--user-agent",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+                "--output",
+                str(pdf_path),
+                direct_url,
+            ],
             capture_output=True,
             timeout=90,
             check=False,
         )
     except subprocess.TimeoutExpired:
-        logger.warning("gdown timed out for %s — skipping", label)
+        logger.warning("curl timed out for %s", label)
         pdf_path.unlink(missing_ok=True)
         return None
 
-    if not pdf_path.exists() or pdf_path.stat().st_size == 0:
-        pdf_path.unlink(missing_ok=True)
-        logger.error("gdown download failed for %s (%s)", label, url)
-        return None
+    if _is_valid_pdf(pdf_path):
+        logger.info("Downloaded %s via curl (%d bytes)", label, pdf_path.stat().st_size)
+        return pdf_path
 
-    # Verify it's actually a PDF (not an HTML error/interstitial page)
-    if pdf_path.read_bytes()[:4] != b"%PDF":
-        logger.warning("Got non-PDF response for %s — removing", label)
-        pdf_path.unlink(missing_ok=True)
-        return None
+    pdf_path.unlink(missing_ok=True)
+    logger.error("All download attempts failed for %s (%s)", label, url)
+    return None
 
-    logger.info("Downloaded %s (%d bytes)", label, pdf_path.stat().st_size)
-    return pdf_path
+
+def _is_valid_pdf(path: Path) -> bool:
+    """Return True if path exists, is non-empty, and starts with the PDF magic bytes."""
+    return path.exists() and path.stat().st_size > 0 and path.read_bytes()[:4] == b"%PDF"
 
 
 def _convert_party_pdf(pdf_path: Path, label: str, source_url: str) -> str:

@@ -1,7 +1,7 @@
 # Meet Q
 
 > **URL**: https://www.opportunity.org.nz/meet-q
-> **Scraped**: 2026-06-08T17:39:12.092734
+> **Scraped**: 2026-06-08T18:02:35.707578
 
 ## About Q
 
