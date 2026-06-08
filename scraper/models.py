@@ -25,6 +25,7 @@ class TeamMember:
     name: str
     role: str = ""
     url: str = ""
+    slug: str = ""  # derived from URL path, e.g. "daniel-eb" from /candidate-daniel-eb
     content: str = ""
     scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
 

@@ -27,6 +27,7 @@ def scrape_team() -> list[TeamMember]:
         members.append(
             TeamMember(
                 name=leader_name,
+                slug="meet-q",
                 role="Party Leader",
                 url="https://www.opportunity.org.nz/meet-q",
                 content=leader_content,
@@ -51,16 +52,18 @@ def scrape_team() -> list[TeamMember]:
             member_soup = fetch_page(path)
             content_md = _extract_member_content(member_soup)
             role = _extract_role(member_soup)
+            slug = _path_to_slug(path)
 
             members.append(
                 TeamMember(
                     name=name,
+                    slug=slug,
                     role=role,
                     url=f"https://www.opportunity.org.nz{path}",
                     content=content_md,
                 )
             )
-            logger.info("Scraped team member: %s", name)
+            logger.info("Scraped team member: %s (slug: %s)", name, slug)
         except Exception as e:
             logger.error("Failed to scrape team member %s: %s", name, e)
 
@@ -73,7 +76,7 @@ def save_team(members: list[TeamMember]) -> dict[str, Path]:
     saved: dict[str, Path] = {}
 
     for member in members:
-        slug = _name_to_slug(member.name)
+        slug = member.slug or _name_to_slug(member.name)
         md_path = save_content(
             output_dir,
             f"{slug}.md",
@@ -84,6 +87,7 @@ def save_team(members: list[TeamMember]) -> dict[str, Path]:
     json_data = [
         {
             "name": m.name,
+            "slug": m.slug or _name_to_slug(m.name),
             "role": m.role,
             "url": m.url,
             "content": m.content,
@@ -165,8 +169,53 @@ def _extract_member_content(soup) -> str:
     for selector in ["main", "[role='main']", ".page-content", "article"]:
         el = soup.select_one(selector)
         if el and len(el.get_text(strip=True)) > 50:
-            return markdownify(str(el), heading_style="ATX").strip()
+            _strip_email_links(el)
+            md = markdownify(str(el), heading_style="ATX").strip()
+            return _clean_markdown(md)
     return ""
+
+
+def _strip_email_links(el) -> None:
+    """Remove Cloudflare email-protection <a> tags from a BeautifulSoup element."""
+    for a in el.find_all("a", href=re.compile(r"/cdn-cgi/l/email-protection")):
+        a.decompose()
+
+
+def _clean_markdown(md: str) -> str:
+    """Remove donation sections and email-protection links from markdown."""
+    # Belt-and-suspenders: strip any remaining Cloudflare email-protection links
+    # (handles nested brackets in link text, e.g. [Email: [email@protected]](url))
+    md = re.sub(
+        r"\[(?:[^\[\]]|\[[^\]]*\])*\]\(/cdn-cgi/l/email-protection[^)]*\)",
+        "",
+        md,
+        flags=re.IGNORECASE,
+    )
+    # Remove donation sections: from a "Donate" heading to end of content
+    # (these always appear at the bottom, so strip everything from the first
+    # donation heading onwards)
+    md = re.sub(
+        r"(?m)^#{1,6}\s+Donate\b.*",
+        "\x00DONATE_CUT",
+        md,
+        count=1,
+        flags=re.IGNORECASE,
+    )
+    cut = md.find("\x00DONATE_CUT")
+    if cut != -1:
+        md = md[:cut]
+    # Tidy up trailing whitespace and excess blank lines
+    md = re.sub(r"\n{3,}", "\n\n", md)
+    return md.rstrip()
+
+
+def _path_to_slug(path: str) -> str:
+    """Derive a clean slug from a URL path like /candidate-daniel-eb."""
+    slug = path.strip("/")
+    # Strip the /candidate- prefix used for team member pages
+    if slug.startswith("candidate-"):
+        slug = slug[len("candidate-"):]
+    return slug
 
 
 def _name_to_slug(name: str) -> str:
