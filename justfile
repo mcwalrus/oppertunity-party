@@ -45,6 +45,26 @@ validate:
     @echo "Running markdown-link-check on scraped data..."
     @find data -name '*.md' | sort | xargs -I{} npx --yes markdown-link-check --config .markdown-link-check.json {}
 
+# Transform scraped data into site content
+transform: install
+    uv run python -m transforms.main
+
+# Install site dependencies
+site-install:
+    cd site && pnpm install
+
+# Build the static site
+site-build: transform site-install
+    cd site && pnpm build
+
+# Preview the built site locally
+site-preview: site-build
+    cd site && pnpm preview
+
+# Dev server for the site
+site-dev: site-install
+    cd site && pnpm dev
+
 # Wire lefthook into .git/hooks (run once after cloning)
 hooks-install:
     lefthook install

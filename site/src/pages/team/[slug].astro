@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const team = await getCollection("team");
+  return team.map((member) => ({
+    params: { slug: member.data.slug },
+    props: { member },
+  }));
+}
+
+const { member } = Astro.props;
+const { Content } = await render(member);
+---
+
+<BaseLayout title={member.data.name}>
+  <a href="/team">← All Team</a>
+  <article>
+    <h1>{member.data.name}</h1>
+    <div class="meta">
+      {member.data.role && <p><strong>Role:</strong> {member.data.role}</p>}
+      {member.data.electorate && <p><strong>Electorate:</strong> {member.data.electorate}</p>}
+    </div>
+    <Content />
+  </article>
+</BaseLayout>

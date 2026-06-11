@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const policies = (await getCollection("policies")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+---
+
+<BaseLayout title="Policies">
+  <h1>Policies</h1>
+  <div class="card-grid">
+    {policies.map((p) => (
+      <a class="card" href={`/policies/${p.data.slug}`}>
+        <h3>{p.data.title}</h3>
+      </a>
+    ))}
+  </div>
+</BaseLayout>

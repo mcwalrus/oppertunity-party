@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const policies = await getCollection("policies");
+  return policies.map((p) => ({
+    params: { slug: p.data.slug },
+    props: { policy: p },
+  }));
+}
+
+const { policy } = Astro.props;
+const { Content } = await render(policy);
+---
+
+<BaseLayout title={policy.data.title}>
+  <a href="/policies">← All Policies</a>
+  <article>
+    <h1>{policy.data.title}</h1>
+    <div class="meta">
+      {policy.data.url && <p>Source: <a href={policy.data.url}>{policy.data.url}</a></p>}
+    </div>
+    <Content />
+  </article>
+</BaseLayout>

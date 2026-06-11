@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const events = await getCollection("events");
+  return events.map((ev) => ({
+    params: { slug: ev.data.slug },
+    props: { event: ev },
+  }));
+}
+
+const { event } = Astro.props;
+const { Content } = await render(event);
+---
+
+<BaseLayout title={event.data.title}>
+  <a href="/events">← All Events</a>
+  <article>
+    <h1>{event.data.title}</h1>
+    <div class="meta">
+      {event.data.when && <p><strong>When:</strong> {event.data.when}</p>}
+      {event.data.venue && <p><strong>Venue:</strong> {event.data.venue}</p>}
+      {event.data.address && <p><strong>Address:</strong> {event.data.address}</p>}
+    </div>
+    <Content />
+  </article>
+</BaseLayout>

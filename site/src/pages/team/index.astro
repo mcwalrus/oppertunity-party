@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const team = (await getCollection("team")).sort((a, b) =>
+  (a.data.role || "").localeCompare(b.data.role || "") ||
+  a.data.name.localeCompare(b.data.name)
+);
+---
+
+<BaseLayout title="Team">
+  <h1>Team</h1>
+  <div class="card-grid">
+    {team.map((member) => (
+      <a class="card" href={`/team/${member.data.slug}`}>
+        <h3>{member.data.name}</h3>
+        <p class="meta">
+          {member.data.role}{member.data.electorate ? ` — ${member.data.electorate}` : ""}
+        </p>
+      </a>
+    ))}
+  </div>
+</BaseLayout>

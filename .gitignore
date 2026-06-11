@@ -24,3 +24,9 @@ data/.cache/
 
 # MCP (under development)
 mcp/
+
+# Site build output
+site/dist/
+site/node_modules/
+site/.astro/
+site/.pnpm-store/

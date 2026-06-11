@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const events = (await getCollection("events")).sort((a, b) =>
+  (a.data.date || "").localeCompare(b.data.date || "")
+);
+---
+
+<BaseLayout title="Events">
+  <h1>Events</h1>
+  <ul>
+    {events.map((ev) => (
+      <li>
+        <strong>{ev.data.date || "TBD"}</strong> —
+        <a href={`/events/${ev.data.slug}`}>{ev.data.title}</a>
+        {ev.data.location && <span class="meta"> · {ev.data.location}</span>}
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

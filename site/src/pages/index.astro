@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const policies = (await getCollection("policies")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+const blog = (await getCollection("blog"))
+  .sort((a, b) => (b.data.date || "").localeCompare(a.data.date || ""));
+const events = (await getCollection("events")).sort((a, b) =>
+  (a.data.date || "").localeCompare(b.data.date || "")
+);
+const team = (await getCollection("team")).sort((a, b) =>
+  (a.data.role || "").localeCompare(b.data.role || "")
+);
+---
+
+<BaseLayout title="Home">
+  <h1>Opportunity Party — Policy Tracker</h1>
+  <p>
+    A plain-text, LLM-accessible mirror of the
+    <a href="https://www.opportunity.org.nz">Opportunity Party</a> website.
+    Browse policies, blog posts, events, and team profiles below,
+    or access the <a href="/docs_site_map.md">LLM sitemap</a>.
+  </p>
+
+  <h2>Policies</h2>
+  <div class="card-grid">
+    {policies.map((p) => (
+      <a class="card" href={`/policies/${p.data.slug}`}>
+        <h3>{p.data.title}</h3>
+      </a>
+    ))}
+  </div>
+
+  <h2>Latest Blog Posts</h2>
+  <ul>
+    {blog.slice(0, 5).map((post) => (
+      <li>
+        <a href={`/blog/${post.data.slug}`}>
+          {post.data.date ? <span class="meta">{post.data.date} — </span> : null}
+          {post.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p><a href="/blog">View all posts →</a></p>
+
+  <h2>Upcoming Events</h2>
+  <ul>
+    {events.slice(0, 5).map((ev) => (
+      <li>
+        <a href={`/events/${ev.data.slug}`}>
+          {ev.data.date ? <span class="meta">{ev.data.date} — </span> : null}
+          {ev.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p><a href="/events">View all events →</a></p>
+
+  <h2>Team</h2>
+  <div class="card-grid">
+    {team.slice(0, 8).map((member) => (
+      <a class="card" href={`/team/${member.data.slug}`}>
+        <h3>{member.data.name}</h3>
+        <p class="meta">
+          {member.data.role}{member.data.electorate ? ` — ${member.data.electorate}` : ""}
+        </p>
+      </a>
+    ))}
+  </div>
+  <p><a href="/team">View full team →</a></p>
+</BaseLayout>

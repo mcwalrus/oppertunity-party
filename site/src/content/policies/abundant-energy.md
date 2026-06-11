@@ -1,0 +1,355 @@
+---
+title: "Abundant Energy"
+slug: abundant-energy
+url: "https://www.opportunity.org.nz/abundant-energy"
+scrapedAt: "2026-06-08T13:25:44.620560"
+pdfDownloads:
+  - "https://drive.google.com/file/d/1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI/view?usp=drive_link"
+---
+# Abundant Energy
+
+# Abundant Energy
+
+#### We need affordable, clean and abundant power. It's time for a long-term energy strategy.
+
+**New Zealand is an energy-rich country. But we act like we're
+energy-poor.**
+
+We have world-leading solar, wind, hydro and geothermal resources —
+but we still spend over $20 billion a year buying fossil fuels. That
+shows up in ever-increasing power bills, idled machinery in Kiwi
+businesses and geopolitical risk that we just can't afford anymore.
+
+We can do better.
+
+Abundant Energy is a circuit breaker for an energy system that has
+been underfunded for decades. This package of large scale investment,
+market reform and community & household level electrification
+will deliver clean, affordable energy — keeping our homes warm and
+our businesses running.
+
+## What will Abundant Energy deliver?
+
+* $500 – $2,700 in savings per year for the average family based on
+  cheaper electricity bills and household electrification.
+* 5,000 extra high-skilled jobs over the next 30 years.
+* 300% more renewable electricity generation capacity (up to 30
+  Gigawatts by 2050).
+* 0.35% more annual GDP growth (based on processing, manufacturing
+  and transport efficiencies and new opportunities).
+* Significant cuts to carbon emissions from energy and industrial
+  processes.
+* Warmer, drier homes for Kiwis.
+
+## How will Abundant Energy work?
+
+To deliver affordable, clean energy for Kiwi families and businesses,
+Abundant Energy will:
+
+* **Boost renewable generation** by securing cross-party
+  agreement to add 30GW to the grid by 2050, launching a capacity
+  investment scheme (like Australia has) to unlock capital and
+  incentivising industries to electrify their processes.
+* **Make the electricity market work for Kiwis** by
+  ringfencing Government profits from power generation for investment
+  in the renewable future, merging the four energy regulatory
+  agencies into one and consolidating the 29 energy distributors into
+  no more than 8.
+* **Electrify houses, communities and businesses** by
+  issuing low-interest loans for household electrification, funding
+  community-run energy projects, insulating Kiwi homes and
+  electrifying public transport systems.
+
+### Read our full policy paper
+
+[Download the full policy paper](https://drive.google.com/file/d/1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI/view?usp=drive_link)
+
+## Frequently Asked Questions
+
+How much will Abundant Energy cost?
+
++
+
+The operational expenditure for implementing this plan will all come
+from the ringfenced dividend revenue from the Government's
+ownership stake in the gentailers; currently around $500 million
+annually. This will take this funding away from core crown revenue,
+so represents a direct cost that will need to be funded through
+other revenue sources; like the land value tax. A full breakdown of
+estimated costs is available in the full policy document.
+
+What about grid stability?
+
++
+
+The main source of grid stability in our proposal comes from
+overbuilding renewables; having more renewable capacity available
+than current grid needs. This means that variable renewable sources
+like wind and solar can be used ahead of hydro. Leaving water in
+the dams provides a reserve of highly responsive generation
+capacity. Additional geothermal and hydro capacity will add to this.
+
+Distributed generation and storage at household and community level
+does not address broader "dry year" stability issues, but builds
+overall grid resilience and could enable some peak shifting.
+Grid-scale storage further supports peak-shifting. Thermal
+generation at Huntly will still be available as a backup option;
+but it will be used in true emergency scenarios, rather than as a
+routine part of the generation mix.
+
+Will you separate the gentailers?
+
++
+
+No. Structural separation is a lengthy and costly solution, and
+doesn't address the core issues in the electricity sector. The
+fundamental problem is the perverse structural incentives that give
+rise to underinvestment in generation across the board. The
+gentailers could undoubtedly do better, but they're reasonably
+competitive with each other at both the retail and generation ends
+of the market.
+
+Do you support the current Government's commitment to build a LNG
+import terminal?
+
++
+
+No. This locks us in to long-term reliance on imported LNG. In
+addition to the environmental impacts, this puts us at the mercy
+of potentially volatile international prices.
+
+What about deep core geothermal or fusion energy?
+
++
+
+These are great technologies and it's great they're being researched
+in New Zealand. We're fully in favour of continuing to support
+domestic research on these sorts of technologies as part of a
+well-supported science and innovation ecosystem. However, these are
+new technologies that haven't yet been applied to reliable
+grid-scale generation, so it wouldn't be responsible to consider
+them as part of a planned energy mix. However, initiatives like our
+capacity investment scheme allow for a range of generation
+technologies — so if there's a breakthrough, there's no reason we
+couldn't take advantage of it.
+
+How do you justify your claims of job creation, GDP growth and
+household savings?
+
++
+
+Modelling the impact of large-scale policies like these is
+necessarily difficult and uncertain. We have taken a conservative
+approach to the claims we make and based these on similar modelling
+by reputable bodies. Modelling can be found in the full policy
+document.
+
+## Full Policy Detail
+
+# Abundant Energy
+
+| Field | Value |
+|-------|-------|
+| Date | February 2026 |
+| Policy | Abundant Energy |
+| Document Type | Policy Overview |
+| Source | `Opportunity_Policy_Abundant Energy.pdf` |
+
+## **Abundant Energy**
+
+New Zealand is an energy-rich country that behaves as though we are energy-poor.
+
+We have some of the best solar, wind, hydro, and geothermal resources in the world. But we spend over $20 billion a year offshore buying expensive fossil fuels to burn. And we still live with volatile power prices, kids going to bed cold and Kiwi businesses leaving their machinery idle or shutting up shop altogether.
+
+At Opportunity we know we can do better.We can have abundant clean energy to power warm comfortable homes and thriving businesses.
+
+We will work across Parliament to secure a bold long-term plan to:
+
+- Triple our renewable electricity generation capacity to 30 Gigawatts by 2050
+
+- Reform the market to make sure generators and distributors are making the big investments needed to power our energy future and putting the needs of consumers first
+
+- Support Kiwis to electrify our homes, communities and businesses
+
+This is an investment in lower household bills, more manufacturing, higher wages, better health, and a safer climate.
+
+## **Our reforms will:**
+
+- Change how our electricity market works so it incentivises new renewable capacity and delivers lower prices for all.
+
+- Invest in smart distribution networks to get clean energy where it needs to go
+
+- Add 19 GW of new renewable generation capacity to the grid by 2050 to reach a 30GW energy abundance target
+
+- Electrify our homes and transport to make New Zealand the world’s most energy efficient country
+
+## **Our Energy Abundance policy will mean:**
+
+- 5,000 extra high-skilled jobs to build the infrastructure we need over the next 30 years and 0.5% or more additional GDP growth
+
+- Direct annual savings of $500+ for the average household from cheaper electricity bills and further savings of $2,700+ from EVs, rooftop solar and appliance electrification
+
+- Business opportunities for sectors like primary processing, manufacturing and transport that lift annual GDP growth by 0.35% or more
+
+- Warmer, drier homes for our poorest kids to grow up in - meaning better lifetime health
+
+- Significant reductions in carbon emissions from electricity generation and industrial processes - meaning less liability to purchase carbon credits offshore
+
+- Less dependence on fossil fuels imports and security from global price instability
+
+## **The problems we’re solving**
+
+## **Market design that drives prices up and investment down**
+
+The current design of our market incentivises low investment. It is designed to deliver “just in time” investment to meet the needs of a steady-state economy. But we’re supposed to be going through an energy transition, and much more will be needed.
+
+Investors wait for prices to rise rather than building new capacity ahead of demand. High and volatile prices in turn put off the sorts of investments in large-scale commercial and industrial use that would help make it easier for generators to invest in new capacity that would stabilise and lower prices. High and volatile wholesale prices are in turn passed directly to consumers through retail bills; contributing to the energy poverty many households face today..
+
+It’s a vicious cycle that needs to be broken.
+
+## **Lack of ambition for our future**
+
+Energy will be a critical building block of the new economy in years to come; whether powering next generation public transport, AI implementation, primary processing or new industries that haven’t yet been invented. Whatever the future looks like, it’s clear that it will involve significant demand for renewable energy.
+
+**Energy**
+
+The Government’s flagship reform programme Electrify NZ is a good start towards a renewable future, but does not go nearly far enough. The recent announcement of a new LNG terminal by 2027 also calls into question the current Government’s commitment to their stated goal of doubling renewable generation by 2050.
+
+## **Fragmented regulation and red tape**
+
+Multiple agencies operating under different statutory regimes oversee the energy sector, leading to jurisdictional gaps, duplication, and missed opportunities for coordination. The complexity and volume of regulatory requirements—spanning network consents, pricing rules, connection standards, and disclosure obligations— create barriers to entry for new generators and impose disproportionate compliance burdens on smaller distributors. Frontier Economics found that this regulatory fragmentation “no longer fits the purpose” of a converged energy system and creates risk of “unintended consequences concentrated in areas of gaps,” while stakeholders report that overlapping rules on distribution pricing, connection processes, and demand response have created confusion and delayed critical infrastructure investment.
+
+## **The Abundant Energy policy pillars**
+
+## **1. Boost Renewable Generation**
+
+New Zealand’s current electricity system is not set up for the energy future Kiwis deserve. Decarbonisation will sharply increase electricity demand, as will adding new industries like data centres, high tech manufacturing and green hydrogen, electricity demand could more than double..
+
+## **1.1 An Ambitious Long Term Strategy**
+
+Transpower’s “Accelerated Electrification” scenario envisages roughly 22 GW of capacity by 2050. That may be just enough to meet core electrification needs and muddle through decarbonisation. It is not enough to deliver energy abundance.
+
+Reaching a more ambitious target of 30GW renewable capacity by 2050  means building around 19.2 GW of new renewable and storage capacity and retiring around 1.6 GW of coal and older gas plants. That means annually building and connecting slightly more than the 556 MW added in 2024. More of what we’ve already been doing - sustained and accelerated.
+
+Most importantly, building large-scale renewable generation will require significant private investment over an extended period. And that requires certainty - no more onagain off-again pumped hydro or LNG terminals. That’s why we’ll work across parties to lock in a 25-year Energy Strategy.
+
+## **1.2 A New Zealand Capacity Investment Scheme**
+
+A capacity investment scheme modeled on that in Australia will use competitive tenders to award long-term government contracts guarantee a minimum revenue for new renewables and storage, while also sharing excess revenue with the government above a “ceiling” wholesale price. The Australian scheme has already supported more than 18GW of new generation and storage capacity and across its life will unlock more than $70 billion of investment.
+
+To avoid over-reliance on government price guarantees and maintain market price signals, the Capacity Investment Scheme will apply to the second decade of operation of new generation.This will provide the certainty necessary to kickstart large-scale investment -  especially in riskier prospects such as initial offshore wind facilities and generation or storage capacity in constrained regions. To promote greater competition in the generation market, initial tender rounds will be restricted to new entrant generators.
+
+## **1.3 Incentivising industrial-process electrification**
+
+In a mirror-image of the capacity investment scheme, existing large scale industrial energy users can be incentivised to accelerate their switch to electricity through awarding long-term government guarantees that the price will not exceed a certain amount through competitive tenders. This will provide an initial increase in baseline electricity demand that can be timed and structured to match initial generation investments through the capacity investment scheme.
+
+## **2. Make the market work for consumers**
+
+High power prices and ongoing reliance on fossil fuels don’t happen by accident. They are the result of long-standing perverse incentives that mean we under-invest in our energy infrastructure. We need to align the way our markets work to make sure that our electricity generators, distributors and retailers are all working towards the energy future we want to see.
+
+## **2.1 Ringfencing government dividend revenue**
+
+Currently the single biggest beneficiary of high end-user energy prices is the Government itself through the dividends it receives from its ownership stake in three of the four big gentailers. That has meant that successive governments have been
+
+**Energy**
+
+incentivised not to modify the regulatory structures that give rise to these superprofits. By ringfencing the proceeds of the Crown’s ownership of these assets we will remove these incentives. That will also allow around $500 million per year to fund the energy system transformation initiatives below.
+
+## **2.2 A single regulator and permissive regulatory environment**
+
+Four different regulators, agencies, and ministries oversee energy, with overlapping mandates and slow decision-making. This fragmentation causes inefficiency, delays, and poor long-term planning. We will merge key functions of the Electricity Authority, Commerce Commission (energy-related functions), MBIE energy policy, Energy Efficiency and Conservation Authority (EECA) and relevant transport-electrification functions into one modern energy regulator, and one Ministry of Energy. A national policy statement on electricity generation and distribution will make it easier for new generation and transmission infrastructure to obtain resource consent and avoid subsequent litigation. This will include large grid-scale generation and storage, generation for direct commercial use and smaller distributed infrastructure in homes and communities.
+
+## **2.3 Consolidation of distributors and reformed pricing rules**
+
+New Zealand’s 29 fragmented electricity distribution businesses (EDBs) —ranging from Vector (600,000+ customers) to Buller Electricity (<5,000 customers)—lack the scale to efficiently manage the investment required for decarbonisation. The Commerce Commission’s “light-handed” regulation has constrained allowable capital investments, while complex regulatory compliance burdens smaller distributors disproportionately.
+
+Consolidating management of the 29 electricity distributors into 6 - 8 larger firms will give them the scale necessary to manage and invest in their infrastructure. Reformed revenue rules for these newly consolidated distributors, as well as Transpower, will free up substantial additional capital for grid upgrades and anticipatory grid investment; building capacity before it is needed rather than in response to new supply or demand.
+
+## **3. Electrify houses, communities, and businesses**
+
+## **3.1 Adopt Rewiring Aotearoa’s low-interest electrification loans as part of a national  Ratepayer Assistance Scheme administered by local government**
+
+The RAS builds on an established successful model used by councils to access credit via the New Zealand Local Government Funding Agency (LGFA). Using the LGFA, councils reduce borrowing costs while providing investors with a stable return on investment. It is important to note that, because the loan is tied to the individual rateable property and no one shareholder owns more than 20%, the debt from these loans will not appear on the books of the councils, or central government.
+
+## **3.2 Empower communities to take control of their energy futures:**
+
+An energy abundant future also means empowering our communities to have a stake. This can mean local initiatives to generate, distribute or store electricity as well as increase energy efficiency or make use of energy differently. In addition
+
+to the benefits of New Zealand citizens taking charge of their own energy future, community-level energy initiatives help to increase the efficiency and resilience of our overall energy system. Two funds will help directly support these local initiatives:
+
+- A community engagement fund will directly support activities where communities work together with electricity distributors to ensure local initiatives are accommodated and supported within the wider electricity grid
+
+- Government will directly co-invest in small-scale (up to 15 MW) communityowned generation and storage initiatives
+
+## **3.3 Expand EECA’s Warmer Kiwi Homes programme to support solar generation and appliance electrification for low-income households**
+
+EECA has already been highly successful in delivering subsidised upgrades to insulation and heating for large numbers of lower income households. But why not go the whole way and at the same time upgrade appliances and install solar generation? Doubling the current funding of the Warmer Kiwi Homes programme would enable it to support the full electrification of those households that are unlikely to be able to realise its benefits on their own.
+
+## **3.4 Electrify urban public transport**
+
+Electrifying our urban bus fleet makes good sense with extensive new generation capacity coming online. A fully funded mandate to Councils to electrify by 2030 will be fully centrally funded, including both charging infrastructure and fleet assets. In addition to significant decarbonisation and air pollution benefits, there are likely to be spillover benefits to building to building out capacity to service electrified heavy vehicle fleets; paving the way for electrifying other significant components of the transport industry.
+
+## **Abundant Energy—Frequently Asked Questions**
+
+## **How much will all this cost?**
+
+The operational expenditure for implementing this plan will all come from the ringfenced dividend revenue from the Government’s ownership stake in the gentailers; currently around $500 million annually. This will take this funding away from core crown revenue, so represents a direct cost that will need to be funded through other revenue sources; like the land value tax.
+
+This dividend revenue will more than fund the costs associated with:
+
+- Administering lending to Councils for the ratepayer assistance scheme and lowinterest electrification loans (approx. $6 million annually)
+
+- Administering the capacity investment scheme (approx. $5 million annually)
+
+- Direct support to communities and electricity distributors to work together to enable greater distributed generation (approx. $10 million annually)
+
+- Co-funding for small-scale community generation projects in isolated communities, and the grid infrastructure necessary to accommodate them (up to $100 million annually to support up to $2 billion of capital expenditure)
+
+- Warmer Kiwi Homes initiative expansion (approx. $80 million annually)
+
+- Mandated electrification of bus fleets (up to $125 million annually to support up to $2.5 billion of capital expenditure)
+
+In addition to the above costs, the Capacity Investment Scheme will represent a contingent liability on the Government balance sheet. While its expected value is $0, as it is designed never to have to be paid out, this still presents a degree of risk if power prices fall too dramatically.
+
+## **What about grid stability?**
+
+The main source of grid stability in our proposal comes from overbuilding renewables; having more renewable capacity available than current grid needs. This means that variable renewable sources like wind and solar can be used ahead of hydro. Leaving water in the hydro dams provides a reserve of highly responsive generation capacity. Additional geothermal and hydro capacity will add to this.
+
+Distributed generation generation and storage at household and community level does not address broader “dry year” stability issues, but builds overall grid resilience and could enable some peak shifting. Grid-scale storage further supports peakshifting.
+
+Thermal generation at Huntly will still be available as a backup option; but it will be used in true emergency scenarios, rather than as a routine part of the generation mix.
+
+## **Why don’t you support structural separation of the gentailers?**
+
+Structural separation is a lengthy and costly solution, and doesn’t address the core issues in the electricity sector. The fundamental problem is the perverse structural incentives that give rise to underinvestment in generation across the board. The
+
+**Energy**
+
+gentailers could undoubtedly do better, but they’re reasonably competitive with each other at both the retail and generation ends of the market.
+
+## **Do you support the current Government’s commitment to build a LNG import terminal?**
+
+No. This locks us in to long-term reliance on imported LNG. In addition to the environmental impacts, this puts us at the mercy of potentially volatile international prices.
+
+## **What about deep core geothermal or fusion energy?**
+
+These are great technologies and it’s great they’re being researched in New Zealand. We’re fully in favour of continuing to support domestic research on these sorts of technologies as part of a well-supported science and innovation ecosystem. However, these are new technologies that haven’t yet been applied to reliable gridscale generation, so it wouldn’t be responsible to consider them as part of a planned energy mix. However, initiatives like our capacity investment scheme allow for a range of generation technologies - so if there’s a breakthrough, there’s no reason we couldn’t take advantage of it.
+
+## **How do you justify your claims of job creation, GDP growth and household savings?**
+
+Modelling the impact of large-scale policies like these is necessarily difficult and uncertain. We have taken a conservative approach to the claims we make and based these on similar modelling by reputable bodies.
+
+|**Claim**|**Key Assumption**|**Justifcation**|
+|---|---|---|
+|Retail electricity prices of<br>~25c/kWh|The total fgure represents a rough<br>and conservative estimate based<br>on a ~25% reduction in generation<br>costs of newly abundant renewable<br>energy that are passed through<br>to consumers by a reasonably<br>competitive electricity retail sector.<br>In addition we assume stable<br>distribution and transmission<br>costs and some “volume efect”<br>on networks; defraying the fxed<br>costs of network maintenance and<br>investment across a greater volume<br>of transmited energy. We assume<br>retail margins per kWh remain<br>unchanged.|Economic analysis by MBIE and Sense<br>Partners considered a hypothetical<br>change in retail prices resulting from<br>greater hydro and gas supply of well<br>over 25%. The paper acknowledges<br>that a similar change could result from<br>large scale adoption of new renewable<br>generation.<br>The Long Run Marginal Cost (LRMC) of<br>new utility-scale solar and wind in New<br>Zealand is estimated at $80–100/MWh<br>(8–10c/kWh) wholesale.<br>Distributed solar is estimated to have<br>a direct levelized cost to consumers of<br>12 - 16c/kWh.|
+
+|**Claim**|**Key Assumption**|**Justifcation**|
+|---|---|---|
+|5000 high-skilled jobs<br>created during 30 year<br>build-out phase|8 jobs per MW of capacity installed.<br>19000 MW of capacity installed<br>is 152,000 job years or 5,000 jobs<br>sustained for the 30 year period.|Research from international economic<br>research service BBVA research puts<br>the job impact of solar installation at 10<br>- 14 jobs per MW and wind at 12 - 15. We<br>have assumed a lower fgure based on<br>larger project scale.<br>These estimates do not include<br>additional jobs created by accelerated<br>investment in grid upgrades.|
+|0.5%+ annual GDP growth<br>during build-out phase|Capital expenditure of ~$45 billion on<br>grid assets with a multiplier of 1.5x is<br>an annual GDP contribution of ~$2.25<br>billion or 0.51% of Sept 2025 GDP of<br>~$440 billion|The Electricity Authority estimates $30<br>billion of investment is required in the<br>grid. Renewable generation capacity<br>is likely to mean around a further $60<br>billion of capital expenditure based on<br>a range of capital cost estimates from<br>around $1.5m/MW (utility-scale solar)<br>to ~$6m/MW (ofshore wind).<br>We assume only half of this will be<br>“new” investment as compared to that<br>currently planned.<br>Treasury estimates a cumulative<br>multiplier from government spending of<br>2.0 - 2.7. We assume a lower multiplier<br>from a mix of public and private<br>expenditure.|
+|0.35%+ permanent GDP<br>growth|This fgure is based on conservative<br>estimates of enhanced economic<br>activity as a result of cheaper power<br>(0.1%+ GDP growth), household<br>savings redirected towards domestic<br>consumption (0.2%) and averted<br>losses from potential future energy<br>crisis events (~0.05% GDP per dry<br>year event).|Economic analysis by MBIE and Sense<br>Partners estimated that 35% lower<br>energy prices in the period 2017-<br>2025 would have lifted annual real<br>GDP growth by 0.15 - 0.2%. A more<br>conservative estimate based on only<br>25% price reductions suggests 0.1-<br>0.15% annual GDP.<br>BERL modelling shows a $500–700<br>million electricity cost reduction<br>generates 0.2% higher GDP. Rewiring<br>Aotearoa estimates suggest this is an<br>extremely conservative estimate of the<br>savings at stake.<br>The 2024 energy crisis was estimated<br>to cost the economy $300 million alone.|
+
+|**Claim**|**Key Assumption**|**Justifcation**|
+|---|---|---|
+|Direct household electricity<br>cost saving of $600 for the<br>average household|This estimate is based on a price<br>reduction from ~34c/kWh to ~25c/<br>kWh (described above). Based on the<br>power consumption of the average<br>New Zealand household this would<br>mean a direct saving of ~$600.|Powerswitch estimates (based on<br>MBIE data) that the average household<br>spends approximately $2343 annually<br>on electricity.|
+|Further household energy<br>savings of $2,700+ from<br>EVs, solar and appliance<br>electrifcation|This is based on a combination of<br>household consumption reduction<br>as a result of converting to an EV as<br>well as electric appliances and solar<br>generation.|This is a midpoint of Rewiring Aotearoa<br>estimates from $1,500 to $4,500.|
