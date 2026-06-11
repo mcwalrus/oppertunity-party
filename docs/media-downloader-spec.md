@@ -75,3 +75,6 @@ Uses `yt-dlp` in flat-extraction mode to enumerate the @OpportunityNZ channel (v
 - The downloader uses a `MediaPlatform` abstraction that can accommodate future platforms without restructuring
 - `just check` passes (ruff + ty)
 - The old `docs/youtube-downloader-impl-plan.md` is removed (this spec replaces it)
+
+
+Use: https://www.youtube.com/@OpportunityNZ

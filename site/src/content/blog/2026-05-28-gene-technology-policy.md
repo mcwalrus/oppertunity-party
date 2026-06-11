@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/gene_technology_policy"
 scrapedAt: "2026-06-08T17:22:56.256278"
 ---
-
 ## Gene Technology Policy
 
 ---

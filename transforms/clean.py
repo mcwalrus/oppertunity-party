@@ -35,13 +35,26 @@ def strip_image_lines(body: str) -> str:
 
 def strip_footer_sections(body: str) -> str:
     """Remove everything from '### Check out more policies' or '## Get Involved' to end-of-file."""
-    pattern = r"(?:###\s*Check out more policies|##\s*Get Involved).*"
-    body, _ = re.splitn(pattern, body, count=1) if hasattr(re, "splitn") else (body, 0)  # type: ignore[attr-defined]
-    # Fallback: use re.sub with DOTALL
     body = re.sub(
-        r"(?:###\s*Check out more policies|##\s*Get Involved).*", "", body, flags=re.DOTALL
+        r"(?:###\s*Check out more policies|##\s*Get Involved).*",
+        "",
+        body,
+        flags=re.DOTALL,
     )
     return body.rstrip()
+
+
+def strip_duplicate_h1(body: str, title: str) -> str:
+    """Remove duplicate # H1 headings that match the title (page template already adds H1)."""
+    # Remove first one or more H1 lines that match the title
+    escaped = re.escape(title.strip())
+    # Match '# Title' at start of body (possibly with leading blank lines)
+    # Also handles duplicate copies like '# Title\n# Title'
+    pattern = rf"^(?:#\s+{escaped}\s*\n)+"
+    body = re.sub(pattern, "", body, count=1)
+    # Strip leading blank lines left behind
+    body = body.lstrip("\n")
+    return body
 
 
 def extract_metadata_fields(body: str) -> tuple[dict[str, str], str]:
@@ -94,7 +107,13 @@ def remove_media_contact(body: str) -> str:
     return body.rstrip()
 
 
-def clean_body(body: str, *, strip_footer: bool = True, strip_media_contact: bool = True) -> str:
+def clean_body(
+    body: str,
+    *,
+    title: str = "",
+    strip_footer: bool = True,
+    strip_media_contact: bool = True,
+) -> str:
     """Apply the full cleaning pipeline to a markdown body."""
     if strip_footer:
         body = strip_footer_sections(body)
@@ -103,6 +122,8 @@ def clean_body(body: str, *, strip_footer: bool = True, strip_media_contact: boo
     body = remove_close_x_carousel(body)
     if strip_media_contact:
         body = remove_media_contact(body)
+    if title:
+        body = strip_duplicate_h1(body, title)
     body = normalise_blank_runs(body)
     return body
 

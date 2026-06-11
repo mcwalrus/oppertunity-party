@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/the_pray_and_delay_budget"
 scrapedAt: "2026-06-08T17:22:55.692763"
 ---
-
 ## The Pray and Delay Budget
 
 ### *This is what a ‘managed decline’ budget feels like*

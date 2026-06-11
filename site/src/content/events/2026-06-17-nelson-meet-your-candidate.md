@@ -9,7 +9,6 @@ location: "The Boathouse, Nelson, New Zealand"
 url: "https://www.opportunity.org.nz/nelson_meet_your_candidate"
 scrapedAt: "2026-06-08T17:22:17.648720"
 ---
-
 Jodie Kuntzsch is our new Opportunity Party candidate for the Nelson electorate, and this is your chance to meet her as she launches her campaign.
 
 Be there as it kicks off on Wednesday 17 June — a chance to meet Jodie in person, connect with others from across the community, and be part of a lively, ideas-focused evening about Nelson’s future.

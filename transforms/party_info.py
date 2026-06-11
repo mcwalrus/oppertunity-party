@@ -31,8 +31,8 @@ def transform_party_info(data_dir: Path, content_dir: Path) -> None:
         url = fields.get("URL", "")
         scraped = fields.get("Scraped", "")
 
-        # Clean body
-        body = clean_body(body, strip_footer=True, strip_media_contact=False)
+        # Clean body — pass title to strip duplicate H1
+        body = clean_body(body, title=title, strip_footer=True, strip_media_contact=False)
 
         # Build frontmatter
         fm_lines = [

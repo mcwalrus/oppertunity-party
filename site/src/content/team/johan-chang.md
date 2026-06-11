@@ -4,8 +4,6 @@ slug: johan-chang
 role: "Candidate"
 electorate: "Auckland Central"
 ---
-# Johan Chang
-
 “My family and I were welcomed to this country by an amazing community with kindness and grace. I’m standing in this election because I want everyone to feel the same charity once afforded to me, and to make sure that no New Zealander is left behind by political decisions that don't feel like it’s been made with their best interest at heart.”
 
 ## About

@@ -4,8 +4,6 @@ slug: kevin-huang
 role: "Candidate"
 electorate: "Pakuranga"
 ---
-# Kevin Huang
-
 “It would be my genuine pleasure to engage with my fellow New Zealanders and, together, build a future for our families, our community, and our country — a future we all wish to see.”
 
 ## About

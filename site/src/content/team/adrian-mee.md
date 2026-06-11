@@ -4,8 +4,6 @@ slug: adrian-mee
 role: "Candidate"
 electorate: "Selwyn"
 ---
-# Adrian Mee
-
 “Using health terms, our current political system is sick and our democracy is unhealthy.
 The Opportunity Party needs your support to make things better for all New Zealanders.
 Opportunity, putting the Pulse back into Politics and the Heartbeat back into New Zealand!

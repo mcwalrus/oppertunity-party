@@ -2,8 +2,6 @@
 title: "Constitution"
 slug: constitution
 ---
-# Constitution
-
 | Field | Value |
 |-------|-------|
 | Source | `constitution.pdf` |

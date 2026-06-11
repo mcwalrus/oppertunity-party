@@ -11,7 +11,7 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [
     "# Opportunity Party — Policies",
     "",
-    `A summary of all ${policies.length} policies from the Opportunity Party.`,
+    `All ${policies.length} policies from the Opportunity Party.`,
     "",
   ];
 
@@ -20,7 +20,7 @@ export const GET: APIRoute = async () => {
     const raw = fs.readFileSync(contentPath, "utf-8");
     const body = raw.replace(/^---\n[\s\S]*?\n---\n/, "").trim();
     const summary = getSummary(body, 200);
-    lines.push(`## ${p.data.title}`, "", summary, "");
+    lines.push(`## [${p.data.title}](/policies/${p.data.slug}.md)`, "", summary, "");
   }
 
   return new Response(lines.join("\n"), {

@@ -4,8 +4,6 @@ slug: cindie-uddstrom
 role: "Candidate"
 electorate: "West Coast-Tasman"
 ---
-# Cindie Uddstrom
-
 "Every person deserves the opportunity to be their best version of themselves."
 
 ## About

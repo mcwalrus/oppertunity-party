@@ -4,8 +4,6 @@ slug: evan-french
 role: "Candidate"
 electorate: "Glendene"
 ---
-# Evan French
-
 "New Zealand's environment and culture is too beautiful to be ruined or to be forced to flee from. That's why I'm fighting for New Zealand's future."
 
 ## About

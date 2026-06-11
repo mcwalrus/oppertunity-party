@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/q_needs_you"
 scrapedAt: "2026-06-08T17:23:07.926525"
 ---
-
 ## Q Needs You!
 
 **We’ve waited long enough for change to happen. Time to build it ourselves.**

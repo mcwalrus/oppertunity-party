@@ -4,8 +4,6 @@ slug: cody-marsh
 role: "Candidate"
 electorate: "Northcote"
 ---
-# Cody Marsh
-
 "Growing up with a single mum and attending patients’ homes, I've witnessed the realities of living paycheck to paycheck. This experience, both at home in Aotearoa New Zealand and working internationally, has motivated me to contribute to a health system that works for everyone."
 
 ## About

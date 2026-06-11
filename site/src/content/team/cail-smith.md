@@ -4,8 +4,6 @@ slug: cail-smith
 role: "Candidate"
 electorate: "East Cape"
 ---
-# Cail Smith
-
 "People on the East Coast are resilient, but they should not have to be resilient just to get by. I learned resilience early because I had to. It shaped me, but it also showed me that getting by should not require constant struggle."
 
 ## About

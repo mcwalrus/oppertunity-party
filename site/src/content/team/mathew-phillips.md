@@ -4,8 +4,6 @@ slug: mathew-phillips
 role: "Candidate"
 electorate: "Taieri"
 ---
-# Mathew Phillips
-
 "Hard work used to be enough to get ahead. Now it’s barely enough to get by. I’m standing to change that."
 
 ## About

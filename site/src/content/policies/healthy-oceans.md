@@ -6,10 +6,6 @@ scrapedAt: "2026-06-08T13:25:44.008147"
 pdfDownloads:
   - "https://drive.google.com/file/d/1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq/view?usp=drive_link"
 ---
-# Healthy Oceans
-
-# Healthy Oceans
-
 #### The ocean defines us as Kiwis. It's time to restore our precious marine ecosystems and grow a sustainable blue economy.
 
 ### Ripping up our seabeds to sell a few more boxes of fish fingers is not a strategy for prosperity.
@@ -206,8 +202,6 @@ more resilient to marine heatwaves, ocean acidification, and
 other climate impacts.
 
 ## Full Policy Detail
-
-# Healthy Oceans
 
 | Field | Value |
 |-------|-------|

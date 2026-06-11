@@ -4,8 +4,6 @@ slug: papa-wharewera
 role: "Candidate"
 electorate: "Waiariki"
 ---
-# Kaperiere "Pāpā" Wharewera
-
 “Guided by evidence, informed by lived experience, and grounded in a genuine commitment to serving others.”
 
 ## About

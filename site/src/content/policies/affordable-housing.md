@@ -4,10 +4,6 @@ slug: affordable-housing
 url: "https://www.opportunity.org.nz/affordable_housing"
 scrapedAt: "2026-06-08T13:25:50.931036"
 ---
-# Affordable Housing
-
-# Affordable Housing
-
 **A home is security and stability – the place we build good, productive lives from. But our housing market is broken, with home ownership now out of reach for generations of Kiwis. It's time to make houses homes again, not just investment vehicles.**
 
 The reality is that houses in New Zealand are 'severely unaffordable'

@@ -4,10 +4,6 @@ slug: honouring-te-tiriti
 url: "https://www.opportunity.org.nz/honouring_te_tiriti"
 scrapedAt: "2026-06-08T13:25:47.439513"
 ---
-# Honouring Te Tiriti
-
-# Honouring Te Tiriti
-
 **Opportunity takes the responsibility of the Crown as a Treaty partner seriously.**
 
 That means taking protection of taonga and redress of historical

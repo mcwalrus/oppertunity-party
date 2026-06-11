@@ -34,8 +34,8 @@ def transform_blog(data_dir: Path, content_dir: Path) -> None:
         # Derive slug from filename (date prefix already there)
         slug = md_file.stem
 
-        # Clean body
-        body = clean_body(body, strip_media_contact=False)
+        # Clean body — pass title to strip duplicate H1
+        body = clean_body(body, title=title, strip_media_contact=False)
 
         # Build frontmatter
         frontmatter_lines = ["---", f'title: "{_esc(title)}"', f"slug: {slug}"]

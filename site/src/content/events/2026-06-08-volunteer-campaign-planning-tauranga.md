@@ -9,7 +9,6 @@ location: "Wingates, Tauranga, New Zealand"
 url: "https://www.opportunity.org.nz/volunteer_campaign_planning"
 scrapedAt: "2026-06-08T17:22:12.887445"
 ---
-
 *Calling all volunteers & supporters!*
 
 If you are interested in volunteering and want to get more involved, then please come along to this campaign planning evening held on **Monday 8th June, at 359 Cameron Road, Wingates 6.00pm - 7.30pm.**

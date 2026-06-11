@@ -4,8 +4,6 @@ slug: intergenerational-infrastructure
 url: "https://www.opportunity.org.nz/intergenerational_infrastructure"
 scrapedAt: "2026-06-08T13:25:50.403512"
 ---
-# Inter-generational Infrastructure
-
 # Inter- generational Infrastructure
 
 **We owe the next generation clean drinking water, sewage that works and buses that arrive on time.**

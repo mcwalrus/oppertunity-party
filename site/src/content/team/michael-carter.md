@@ -4,8 +4,6 @@ slug: michael-carter
 role: "Candidate"
 electorate: "Tauranga"
 ---
-# Michael Carter
-
 “With a creative and practical mindset, I aim to make a positive difference to people and the environment through future-focused policies.”
 
 ## About

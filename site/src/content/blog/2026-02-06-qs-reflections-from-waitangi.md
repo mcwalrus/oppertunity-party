@@ -6,7 +6,6 @@ author: "Q Wong"
 url: "https://www.opportunity.org.nz/5_reflections_from_waitangi"
 scrapedAt: "2026-06-08T17:23:07.413302"
 ---
-
 ## Q's reflections from Waitangi
 
 I am in Waitangi this week, my first time being here for Waitangi Day. Yesterday, I was fortunate to join the parliamentary pōwhiri and sit amongst MPs and Ministers as we listened to speakers representing Māori and the Crown.

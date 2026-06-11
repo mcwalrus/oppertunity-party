@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/accelerating_ev_uptake"
 scrapedAt: "2026-06-08T17:22:57.708185"
 ---
-
 ## Accelerating EV uptake
 
 ### **Opportunity backs targeted tax incentives to accelerate business EV uptake**

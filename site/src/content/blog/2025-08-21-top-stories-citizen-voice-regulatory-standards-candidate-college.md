@@ -6,7 +6,6 @@ author: "Keith Morris"
 url: "https://www.opportunity.org.nz/top-stories-1"
 scrapedAt: "2026-06-08T17:23:10.427514"
 ---
-
 ## TOP Stories: Citizen Voice, Regulatory Standards, Candidate College
 
 Welcome to the first edition of TOP’s new monthly newsletter, ***TOP Stories***, where we share the latest updates, wins, and ways to get involved. Whether you’re a long-time supporter or just getting to know us, we’re glad you’re on the journey with us.

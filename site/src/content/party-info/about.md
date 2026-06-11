@@ -2,8 +2,6 @@
 title: "About"
 slug: about
 ---
-# About
-
 ## We stand for opportunity for every Kiwi.
 
 We believe that New Zealand does best when all of us have what we need to turn effort into progress – like access to nature, good jobs, future-fit education and affordable basics.

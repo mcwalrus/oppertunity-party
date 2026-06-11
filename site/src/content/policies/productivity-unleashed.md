@@ -4,10 +4,6 @@ slug: productivity-unleashed
 url: "https://www.opportunity.org.nz/productivity-unleashed"
 scrapedAt: "2026-06-08T13:25:45.108127"
 ---
-# Productivity Unleashed
-
-# Productivity Unleashed
-
 **Homegrown success stories like Xero and Rocket Lab show that Kiwi creativity can change the world. But these don't happen by accident. It's time to get our innovation foundations right, so New Zealand can become the best place in the world to start and scale a business.**
 
 With the right innovation ecosystem in-place, we can design the kind

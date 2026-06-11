@@ -36,8 +36,8 @@ def transform_events(data_dir: Path, content_dir: Path) -> None:
 
         slug = md_file.stem
 
-        # Clean body
-        body = clean_body(body, strip_footer=False, strip_media_contact=False)
+        # Clean body — pass title to strip duplicate H1
+        body = clean_body(body, title=title, strip_footer=False, strip_media_contact=False)
 
         # Build frontmatter
         fm_lines = [

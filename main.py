@@ -150,7 +150,73 @@ def run_scrapers(
     logger.info("=== %s ===", cache.summary_line())
 
 
+def _run_media(args: argparse.Namespace) -> None:
+    """Entry point for the ``media`` sub-command."""
+    from media.youtube import YouTubePlatform
+
+    platform: YouTubePlatform
+    if args.platform == "youtube":
+        platform = YouTubePlatform(year_filter=getattr(args, "year", None))
+    else:
+        logger.error("Unknown media platform: %s", args.platform)
+        sys.exit(1)
+
+    mode: str = getattr(args, "mode", "download")
+    refresh: bool = getattr(args, "refresh", False)
+
+    items = platform.enumerate(refresh=refresh)
+    grouped = platform.group(items)
+
+    if mode == "list":
+        platform.list_summary(grouped)
+    elif mode == "download":
+        queue = platform.select(grouped)
+        platform.download(queue)
+    else:
+        logger.error("Unknown mode: %s", mode)
+        sys.exit(1)
+
+
+def _build_media_parser() -> argparse.ArgumentParser:
+    """Build the standalone argument parser for the ``media`` sub-command."""
+    p = argparse.ArgumentParser(
+        prog="main.py media",
+        description="Download off-platform media.",
+    )
+    sub = p.add_subparsers(dest="platform")
+
+    yt = sub.add_parser("youtube", help="YouTube channel downloader (@OpportunityNZ)")
+    yt.add_argument(
+        "--mode",
+        choices=["list", "download"],
+        default="download",
+        help="list: show year summary; download: interactive pick + download (default)",
+    )
+    yt.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Force re-enumeration, replacing the JSON cache",
+    )
+    yt.add_argument(
+        "--year",
+        metavar="YYYY",
+        help="Filter to a specific year (e.g. 2024)",
+    )
+    return p
+
+
 def main() -> None:
+    # Early dispatch: if first arg is "media", use the dedicated media parser
+    # to avoid argparse conflicts with the nargs="*" targets positional.
+    if len(sys.argv) > 1 and sys.argv[1] == "media":
+        media_parser = _build_media_parser()
+        media_args = media_parser.parse_args(sys.argv[2:])
+        if not media_args.platform:
+            media_parser.print_help()
+            sys.exit(1)
+        _run_media(media_args)
+        return
+
     # Build a readable list of category TTLs for the help text
     _ttl_help = ", ".join(
         f"{cat}={ttl // 3600}h" if ttl >= 3600 else f"{cat}={ttl // 60}m"

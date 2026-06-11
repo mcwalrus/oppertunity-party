@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/call_for_government_reversal_on_lng_terminal"
 scrapedAt: "2026-06-08T17:23:02.625147"
 ---
-
 ## Call for Government reversal on LNG terminal
 
 **Opportunity is calling on the Government to reverse its plans to build an LNG terminal in Taranaki.**  

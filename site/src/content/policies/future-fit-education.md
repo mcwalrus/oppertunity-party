@@ -4,10 +4,6 @@ slug: future-fit-education
 url: "https://www.opportunity.org.nz/future_fit_education"
 scrapedAt: "2026-06-08T13:25:48.355111"
 ---
-# Future-fit Education
-
-# Future-fit Education
-
 **The world our children will grow up in will be challenging and complex. Education needs to change with the times to ensure our young people are ready.**
 
 To build more adaptability into the education system, Opportunity

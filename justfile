@@ -45,6 +45,18 @@ validate:
     @echo "Running markdown-link-check on scraped data..."
     @find data -name '*.md' | sort | xargs -I{} npx --yes markdown-link-check --config .markdown-link-check.json {}
 
+# YouTube: show year-grouped summary
+media-list: install
+    uv run python main.py media youtube --mode=list
+
+# YouTube: interactive pick + download
+media-download: install
+    uv run python main.py media youtube --mode=download
+
+# YouTube: force re-enumerate and refresh cache
+media-refresh: install
+    uv run python main.py media youtube --refresh
+
 # Transform scraped data into site content
 transform: install
     uv run python -m transforms.main
@@ -52,6 +64,10 @@ transform: install
 # Install site dependencies
 site-install:
     cd site && pnpm install
+
+# Type-check the Astro site
+site-check: site-install
+    cd site && pnpm check
 
 # Build the static site
 site-build: transform site-install

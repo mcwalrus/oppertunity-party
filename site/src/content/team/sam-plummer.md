@@ -4,8 +4,6 @@ slug: sam-plummer
 role: "Candidate"
 electorate: "Taupō"
 ---
-# Sam Plummer
-
 “I spent years working in international development and trumpeting the way we do
 things in NZ. It was disappointing to return and find that we’ve lost our way. We need
 some new thinking focused on what democracy is all about – the best interests of our

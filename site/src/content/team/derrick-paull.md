@@ -4,8 +4,6 @@ slug: derrick-paull
 role: "Candidate"
 electorate: "Maungakiekie"
 ---
-# Derrick Paull
-
 “In a world increasingly focused on ideological silos that determine the outcomes for nations, Opportunity Party provides sensible, evidence-based policy that transcends ideology and party politics. Our country needs balanced, logical policy-making, and that’s why I choose to invest in the success of the Opportunity Party in 2026. Together we can build a stronger, sustainable future for our country.”
 
 ## About

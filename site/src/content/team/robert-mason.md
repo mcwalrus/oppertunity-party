@@ -4,8 +4,6 @@ slug: robert-mason
 role: "Candidate"
 electorate: "Kenepuru"
 ---
-# Robert Mason
-
 “New Zealand is my home: an amazing country with wonderful people - it just deserves a better effort from those who claim to govern us. A wasted vote is a vote for the established parties with a vested interest in the status quo. Only a vote for Opportunity can bring about the lasting change New Zealand needs.”
 
 ## About

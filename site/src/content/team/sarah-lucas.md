@@ -4,8 +4,6 @@ slug: sarah-lucas
 role: "Candidate"
 electorate: "New Plymouth"
 ---
-# Sarah Lucas
-
 “I’m standing because New Zealand needs leadership that is collaborative, practical, and
 evidence-based — leadership that builds a stronger, fairer country for the next generation.”
 

@@ -6,10 +6,6 @@ scrapedAt: "2026-06-08T13:25:44.620560"
 pdfDownloads:
   - "https://drive.google.com/file/d/1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI/view?usp=drive_link"
 ---
-# Abundant Energy
-
-# Abundant Energy
-
 #### We need affordable, clean and abundant power. It's time for a long-term energy strategy.
 
 **New Zealand is an energy-rich country. But we act like we're
@@ -145,8 +141,6 @@ by reputable bodies. Modelling can be found in the full policy
 document.
 
 ## Full Policy Detail
-
-# Abundant Energy
 
 | Field | Value |
 |-------|-------|

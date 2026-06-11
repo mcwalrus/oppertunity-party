@@ -9,13 +9,13 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [
     "# Opportunity Party — Team",
     "",
-    `All ${team.length} team members.`,
+    `All ${team.length} team members and candidates.`,
     "",
   ];
 
   for (const member of team) {
     lines.push(
-      `## ${member.data.name}`,
+      `## [${member.data.name}](/team/${member.data.slug})`,
       "",
       member.data.role ? `**Role:** ${member.data.role}` : "",
       member.data.electorate ? `**Electorate:** ${member.data.electorate}` : "",

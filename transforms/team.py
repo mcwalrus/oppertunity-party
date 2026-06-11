@@ -1,5 +1,6 @@
 """Transform team members from data/ to site/src/content/team/."""
 
+import re
 from pathlib import Path
 
 from transforms.clean import (
@@ -35,8 +36,8 @@ def transform_team(data_dir: Path, content_dir: Path) -> None:
         url = fields.get("URL", "")
         scraped = fields.get("Scraped", "")
 
-        # Clean body
-        body = clean_body(body, strip_footer=False)
+        # Clean body — pass name to strip duplicate H1
+        body = clean_body(body, title=name, strip_footer=False)
 
         # Build frontmatter
         fm_lines = [
@@ -65,8 +66,6 @@ def transform_team(data_dir: Path, content_dir: Path) -> None:
 
 def _extract_name(body: str) -> str:
     """Extract name from the first markdown heading like '# Adam MacRae-Martin'."""
-    import re
-
     m = re.match(r"^#\s+(.+)$", body, re.MULTILINE)
     return m.group(1).strip() if m else ""
 

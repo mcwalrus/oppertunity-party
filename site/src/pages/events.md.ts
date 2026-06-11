@@ -9,15 +9,14 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [
     "# Opportunity Party — Events",
     "",
-    `All ${events.length} upcoming events.`,
+    `All ${events.length} events from the Opportunity Party.`,
     "",
   ];
 
   for (const ev of events) {
     lines.push(
-      `## ${ev.data.title}`,
+      `## [${ev.data.title}](/events/${ev.data.slug})`,
       "",
-      ev.data.date ? `**Date:** ${ev.data.date}` : "",
       ev.data.when ? `**When:** ${ev.data.when}` : "",
       ev.data.venue ? `**Venue:** ${ev.data.venue}` : "",
       ev.data.address ? `**Address:** ${ev.data.address}` : "",

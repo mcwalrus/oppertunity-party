@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/meet_the_opportunity_candidates"
 scrapedAt: "2026-06-08T17:22:59.528515"
 ---
-
 ## Meet the first Opportunity candidates
 
 #### We are entrepreneurs, community champions and impact makers.

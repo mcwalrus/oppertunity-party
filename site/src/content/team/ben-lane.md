@@ -4,8 +4,6 @@ slug: ben-lane
 role: "Candidate"
 electorate: "Māngere"
 ---
-# Ben Lane
-
 “New Zealand’s best days are still ahead of us, but only if we start thinking longer term.”
 
 ## About

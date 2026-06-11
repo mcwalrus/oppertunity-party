@@ -20,7 +20,7 @@ export const GET: APIRoute = async () => {
     const body = raw.replace(/^---\n[\s\S]*?\n---\n/, "").trim();
     const summary = getSummary(body, 100);
     lines.push(
-      `## ${post.data.date || "No date"} ${post.data.title}`,
+      `## [${post.data.title}](/blog/${post.data.slug}.md)`,
       "",
       post.data.author ? `By ${post.data.author}` : "",
       summary,

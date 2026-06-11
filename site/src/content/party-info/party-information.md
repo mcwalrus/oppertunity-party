@@ -2,8 +2,6 @@
 title: "Party Information"
 slug: party-information
 ---
-# Party Information
-
 ## Party Information
 
 * ### Board

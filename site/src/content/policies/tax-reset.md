@@ -7,10 +7,6 @@ pdfDownloads:
   - "https://drive.google.com/file/d/1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B/view?usp=drive_link"
   - "https://drive.google.com/file/d/1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW/view?usp=drive_link"
 ---
-# Tax Reset
-
-# Tax Reset
-
 Let’s invest in people. Not property.
 
 It's time for a tax reset that increases incomes, makes homes affordable
@@ -434,8 +430,6 @@ hard choices about the future.
 
 ## Full Policy Detail
 
-# Tax Reset — Policy Addendum
-
 | Field | Value |
 |-------|-------|
 | Date | May 2026 |
@@ -483,10 +477,6 @@ Done well. the transition would avoid excessive inflationary impacts or other ec
 |9|100.00%|1.75%|0.50%|0.00%|6.00%|6.00%|6.00%|6.00%|0.00%|
 |10|100.00%|1.75%|0.50%|0.00%|6.00%|6.00%|6.00%|6.00%|0.00%|
 |11|100.00%|1.75%|0.50%|0.00%|6.00%|6.00%|6.00%|6.00%|2.00%|
-
-**Tax**
-
-# Tax Reset
 
 | Field | Value |
 |-------|-------|
@@ -551,8 +541,6 @@ Together these create a package that puts more money in New Zealanders’ pocket
 
 - A domestic savings pool that will top $1 trillion within 20 years, increasing the availability of capital and lessening our reliance on offshore borrowing and strengthening our financial resilience
 
-**Tax**
-
 ## **The problems we’re solving**
 
 ## **The cost-of-living crisis is crushing working families**
@@ -578,8 +566,6 @@ A home should provide security and stability—the foundation for a productive l
 New Zealand’s current retirement income system is on an unsustainable path with today’s benefits funded entirely from current tax revenue. As our population ages, this model faces mounting pressure. Treasury projects that, without reform, National Superannuation expenditure will rise from 15% of government revenue today to approximately 22% by 2065.
 
 Without reform, we face three unpalatable choices: raise taxes substantially on working-age New Zealanders, cut superannuation benefits for retirees or reduce other essential public services. None of these options is acceptable.
-
-**Tax**
 
 At the same time, New Zealand’s low national savings rate limits our capacity to fund productive investment domestically. We remain heavily reliant on offshore capital, exposing us to external shocks and limiting our ability to finance infrastructure and economic transformation on our own terms.
 
@@ -612,8 +598,6 @@ To balance the Citizens’ Income, simplify the tax system, and maintain progres
 - 39% for income at $200,001+ p/a
 
 Combined with the Citizens’ Income, this represents a reduction in total income tax at all income levels, with the largest reductions at lower income levels where it is most needed.Those earning less than $60,000 per year will pay less income tax than the Citizens’ Income they receive.
-
-**Tax**
 
 ## **1.3 A Simplified Benefit System**
 
@@ -686,8 +670,6 @@ Exemptions to the land value tax will apply for:
 - Treaty settlement land (subject to consultation with iwi), and
 
 - Social housing.
-
-**Tax**
 
 ## **2.3 Deferrals protect older people and farmers**
 
@@ -823,8 +805,6 @@ We understand this concern deeply, and we want to be clear - the Tax Reset is no
 
 Many homeowners have seen their property values rise substantially over the years, often through no action of their own. That’s not a criticism of anyone who bought a house and got lucky with timing. But it does point to something being wrong with the underlying system, and that’s what we’re trying to fix. A New Zealand where your house makes more money than you do - is not one that’s working for the next generation.
 
-**Tax**
-
 The LVT corrects this imbalance. You still own your house. You still benefit from capital gains, though they’ll be lower as land values adjust. Except now you live in a country where housing is affordable for your children and grandchildren, businesses can grow because capital isn’t locked up in property and everyone has basic security through the Citizen’s Income.
 
 We think that’s a fair deal.
@@ -853,8 +833,6 @@ The supply of land is fixed, and those who own houses don’t want to lose money
 
 Longer term, the LVT encourages development of higher-density housing, increasing supply and reducing rents for everyone. Our housing policy will also increase the
 
-**Tax**
-
 supply of low cost housing over time, providing more options to renters whose rents might have increased.
 
 ## **Won’t landlords just increase rents if people get the Citizens’ Income?**
@@ -881,8 +859,6 @@ To ensure that farmers are supported through tough seasons and the broader Tax R
 
 It’s true that farming can be a very low-margin business. For many farmers, the business model has become more about holding on for capital gains from land sales - because delivering consistent strong returns from farming practices can be such a challenge. That isn’t sustainable. Food and fibre is a critical part of NZ’s economy and we need our farmers to be profitable. That’s why the Land Value Tax sits amongst a
 
-**Tax**
-
 broader policy package designed to step-change research, development and highvalue food & fibre production. It is one stick amongst many carrots and is a necessary measure to reduce land prices so that young farmers can get into ownership and start innovating. When the average age of a sheep and beef farmer is pushing 60 - downward pressure on land prices is necessary for the sector’s future.
 
 ## **Is the Tax Reset politically realistic?**
@@ -906,8 +882,6 @@ Rural land is overvalued too. Young farmers increasingly find it difficult or im
 ## **Can local councils still charge rates?**
 
 Yes. The LVT is a national tax generating revenue for the Citizen’s Income and national services. Council rates continue to fund local services. They’re separate systems serving different purposes.
-
-**Tax**
 
 ## **Why exempt Kiwisaver 2.0 contributions from tax?**
 

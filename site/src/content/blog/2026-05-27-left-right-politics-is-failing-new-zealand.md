@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/_left_right_politics_is_failing_new_zealand"
 scrapedAt: "2026-06-08T17:22:56.739370"
 ---
-
 ## Left-right politics is failing New Zealand
 
 **Why Opportunity won't pick a side**

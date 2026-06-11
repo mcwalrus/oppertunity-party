@@ -4,10 +4,6 @@ slug: climate-action
 url: "https://www.opportunity.org.nz/climate_action"
 scrapedAt: "2026-06-08T13:25:49.855496"
 ---
-# Climate Action
-
-# Climate Action
-
 **Climate change is real, is caused by human activity and is already here. The decisions we make today will shape how we, our children and grandchildren adapt — or not — to a warming world.**
 
 Preparing for climate change means doing our part to prevent further

@@ -4,8 +4,6 @@ slug: jamie-attenborough
 role: "Candidate"
 electorate: "Mt Roskill"
 ---
-# Jamie Attenborough
-
 “Our political and economic system is no longer working for us. We need Opportunity’s vision to build a new path forward.”
 
 ## About

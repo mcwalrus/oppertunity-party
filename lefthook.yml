@@ -39,6 +39,16 @@ pre-commit:
     # Runs once per staged file (the tool only accepts one file at a time).
     # Relative links resolve against https://www.opportunity.org.nz via config.
     # -------------------------------------------------------------------------
+    # -------------------------------------------------------------------------
+    # astro check — TypeScript + template type-checking for the Astro site.
+    # Triggers on any staged file inside site/; runs the full project check
+    # because astro check doesn't accept individual file paths.
+    # Requires: just site-install (pnpm install) has been run once.
+    # -------------------------------------------------------------------------
+    site-check:
+      glob: "site/**/*.{ts,tsx,mts,astro}"
+      run: cd site && pnpm check
+
     markdown-link-check:
       glob: "data/**/*.md"
       run: for f in {staged_files}; do npx --yes markdown-link-check --config .markdown-link-check.json "$f" || exit 1; done

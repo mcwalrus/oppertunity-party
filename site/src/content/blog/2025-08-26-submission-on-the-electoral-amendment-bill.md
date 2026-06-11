@@ -6,7 +6,6 @@ author: "Policy Team"
 url: "https://www.opportunity.org.nz/electoral_amendment_bill_submission"
 scrapedAt: "2026-06-08T17:23:09.942877"
 ---
-
 ## Submission on the Electoral Amendment Bill
 
 TOP is broadly supportive of the majority of the Bill.  Measures such as strengthening prohibitions on treating and preventing MPs from acting as scrutineers are minor improvements in line with the good functioning of our democracy. 

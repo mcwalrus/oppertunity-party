@@ -53,8 +53,8 @@ def transform_policies(data_dir: Path, content_dir: Path) -> None:
         scraped = fields.get("Scraped") or index_entry.get("scraped_at", "")
         pdf_downloads = index_entry.get("pdf_downloads", [])
 
-        # Clean body
-        body = clean_body(body)
+        # Clean body — pass title to strip duplicate H1
+        body = clean_body(body, title=title)
 
         # Find and append PDF content
         pdf_files = sorted(slug_dir.glob("pdf-*.md"))
@@ -114,6 +114,10 @@ def _load_pdf_content(pdf_files: list[Path]) -> str:
         content = pdf_file.read_text(encoding="utf-8")
         # Strip the metadata table at the top of PDF markdown
         content = re.sub(r"^# .+?\n(\|.*?\|.*?\n)+\n*", "", content, count=1)
+        # Strip standalone "**Tax**" noise lines from PDF content
+        content = re.sub(r"^\*\*Tax\*\*\s*$", "", content, flags=re.MULTILINE)
+        # Strip all H1 headings — they duplicate the page template's H1
+        content = re.sub(r"^#[^#].+$", "", content, flags=re.MULTILINE)
         # Also strip any leading blank lines
         content = content.lstrip("\n")
         if content.strip():

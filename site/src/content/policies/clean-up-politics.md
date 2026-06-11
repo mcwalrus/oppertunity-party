@@ -4,10 +4,6 @@ slug: clean-up-politics
 url: "https://www.opportunity.org.nz/clean_up_politics"
 scrapedAt: "2026-06-08T13:25:46.631132"
 ---
-# Clean up Politics
-
-# Clean up Politics
-
 **Democracy works when everyone – rich or poor – is represented equally.**
 
 But when some New Zealanders are able to hire lobbyists or make large

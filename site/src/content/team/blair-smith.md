@@ -4,8 +4,6 @@ slug: blair-smith
 role: "Candidate"
 electorate: "Hamilton West"
 ---
-# Blair Smith
-
 “The decisions made in Wellington show up in the lives of ordinary Kiwis every day. I have seen enough to know we can do better. It's time for a change”
 
 ## About

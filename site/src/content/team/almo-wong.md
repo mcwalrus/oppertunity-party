@@ -4,8 +4,6 @@ slug: almo-wong
 role: "Candidate"
 electorate: "Henderson"
 ---
-# Almo Wong
-
 “I bring a commitment to listening to people, and being a voice for common sense and real change. I’m passionate about ensuring that future generations receive a solid education, that local businesses can grow, and infrastructure spending is efficient and expansive.”
 
 ## About

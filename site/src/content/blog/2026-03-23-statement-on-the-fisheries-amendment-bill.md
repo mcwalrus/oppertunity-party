@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/statement_on_the_fisheries_amendment_bill"
 scrapedAt: "2026-06-08T17:23:00.039058"
 ---
-
 ## Statement on the Fisheries Amendment Bill
 
 Our fisheries are a public resource. They belong to the people of New Zealand.

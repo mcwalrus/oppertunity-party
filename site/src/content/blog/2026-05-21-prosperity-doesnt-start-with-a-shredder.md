@@ -6,7 +6,6 @@ author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/prosperity_doesn_t_start_with_a_shredder"
 scrapedAt: "2026-06-08T17:22:57.225070"
 ---
-
 ## Prosperity doesn’t start with a shredder
 
 #### *Opportunity's position on proposed public sector cuts*

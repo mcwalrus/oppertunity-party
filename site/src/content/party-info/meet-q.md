@@ -2,8 +2,6 @@
 title: "Meet Q"
 slug: meet-q
 ---
-# Meet Q
-
 ## About Q
 
 Qiulae Wong  

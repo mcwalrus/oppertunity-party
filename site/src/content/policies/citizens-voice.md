@@ -6,10 +6,6 @@ scrapedAt: "2026-06-08T13:25:45.601006"
 pdfDownloads:
   - "https://drive.google.com/file/d/116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L/view?usp=drive_link"
 ---
-# Citizens' Voice
-
-# Citizens' Voice
-
 #### People are losing trust in politics. So let's do democracy differently. With Citizens' Assemblies, we can solve big issues by hearing a new voice in politics. Yours.
 
 ## Politics as usual isn't working.
@@ -331,8 +327,6 @@ Is this just another TOP policy nerd idea?
 Yep. The best one yet!
 
 ## Full Policy Detail
-
-# Citizen’s Voice
 
 | Field | Value |
 |-------|-------|

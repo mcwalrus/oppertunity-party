@@ -2,8 +2,6 @@
 title: "Charter"
 slug: charter
 ---
-# Charter
-
 | Field | Value |
 |-------|-------|
 | Source | `charter.pdf` |
