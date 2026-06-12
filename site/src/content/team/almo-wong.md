@@ -3,6 +3,8 @@ name: "Almo Wong"
 slug: almo-wong
 role: "Candidate"
 electorate: "Henderson"
+url: "https://www.opportunity.org.nz/candidate-almo-wong"
+scrapedAt: "2026-06-08T16:20:29.914892"
 ---
 “I bring a commitment to listening to people, and being a voice for common sense and real change. I’m passionate about ensuring that future generations receive a solid education, that local businesses can grow, and infrastructure spending is efficient and expansive.”
 

@@ -11,7 +11,7 @@ from typing import Any
 
 from scraper.blog_posts import save_blog_posts, scrape_blog_posts
 from scraper.cache import CATEGORY_TTL
-from scraper.client import DATA_DIR, clean_data, configure_cache
+from scraper.client import CACHE_DIR, DATA_DIR, clean_data, configure_cache
 from scraper.events import save_events, scrape_events
 from scraper.models import PartyInfo, PolicyPage
 from scraper.party_info import download_and_convert_party_pdfs, save_party_info, scrape_party_info
@@ -250,7 +250,7 @@ def main() -> None:
     parser.add_argument(
         "--clean",
         action="store_true",
-        help="Clear data/ directory before scraping (preserves pdfs/ and .cache/)",
+        help="Clear data/sources/opportunity-website/ before scraping (preserves pdfs/)",
     )
 
     refresh_group = parser.add_mutually_exclusive_group()
@@ -297,7 +297,7 @@ def _print_cache_stats() -> None:
     cache = get_cache()
     stats = cache.stats()
     print("HTTP cache contents:")
-    print(f"  Location : {DATA_DIR / '.cache'}")
+    print(f"  Location : {CACHE_DIR}")
     total = 0
     for cat, ttl in CATEGORY_TTL.items():
         if cat == "default":

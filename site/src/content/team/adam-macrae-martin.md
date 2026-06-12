@@ -3,6 +3,8 @@ name: "Adam MacRae-Martin"
 slug: adam-macrae-martin
 role: "Candidate"
 electorate: "Ōtāhuhu"
+url: "https://www.opportunity.org.nz/candidate-adam-macrae-martin"
+scrapedAt: "2026-06-08T16:20:18.987431"
 ---
 “My motivation comes from wanting to reshape our economy and democracy to make both work for everyone. This will create a future for Aotearoa New Zealand that my daughter and the next generation can be proud to inherit."
 

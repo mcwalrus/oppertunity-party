@@ -205,8 +205,6 @@ It’s a vicious cycle that needs to be broken.
 
 Energy will be a critical building block of the new economy in years to come; whether powering next generation public transport, AI implementation, primary processing or new industries that haven’t yet been invented. Whatever the future looks like, it’s clear that it will involve significant demand for renewable energy.
 
-**Energy**
-
 The Government’s flagship reform programme Electrify NZ is a good start towards a renewable future, but does not go nearly far enough. The recent announcement of a new LNG terminal by 2027 also calls into question the current Government’s commitment to their stated goal of doubling renewable generation by 2050.
 
 ## **Fragmented regulation and red tape**
@@ -244,8 +242,6 @@ High power prices and ongoing reliance on fossil fuels don’t happen by acciden
 ## **2.1 Ringfencing government dividend revenue**
 
 Currently the single biggest beneficiary of high end-user energy prices is the Government itself through the dividends it receives from its ownership stake in three of the four big gentailers. That has meant that successive governments have been
-
-**Energy**
 
 incentivised not to modify the regulatory structures that give rise to these superprofits. By ringfencing the proceeds of the Crown’s ownership of these assets we will remove these incentives. That will also allow around $500 million per year to fund the energy system transformation initiatives below.
 
@@ -316,8 +312,6 @@ Thermal generation at Huntly will still be available as a backup option; but it 
 ## **Why don’t you support structural separation of the gentailers?**
 
 Structural separation is a lengthy and costly solution, and doesn’t address the core issues in the electricity sector. The fundamental problem is the perverse structural incentives that give rise to underinvestment in generation across the board. The
-
-**Energy**
 
 gentailers could undoubtedly do better, but they’re reasonably competitive with each other at both the retail and generation ends of the market.
 

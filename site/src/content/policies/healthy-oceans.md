@@ -266,8 +266,6 @@ The government reports that 87% of fish stocks are in “good shape” but local
 
 At the same time, New Zealand is an outlier among our friends in allowing indiscriminate, destructive practices like bottom-trawling. Destruction of coral reefs
 
-**Oceans**
-
 and seafloor ecosystems, noise and light pollution and sediment plumes promise damage that will take decades to recover from, if it does at all.
 
 The standards we impose on the fishing industry are poorly enforced. Despite clear evidence that cameras dramatically improve transparency and accountability, the current government refuses to install them on deep-sea trawlers—the very vessels operating in the most remote and ecologically sensitive areas.
@@ -375,8 +373,6 @@ Marine protection imposed by central government without community involvement cr
 - Commercial and recreational fishing communities
 
 - Tourism operators and marine industries
-
-**Oceans**
 
 - Conservation groups and marine scientists
 
@@ -488,8 +484,6 @@ We will use existing mechanisms including the Sustainable Food and Fibre Futures
 
 Four separate agencies operating under different statutory frameworks cannot deliver the integrated ecosystem management our oceans require. We will reinstate an Ocean Secretariat with statutory authority to provide cohesive, cross-agency advice on ocean management, economic development, and biodiversity regeneration. This Secretariat will be explicitly mandated to prioritise the interests of future generations, applying intergenerational equity principles to all marine policy decisions. It will coordinate between MPI, DOC, regional councils, the EPA, and other agencies to ensure that fisheries decisions account for ecosystem health, marine protection planning considers economic impacts, and coastal development respects marine biodiversity. It will be an independent, cross-sector convening body resourced
 
-**Oceans**
-
 to convene stakeholders, coordinate strategy, and steward long-term change. It will be initially tasked with establishing a sustainable/regenerative oceans strategy to help unify ocean-related legislation, agencies, and economic pathways.
 
 ## **4.2 Invest in open-access marine research and data infrastructure**
@@ -545,8 +539,6 @@ We have proposed a range of measures to support the transition that are likely t
 All reforms will be implemented in a manner fully respecting Māori fishing rights established under the Treaty of Waitangi (Fisheries Claims) Settlement Act 1992 and related agreements. This includes protecting customary fishing rights (and in fact benefiting them from increased fish abundance).
 
 Māori will also be full partners in marine protection planning processes.Many iwi and hapū are already leading innovative marine management that exceeds government standards. These reforms will support and learn from that leadership rather than override it.
-
-**Oceans**
 
 ## **What about jobs in fishing communities?**
 

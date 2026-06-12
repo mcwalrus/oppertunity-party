@@ -3,6 +3,8 @@ name: "Kaperiere \"Pāpā\" Wharewera"
 slug: papa-wharewera
 role: "Candidate"
 electorate: "Waiariki"
+url: "https://www.opportunity.org.nz/candidate-papa-wharewera"
+scrapedAt: "2026-06-08T16:20:28.583975"
 ---
 “Guided by evidence, informed by lived experience, and grounded in a genuine commitment to serving others.”
 

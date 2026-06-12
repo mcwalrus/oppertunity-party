@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 CHANNEL_URL = "https://www.youtube.com/@OpportunityNZ"
-CACHE_PATH = Path("data/youtube/channel_videos.json")
+CACHE_PATH = Path("data/sources/youtube/channel_videos.json")
 DOWNLOAD_ROOT = Path("downloads/youtube")
 DOWNLOAD_SLEEP = 2.0  # seconds between yt-dlp invocations
 

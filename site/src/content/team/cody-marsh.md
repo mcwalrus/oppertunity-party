@@ -3,6 +3,8 @@ name: "Cody Marsh"
 slug: cody-marsh
 role: "Candidate"
 electorate: "Northcote"
+url: "https://www.opportunity.org.nz/candidate-cody-marsh"
+scrapedAt: "2026-06-08T16:20:19.344420"
 ---
 "Growing up with a single mum and attending patients’ homes, I've witnessed the realities of living paycheck to paycheck. This experience, both at home in Aotearoa New Zealand and working internationally, has motivated me to contribute to a health system that works for everyone."
 

@@ -1,43 +1,44 @@
-"""Transform blog posts from data/ to site/src/content/blog/."""
+"""Transform blog posts from data/clean/ to site/src/content/blog/."""
 
-from pathlib import Path
+from __future__ import annotations
 
-from transforms.clean import (
-    clean_body,
-    extract_metadata_fields,
-    normalise_blank_runs,
-)
+import json
+from typing import TYPE_CHECKING
+
+from transforms.clean import normalise_blank_runs
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
-def transform_blog(data_dir: Path, content_dir: Path) -> None:
-    """Read data/blog/ and write clean markdown to site/src/content/blog/."""
-    blog_dir = data_dir / "blog"
+def transform_blog(clean_dir: Path, content_dir: Path) -> None:
+    """Read data/clean/blog-post/ and write Astro-compatible markdown to site/src/content/blog/."""
+    blog_dir = clean_dir / "blog-post"
     out_dir = content_dir / "blog"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not blog_dir.exists():
         return
 
-    for md_file in sorted(blog_dir.glob("*.md")):
-        if md_file.name == "index.json":
+    for item_dir in sorted(blog_dir.iterdir()):
+        if not item_dir.is_dir():
+            continue
+        slug = item_dir.name
+
+        meta_file = item_dir / "meta.json"
+        md_file = item_dir / f"{slug}.md"
+        if not md_file.exists():
             continue
 
-        body = md_file.read_text(encoding="utf-8")
-        fields, body = extract_metadata_fields(body)
+        meta = json.loads(meta_file.read_text(encoding="utf-8")) if meta_file.exists() else {}
+        body = _extract_body(md_file.read_text(encoding="utf-8"))
 
-        title = fields.get("Title", md_file.stem)
-        date = fields.get("Date", "")
-        author = fields.get("Author", "")
-        url = fields.get("URL", "")
-        scraped = fields.get("Scraped", "")
+        title = str(meta.get("title") or slug)
+        date = str(meta.get("date") or "")
+        author = str(meta.get("author") or "")
+        url = str(meta.get("source_url") or "")
+        scraped = str(meta.get("ingested_at") or "")
 
-        # Derive slug from filename (date prefix already there)
-        slug = md_file.stem
-
-        # Clean body — pass title to strip duplicate H1
-        body = clean_body(body, title=title, strip_media_contact=False)
-
-        # Build frontmatter
         frontmatter_lines = ["---", f'title: "{_esc(title)}"', f"slug: {slug}"]
         if date:
             frontmatter_lines.append(f'date: "{_esc(date)}"')
@@ -49,13 +50,17 @@ def transform_blog(data_dir: Path, content_dir: Path) -> None:
             frontmatter_lines.append(f'scrapedAt: "{_esc(scraped)}"')
         frontmatter_lines.append("---")
 
-        frontmatter = "\n".join(frontmatter_lines)
-        output = frontmatter + "\n" + body
-        output = normalise_blank_runs(output)
-
-        out_file = out_dir / f"{slug}.md"
-        out_file.write_text(output, encoding="utf-8")
+        output = normalise_blank_runs("\n".join(frontmatter_lines) + "\n" + body)
+        (out_dir / f"{slug}.md").write_text(output, encoding="utf-8")
         print(f"  📝 blog/{slug}.md")
+
+
+def _extract_body(content: str) -> str:
+    if content.startswith("---\n"):
+        parts = content.split("---\n", 2)
+        if len(parts) >= 3:
+            return parts[2]
+    return content
 
 
 def _esc(value: str) -> str:

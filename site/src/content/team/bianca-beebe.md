@@ -3,6 +3,8 @@ name: "Bianca Beebe"
 slug: bianca-beebe
 role: "Candidate"
 electorate: "Southland"
+url: "https://www.opportunity.org.nz/candidate-bianca-beebe"
+scrapedAt: "2026-06-08T16:20:13.151857"
 ---
 “New Zealand is the perfect place to build a truly sovereign, solarpunk future.”
 

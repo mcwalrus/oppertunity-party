@@ -1,58 +1,60 @@
-"""Transform party information from data/ to site/src/content/party-info/."""
+"""Transform party information from data/clean/ to site/src/content/party-info/."""
 
-from pathlib import Path
+from __future__ import annotations
 
-from transforms.clean import (
-    clean_body,
-    extract_metadata_fields,
-    normalise_blank_runs,
-)
+import json
+from typing import TYPE_CHECKING
+
+from transforms.clean import normalise_blank_runs
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
-def transform_party_info(data_dir: Path, content_dir: Path) -> None:
-    """Read data/party-information/ and write clean markdown to site/src/content/party-info/."""
-    pi_dir = data_dir / "party-information"
+def transform_party_info(clean_dir: Path, content_dir: Path) -> None:
+    """Read data/clean/party-information/ and write to site/src/content/party-info/."""
+    pi_dir = clean_dir / "party-information"
     out_dir = content_dir / "party-info"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not pi_dir.exists():
         return
 
-    for md_file in sorted(pi_dir.glob("*.md")):
-        if md_file.name == "index.json":
+    for item_dir in sorted(pi_dir.iterdir()):
+        if not item_dir.is_dir():
+            continue
+        slug = item_dir.name
+
+        meta_file = item_dir / "meta.json"
+        md_file = item_dir / f"{slug}.md"
+        if not md_file.exists():
             continue
 
-        body = md_file.read_text(encoding="utf-8")
-        fields, body = extract_metadata_fields(body)
+        meta = json.loads(meta_file.read_text(encoding="utf-8")) if meta_file.exists() else {}
+        body = _extract_body(md_file.read_text(encoding="utf-8"))
 
-        # Use filename stem as slug and section title
-        slug = md_file.stem
-        title = fields.get("Title", slug.replace("-", " ").title())
-        url = fields.get("URL", "")
-        scraped = fields.get("Scraped", "")
+        title = str(meta.get("title") or slug.replace("-", " ").title())
+        url = str(meta.get("source_url") or "")
+        scraped = str(meta.get("ingested_at") or "")
 
-        # Clean body — pass title to strip duplicate H1
-        body = clean_body(body, title=title, strip_footer=True, strip_media_contact=False)
-
-        # Build frontmatter
-        fm_lines = [
-            "---",
-            f'title: "{_esc(title)}"',
-            f"slug: {slug}",
-        ]
+        fm_lines = ["---", f'title: "{_esc(title)}"', f"slug: {slug}"]
         if url:
             fm_lines.append(f'url: "{_esc(url)}"')
         if scraped:
             fm_lines.append(f'scrapedAt: "{_esc(scraped)}"')
         fm_lines.append("---")
 
-        frontmatter = "\n".join(fm_lines)
-        output = frontmatter + "\n" + body
-        output = normalise_blank_runs(output)
-
-        out_file = out_dir / f"{slug}.md"
-        out_file.write_text(output, encoding="utf-8")
+        output = normalise_blank_runs("\n".join(fm_lines) + "\n" + body)
+        (out_dir / f"{slug}.md").write_text(output, encoding="utf-8")
         print(f"  📝 party-info/{slug}.md")
+
+
+def _extract_body(content: str) -> str:
+    if content.startswith("---\n"):
+        parts = content.split("---\n", 2)
+        if len(parts) >= 3:
+            return parts[2]
+    return content
 
 
 def _esc(value: str) -> str:

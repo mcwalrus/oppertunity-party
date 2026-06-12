@@ -1,148 +1,89 @@
-"""Transform policies from data/ to site/src/content/policies/."""
+"""Transform policies from data/clean/ to site/src/content/policies/."""
+
+from __future__ import annotations
 
 import json
-import re
-from pathlib import Path
+from typing import TYPE_CHECKING
 
-from transforms.clean import (
-    clean_body,
-    extract_metadata_fields,
-    normalise_blank_runs,
-)
+from transforms.clean import normalise_blank_runs
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
-def transform_policies(data_dir: Path, content_dir: Path) -> None:
-    """Read data/policies/ and write clean markdown to site/src/content/policies/."""
-    policies_dir = data_dir / "policies"
+def transform_policies(clean_dir: Path, content_dir: Path) -> None:
+    """Read data/clean/policy/ and write Astro-compatible markdown to site/src/content/policies/."""
+    policies_dir = clean_dir / "policy"
     out_dir = content_dir / "policies"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Load index.json for metadata
-    index_data: dict[str, dict] = {}
-    index_file = policies_dir / "index.json"
-    if index_file.exists():
-        with open(index_file) as f:
-            entries = json.load(f)
-            for entry in entries:
-                index_data[entry["slug"]] = entry
+    if not policies_dir.exists():
+        return
 
-    # Process each policy slug directory
-    for slug_dir in sorted(policies_dir.iterdir()):
-        if not slug_dir.is_dir():
+    for item_dir in sorted(policies_dir.iterdir()):
+        if not item_dir.is_dir():
             continue
-        slug = slug_dir.name
+        slug = item_dir.name
 
-        # Find the main markdown file (the one named after the slug)
-        main_file = slug_dir / f"{slug}.md"
-        if not main_file.exists():
-            # Some dirs only have pdf-*.md files (e.g. charter, constitution)
-            # Use those as the main content
-            pdf_files = sorted(slug_dir.glob("pdf-*.md"))
-            if pdf_files:
-                _write_policy_from_pdf_only(slug, pdf_files, index_data, out_dir)
+        meta_file = item_dir / "meta.json"
+        md_file = item_dir / f"{slug}.md"
+        if not md_file.exists():
             continue
 
-        # Read and process main file
-        body = main_file.read_text(encoding="utf-8")
-        fields, body = extract_metadata_fields(body)
+        meta = json.loads(meta_file.read_text(encoding="utf-8")) if meta_file.exists() else {}
+        body = _extract_body(md_file.read_text(encoding="utf-8"))
 
-        # Build frontmatter from index.json + extracted fields
-        index_entry = index_data.get(slug, {})
-        title = fields.get("Title") or index_entry.get("title", slug.replace("-", " ").title())
-        url = fields.get("URL") or index_entry.get("url", "")
-        scraped = fields.get("Scraped") or index_entry.get("scraped_at", "")
-        pdf_downloads = index_entry.get("pdf_downloads", [])
+        title = str(meta.get("title") or slug.replace("-", " ").title())
+        url = str(meta.get("source_url") or "")
+        scraped = str(meta.get("ingested_at") or "")
+        pdf_urls: list[str] = [str(u) for u in (meta.get("pdf_urls") or [])]
 
-        # Clean body — pass title to strip duplicate H1
-        body = clean_body(body, title=title)
-
-        # Find and append PDF content
-        pdf_files = sorted(slug_dir.glob("pdf-*.md"))
-        pdf_content = _load_pdf_content(pdf_files)
-
-        # Build output file
         frontmatter = _build_frontmatter(
             slug=slug,
             title=title,
             url=url,
             scraped=scraped,
-            pdf_downloads=pdf_downloads,
+            pdf_downloads=pdf_urls,
         )
-
-        output = frontmatter + "\n" + body
-        if pdf_content:
-            output += "\n\n## Full Policy Detail\n\n" + pdf_content
-
-        output = normalise_blank_runs(output)
-
-        out_file = out_dir / f"{slug}.md"
-        out_file.write_text(output, encoding="utf-8")
+        output = normalise_blank_runs(frontmatter + "\n" + body)
+        (out_dir / f"{slug}.md").write_text(output, encoding="utf-8")
         print(f"  📝 policies/{slug}.md")
 
 
-def _write_policy_from_pdf_only(
-    slug: str, pdf_files: list[Path], index_data: dict[str, dict], out_dir: Path
-) -> None:
-    """Handle slug dirs that only have pdf-*.md files (e.g. charter, constitution)."""
-    index_entry = index_data.get(slug, {})
-    title = index_entry.get("title", slug.replace("-", " ").title())
-    url = index_entry.get("url", "")
-    scraped = index_entry.get("scraped_at", "")
-
-    pdf_content = _load_pdf_content(pdf_files)
-
-    frontmatter = _build_frontmatter(
-        slug=slug,
-        title=title,
-        url=url,
-        scraped=scraped,
-        pdf_downloads=index_entry.get("pdf_downloads", []),
-    )
-
-    output = frontmatter + "\n" + pdf_content
-    output = normalise_blank_runs(output)
-
-    out_file = out_dir / f"{slug}.md"
-    out_file.write_text(output, encoding="utf-8")
-    print(f"  📝 policies/{slug}.md (PDF-only)")
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
 
 
-def _load_pdf_content(pdf_files: list[Path]) -> str:
-    """Load and concatenate PDF markdown files, stripping their metadata tables."""
-    sections: list[str] = []
-    for pdf_file in pdf_files:
-        content = pdf_file.read_text(encoding="utf-8")
-        # Strip the metadata table at the top of PDF markdown
-        content = re.sub(r"^# .+?\n(\|.*?\|.*?\n)+\n*", "", content, count=1)
-        # Strip standalone "**Tax**" noise lines from PDF content
-        content = re.sub(r"^\*\*Tax\*\*\s*$", "", content, flags=re.MULTILINE)
-        # Strip all H1 headings — they duplicate the page template's H1
-        content = re.sub(r"^#[^#].+$", "", content, flags=re.MULTILINE)
-        # Also strip any leading blank lines
-        content = content.lstrip("\n")
-        if content.strip():
-            sections.append(content.strip())
-
-    return "\n\n".join(sections)
+def _extract_body(content: str) -> str:
+    """Return the body text after stripping the YAML frontmatter block."""
+    if content.startswith("---\n"):
+        parts = content.split("---\n", 2)
+        if len(parts) >= 3:
+            return parts[2]
+    return content
 
 
 def _build_frontmatter(
-    *, slug: str, title: str, url: str, scraped: str, pdf_downloads: list[str]
+    *,
+    slug: str,
+    title: str,
+    url: str,
+    scraped: str,
+    pdf_downloads: list[str],
 ) -> str:
-    """Build YAML frontmatter string."""
-    lines = ["---", f'title: "{_escape_yaml(title)}"', f"slug: {slug}"]
+    lines = ["---", f'title: "{_esc(title)}"', f"slug: {slug}"]
     if url:
-        lines.append(f'url: "{_escape_yaml(url)}"')
+        lines.append(f'url: "{_esc(url)}"')
     if scraped:
-        lines.append(f'scrapedAt: "{_escape_yaml(scraped)}"')
+        lines.append(f'scrapedAt: "{_esc(scraped)}"')
     if pdf_downloads:
         lines.append("pdfDownloads:")
         for dl in pdf_downloads:
-            lines.append(f'  - "{_escape_yaml(dl)}"')
+            lines.append(f'  - "{_esc(dl)}"')
     lines.append("---")
     return "\n".join(lines)
 
 
-def _escape_yaml(value: str) -> str:
-    """Escape double quotes in a YAML value."""
+def _esc(value: str) -> str:
     return value.replace('"', '\\"')

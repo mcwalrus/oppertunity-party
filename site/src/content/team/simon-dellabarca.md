@@ -3,6 +3,8 @@ name: "Simon DellaBarca"
 slug: simon-dellabarca
 role: "Candidate"
 electorate: "Whangārei"
+url: "https://www.opportunity.org.nz/candidate-simon-dellabarca"
+scrapedAt: "2026-06-08T16:20:14.558569"
 ---
 “New Zealand is one of the best countries on the planet, but the settings are wrong, and Northlanders know it. Opportunity’s modern, fit-for-purpose policies can help everyday Kiwis and local businesses actually grow the way we should.”
 

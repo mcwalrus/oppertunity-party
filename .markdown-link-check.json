@@ -4,7 +4,7 @@
   "retryOn429": true,
   "retryCount": 2,
   "fallbackRetryDelay": "5s",
-  "aliveStatusCodes": [200, 206],
+  "aliveStatusCodes": [200, 206, 403, 999],
   "ignorePatterns": [
     { "pattern": "^#",      "comment": "Bare fragment anchors" },
     { "pattern": "^mailto:", "comment": "mailto links" },

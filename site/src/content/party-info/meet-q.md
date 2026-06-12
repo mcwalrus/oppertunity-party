@@ -1,6 +1,8 @@
 ---
 title: "Meet Q"
 slug: meet-q
+url: "https://www.opportunity.org.nz/meet-q"
+scrapedAt: "2026-06-08T18:02:35.707578"
 ---
 ## About Q
 

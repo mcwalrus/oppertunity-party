@@ -33,15 +33,19 @@ BASE_URL = "https://www.opportunity.org.nz"
 # Project root is where pyproject.toml lives
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-# All scraped data goes here
-DATA_DIR = PROJECT_ROOT / "data" / "campaign" / "website"
+# All scraped data goes here (raw ingestor output — write-only for consumers)
+DATA_DIR = PROJECT_ROOT / "data" / "sources" / "opportunity-website"
+
+# HTTP cache lives at data/.cache/ — separate from ingestor output so it is
+# preserved when data/sources/ is wiped and not gitignored with it.
+CACHE_DIR = PROJECT_ROOT / "data" / ".cache"
 
 # ---------------------------------------------------------------------------
 # Cache singleton
 # ---------------------------------------------------------------------------
 
 #: Module-level cache instance; replace or reconfigure via :func:`configure_cache`.
-_cache: RequestCache = RequestCache(DATA_DIR / ".cache")
+_cache: RequestCache = RequestCache(CACHE_DIR)
 
 
 def configure_cache(
@@ -72,7 +76,7 @@ def configure_cache(
     """
     global _cache  # module-level singleton, intentional
     _cache = RequestCache(
-        DATA_DIR / ".cache",
+        CACHE_DIR,
         force_refresh=force_refresh,
         refresh_categories=frozenset(refresh_categories) if refresh_categories else None,
     )
@@ -89,16 +93,19 @@ def get_cache() -> RequestCache:
 
 
 def clean_data() -> None:
-    """Remove all scraped data, preserving the pdfs folder and HTTP cache."""
+    """Remove all scraped data, preserving the pdfs folder.
+
+    The HTTP cache lives at ``data/.cache/`` and is never touched here.
+    """
     if DATA_DIR.exists():
         for child in DATA_DIR.iterdir():
-            if child.name in ("pdfs", ".cache"):
+            if child.name == "pdfs":
                 continue
             if child.is_dir():
                 shutil.rmtree(child)
             else:
                 child.unlink()
-        logger.info("Cleaned data directory (preserved pdfs and .cache)")
+        logger.info("Cleaned data/sources/opportunity-website/ (preserved pdfs)")
 
 
 def fetch_html(path: str, category: str = "default") -> str:

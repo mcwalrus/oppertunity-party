@@ -3,6 +3,8 @@ name: "Evan French"
 slug: evan-french
 role: "Candidate"
 electorate: "Glendene"
+url: "https://www.opportunity.org.nz/candidate-evan-french"
+scrapedAt: "2026-06-08T16:20:14.912196"
 ---
 "New Zealand's environment and culture is too beautiful to be ruined or to be forced to flee from. That's why I'm fighting for New Zealand's future."
 

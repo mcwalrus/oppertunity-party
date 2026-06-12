@@ -5,9 +5,14 @@
 install:
     uv sync
 
-# Scrape everything
+# Scrape everything and run the full transform pipeline
 scrape: install
     uv run python main.py --clean
+    uv run python -m transforms.main
+
+# Run transforms only (no re-scraping)
+transform: install
+    uv run python -m transforms.main
 
 # Re-convert PDFs to markdown (no re-scrape)
 pdfs: install
@@ -38,12 +43,12 @@ check: install
     uv run ruff check .
     uv run ty check --error-on-warning .
 
-# Validate all scraped markdown files with markdown-link-check
-# Checks that every link in data/**/*.md resolves (external URLs + relative paths
-# resolved against https://www.opportunity.org.nz via .markdown-link-check.json).
+# Validate normalized clean-layer markdown files with markdown-link-check
+# Checks that every link in data/clean/**/*.md resolves (external URLs + relative
+# paths resolved against https://www.opportunity.org.nz via .markdown-link-check.json).
 validate:
-    @echo "Running markdown-link-check on scraped data..."
-    @find data -name '*.md' | sort | xargs -I{} npx --yes markdown-link-check --config .markdown-link-check.json {}
+    @echo "Running markdown-link-check on clean layer..."
+    @find data/clean -name '*.md' | sort | xargs -I{} npx --yes markdown-link-check --config .markdown-link-check.json {}
 
 # YouTube: show year-grouped summary
 media-list: install
@@ -56,10 +61,6 @@ media-download: install
 # YouTube: force re-enumerate and refresh cache
 media-refresh: install
     uv run python main.py media youtube --refresh
-
-# Transform scraped data into site content
-transform: install
-    uv run python -m transforms.main
 
 # Install site dependencies
 site-install:

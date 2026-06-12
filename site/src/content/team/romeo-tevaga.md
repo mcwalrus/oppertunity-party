@@ -3,6 +3,8 @@ name: "Romeo Tevaga"
 slug: romeo-tevaga
 role: "Candidate"
 electorate: "Upper Harbour"
+url: "https://www.opportunity.org.nz/candidate-romeo-tevaga"
+scrapedAt: "2026-06-08T16:20:27.448124"
 ---
 "Our values, our culture and our people are our strength. Being able to draw upon these to do something different for a country our size is a huge competitive advantage. It’s no surprise we were once the world’s social laboratory — pioneering bold democratic and social reforms that shaped global progress. I believe we can do it again - showing the world a new way of investing in people, innovation and the environment that builds a stronger society and an enduring economy."
 

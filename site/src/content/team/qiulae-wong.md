@@ -3,6 +3,8 @@ name: "Qiulae (Q) Wong"
 slug: qiulae-wong
 role: "Party Leader"
 electorate: "Mt Albert"
+url: "https://www.opportunity.org.nz/candidate-qiulae-wong"
+scrapedAt: "2026-06-08T16:20:10.789473"
 ---
 “I think this election feels really different in terms of the New Zealand public’s frustration and impatience and the lack of vision for a real change for this country.   
   

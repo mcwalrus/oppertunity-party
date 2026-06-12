@@ -371,10 +371,6 @@ This isn’t about replacing elections or Parliament. It’s about improving how
 
 Big decisions are typically made by politicians with advice from experts, pressure from lobbyists and donors, or consultation that only reaches a limited audience. This can lead to outcomes that prioritise immediate electoral prospects over the long-term. Governments from both sides “kick the can down the road” on issues that will have a massive impact on New Zealand but are too slow-moving to result in an immediate crisis, or require solutions that cannot be implemented within one Parliamentary term. Current examples include the housing crisis, climate change and the impacts of our ageing population.
 
-**Direct Democracy**
-
-**Photo: Climate Assembly UK**
-
 ## **Citizens assemblies can make better and more democratic decisions**
 
 An assembly will have the same number of citizens as MPs in the current Parliament. They will be randomly selected to be representative of New Zealand’s population. The assembly will be guided by a suitably qualified facilitator and supported by politically neutral, professional staff. Assembly meetings will take place using a mixture of inperson and online formats. Given the complexity of the issues at stake, and the need to build consensus, each assembly may last for up to a year.

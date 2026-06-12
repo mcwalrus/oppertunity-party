@@ -1,6 +1,8 @@
 ---
 title: "About"
 slug: about
+url: "https://www.opportunity.org.nz/about"
+scrapedAt: "2026-06-08T18:02:35.702817"
 ---
 ## We stand for opportunity for every Kiwi.
 

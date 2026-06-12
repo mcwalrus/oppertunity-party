@@ -3,6 +3,8 @@ name: "Dave Bainbridge-Zafar"
 slug: dave-bainbridge-zafar
 role: "Candidate"
 electorate: "Dunedin"
+url: "https://www.opportunity.org.nz/candidate-dave-bainbridge-zafar"
+scrapedAt: "2026-06-08T16:20:12.809041"
 ---
 “I never planned on getting into politics, but I care about this country — and the future we’re building — and I’m frustrated with all the pointless bickering and policy u-turns. I want to see practical, evidence-based decisions and long-term thinking over short-term point-scoring. Let’s just get on with the job of making things better for New Zealanders.”
 

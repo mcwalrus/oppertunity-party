@@ -3,6 +3,8 @@ name: "Jamie Attenborough"
 slug: jamie-attenborough
 role: "Candidate"
 electorate: "Mt Roskill"
+url: "https://www.opportunity.org.nz/candidate-jamie-attenborough"
+scrapedAt: "2026-06-08T16:20:12.439847"
 ---
 “Our political and economic system is no longer working for us. We need Opportunity’s vision to build a new path forward.”
 

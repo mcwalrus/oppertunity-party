@@ -8,6 +8,7 @@ YouTube channels, social media platforms, external text sources (Substack, news)
 and media types (audio, video, transcripts), this layout will not scale.
 
 This PRD specifies a restructured `data/` hierarchy that:
+
 - Cleanly separates raw ingested content from normalized consumer-ready content
 - Supports text, audio, video, transcripts, and binary media from any source
 - Provides a stable contract between ingestors and consumers (MCP, SSG, analysis)
@@ -33,6 +34,7 @@ data/clean/{content-type}/         ← canonical, cross-source, read by all cons
 ```
 
 **Invariants:**
+
 1. `data/sources/` is write-only from ingestors. Consumers MUST NOT read from it.
 2. `data/clean/` is the single source of truth for normalized content.
 3. Binary media (video, audio, raw images) lives under `data/sources/` only.
@@ -181,6 +183,7 @@ the YAML frontmatter of the `.md` file and into `meta.json`.
 ### Content-type specific fields
 
 **`policy`**
+
 ```yaml
 title: string
 summary: string          # 1–2 sentence description
@@ -189,6 +192,7 @@ tags: [string]
 ```
 
 **`blog-post`**
+
 ```yaml
 title: string
 date: YYYY-MM-DD
@@ -197,6 +201,7 @@ excerpt: string
 ```
 
 **`event`**
+
 ```yaml
 title: string
 date: YYYY-MM-DD
@@ -207,6 +212,7 @@ registration_url: string # optional
 ```
 
 **`team-member`**
+
 ```yaml
 name: string
 role: string             # e.g. "Party Leader", "Candidate"
@@ -214,6 +220,7 @@ electorate: string       # optional
 ```
 
 **`media`**
+
 ```yaml
 title: string
 date: YYYY-MM-DD
@@ -225,6 +232,7 @@ has_transcript: boolean
 ```
 
 **`social-post`**
+
 ```yaml
 platform: string
 account: string
@@ -235,6 +243,7 @@ engagement: {}           # platform-specific (likes, shares, etc.) — optional
 ```
 
 **`external-article`**
+
 ```yaml
 title: string
 date: YYYY-MM-DD
@@ -263,11 +272,13 @@ excerpt: string
 ## User Stories
 
 ### US-001: Restructure opportunity-website source path
+
 **Description:** As a developer, I need the existing scraper output moved into
 `data/sources/opportunity-website/` so the new layout is established and the
 scraper writes to the canonical source path.
 
 **Acceptance Criteria:**
+
 - [ ] All content currently under `data/{type}/` is moved to
   `data/sources/opportunity-website/{type}/`
 - [ ] `scraper/` write paths updated throughout to use new location
@@ -281,11 +292,13 @@ scraper writes to the canonical source path.
 - [ ] `just check` (ruff + ty) passes
 
 ### US-002: Define and document the clean layer schema
+
 **Description:** As a developer, I need a documented, versioned schema for
 `data/clean/` items so any ingestor or consumer can produce or read clean data
 correctly.
 
 **Acceptance Criteria:**
+
 - [ ] `docs/data-schema.md` written, covering all content types
 - [ ] Mandatory provenance fields documented (`slug`, `content_type`,
   `source_id`, `source_type`, `source_url`, `ingested_at`, `cleaned_at`)
@@ -294,11 +307,13 @@ correctly.
 - [ ] `just check` passes
 
 ### US-003: Implement clean layer transform for opportunity-website
+
 **Description:** As a developer, I need a transform step that reads from
 `data/sources/opportunity-website/` and writes normalized items to `data/clean/`
 so downstream consumers have a stable, source-agnostic input.
 
 **Acceptance Criteria:**
+
 - [ ] New module `transforms/sources/opportunity_website.py` reads each content
   type from `data/sources/opportunity-website/` and writes to the correct
   `data/clean/{content-type}/{slug}/` directory
@@ -312,10 +327,12 @@ so downstream consumers have a stable, source-agnostic input.
 - [ ] `just check` passes
 
 ### US-004: Define YouTube source schema and layout
+
 **Description:** As a developer, I need a documented schema for YouTube source
 data so a future ingestor knows exactly where and how to write channel/video data.
 
 **Acceptance Criteria:**
+
 - [ ] `docs/data-schema.md` extended with YouTube source schema:
   - `data/sources/youtube/{channel-slug}/channel.json` fields documented
   - `data/sources/youtube/{channel-slug}/{video-id}/meta.json` fields documented
@@ -326,10 +343,12 @@ data so a future ingestor knows exactly where and how to write channel/video dat
 - [ ] `just check` passes
 
 ### US-005: Define social media source schema and layout
+
 **Description:** As a developer, I need a documented schema for each social
 media platform's source data so ingestors have a clear target layout.
 
 **Acceptance Criteria:**
+
 - [ ] `docs/data-schema.md` extended with social source schema:
   - `data/sources/social/{platform}/{account-slug}/{post-id}/meta.json` fields
     documented for Instagram, Facebook, X, LinkedIn, TikTok
@@ -340,10 +359,12 @@ media platform's source data so ingestors have a clear target layout.
 - [ ] `just check` passes
 
 ### US-006: Define external text source schema and layout
+
 **Description:** As a developer, I need a documented schema for external text
 sources (Substack, news sites) so ingestors know where and how to write articles.
 
 **Acceptance Criteria:**
+
 - [ ] `docs/data-schema.md` extended with external source schema:
   - `data/sources/external/{source-slug}/source.json` fields documented
     (`name`, `url`, `feed_url`, `source_type`)
@@ -353,11 +374,13 @@ sources (Substack, news sites) so ingestors know where and how to write articles
 - [ ] `just check` passes
 
 ### US-007: Write data architecture documentation and update project docs
+
 **Description:** As a developer, I need a single reference document explaining
 the full data pipeline — from ingestors through `sources/`, `clean/`, and into
 each consumer — so any contributor can understand how data flows.
 
 **Acceptance Criteria:**
+
 - [ ] `docs/data-architecture.md` written covering:
   - Pipeline diagram (sources → clean → consumers)
   - Invariants (what each layer owns and what it must not do)
@@ -435,10 +458,12 @@ each consumer — so any contributor can understand how data flows.
   US-001 and US-003, it will read `data/clean/{content-type}/` instead. The
   intermediate step (sources → clean) is new work.
 - **Gitignore strategy:**
+
   ```
   # Raw ingestor output — ephemeral, regenerated by `just scrape`
   data/sources/
   ```
+
   The existing media-only patterns (`data/sources/**/media/`) are superseded
   by the top-level `data/sources/` ignore. They are no longer needed.
 

@@ -1,50 +1,48 @@
-"""Transform events from data/ to site/src/content/events/."""
+"""Transform events from data/clean/ to site/src/content/events/."""
 
-from pathlib import Path
+from __future__ import annotations
 
-from transforms.clean import (
-    clean_body,
-    extract_metadata_fields,
-    normalise_blank_runs,
-)
+import json
+from typing import TYPE_CHECKING
+
+from transforms.clean import normalise_blank_runs
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
-def transform_events(data_dir: Path, content_dir: Path) -> None:
-    """Read data/events/ and write clean markdown to site/src/content/events/."""
-    events_dir = data_dir / "events"
+def transform_events(clean_dir: Path, content_dir: Path) -> None:
+    """Read data/clean/event/ and write Astro-compatible markdown to site/src/content/events/."""
+    events_dir = clean_dir / "event"
     out_dir = content_dir / "events"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not events_dir.exists():
         return
 
-    for md_file in sorted(events_dir.glob("*.md")):
-        if md_file.name == "index.json":
+    for item_dir in sorted(events_dir.iterdir()):
+        if not item_dir.is_dir():
+            continue
+        slug = item_dir.name
+
+        meta_file = item_dir / "meta.json"
+        md_file = item_dir / f"{slug}.md"
+        if not md_file.exists():
             continue
 
-        body = md_file.read_text(encoding="utf-8")
-        fields, body = extract_metadata_fields(body)
+        meta = json.loads(meta_file.read_text(encoding="utf-8")) if meta_file.exists() else {}
+        body = _extract_body(md_file.read_text(encoding="utf-8"))
 
-        title = fields.get("Title", md_file.stem)
-        date = fields.get("Date", "")
-        location = fields.get("Location", "")
-        url = fields.get("URL", "")
-        scraped = fields.get("Scraped", "")
-        when = fields.get("When", "")
-        venue = fields.get("Venue", "")
-        address = fields.get("Address", "")
+        title = str(meta.get("title") or slug)
+        date = str(meta.get("date") or "")
+        when = str(meta.get("time") or "")  # clean layer stores as "time"; Astro schema: "when"
+        venue = str(meta.get("venue") or "")
+        address = str(meta.get("address") or "")
+        location = str(meta.get("location") or "")
+        url = str(meta.get("source_url") or "")
+        scraped = str(meta.get("ingested_at") or "")
 
-        slug = md_file.stem
-
-        # Clean body — pass title to strip duplicate H1
-        body = clean_body(body, title=title, strip_footer=False, strip_media_contact=False)
-
-        # Build frontmatter
-        fm_lines = [
-            "---",
-            f'title: "{_esc(title)}"',
-            f"slug: {slug}",
-        ]
+        fm_lines = ["---", f'title: "{_esc(title)}"', f"slug: {slug}"]
         if date:
             fm_lines.append(f'date: "{_esc(date)}"')
         if when:
@@ -61,13 +59,17 @@ def transform_events(data_dir: Path, content_dir: Path) -> None:
             fm_lines.append(f'scrapedAt: "{_esc(scraped)}"')
         fm_lines.append("---")
 
-        frontmatter = "\n".join(fm_lines)
-        output = frontmatter + "\n" + body
-        output = normalise_blank_runs(output)
-
-        out_file = out_dir / f"{slug}.md"
-        out_file.write_text(output, encoding="utf-8")
+        output = normalise_blank_runs("\n".join(fm_lines) + "\n" + body)
+        (out_dir / f"{slug}.md").write_text(output, encoding="utf-8")
         print(f"  📝 events/{slug}.md")
+
+
+def _extract_body(content: str) -> str:
+    if content.startswith("---\n"):
+        parts = content.split("---\n", 2)
+        if len(parts) >= 3:
+            return parts[2]
+    return content
 
 
 def _esc(value: str) -> str:
