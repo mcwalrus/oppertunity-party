@@ -1,0 +1,20 @@
+# Brewfile — Homebrew dependencies for the Opportunity Party project
+# Run directly:  brew bundle --file=scripts/Brewfile
+# Or via setup:  ./scripts/setup.sh
+
+# ── Shell / environment ───────────────────────────────────────────────────────
+brew "direnv"       # Per-directory env vars (.envrc); hooks into your shell
+
+# ── Node.js ───────────────────────────────────────────────────────────────────
+brew "fnm"          # Fast Node.js version manager (reads .node-version)
+brew "pnpm"         # Node package manager (used by site/)
+
+# ── Python ────────────────────────────────────────────────────────────────────
+brew "uv"           # Fast Python package & project manager (reads .python-version)
+
+# ── Task running & git hooks ──────────────────────────────────────────────────
+brew "just"         # Command runner — see justfile for available tasks
+brew "lefthook"     # Git hook manager (pre-commit: ruff, ty, markdown-link-check)
+
+# ── Content processing ────────────────────────────────────────────────────────
+brew "poppler"      # PDF utilities — required for PDF → Markdown conversion
