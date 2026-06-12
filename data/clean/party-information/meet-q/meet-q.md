@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/meet-q"
 ingested_at: "2026-06-08T18:02:35.707578"
-cleaned_at: "2026-06-12T01:18:46.526502+00:00"
+cleaned_at: "2026-06-12T01:40:42.128019+00:00"
 title: "Meet Q"
 ---
 ## About Q

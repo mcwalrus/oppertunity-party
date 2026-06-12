@@ -3,7 +3,7 @@ slug: "team"
 content_type: "team-member"
 source_id: "opportunity-website"
 source_type: "website"
-cleaned_at: "2026-06-12T01:18:46.526502+00:00"
+cleaned_at: "2026-06-12T01:40:42.128019+00:00"
 name: "Opportunity Party — Team & Candidates Index"
 ---
 **Source**: [opportunity.org.nz/team](https://www.opportunity.org.nz/team)  
