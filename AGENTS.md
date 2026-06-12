@@ -20,20 +20,26 @@ The scraper lives in `scraper/` as a set of modules (one per content type). `mai
 
 ## Data Pipeline
 
-```
-scraper/ writes → data/sources/opportunity-website/
-     ↓ transforms/sources/opportunity_website.py
-data/clean/{content-type}/{slug}/     ← committed, canonical
-     ↓ transforms/{blog,events,...}.py
-site/src/content/                     ← rebuilt each run
+https://dagster.io/ is the library we use to manage ETL (Extract, Transform, Load) processes. This will include, web-scraping, data cleansing, transformations and writing to target directories. We expect agents to apply the appropriate Asset management.
+
+Dagster.io has it's own approach to ETL pipelines, and we expect decisions to represent assets in particular means have been signed off during the design / planning phase, and apply the right `@dg` decorators to define workflows. 
+
+Raw data should only be managed locally if it is useful for comparison or analysis with the of transformation of data, or if data is of significant storage requirements. This would be to avoid refetching during development, or heavy processing. If an ETL pipeline is managed, we should say that it is okay to avoid storing raw data unnecessarily.
+
+## Setup
+
+Run the onboarding script once on a fresh machine (macOS only):
+
+```bash
+./scripts/setup.sh
 ```
 
-See [docs/data-architecture.md](docs/data-architecture.md) and [docs/data-schema.md](docs/data-schema.md).
+This installs all system dependencies via Homebrew (`scripts/Brewfile`), installs [pi](https://pi.dev), configures shell hooks for `fnm` and `direnv`, installs Node + Python + site deps, and wires up git hooks.
 
 ## Tools
 
 | Tool | Purpose |
-|------|---------|
+|------|------|
 | `uv` | Dependency management and script runner (`uv sync`, `uv run`) |
 | `just` | Task runner — see `justfile` for all recipes |
 | `ruff` | Linter and formatter for Python |
@@ -41,6 +47,10 @@ See [docs/data-architecture.md](docs/data-architecture.md) and [docs/data-schema
 | `lefthook` | Git hook manager (pre-commit runs ruff + ty + markdown-link-check) |
 | `poppler` | PDF utilities (required for PDF-to-markdown conversion) |
 | `npx markdown-link-check` | Validates links in scraped markdown output |
+| `fnm` | Node.js version manager (reads `.node-version`) |
+| `pnpm` | Node package manager (used by `site/`) |
+| `direnv` | Per-directory env vars — run `direnv allow` after cloning |
+| `pi` | AI coding agent — install via `scripts/setup.sh` |
 
 ## Common Commands
 
