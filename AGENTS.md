@@ -38,19 +38,18 @@ This installs all system dependencies via Homebrew (`scripts/Brewfile`), install
 
 ## Tools
 
-| Tool | Purpose |
-|------|------|
-| `uv` | Dependency management and script runner (`uv sync`, `uv run`) |
-| `just` | Task runner — see `justfile` for all recipes |
-| `ruff` | Linter and formatter for Python |
-| `ty` | Static type checker for Python |
+| Tool       | Purpose                                                            |
+| ---------- | ------------------------------------------------------------------ |
+| `uv`       | Dependency management and script runner (`uv sync`, `uv run`)      |
+| `just`     | Task runner — see `justfile` for all recipes                       |
+| `ruff`     | Linter and formatter for Python                                    |
+| `ty`       | Static type checker for Python                                     |
 | `lefthook` | Git hook manager (pre-commit runs ruff + ty + markdown-link-check) |
-| `poppler` | PDF utilities (required for PDF-to-markdown conversion) |
-| `npx markdown-link-check` | Validates links in scraped markdown output |
-| `fnm` | Node.js version manager (reads `.node-version`) |
-| `pnpm` | Node package manager (used by `site/`) |
-| `direnv` | Per-directory env vars — run `direnv allow` after cloning |
-| `pi` | AI coding agent — install via `scripts/setup.sh` |
+| `poppler`  | PDF utilities (required for PDF-to-markdown conversion)            |
+| `fnm`      | Node.js version manager (reads `.node-version`)                    |
+| `pnpm`     | Node package manager (used by `site/`)                             |
+| `direnv`   | Per-directory env vars — run `direnv allow` after cloning          |
+| `pi`       | AI coding agent — install via `scripts/setup.sh`                   |
 
 ## Common Commands
 

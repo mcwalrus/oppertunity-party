@@ -34,3 +34,6 @@ site/dist/
 site/node_modules/
 site/.astro/
 site/.pnpm-store/
+
+# personal todo file
+TASKLIST.md
