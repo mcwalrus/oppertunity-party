@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/healthy_people"
 ingested_at: "2026-06-08T13:25:49.380062"
-cleaned_at: "2026-06-12T01:18:46.526502+00:00"
+cleaned_at: "2026-06-12T01:40:42.128019+00:00"
 title: "Healthy People"
 ---
 **Our healthcare system is about more than just hospitals. Every $1 spent on primary care (like GPs, practice nurses and midwives) can save upwards of $13 in wider health system costs.**
