@@ -155,10 +155,41 @@ class YouTubePlatform:
         logger.info("Cached %d videos to %s", len(unique), CACHE_PATH)
         return unique
 
+    @staticmethod
+    def _python_exe() -> str:
+        """Return a Python executable that can open network sockets.
+
+        CPython 3.12 on macOS 26 has a bug (errno 9 / EBADF) that prevents
+        socket.connect() from working inside a uv venv subprocess.  The system
+        Python 3.13 at /usr/local/bin/python3 is unaffected, so we probe for
+        it explicitly before falling back to the current interpreter.
+        """
+        import sys
+
+        venv_prefix = sys.prefix  # e.g. /project/.venv
+
+        # Common system Python locations on macOS / Linux, newest first
+        candidates = [
+            "/usr/local/bin/python3",
+            "/usr/bin/python3",
+            "/opt/homebrew/bin/python3",
+        ]
+        for path in candidates:
+            from pathlib import Path as _Path
+
+            p = _Path(path)
+            if p.exists() and not str(p.resolve()).startswith(venv_prefix):
+                return str(p)
+
+        return sys.executable
+
     def _yt_dlp_flat(self, url: str) -> list[dict[str, Any]]:
         """Run yt-dlp --flat-playlist and return the parsed entries."""
+        python = self._python_exe()
         cmd = [
-            "yt-dlp",
+            python,
+            "-m",
+            "yt_dlp",
             "--flat-playlist",
             "--dump-json",
             "--no-warnings",
@@ -372,8 +403,11 @@ class YouTubePlatform:
             output_template = str(dest_dir / f"{safe_title}-{item.id}.%(ext)s")
 
             self._console.print(f"  [{i}/{len(queue)}] [cyan]{item.title}[/cyan]")
+            python = self._python_exe()
             cmd = [
-                "yt-dlp",
+                python,
+                "-m",
+                "yt_dlp",
                 "--no-warnings",
                 "--ignore-errors",
                 "-o",

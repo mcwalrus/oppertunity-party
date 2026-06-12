@@ -22,6 +22,9 @@ scraper.log
 # HTTP response cache (ephemeral, not worth tracking)
 data/.cache/
 
+# YouTube raw enumeration cache (large, generated on demand)
+data/youtube/
+
 # MCP (under development)
 mcp/
 
