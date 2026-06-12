@@ -82,6 +82,13 @@ site-preview: site-build
 site-dev: site-install
     cd site && pnpm dev
 
+# Resolve docs_site_map.md with absolute URLs.
+# Reads site/dist/docs_site_map.md and rewrites relative links using SITE_URL.
+# Requires: SITE_URL env var (or set in site/.env.local), and a prior site-build run.
+# Example: SITE_URL=https://opportunity.org.nz just site-generate-sitemap
+site-generate-sitemap: site-install
+    cd site && pnpm generate:sitemap
+
 # Wire lefthook into .git/hooks (run once after cloning)
 hooks-install:
     lefthook install
