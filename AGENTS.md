@@ -1,22 +1,20 @@
-# Agent Instructions — Opportunity Party Policy Tracker
+# Agent Instructions
 
 ## Project Overview
 
 Scrapes the New Zealand [Opportunity Party](https://www.opportunity.org.nz) website and converts content into local markdown files. Sources include policies (with linked PDFs), blog posts, news, team profiles, events, and party governance documents.
 
-The scraper lives in `scraper/` as a set of modules (one per content type). `main.py` is the CLI entry point. All scraped output goes to `data/sources/opportunity-website/` (gitignored); normalized output goes to `data/clean/` (committed).
-
 ## Key Paths
 
-| Path | Description | Git |
-|------|-------------|-----|
-| `data/sources/opportunity-website/` | Raw scraper output — written by ingestors, never read by consumers | Ignored |
-| `data/clean/` | Normalized content — canonical source for all consumers | Tracked |
-| `data/clean/_index.json` | Cross-type search index (regenerated each transform run) | Tracked |
-| `data/.cache/` | HTTP response cache (scraper-internal, ephemeral) | Ignored |
-| `site/src/content/` | Astro SSG input — rebuilt from `data/clean/` each run | Ignored |
-| `transforms/sources/opportunity_website.py` | Source → clean transform | — |
-| `transforms/main.py` | Full pipeline entry point | — |
+| Path                                        | Description                                                        | Git     |
+| ------------------------------------------- | ------------------------------------------------------------------ | ------- |
+| `data/sources/opportunity-website/`         | Raw scraper output — written by ingestors, never read by consumers | Ignored |
+| `data/clean/`                               | Normalized content — canonical source for all consumers            | Tracked |
+| `data/clean/_index.json`                    | Cross-type search index (regenerated each transform run)           | Tracked |
+| `data/.cache/`                              | HTTP response cache (scraper-internal, ephemeral)                  | Ignored |
+| `site/src/content/`                         | Astro SSG input — rebuilt from `data/clean/` each run              | Ignored |
+| `transforms/sources/opportunity_website.py` | Source → clean transform                                           | —       |
+| `transforms/main.py`                        | Full pipeline entry point                                          | —       |
 
 ## Data Pipeline
 
@@ -28,7 +26,7 @@ Raw data should only be managed locally if it is useful for comparison or analys
 
 ## Setup
 
-Run the onboarding script once on a fresh machine (macOS only):
+Run the onboarding script once on a fresh machine (macOS/Linux only):
 
 ```bash
 ./scripts/setup.sh
@@ -50,6 +48,8 @@ This installs all system dependencies via Homebrew (`scripts/Brewfile`), install
 | `pnpm`     | Node package manager (used by `site/`)                             |
 | `direnv`   | Per-directory env vars — run `direnv allow` after cloning          |
 | `pi`       | AI coding agent — install via `scripts/setup.sh`                   |
+| `dg`       | CLI for managing Dagster projects.                                 |
+| `dagster`  | CLI tools for working with Dagster.                                |
 
 ## Common Commands
 
@@ -63,17 +63,6 @@ just lint-fix     # ruff check --fix
 just fmt          # ruff format
 just validate     # markdown-link-check on all data/clean/**/*.md
 ```
-
-## Obsidian Graph Naming
-
-<!-- Obsidian graph view labels nodes by filename (without extension). Generic names like
-     INDEX or page make every node look identical in the graph. All output markdown files
-     MUST use a descriptive, content-specific filename:
-     - Section index files: named after the section (e.g. team/team.md, not team/INDEX.md)
-     - Per-item files inside a slug directory: named after the slug
-       (e.g. clean/policy/tax-reset/tax-reset.md, not clean/policy/tax-reset/page.md)
-     When adding new scrapers/transforms, follow this pattern — never use generic names
-     like INDEX.md, page.md, or index.md for human-readable markdown output. -->
 
 ## Quality Gates
 
