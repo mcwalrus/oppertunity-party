@@ -9,4 +9,7 @@ node_modules/
 
 # env
 .env
+.env.local
 .env.production
+# but keep the example template committed
+!.env.example
