@@ -21,12 +21,12 @@ from pathlib import Path
 
 import pymupdf4llm
 
-from .client import DATA_DIR, save_content
+from pipeline.ingestion.client import save_content
+from pipeline.paths import DATA_DIR, POLICY_ASSETS_DIR, REFERENCE_FILE
 
 logger = logging.getLogger(__name__)
 
-POLICY_ASSETS_DIR = DATA_DIR / "pdfs"
-REFERENCE_FILE = POLICY_ASSETS_DIR / "reference.json"
+# Path constants imported from pipeline.paths
 
 # Header fields are emitted by pymupdf4llm as bold values on a single line:
 # "Date **February 2026** Policy **Abundant Energy** Document Type **...**"

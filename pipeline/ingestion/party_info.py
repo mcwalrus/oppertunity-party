@@ -15,8 +15,9 @@ from markdownify import markdownify
 if TYPE_CHECKING:
     from bs4 import BeautifulSoup
 
-from .client import DATA_DIR, fetch_page, save_content
-from .models import PartyInfo
+from pipeline.ingestion.client import DATA_DIR, fetch_page, save_content
+from pipeline.ingestion.models import PartyInfo
+from pipeline.paths import POLICY_ASSETS_DIR as PARTY_PDF_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -127,7 +128,7 @@ def save_party_info(pages: list[PartyInfo]) -> dict[str, Path]:
     return saved
 
 
-PARTY_PDF_DIR = DATA_DIR / "pdfs"
+# PARTY_PDF_DIR imported from pipeline.paths (as POLICY_ASSETS_DIR)
 
 
 def download_and_convert_party_pdfs(pages: list[PartyInfo]) -> list[dict]:

@@ -14,17 +14,14 @@ Pipeline stages
 """
 
 import shutil
-from pathlib import Path
 
-from transforms.blog import transform_blog
-from transforms.events import transform_events
-from transforms.party_info import transform_party_info
-from transforms.policies import transform_policies
-from transforms.sources.opportunity_website import transform_opportunity_website
-from transforms.team import transform_team
-
-CLEAN_DIR = Path("data/clean")
-CONTENT_DIR = Path("site/src/content")
+from pipeline.paths import CLEAN_DIR, CONTENT_DIR
+from pipeline.transforms.blog import transform_blog
+from pipeline.transforms.events import transform_events
+from pipeline.transforms.party_info import transform_party_info
+from pipeline.transforms.policies import transform_policies
+from pipeline.transforms.sources.opportunity_website import transform_opportunity_website
+from pipeline.transforms.team import transform_team
 
 
 def transform_all() -> None:

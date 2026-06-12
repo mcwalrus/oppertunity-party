@@ -7,12 +7,12 @@ from typing import TYPE_CHECKING
 
 import dagster as dg
 
-from transforms.blog import transform_blog
-from transforms.events import transform_events
-from transforms.main import CLEAN_DIR, CONTENT_DIR
-from transforms.party_info import transform_party_info
-from transforms.policies import transform_policies
-from transforms.team import transform_team
+from pipeline.paths import CLEAN_DIR, CONTENT_DIR
+from pipeline.transforms.blog import transform_blog
+from pipeline.transforms.events import transform_events
+from pipeline.transforms.party_info import transform_party_info
+from pipeline.transforms.policies import transform_policies
+from pipeline.transforms.team import transform_team
 
 if TYPE_CHECKING:
     from pathlib import Path

@@ -9,9 +9,9 @@ the URL and the timestamp it was cached.  A fresh hit avoids a network
 round-trip entirely; a stale or missing entry falls through to the live
 fetch.
 
-Usage (managed automatically by ``scraper.client``)::
+Usage (managed automatically by ``pipeline.ingestion.client``)::
 
-    from scraper.cache import RequestCache
+    from pipeline.ingestion.cache import RequestCache
 
     cache = RequestCache(cache_dir=DATA_DIR / ".cache")
     content = cache.get(url, category="policies")  # None → cache miss

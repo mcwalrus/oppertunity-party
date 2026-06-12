@@ -9,16 +9,20 @@ import time
 from collections.abc import Callable
 from typing import Any
 
-from scraper.blog_posts import save_blog_posts, scrape_blog_posts
-from scraper.cache import CATEGORY_TTL
-from scraper.client import CACHE_DIR, DATA_DIR, clean_data, configure_cache
-from scraper.events import save_events, scrape_events
-from scraper.models import PartyInfo, PolicyPage
-from scraper.party_info import download_and_convert_party_pdfs, save_party_info, scrape_party_info
-from scraper.pdf_convert import convert_all_pdfs
-from scraper.pdf_download import download_policy_pdfs, migrate_existing_pdfs
-from scraper.policies import save_policies, scrape_policies
-from scraper.team import save_team, scrape_team
+from pipeline.ingestion.blog_posts import save_blog_posts, scrape_blog_posts
+from pipeline.ingestion.cache import CATEGORY_TTL
+from pipeline.ingestion.client import CACHE_DIR, DATA_DIR, clean_data, configure_cache
+from pipeline.ingestion.events import save_events, scrape_events
+from pipeline.ingestion.models import PartyInfo, PolicyPage
+from pipeline.ingestion.party_info import (
+    download_and_convert_party_pdfs,
+    save_party_info,
+    scrape_party_info,
+)
+from pipeline.ingestion.pdf_convert import convert_all_pdfs
+from pipeline.ingestion.pdf_download import download_policy_pdfs, migrate_existing_pdfs
+from pipeline.ingestion.policies import save_policies, scrape_policies
+from pipeline.ingestion.team import save_team, scrape_team
 
 logging.basicConfig(
     level=logging.INFO,
@@ -292,7 +296,7 @@ def main() -> None:
 
 def _print_cache_stats() -> None:
     """Print a summary of the current HTTP cache state and exit."""
-    from scraper.client import get_cache
+    from pipeline.ingestion.client import get_cache
 
     cache = get_cache()
     stats = cache.stats()

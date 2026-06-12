@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from typing import TYPE_CHECKING
 
-from transforms.clean import normalise_blank_runs
+from pipeline.transforms.clean import normalise_blank_runs
 
 if TYPE_CHECKING:
     from pathlib import Path

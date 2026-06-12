@@ -1,26 +1,26 @@
-"""Transform party information from data/clean/ to site/src/content/party-info/."""
+"""Transform team members from data/clean/ to site/src/content/team/."""
 
 from __future__ import annotations
 
 import json
 from typing import TYPE_CHECKING
 
-from transforms.clean import normalise_blank_runs
+from pipeline.transforms.clean import normalise_blank_runs
 
 if TYPE_CHECKING:
     from pathlib import Path
 
 
-def transform_party_info(clean_dir: Path, content_dir: Path) -> None:
-    """Read data/clean/party-information/ and write to site/src/content/party-info/."""
-    pi_dir = clean_dir / "party-information"
-    out_dir = content_dir / "party-info"
+def transform_team(clean_dir: Path, content_dir: Path) -> None:
+    """Read data/clean/team-member/ and write Astro-compatible markdown to site/src/content/team/."""
+    team_dir = clean_dir / "team-member"
+    out_dir = content_dir / "team"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    if not pi_dir.exists():
+    if not team_dir.exists():
         return
 
-    for item_dir in sorted(pi_dir.iterdir()):
+    for item_dir in sorted(team_dir.iterdir()):
         if not item_dir.is_dir():
             continue
         slug = item_dir.name
@@ -33,11 +33,17 @@ def transform_party_info(clean_dir: Path, content_dir: Path) -> None:
         meta = json.loads(meta_file.read_text(encoding="utf-8")) if meta_file.exists() else {}
         body = _extract_body(md_file.read_text(encoding="utf-8"))
 
-        title = str(meta.get("title") or slug.replace("-", " ").title())
+        name = str(meta.get("name") or slug.replace("-", " ").title())
+        role = str(meta.get("role") or "")
+        electorate = str(meta.get("electorate") or "")
         url = str(meta.get("source_url") or "")
         scraped = str(meta.get("ingested_at") or "")
 
-        fm_lines = ["---", f'title: "{_esc(title)}"', f"slug: {slug}"]
+        fm_lines = ["---", f'name: "{_esc(name)}"', f"slug: {slug}"]
+        if role:
+            fm_lines.append(f'role: "{_esc(role)}"')
+        if electorate:
+            fm_lines.append(f'electorate: "{_esc(electorate)}"')
         if url:
             fm_lines.append(f'url: "{_esc(url)}"')
         if scraped:
@@ -46,7 +52,7 @@ def transform_party_info(clean_dir: Path, content_dir: Path) -> None:
 
         output = normalise_blank_runs("\n".join(fm_lines) + "\n" + body)
         (out_dir / f"{slug}.md").write_text(output, encoding="utf-8")
-        print(f"  📝 party-info/{slug}.md")
+        print(f"  📝 team/{slug}.md")
 
 
 def _extract_body(content: str) -> str:

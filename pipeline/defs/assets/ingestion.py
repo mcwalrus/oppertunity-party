@@ -6,18 +6,18 @@ import json
 
 import dagster as dg
 
-from scraper.blog_posts import save_blog_posts, scrape_blog_posts
-from scraper.client import DATA_DIR
-from scraper.events import save_events, scrape_events
-from scraper.models import PolicyPage
-from scraper.party_info import (
+from pipeline.ingestion.blog_posts import save_blog_posts, scrape_blog_posts
+from pipeline.ingestion.client import DATA_DIR
+from pipeline.ingestion.events import save_events, scrape_events
+from pipeline.ingestion.models import PolicyPage
+from pipeline.ingestion.party_info import (
     download_and_convert_party_pdfs,
     save_party_info,
     scrape_party_info,
 )
-from scraper.pdf_download import download_policy_pdfs
-from scraper.policies import save_policies, scrape_policies
-from scraper.team import save_team, scrape_team
+from pipeline.ingestion.pdf_download import download_policy_pdfs
+from pipeline.ingestion.policies import save_policies, scrape_policies
+from pipeline.ingestion.team import save_team, scrape_team
 
 
 @dg.asset(group_name="ingestion")

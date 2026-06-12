@@ -6,7 +6,7 @@ data/ directory.
 
 Rate-limiting / caching
 -----------------------
-All HTTP requests go through a :class:`~scraper.cache.RequestCache` that
+All HTTP requests go through a :class:`~pipeline.ingestion.cache.RequestCache` that
 stores raw responses on disk under ``data/.cache/{category}/``.  Call
 :func:`configure_cache` once at startup (e.g. from ``main.py``) to
 customise the force-refresh behaviour.
@@ -20,25 +20,22 @@ import json
 import logging
 import shutil
 import subprocess
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from bs4 import BeautifulSoup
 
-from scraper.cache import RequestCache
+from pipeline.ingestion.cache import RequestCache
+from pipeline.paths import CACHE_DIR, DATA_DIR
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://www.opportunity.org.nz"
 
-# Project root is where pyproject.toml lives
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-# All scraped data goes here (raw ingestor output — write-only for consumers)
-DATA_DIR = PROJECT_ROOT / "data" / "sources" / "opportunity-website"
-
-# HTTP cache lives at data/.cache/ — separate from ingestor output so it is
-# preserved when data/sources/ is wiped and not gitignored with it.
-CACHE_DIR = PROJECT_ROOT / "data" / ".cache"
+# Re-export path constants for backward compatibility within ingestion modules
+__all__ = ["BASE_URL", "CACHE_DIR", "DATA_DIR"]
 
 # ---------------------------------------------------------------------------
 # Cache singleton

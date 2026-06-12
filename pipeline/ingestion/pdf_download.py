@@ -12,12 +12,11 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
-from .client import DATA_DIR
+from pipeline.paths import POLICY_ASSETS_DIR, REFERENCE_FILE
 
 logger = logging.getLogger(__name__)
 
-POLICY_ASSETS_DIR = DATA_DIR / "pdfs"
-REFERENCE_FILE = POLICY_ASSETS_DIR / "reference.json"
+# Path constants imported from pipeline.paths
 
 GDRIVE_FILE_ID_RE = re.compile(r"/file/d/([a-zA-Z0-9_-]+)")
 

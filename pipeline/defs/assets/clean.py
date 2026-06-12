@@ -9,7 +9,7 @@ import dagster as dg
 if TYPE_CHECKING:
     from pathlib import Path
 
-from transforms.sources.opportunity_website import (
+from pipeline.transforms.sources.opportunity_website import (
     CLEAN_DIR,
     regenerate_clean_index,
     transform_opportunity_website,

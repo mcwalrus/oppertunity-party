@@ -17,21 +17,24 @@ from __future__ import annotations
 import json
 import re
 from datetime import UTC, datetime
-from pathlib import Path
+from typing import TYPE_CHECKING
 
-from transforms.clean import (
+from pipeline.paths import CLEAN_DIR
+from pipeline.paths import DATA_DIR as SOURCE_DIR
+from pipeline.transforms.clean import (
     clean_body,
     extract_metadata_fields,
     normalise_blank_runs,
     strip_footer_sections,
 )
 
+if TYPE_CHECKING:
+    from pathlib import Path
+
 # ---------------------------------------------------------------------------
-# Paths
+# Constants
 # ---------------------------------------------------------------------------
 
-SOURCE_DIR = Path("data/sources/opportunity-website")
-CLEAN_DIR = Path("data/clean")
 SOURCE_ID = "opportunity-website"
 SOURCE_TYPE = "website"
 
