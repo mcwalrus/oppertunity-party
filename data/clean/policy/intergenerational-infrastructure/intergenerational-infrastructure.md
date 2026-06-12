@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/intergenerational_infrastructure"
 ingested_at: "2026-06-08T13:25:50.403512"
-cleaned_at: "2026-06-12T01:03:39.807938+00:00"
+cleaned_at: "2026-06-12T01:18:46.526502+00:00"
 title: "Inter-generational Infrastructure"
 ---
 # Inter- generational Infrastructure

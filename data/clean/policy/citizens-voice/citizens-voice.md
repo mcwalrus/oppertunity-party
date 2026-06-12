@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/citizens-voice"
 ingested_at: "2026-06-08T13:25:45.601006"
-cleaned_at: "2026-06-12T01:03:39.807938+00:00"
+cleaned_at: "2026-06-12T01:18:46.526502+00:00"
 title: "Citizens' Voice"
 pdf_urls: ["https://drive.google.com/file/d/116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L/view?usp=drive_link"]
 ---

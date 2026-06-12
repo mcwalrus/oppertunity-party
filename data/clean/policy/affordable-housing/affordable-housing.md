@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/affordable_housing"
 ingested_at: "2026-06-08T13:25:50.931036"
-cleaned_at: "2026-06-12T01:03:39.807938+00:00"
+cleaned_at: "2026-06-12T01:18:46.526502+00:00"
 title: "Affordable Housing"
 ---
 **A home is security and stability – the place we build good, productive lives from. But our housing market is broken, with home ownership now out of reach for generations of Kiwis. It's time to make houses homes again, not just investment vehicles.**
