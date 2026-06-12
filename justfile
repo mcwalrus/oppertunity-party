@@ -7,12 +7,15 @@ install:
 
 # Scrape everything and run the full transform pipeline
 scrape: install
-    uv run python main.py --clean
-    uv run python -m transforms.main
+    uv run dagster asset materialize --select 'group:ingestion'
 
 # Run transforms only (no re-scraping)
 transform: install
-    uv run python -m transforms.main
+    uv run dagster asset materialize --select 'group:clean group:site'
+
+# Launch the Dagster UI dev server
+dev:
+    uv run dg dev
 
 # Re-convert PDFs to markdown (no re-scrape)
 pdfs: install

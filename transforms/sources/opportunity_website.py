@@ -41,24 +41,43 @@ SOURCE_TYPE = "website"
 # ---------------------------------------------------------------------------
 
 
-def transform_opportunity_website() -> list[dict[str, str]]:
-    """Read all content types from sources and write normalized items to data/clean/.
+def transform_opportunity_website(
+    content_type: str | None = None,
+) -> list[dict[str, str]]:
+    """Read content types from sources and write normalized items to data/clean/.
+
+    Args:
+        content_type: When provided, only the matching content type is processed
+            and written to ``data/clean/{type}/`` — other directories are not
+            touched.  Accepted values: ``'policy'``, ``'team'``, ``'blog'``,
+            ``'events'``, ``'party-information'``, ``'pdf-document'``.
+            When ``None`` (default) all types are processed and
+            ``data/clean/_index.json`` is regenerated — preserving the
+            existing behaviour.
 
     Returns a list of index entries suitable for ``data/clean/_index.json``.
     """
     cleaned_at = datetime.now(UTC).isoformat()
     index_entries: list[dict[str, str]] = []
 
-    index_entries += _transform_policies(cleaned_at)
-    index_entries += _transform_blog(cleaned_at)
-    index_entries += _transform_events(cleaned_at)
-    index_entries += _transform_team(cleaned_at)
-    index_entries += _transform_party_info(cleaned_at)
-    index_entries += _transform_news(cleaned_at)
-    index_entries += _transform_pdf_documents(cleaned_at)
+    if content_type is None or content_type == "policy":
+        index_entries += _transform_policies(cleaned_at)
+    if content_type is None or content_type == "blog":
+        index_entries += _transform_blog(cleaned_at)
+        index_entries += _transform_news(cleaned_at)
+    if content_type is None or content_type == "events":
+        index_entries += _transform_events(cleaned_at)
+    if content_type is None or content_type == "team":
+        index_entries += _transform_team(cleaned_at)
+    if content_type is None or content_type == "party-information":
+        index_entries += _transform_party_info(cleaned_at)
+    if content_type is None or content_type == "pdf-document":
+        index_entries += _transform_pdf_documents(cleaned_at)
 
-    _write_index(index_entries)
-    print(f"  📋 clean/_index.json  ({len(index_entries)} items)")
+    if content_type is None:
+        _write_index(index_entries)
+        print(f"  📋 clean/_index.json  ({len(index_entries)} items)")
+
     return index_entries
 
 
@@ -535,6 +554,42 @@ def _write_index(entries: list[dict[str, str]]) -> None:
         json.dumps(entries, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
+
+
+def regenerate_clean_index() -> int:
+    """Regenerate data/clean/_index.json from the existing clean data.
+
+    Scans every ``meta.json`` under CLEAN_DIR without re-running the full
+    transform pipeline, then writes a fresh cross-type search index.
+
+    Returns the number of index entries written.
+    """
+    entries: list[dict[str, str]] = []
+    if CLEAN_DIR.exists():
+        for type_dir in sorted(CLEAN_DIR.iterdir()):
+            # Skip special files/dirs (e.g. _index.json lives at this level)
+            if not type_dir.is_dir() or type_dir.name.startswith("_"):
+                continue
+            for item_dir in sorted(type_dir.iterdir()):
+                if not item_dir.is_dir():
+                    continue
+                meta_file = item_dir / "meta.json"
+                if not meta_file.exists():
+                    continue
+                with open(meta_file) as fh:
+                    meta: dict[str, object] = json.load(fh)
+                entries.append(
+                    {
+                        "slug": str(meta.get("slug", "")),
+                        "content_type": str(meta.get("content_type", "")),
+                        "source_id": str(meta.get("source_id", "")),
+                        "source_url": str(meta.get("source_url", "")),
+                        "title": str(meta.get("title", "")),
+                        "date": str(meta.get("date", "")),
+                    }
+                )
+    _write_index(entries)
+    return len(entries)
 
 
 # ---------------------------------------------------------------------------

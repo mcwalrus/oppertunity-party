@@ -16,8 +16,8 @@
         "Typecheck passes"
       ],
       "priority": 1,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Created pipeline/__init__.py, pipeline/defs/__init__.py, pipeline/defs/assets/__init__.py, pipeline/defs/resources.py, pipeline/defs/jobs.py, pipeline/defs/schedules.py, definitions.py; added [tool.dagster] python_file entry to pyproject.toml. just check passes."
     },
     {
       "id": "US-002",
@@ -32,8 +32,8 @@
         "Typecheck passes"
       ],
       "priority": 2,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Added content_type: str | None = None parameter to transform_opportunity_website(). When a type is given, only that type's _transform_* function(s) run and _write_index is skipped. Existing call in transforms/main.py (no argument) is fully preserved. just check passes."
     },
     {
       "id": "US-003",
@@ -49,8 +49,8 @@
         "Typecheck passes"
       ],
       "priority": 3,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Created pipeline/defs/assets/ingestion.py with six @dg.asset functions (raw_policies, raw_team, raw_blog, raw_events, raw_party_info, raw_pdfs) all in group 'ingestion'. raw_pdfs declares deps=['raw_policies'] and loads saved policy JSON to call download_policy_pdfs(). Updated definitions.py to register all six assets. just check passes."
     },
     {
       "id": "US-004",
@@ -67,8 +67,8 @@
         "Typecheck passes"
       ],
       "priority": 4,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Created pipeline/defs/assets/clean.py with six @dg.asset functions (clean_policies, clean_team, clean_blog, clean_events, clean_party_info, clean_pdfs) in group 'clean', each depending on its raw_* counterpart and calling transform_opportunity_website(content_type=...). Updated definitions.py to register all six assets. just check passes."
     },
     {
       "id": "US-005",
@@ -86,8 +86,8 @@
         "Typecheck passes"
       ],
       "priority": 5,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Created pipeline/defs/assets/site.py with five @dg.asset functions (site_policies, site_blog, site_events, site_team, site_party_info) in group 'site', each wiping its own collection dir before calling the corresponding transform_*(CLEAN_DIR, CONTENT_DIR). Updated definitions.py to register all five assets. just check passes."
     },
     {
       "id": "US-006",
@@ -102,8 +102,8 @@
         "Typecheck passes"
       ],
       "priority": 6,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Added regenerate_clean_index() to transforms/sources/opportunity_website.py (scans meta.json files under CLEAN_DIR). Added clean_index @dg.asset to pipeline/defs/assets/clean.py with deps on all six clean_* assets. Registered clean_index in definitions.py. just check passes."
     },
     {
       "id": "US-007",
@@ -119,8 +119,8 @@
         "Typecheck passes"
       ],
       "priority": 7,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Updated pipeline/defs/jobs.py with full_pipeline, ingestion_job, transforms_job; pipeline/defs/schedules.py with weekly_full_pipeline (cron 0 6 * * 1, no default_status); registered jobs and schedule in definitions.py. just check passes."
     },
     {
       "id": "US-008",
@@ -135,8 +135,8 @@
         "Typecheck passes"
       ],
       "priority": 8,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Updated justfile: scrape recipe now runs dagster asset materialize --select 'group:ingestion'; transform recipe runs dagster asset materialize --select 'group:clean group:site'; added dev recipe with uv run dg dev; removed old uv run python main.py and uv run python -m transforms.main invocations. just check passes."
     }
   ]
 }

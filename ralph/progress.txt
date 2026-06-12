@@ -1,3 +1,11 @@
 # Ralph Progress Log
 Started: (not yet run)
 ---
+[US-001] Scaffold pipeline/ module and empty Definitions entry point — done
+[US-002] Refactor transform_opportunity_website() for per-type invocation — done
+[US-003] Create ingestion assets — raw scraper layer — done
+[US-004] Create clean layer assets — normalise to data/clean/ — done
+[US-005] Create site layer assets — generate site/src/content/ — done
+[US-006] Create clean_index asset — search index regeneration — done
+[US-007] Create named jobs and weekly schedule — done
+[US-008] Update justfile to use Dagster CLI commands — done
