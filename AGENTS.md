@@ -34,7 +34,7 @@ Run the onboarding script once on a fresh machine (macOS/Linux only):
 
 This installs all system dependencies via Homebrew (`scripts/Brewfile`), installs [pi](https://pi.dev), configures shell hooks for `fnm` and `direnv`, installs Node + Python + site deps, and wires up git hooks.
 
-## Tools
+## CLI Tools
 
 | Tool       | Purpose                                                            |
 | ---------- | ------------------------------------------------------------------ |
@@ -50,12 +50,21 @@ This installs all system dependencies via Homebrew (`scripts/Brewfile`), install
 | `dg`       | CLI for managing Dagster projects.                                 |
 | `dagster`  | CLI tools for working with Dagster.                                |
 
+## Python Libraries
 
-**Python Libraries**
+| Library       | Purpose                                          |
+| ------------- | ------------------------------------------------ |
+| `yt-dlp`      | Download videos                                  |
+| `pymupdf4llm` | PDF to markdown converter (strongly vetted)      |
+| `dagster`     | ETL pipeline orchestration (asset-based)         |
 
-yt-dlp: download videos
-pymupdf4llm: pdf to markdown converter
+## Node Libraries
 
+| Library         | Purpose      |
+| --------------- | ------------ |
+| `astro`         | SSG          |
+| `@astrojs/check`| Type check   |
+| `typescript`    | TS compiler  |
 
 ## Common Commands
 
