@@ -1,12 +1,12 @@
-"""Reference: pymupdf4llm-based extraction to replace pdftotext.
+"""Reference: pymupdf4llm-based extraction.
 
-Drop-in replacement for `extract_text()` + the header/footer cleanup in
+Drop-in replacement for the header/footer cleanup in
 `scraper/pdf_convert.py`. pymupdf4llm already produces structured markdown
 (headings, reflowed paragraphs, real tables), so most of the hand-rolled
 `format_body()` logic in the current module becomes unnecessary — the only
 post-processing left is stripping three known artifacts.
 
-Install:  uv add pymupdf4llm      (pure-Python, no poppler/system dep)
+Install:  uv add pymupdf4llm      (pure-Python)
 
 Artifacts pymupdf4llm leaves, and how we handle them:
   1. `**==> picture [86 x 35] intentionally omitted <==**`  -> drop the line

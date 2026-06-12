@@ -4,7 +4,7 @@ slug: 2026-03-25-meet-the-first-opportunity-candidates
 date: "2026-03-25"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/meet_the_opportunity_candidates"
-scrapedAt: "2026-06-08T17:22:59.528515"
+scrapedAt: "2026-06-12T16:04:07.380373"
 ---
 ## Meet the first Opportunity candidates
 

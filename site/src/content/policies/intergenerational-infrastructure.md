@@ -2,7 +2,7 @@
 title: "Inter-generational Infrastructure"
 slug: intergenerational-infrastructure
 url: "https://www.opportunity.org.nz/intergenerational_infrastructure"
-scrapedAt: "2026-06-08T13:25:50.403512"
+scrapedAt: "2026-06-12T16:04:10.804824"
 ---
 # Inter- generational Infrastructure
 

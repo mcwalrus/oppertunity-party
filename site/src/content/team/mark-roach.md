@@ -4,7 +4,7 @@ slug: mark-roach
 role: "Candidate"
 electorate: "Waitākere"
 url: "https://www.opportunity.org.nz/candidate-mark-roach"
-scrapedAt: "2026-06-08T16:20:23.076463"
+scrapedAt: "2026-06-12T16:04:17.682862"
 ---
 "I’m standing for Opportunity this election because I want to help build a more optimistic future for Aotearoa New Zealand. One driven by smart policy cultural vitality social equity innovation and long-term nation-building beyond the pettiness of short-term politics."
 

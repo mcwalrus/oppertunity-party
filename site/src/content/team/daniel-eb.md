@@ -4,7 +4,7 @@ slug: daniel-eb
 role: "Deputy Leader"
 electorate: "Kaipara Ki Mahurangi"
 url: "https://www.opportunity.org.nz/candidate-daniel-eb"
-scrapedAt: "2026-06-08T16:20:11.302176"
+scrapedAt: "2026-06-12T16:04:03.502935"
 ---
 “New Zealand welcomed my family and offered me an urban-rural upbringing that continues to define my life. I’m standing to pay back those gifts through service.”
 

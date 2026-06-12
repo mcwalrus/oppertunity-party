@@ -17,4 +17,3 @@ brew "just"         # Command runner — see justfile for available tasks
 brew "lefthook"     # Git hook manager (pre-commit: ruff, ty, markdown-link-check)
 
 # ── Content processing ────────────────────────────────────────────────────────
-brew "poppler"      # PDF utilities — required for PDF → Markdown conversion

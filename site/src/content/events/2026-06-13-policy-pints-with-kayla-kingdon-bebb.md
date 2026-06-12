@@ -7,7 +7,7 @@ venue: "Double Vision Brewing - Miramar"
 address: "128A Unit E, Park Road, Miramar, Wellington 6022, New Zealand"
 location: "Double Vision Brewing - Miramar, Wellington, New Zealand"
 url: "https://www.opportunity.org.nz/policy_and_pints_with_kayla"
-scrapedAt: "2026-06-08T17:22:15.728915"
+scrapedAt: "2026-06-12T16:04:06.143445"
 ---
 Are you Opportunity-curious? Or perhaps you'd like to learn more about our campaign for the Party Vote in Wellington Bays?
 

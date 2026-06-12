@@ -2,7 +2,7 @@
 title: "Clean up Politics"
 slug: clean-up-politics
 url: "https://www.opportunity.org.nz/clean_up_politics"
-scrapedAt: "2026-06-08T13:25:46.631132"
+scrapedAt: "2026-06-12T16:04:07.040180"
 ---
 **Democracy works when everyone – rich or poor – is represented equally.**
 

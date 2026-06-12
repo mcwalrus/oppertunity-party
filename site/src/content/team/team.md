@@ -3,26 +3,23 @@ name: "Opportunity Party — Team & Candidates Index"
 slug: team
 ---
 **Source**: [opportunity.org.nz/team](https://www.opportunity.org.nz/team)  
-**Generated**: 2026-06-08
+**Generated**: 2026-06-12
 
 ---
 
 ## Key Facts
 
-- **Party Leader**: Qiulae (Q) Wong — standing in **Mt Albert**
 - **Deputy Leader**: Daniel Eb — standing in **Kaipara Ki Mahurangi**
-- **Total candidates**: 44
-- **Electorates contested**: 43
+- **Total candidates**: 42
+- **Electorates contested**: 42
 
 ## Leadership
 
 | Name | Role | Electorate | Profile |
 |------|------|------------|---------|
-| [Meet Q](meet-q.md) | Party Leader | — | [opportunity.org.nz](https://www.opportunity.org.nz/meet-q) |
-| [Qiulae (Q) Wong](qiulae-wong.md) | Party Leader | Mt Albert | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-qiulae-wong) |
 | [Daniel Eb](daniel-eb.md) | Deputy Leader | Kaipara Ki Mahurangi | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-daniel-eb) |
 
-## All Candidates (A–Z)
+## All Candidates (A-Z)
 
 | Name | Role | Electorate | Profile |
 |------|------|------------|---------|
@@ -58,11 +55,9 @@ slug: team
 | [Mathew Phillips](mathew-phillips.md) | Candidate | Taieri | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-mathew-phillips) |
 | [Matt Harris](matt-harris.md) | Candidate | Rangitata | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-matt-harris) |
 | [Matt Shepherd](matt-shepherd.md) | Candidate | Wairarapa | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-matt-shepherd) |
-| [Meet Q](meet-q.md) | Party Leader | — | [opportunity.org.nz](https://www.opportunity.org.nz/meet-q) |
 | [Michael Carter](michael-carter.md) | Candidate | Tauranga | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-michael-carter) |
 | [Netra Ghimire](netra-ghimire.md) | Candidate | Palmerston North | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-netra-ghimire) |
 | [Paul Jackson](paul-jackson.md) | Candidate | Epsom | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-paul-jackson) |
-| [Qiulae (Q) Wong](qiulae-wong.md) | Party Leader | Mt Albert | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-qiulae-wong) |
 | [Rachel Ward](rachel-ward.md) | Candidate | Tukituki | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-rachel-ward) |
 | [Robert Mason](robert-mason.md) | Candidate | Kenepuru | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-robert-mason) |
 | [Romeo Tevaga](romeo-tevaga.md) | Candidate | Upper Harbour | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-romeo-tevaga) |

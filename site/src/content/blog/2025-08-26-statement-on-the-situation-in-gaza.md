@@ -4,7 +4,7 @@ slug: 2025-08-26-statement-on-the-situation-in-gaza
 date: "2025-08-26"
 author: "Policy Team"
 url: "https://www.opportunity.org.nz/situation_in_gaza"
-scrapedAt: "2026-06-08T17:23:09.452947"
+scrapedAt: "2026-06-12T16:04:12.330581"
 ---
 [![](https://assets.nationbuilder.com/garethmorgan/pages/6989/features/original/1.jpg?1769681791)
 

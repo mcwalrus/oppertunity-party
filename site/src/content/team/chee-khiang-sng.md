@@ -4,7 +4,7 @@ slug: chee-khiang-sng
 role: "Candidate"
 electorate: "Kāpiti"
 url: "https://www.opportunity.org.nz/candidate-chee-khiang-sng"
-scrapedAt: "2026-06-08T16:20:26.699817"
+scrapedAt: "2026-06-12T16:04:21.113171"
 ---
 “We need to restore the promise of a fair go, that everyone willing and able has the opportunity to build a life of dignity and security. And when life deals unfair blows, we stand together to support those in need. This is my purpose. A better New Zealand will be my legacy.”
 

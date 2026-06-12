@@ -7,7 +7,7 @@ venue: "Sprig & Fern Tawa"
 address: "99 Main Rd, Tawa, Wellington 5028, New Zealand"
 location: "Sprig & Fern Tawa, Wellington, New Zealand"
 url: "https://www.opportunity.org.nz/meet_robert_mason"
-scrapedAt: "2026-06-08T17:22:15.019073"
+scrapedAt: "2026-06-12T16:04:05.795171"
 ---
 **![](https://assets.nationbuilder.com/garethmorgan/pages/12335/attachments/original/1779578017/Wellington_candidate_meeting_flyers.png?1779578017)**
 

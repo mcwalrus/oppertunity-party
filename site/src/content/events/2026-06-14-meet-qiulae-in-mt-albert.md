@@ -4,9 +4,10 @@ slug: 2026-06-14-meet-qiulae-in-mt-albert
 date: "2026-06-14"
 when: "June 14, 2026 at  4:00pm · 1 hr 30 mins"
 venue: "Mt Albert Primary School Hall"
-location: "Mt Albert Primary School Hall"
+address: "6 Sainsbury Rd, Mount Albert, Auckland 1025, New Zealand"
+location: "Mt Albert Primary School Hall, Auckland, New Zealand"
 url: "https://www.opportunity.org.nz/meet_qiulae_in_mt_albert"
-scrapedAt: "2026-06-08T17:22:16.888968"
+scrapedAt: "2026-06-12T16:04:08.507201"
 ---
 **Meet Opportunity Party Leader and Candidate for Mt Albert, Qiulae Wong!**
 

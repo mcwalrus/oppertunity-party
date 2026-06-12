@@ -2,7 +2,7 @@
 title: "Honouring Te Tiriti"
 slug: honouring-te-tiriti
 url: "https://www.opportunity.org.nz/honouring_te_tiriti"
-scrapedAt: "2026-06-08T13:25:47.439513"
+scrapedAt: "2026-06-12T16:04:07.407634"
 ---
 **Opportunity takes the responsibility of the Crown as a Treaty partner seriously.**
 
@@ -19,8 +19,7 @@ will:
 * Support devolution of services — backed by real resources and
   autonomy — in key areas where outcomes are unequal, especially
   health and justice.
-* Support the equitable conclusion of remaining Treaty settlement
-  processes.
+* Support equitable Treaty settlements.
 
 Interested to see the detailed policy at launch? Sign-up for
 [Opportunity news and updates](https://www.opportunity.org.nz/subscribe).

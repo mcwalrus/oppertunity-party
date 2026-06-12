@@ -4,7 +4,7 @@ slug: helen-tait
 role: "Candidate"
 electorate: "Waitaki"
 url: "https://www.opportunity.org.nz/candidate-helen-tait"
-scrapedAt: "2026-06-08T16:20:27.079019"
+scrapedAt: "2026-06-12T16:04:21.517609"
 ---
 “Like many New Zealanders, I’m tired of the time and effort wasted by our current politicians in bickering, in blaming the opposition, and in short term thinking, focused only on reelection. I have committed to Opportunity because I believe that the party’s values and policies offer a positive base on which to develop our country.”
 

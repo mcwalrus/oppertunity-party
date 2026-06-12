@@ -2,7 +2,7 @@
 title: "Meet Q"
 slug: meet-q
 url: "https://www.opportunity.org.nz/meet-q"
-scrapedAt: "2026-06-08T18:02:35.707578"
+scrapedAt: "2026-06-12T16:04:03.092466"
 ---
 ## About Q
 
@@ -21,3 +21,23 @@ After a decade overseas, Qiulae returned home with husband Grant and her two dau
 From there it was on to KPMG to support some of our largest corporations to tackle the transition to a low-carbon future, as well as several volunteer and governance roles in the climate and purpose space.
 
 After a career supporting businesses to lead where it matters, Q is now leading a new generation of politicians to Wellington. Because it's not enough for a few organisations to build connected, resilient communities and restore nature. That's the government's job too.
+
+## Donate to our Party Vote Campaign in Mt Albert
+
+### Select an amount
+
+$25
+
+$50
+
+$100
+
+$250
+
+$500
+
+$1,000
+
+Other
+
+[Custom Donation](mt-albert-donations "Donate a custom amount")

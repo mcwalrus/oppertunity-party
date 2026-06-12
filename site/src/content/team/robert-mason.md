@@ -4,7 +4,7 @@ slug: robert-mason
 role: "Candidate"
 electorate: "Kenepuru"
 url: "https://www.opportunity.org.nz/candidate-robert-mason"
-scrapedAt: "2026-06-08T16:20:19.864735"
+scrapedAt: "2026-06-12T16:04:15.157142"
 ---
 “New Zealand is my home: an amazing country with wonderful people - it just deserves a better effort from those who claim to govern us. A wasted vote is a vote for the established parties with a vested interest in the status quo. Only a vote for Opportunity can bring about the lasting change New Zealand needs.”
 

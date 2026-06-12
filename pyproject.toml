@@ -62,8 +62,14 @@ docstring-code-format = true
 # ---------------------------------------------------------------------------
 # Dagster — code location discovery
 # ---------------------------------------------------------------------------
+[tool.dg]
+directory_type = "project"
+
+[tool.dg.project]
+root_module = "pipeline"
+
 [tool.dagster]
-python_file = "definitions.py"
+module_name = "pipeline.definitions"
 
 # ---------------------------------------------------------------------------
 # ty — type checker

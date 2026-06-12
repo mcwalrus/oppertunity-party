@@ -4,7 +4,7 @@ slug: 2025-08-21-top-stories-citizen-voice-regulatory-standards-candidate-colleg
 date: "2025-08-21"
 author: "Keith Morris"
 url: "https://www.opportunity.org.nz/top-stories-1"
-scrapedAt: "2026-06-08T17:23:10.427514"
+scrapedAt: "2026-06-12T16:04:13.102439"
 ---
 ## TOP Stories: Citizen Voice, Regulatory Standards, Candidate College
 
@@ -36,7 +36,7 @@ TOP recently made a submission opposing the Regulatory Standards Bill, which thr
 
 **Building a Bold Team**
 
-Our Candidates College is off to a fantastic start. This inspiring group of TOP members is developing the skills, confidence, and knowledge needed to become outstanding candidates. Just as importantly, they’re supporting one another and helping build a strong, connected team ready to take TOP’s message to communities across the country. Every member of TOP is welcome to join. You don’t need to be sure you want to be a candidate yet. The College is a place to explore, learn, and see if candidacy might be right for you. If you're curious, we’d love to hear from you. Email [[email protected]](/cdn-cgi/l/email-protection#0b686a656f626f6a7f6e784b7f647b2564796c256571) to find out more.
+Our Candidates College is off to a fantastic start. This inspiring group of TOP members is developing the skills, confidence, and knowledge needed to become outstanding candidates. Just as importantly, they’re supporting one another and helping build a strong, connected team ready to take TOP’s message to communities across the country. Every member of TOP is welcome to join. You don’t need to be sure you want to be a candidate yet. The College is a place to explore, learn, and see if candidacy might be right for you. If you're curious, we’d love to hear from you. Email [[email protected]](/cdn-cgi/l/email-protection#abc8cac5cfc2cfcadfced8ebdfc4db85c4d9cc85c5d1) to find out more.
 
 ---
 

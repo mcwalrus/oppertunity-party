@@ -4,7 +4,7 @@ slug: ben-wylie-van-eerd
 role: "Candidate"
 electorate: "Hutt South"
 url: "https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd"
-scrapedAt: "2026-06-08T16:20:30.852312"
+scrapedAt: "2026-06-12T16:04:24.670461"
 ---
 “Opportunity is a party which is bold about facing big challenges, serious about facing up to the evidence, and optimistic about building a better future. Unless we view the future with hope and with a shared plan, we will continue to struggle. The opportunity exists for us to change how we improve our lives into the next decades.”
 

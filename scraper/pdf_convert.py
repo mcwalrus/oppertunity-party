@@ -2,7 +2,7 @@
 
 Uses pymupdf4llm for text extraction — produces structured markdown with
 headings, reflowed paragraphs, and real tables, with no system dependencies
-(pure-Python; no poppler required).
+(pure-Python).
 
 Each PDF has:
   - A header block: Date, Policy, Document Type (bold values on one line)

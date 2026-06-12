@@ -7,6 +7,6 @@ venue: "The Swan"
 address: "Bath Street, Dunedin 9016, New Zealand"
 location: "The Swan, Dunedin, New Zealand"
 url: "https://www.opportunity.org.nz/dunedin_cafe_tour"
-scrapedAt: "2026-06-08T17:22:14.184143"
+scrapedAt: "2026-06-12T16:04:05.043699"
 ---
 Every Saturday morning from 10am, Opportunity candidates Dave for Dunedin and Matt for Mosgiel will be at a different cafe, so come and grab a hot drink, and spill your hot takes on politics.

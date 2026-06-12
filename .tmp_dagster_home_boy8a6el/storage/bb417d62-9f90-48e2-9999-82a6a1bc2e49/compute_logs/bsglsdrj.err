@@ -1,0 +1,5 @@
+[32m2026-06-12 16:04:26 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50929 - LOGS_CAPTURED - Capturing logs for process (pid: 50929).
+[32m2026-06-12 16:04:26 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50929 - clean_team - STEP_START - Started execution of step "clean_team".
+[32m2026-06-12 16:04:26 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50929 - clean_team - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2026-06-12 16:04:26 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50929 - clean_team - ASSET_MATERIALIZATION - Materialized value clean_team.
+[32m2026-06-12 16:04:26 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50929 - clean_team - STEP_SUCCESS - Finished execution of step "clean_team" in 64ms.

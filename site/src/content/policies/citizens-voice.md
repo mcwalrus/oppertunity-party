@@ -2,7 +2,7 @@
 title: "Citizens' Voice"
 slug: citizens-voice
 url: "https://www.opportunity.org.nz/citizens-voice"
-scrapedAt: "2026-06-08T13:25:45.601006"
+scrapedAt: "2026-06-12T16:04:05.580120"
 pdfDownloads:
   - "https://drive.google.com/file/d/116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L/view?usp=drive_link"
 ---

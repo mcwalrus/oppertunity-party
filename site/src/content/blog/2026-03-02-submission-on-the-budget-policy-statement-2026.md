@@ -4,7 +4,7 @@ slug: 2026-03-02-submission-on-the-budget-policy-statement-2026
 date: "2026-03-02"
 author: "Q Wong"
 url: "https://www.opportunity.org.nz/submission_on_the_budget_policy_statement_2026"
-scrapedAt: "2026-06-08T17:23:06.798121"
+scrapedAt: "2026-06-12T16:04:09.984959"
 ---
 ## Submission on the Budget Policy Statement 2026
 

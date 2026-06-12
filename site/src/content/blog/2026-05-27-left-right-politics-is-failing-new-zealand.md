@@ -4,7 +4,7 @@ slug: 2026-05-27-left-right-politics-is-failing-new-zealand
 date: "2026-05-27"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/_left_right_politics_is_failing_new_zealand"
-scrapedAt: "2026-06-08T17:22:56.739370"
+scrapedAt: "2026-06-12T16:04:03.926436"
 ---
 ## Left-right politics is failing New Zealand
 

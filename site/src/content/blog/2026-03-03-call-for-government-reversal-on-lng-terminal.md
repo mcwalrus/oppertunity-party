@@ -4,7 +4,7 @@ slug: 2026-03-03-call-for-government-reversal-on-lng-terminal
 date: "2026-03-03"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/call_for_government_reversal_on_lng_terminal"
-scrapedAt: "2026-06-08T17:23:02.625147"
+scrapedAt: "2026-06-12T16:04:08.827442"
 ---
 ## Call for Government reversal on LNG terminal
 

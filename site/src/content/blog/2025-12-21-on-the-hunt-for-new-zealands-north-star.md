@@ -4,7 +4,7 @@ slug: 2025-12-21-on-the-hunt-for-new-zealands-north-star
 date: "2025-12-21"
 author: "Q Wong"
 url: "https://www.opportunity.org.nz/on_the_hunt_for_new_zealand_s_north_star"
-scrapedAt: "2026-06-08T17:23:08.945169"
+scrapedAt: "2026-06-12T16:04:11.649361"
 ---
 [![](https://assets.nationbuilder.com/garethmorgan/pages/8178/features/original/OpportunityLeader_Qiulae_Wong_3.jpg?1766285627)
 

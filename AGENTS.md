@@ -43,13 +43,19 @@ This installs all system dependencies via Homebrew (`scripts/Brewfile`), install
 | `ruff`     | Linter and formatter for Python                                    |
 | `ty`       | Static type checker for Python                                     |
 | `lefthook` | Git hook manager (pre-commit runs ruff + ty + markdown-link-check) |
-| `poppler`  | PDF utilities (required for PDF-to-markdown conversion)            |
 | `fnm`      | Node.js version manager (reads `.node-version`)                    |
 | `pnpm`     | Node package manager (used by `site/`)                             |
 | `direnv`   | Per-directory env vars — run `direnv allow` after cloning          |
 | `pi`       | AI coding agent — install via `scripts/setup.sh`                   |
 | `dg`       | CLI for managing Dagster projects.                                 |
 | `dagster`  | CLI tools for working with Dagster.                                |
+
+
+**Python Libraries**
+
+yt-dlp: download videos
+pymupdf4llm: pdf to markdown converter
+
 
 ## Common Commands
 

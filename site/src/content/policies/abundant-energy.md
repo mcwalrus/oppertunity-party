@@ -2,7 +2,7 @@
 title: "Abundant Energy"
 slug: abundant-energy
 url: "https://www.opportunity.org.nz/abundant-energy"
-scrapedAt: "2026-06-08T13:25:44.620560"
+scrapedAt: "2026-06-12T16:04:04.174339"
 pdfDownloads:
   - "https://drive.google.com/file/d/1-QMkAP3CI8_14Sn7FKRafLi283B_O7zI/view?usp=drive_link"
 ---

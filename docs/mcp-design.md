@@ -17,8 +17,8 @@ It lives under [`mcp/`](../mcp).
   `opportunity_get_upcoming_events` (live event listing) and
   `opportunity_tax_reset_calculator` (a calculator powered by live policy data).
 - **PDF documents via managed cache.** Policy PDFs are binary files on Google
-  Drive. The server downloads them, converts with `pdftotext`, and stores the
-  text output on disk under a long TTL. This is the sole exception to no-cache
+  Drive. The server downloads them, converts with `pymupdf4llm`, and stores the
+  markdown output on disk under a long TTL. This is the sole exception to no-cache
   reads — the disk store is managed entirely by the MCP server itself.
 - **Agent-friendly.** Clear `opportunity_*` tool names, concise summaries in
   listings, full content in detail views, and canonical URLs in every response.
@@ -40,7 +40,7 @@ It lives under [`mcp/`](../mcp).
                          │        mcp/repository.py         │
                          │  live-first data access layer    │
                          │  • TTL cache for all fetches     │
-                         │  • PDF download + pdftotext      │
+                         │  • PDF download + pymupdf4llm    │
                          │  • policy param extraction       │
                          └────────┬─────────────┬──────────┘
                                   │ reuses      │ manages
@@ -48,7 +48,7 @@ It lives under [`mcp/`](../mcp).
                    │   scraper/ package   │  │    mcp/cache/          │
                    │   curl client,       │  │  TTL-keyed JSON files  │
                    │   BS4 extractors,    │  │  + pdf-docs/*.md       │
-                   │   markdownify        │  │  (pdftotext output)    │
+                   │   markdownify        │  │  (pymupdf4llm output)  │
                    └──────────┬───────────┘  └────────────────────────┘
                               │ curl
                    ┌──────────▼───────────┐
@@ -96,8 +96,7 @@ entry is fresh it is returned immediately; if expired (or absent) the live fetch
 runs, the result is written back to disk, and the result is returned. The cache
 is completely transparent to `server.py`.
 
-PDF document text files (converted via `pdftotext`) live alongside the cache but
-are treated as opaque text blobs; their TTL is tracked in a sidecar
+PDF document text files (converted via `pymupdf4llm`) live alongside the cache; their TTL is tracked in a sidecar
 `mcp/cache/pdf-index.json` file using the same envelope pattern.
 
 ### TTL table
@@ -177,7 +176,7 @@ Every result always includes:
 | `opportunity_list_policies` | `force_refresh` | `/policy` |
 | `opportunity_get_policy` | `slug`, `force_refresh` | `/{slug}` |
 | `opportunity_list_policy_documents` | `force_refresh` | derived from policy pages (PDF links) |
-| `opportunity_get_policy_document` | `id`, `force_refresh` | Google Drive PDF → pdftotext |
+| `opportunity_get_policy_document` | `id`, `force_refresh` | Google Drive PDF → pymupdf4llm |
 | `opportunity_list_news` | `force_refresh` | `/news` |
 | `opportunity_get_news_article` | `slug`, `force_refresh` | individual article URL |
 | `opportunity_list_team` | `force_refresh` | `/team` + `/meet-q` |
@@ -303,8 +302,7 @@ On `get_policy_document`:
 1. Check `pdf-index.json`. If the entry exists and `expires_at > now`, read and
    return `mcp/cache/pdf-docs/{filename}`.
 2. Otherwise: download the PDF from Google Drive (reusing `pdf_download` helpers),
-   convert with `pdftotext -layout`, parse header/body with `pdf_convert` helpers,
-   write the markdown to `mcp/cache/pdf-docs/`, update the index, return content.
+   convert with `pymupdf4llm`, write markdown to `mcp/cache/pdf-docs/`, update the index, return content.
 
 The listing tool (`list_policy_documents`) derives its list from two sources:
 

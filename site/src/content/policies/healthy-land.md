@@ -2,7 +2,7 @@
 title: "Healthy Land"
 slug: healthy-land
 url: "https://www.opportunity.org.nz/healthy_land"
-scrapedAt: "2026-06-08T13:25:48.826187"
+scrapedAt: "2026-06-12T16:04:09.450339"
 pdfDownloads:
   - "https://www.scionresearch.com/__data/assets/pdf_file/0003/80607/MakingZeroTheHero-Summary-Report.pdf"
 ---

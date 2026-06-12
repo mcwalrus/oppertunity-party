@@ -2,7 +2,7 @@
 title: "Tax Reset"
 slug: tax-reset
 url: "https://www.opportunity.org.nz/tax-reset"
-scrapedAt: "2026-06-08T13:25:46.158309"
+scrapedAt: "2026-06-12T16:04:06.330388"
 pdfDownloads:
   - "https://drive.google.com/file/d/1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B/view?usp=drive_link"
   - "https://drive.google.com/file/d/1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW/view?usp=drive_link"

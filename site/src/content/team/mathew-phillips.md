@@ -4,7 +4,7 @@ slug: mathew-phillips
 role: "Candidate"
 electorate: "Taieri"
 url: "https://www.opportunity.org.nz/candidate-mathew-phillips"
-scrapedAt: "2026-06-08T16:20:21.324330"
+scrapedAt: "2026-06-12T16:04:16.366281"
 ---
 "Hard work used to be enough to get ahead. Now it’s barely enough to get by. I’m standing to change that."
 

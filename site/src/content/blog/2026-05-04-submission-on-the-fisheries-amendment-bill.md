@@ -4,7 +4,7 @@ slug: 2026-05-04-submission-on-the-fisheries-amendment-bill
 date: "2026-05-04"
 author: "Finn Cattaway"
 url: "https://www.opportunity.org.nz/submission_on_the_fisheries_amendment_bill"
-scrapedAt: "2026-06-08T17:22:58.203173"
+scrapedAt: "2026-06-12T16:04:04.986299"
 ---
 ## Submission on the Fisheries Amendment Bill
 
