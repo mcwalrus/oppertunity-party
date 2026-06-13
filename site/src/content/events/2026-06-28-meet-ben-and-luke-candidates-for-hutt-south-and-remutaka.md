@@ -7,7 +7,7 @@ venue: "Wainuiomata Community Centre"
 address: "Queen Street Wainuiomata, Lower Hutt, Wellington Region 5011, New Zealand"
 location: "Wainuiomata Community Centre, Lower Hutt, New Zealand"
 url: "https://www.opportunity.org.nz/meet_ben_and_luke_wainuiomata"
-scrapedAt: "2026-06-12T16:04:13.677932"
+scrapedAt: "2026-06-13T15:05:38.311286"
 ---
 **Meet your Opportunity Party Candidates for Hutt South & Remutaka**
 

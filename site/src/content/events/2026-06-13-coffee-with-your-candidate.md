@@ -7,7 +7,7 @@ venue: "Ilex Cafe"
 address: "Christchurch Botanic Gardens , Christchurch  8013, New Zealand"
 location: "Ilex Cafe, Christchurch , New Zealand"
 url: "https://www.opportunity.org.nz/coffee_and_policy_14_6"
-scrapedAt: "2026-06-12T16:04:04.699944"
+scrapedAt: "2026-06-13T15:05:38.209316"
 ---
 Come along to meet your Christchurch Central Candidate Eden Skipper, other members and chat policy.
 

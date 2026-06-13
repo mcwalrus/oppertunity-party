@@ -2,7 +2,7 @@
 title: "Smart on Crime"
 slug: smart-on-crime
 url: "https://www.opportunity.org.nz/smart_on_crime"
-scrapedAt: "2026-06-12T16:04:12.817365"
+scrapedAt: "2026-06-13T15:05:38.448605"
 ---
 **It costs all of us more than $150,000 a year to house a prisoner. For context, we spend about $9,000 educating a child for a year.**
 

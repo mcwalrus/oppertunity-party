@@ -7,7 +7,7 @@ venue: "Mt Albert Primary School Hall"
 address: "6 Sainsbury Rd, Mount Albert, Auckland 1025, New Zealand"
 location: "Mt Albert Primary School Hall, Auckland, New Zealand"
 url: "https://www.opportunity.org.nz/meet_qiulae_in_mt_albert"
-scrapedAt: "2026-06-12T16:04:08.507201"
+scrapedAt: "2026-06-13T15:05:38.251108"
 ---
 **Meet Opportunity Party Leader and Candidate for Mt Albert, Qiulae Wong!**
 

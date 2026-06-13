@@ -4,7 +4,7 @@ slug: cindie-uddstrom
 role: "Candidate"
 electorate: "West Coast-Tasman"
 url: "https://www.opportunity.org.nz/candidate-cindie-uddstrom"
-scrapedAt: "2026-06-12T16:04:22.663037"
+scrapedAt: "2026-06-13T15:05:38.685381"
 ---
 "Every person deserves the opportunity to be their best version of themselves."
 

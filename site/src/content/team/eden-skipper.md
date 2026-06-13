@@ -4,7 +4,7 @@ slug: eden-skipper
 role: "Candidate"
 electorate: "Christchurch Central"
 url: "https://www.opportunity.org.nz/candidate-eden-skipper"
-scrapedAt: "2026-06-12T16:04:19.405278"
+scrapedAt: "2026-06-13T15:05:38.626307"
 ---
 “I’m a big believer in Opportunity, as I’m convinced that together we can be a political catalyst and steady voice of reason in Aotearoa. Let’s have sound policy based on evidence and community voice, and our country and people can be much better off.”
 

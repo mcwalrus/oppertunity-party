@@ -2,7 +2,7 @@
 title: "Future-fit Education"
 slug: future-fit-education
 url: "https://www.opportunity.org.nz/future_fit_education"
-scrapedAt: "2026-06-12T16:04:08.064464"
+scrapedAt: "2026-06-13T15:05:38.381975"
 ---
 **The world our children will grow up in will be challenging and complex. Education needs to change with the times to ensure our young people are ready.**
 

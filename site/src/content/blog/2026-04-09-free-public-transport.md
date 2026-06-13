@@ -4,7 +4,7 @@ slug: 2026-04-09-free-public-transport
 date: "2026-04-09"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/free_public_transport"
-scrapedAt: "2026-06-12T16:04:06.740103"
+scrapedAt: "2026-06-13T15:05:38.231065"
 ---
 ## Free Public Transport
 

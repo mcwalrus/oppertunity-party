@@ -4,7 +4,7 @@ slug: 2026-02-06-qs-reflections-from-waitangi
 date: "2026-02-06"
 author: "Q Wong"
 url: "https://www.opportunity.org.nz/5_reflections_from_waitangi"
-scrapedAt: "2026-06-12T16:04:10.387803"
+scrapedAt: "2026-06-13T15:05:38.269366"
 ---
 ## Q's reflections from Waitangi
 

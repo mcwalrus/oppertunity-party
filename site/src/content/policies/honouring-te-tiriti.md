@@ -2,7 +2,7 @@
 title: "Honouring Te Tiriti"
 slug: honouring-te-tiriti
 url: "https://www.opportunity.org.nz/honouring_te_tiriti"
-scrapedAt: "2026-06-12T16:04:07.407634"
+scrapedAt: "2026-06-13T15:05:38.369601"
 ---
 **Opportunity takes the responsibility of the Crown as a Treaty partner seriously.**
 

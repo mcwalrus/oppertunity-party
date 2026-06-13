@@ -7,7 +7,7 @@ venue: "Invercargill Workingmen's Club"
 address: "154 Esk St, Invercargill, Southland 9810, New Zealand"
 location: "Invercargill Workingmen's Club, Invercargill, New Zealand"
 url: "https://www.opportunity.org.nz/inv_oceans_forum"
-scrapedAt: "2026-06-12T16:04:09.223425"
+scrapedAt: "2026-06-13T15:05:38.268654"
 ---
 Join us for an introduction to, and discussion about **Opportunity** **Party's Healthy Oceans Policy**, which covers recreational & industry fishing, governance and marine sustainability.   
 You can find the policy webpage **[here](https://www.opportunity.org.nz/healthy-oceans)**.

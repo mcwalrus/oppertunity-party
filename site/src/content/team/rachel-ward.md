@@ -4,7 +4,7 @@ slug: rachel-ward
 role: "Candidate"
 electorate: "Tukituki"
 url: "https://www.opportunity.org.nz/candidate-rachel-ward"
-scrapedAt: "2026-06-12T16:04:23.075609"
+scrapedAt: "2026-06-13T15:05:38.695563"
 ---
 “Currently, political choices are being made on our behalf that are gutting the very environment we need to thrive and short-changing our future generations. It doesn’t have to be this way. Together we can bring a fresh voice to parliament - led by real kiwis that have joined forces to offer pragmatic, innovative solutions for our future. That movement is Opportunity – come and join us.”
 

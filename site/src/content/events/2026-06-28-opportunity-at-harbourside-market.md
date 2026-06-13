@@ -7,7 +7,7 @@ venue: "Harbourside Market"
 address: "Cnr Barnett and Cable Streets Wellington, Wellington 6022, New Zealand"
 location: "Harbourside Market, Wellington, New Zealand"
 url: "https://www.opportunity.org.nz/opportunity_at_harbourside_market"
-scrapedAt: "2026-06-12T16:04:11.999646"
+scrapedAt: "2026-06-13T15:05:38.298828"
 ---
 The Opportunity Party will be at the [Harbourside Market](https://wellington.govt.nz/news-and-events/events-and-festivals/harbourside-market)!
 

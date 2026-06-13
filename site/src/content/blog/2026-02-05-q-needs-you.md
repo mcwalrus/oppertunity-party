@@ -4,7 +4,7 @@ slug: 2026-02-05-q-needs-you
 date: "2026-02-05"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/q_needs_you"
-scrapedAt: "2026-06-12T16:04:10.894592"
+scrapedAt: "2026-06-13T15:05:38.278557"
 ---
 ## Q Needs You!
 
@@ -20,7 +20,7 @@ If you've ever wanted to be part of something big, inspiring and a touch crazy -
 
 ---
 
-***Marketing team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#7a171b08111f0e13141d3a150a0a15080e0f14130e035415081d541400)*
+***Marketing team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#d8b5b9aab3bdacb1b6bf98b7a8a8b7aaacadb6b1aca1f6b7aabff6b6a2)*
 
 **Social media manager.**Run point on Opportunity’s social media channels - plan, work with copywriters and designers to create content, schedule posts, support the moderation team and report on the results. Experience required. 
 
@@ -36,7 +36,7 @@ If you've ever wanted to be part of something big, inspiring and a touch crazy -
 
 ---
 
-***Comms team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#b5d8d0d1dcd4f5dac5c5dac7c1c0dbdcc1cc9bdac7d2)*
+***Comms team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#0f626a6b666e4f607f7f607d7b7a61667b7621607d68)*
 
 **Press office manager.**Field inquiries from journalists, organise interviews, coach Q, write and issue press releases, support the copywriting team as required and more. You’ll work alongside an experienced PR professional, but previous experience is preferred. 
 
@@ -46,7 +46,7 @@ If you've ever wanted to be part of something big, inspiring and a touch crazy -
 
 ---
 
-***IT team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#551c01153a25253a2721203b3c212c7b3a27327b3b2f)*
+***IT team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#672e332708171708151312090e131e4908150049091d)*
 
 **Tech support.**Help keep the Opportunity team running across our Google Workspace, NationBuilder and other systems. Experience required. Data hygiene and processing skills are a bonus.
 
@@ -56,7 +56,7 @@ If you've ever wanted to be part of something big, inspiring and a touch crazy -
 
 ---
 
-***Operations team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#dcbbb9b2b9aebdb0b1bdb2bdbbb9ae9cb3acacb3aea8a9b2b5a8a5f2b3aebbf2b2a6)*
+***Operations team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#1374767d7661727f7e727d72747661537c63637c6167667d7a676a3d7c61743d7d69)*
 
 **Member & volunteer manager.**Help members onboard into the Opportunity community and step-into volunteering roles when the time is right. Experience preferred, but enthusiasm counts more. 
 
@@ -66,6 +66,6 @@ If you've ever wanted to be part of something big, inspiring and a touch crazy -
 
 ---
 
-***Policy team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#55253a393c362c153a25253a2721203b3c212c7b3a27327b3b2f)*
+***Policy team - Apply to** [**[email protected]**](/cdn-cgi/l/email-protection#abdbc4c7c2c8d2ebc4dbdbc4d9dfdec5c2dfd285c4d9cc85c5d1)*
 
 **Policy inbox support.**Assess, triage, respond to or delegate queries about our policies from prospective voters and other members of the party. Work as part of a wider policy team to sharpen our processes and how we make our policy positions known. Experience preferred.

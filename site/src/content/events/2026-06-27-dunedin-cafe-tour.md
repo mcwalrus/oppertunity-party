@@ -7,6 +7,6 @@ venue: "Alto"
 address: "Mailer Street, Mornington, Dunedin 9011, New Zealand"
 location: "Alto, Dunedin, New Zealand"
 url: "https://www.opportunity.org.nz/dunedin_cafe_tour_3"
-scrapedAt: "2026-06-12T16:04:11.223245"
+scrapedAt: "2026-06-13T15:05:38.293660"
 ---
 Every Saturday morning from 10am, Opportunity candidates Dave for Dunedin and Matt for Mosgiel will be at a different cafe, so come and grab a hot drink, and spill your hot takes on politics.

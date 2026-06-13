@@ -4,7 +4,7 @@ slug: jessica-hammond
 role: "Candidate"
 electorate: "Wellington North"
 url: "https://www.opportunity.org.nz/candidate-jessica-hammond"
-scrapedAt: "2026-06-12T16:04:04.650970"
+scrapedAt: "2026-06-13T15:05:38.310780"
 ---
 “I’m completely out of patience with tinkering and bandaid solutions. Our country can be dramatically better - but only if we choose to do better things.”
 

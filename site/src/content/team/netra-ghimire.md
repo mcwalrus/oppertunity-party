@@ -4,7 +4,7 @@ slug: netra-ghimire
 role: "Candidate"
 electorate: "Palmerston North"
 url: "https://www.opportunity.org.nz/candidate-netra-ghimire"
-scrapedAt: "2026-06-12T16:04:09.212323"
+scrapedAt: "2026-06-13T15:05:38.398912"
 ---
 "New Zealand doesn’t need more political division and short-term thinking. We have the people, resources, knowledge and spirit to lead the world - what we need now is empowered communities, and long-term leadership that unlocks our full potential."
 

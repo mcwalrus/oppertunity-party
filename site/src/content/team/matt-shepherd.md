@@ -4,7 +4,7 @@ slug: matt-shepherd
 role: "Candidate"
 electorate: "Wairarapa"
 url: "https://www.opportunity.org.nz/candidate-matt-shepherd"
-scrapedAt: "2026-06-12T16:04:19.004259"
+scrapedAt: "2026-06-13T15:05:38.616374"
 ---
 “I heard the saying *“Society grows great when good men and women plant trees in whose shade they know they shall never sit”* when I was about 15 years old. Even if I didn't fully understand it at the time, it was formative. It resonated with me then, and it resonates with me today. Lets build something together!"
 

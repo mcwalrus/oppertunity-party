@@ -4,7 +4,7 @@ slug: kevin-huang
 role: "Candidate"
 electorate: "Pakuranga"
 url: "https://www.opportunity.org.nz/candidate-kevin-huang"
-scrapedAt: "2026-06-12T16:04:10.912005"
+scrapedAt: "2026-06-13T15:05:38.427272"
 ---
 “It would be my genuine pleasure to engage with my fellow New Zealanders and, together, build a future for our families, our community, and our country — a future we all wish to see.”
 

@@ -7,7 +7,7 @@ venue: "Garage Project Leeds Street"
 address: "7 Leeds St, Te Aro, Wellington 6011, New Zealand"
 location: "Garage Project Leeds Street, Wellington, New Zealand"
 url: "https://www.opportunity.org.nz/wellington_marathon_afterparty"
-scrapedAt: "2026-06-12T16:04:12.600768"
+scrapedAt: "2026-06-13T15:05:38.305428"
 ---
 Join Kayla Kingdon-Bebb (Opportunity Candidate for Wellington Bays) and Robert Mason (Opportunity Candidate for Kenepuru) for a celebratory post-race pint.
 

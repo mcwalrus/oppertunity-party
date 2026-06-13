@@ -4,7 +4,7 @@ slug: 2025-08-26-submission-on-the-electoral-amendment-bill
 date: "2025-08-26"
 author: "Policy Team"
 url: "https://www.opportunity.org.nz/electoral_amendment_bill_submission"
-scrapedAt: "2026-06-12T16:04:12.744623"
+scrapedAt: "2026-06-13T15:05:38.302321"
 ---
 ## Submission on the Electoral Amendment Bill
 

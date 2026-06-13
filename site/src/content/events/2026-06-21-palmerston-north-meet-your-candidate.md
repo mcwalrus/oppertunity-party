@@ -7,7 +7,7 @@ venue: "Palmerston North Community Leisure Centre"
 address: "569 Ferguson Street Terrace End, Palmerston North 4410, New Zealand"
 location: "Palmerston North Community Leisure Centre, Palmerston North, New Zealand"
 url: "https://www.opportunity.org.nz/palmerston-north-meet-netra"
-scrapedAt: "2026-06-12T16:04:10.879414"
+scrapedAt: "2026-06-13T15:05:38.288306"
 ---
 ## **Meet Opportunity candidate for Palmerston North, Netra Ghimire, and Party Leader Qiulae Wong!**
 

@@ -7,7 +7,7 @@ venue: "The Boathouse, 326 Wakefield Quay, Nelson"
 address: "326 Wakefield Quay, Nelson 7010, New Zealand"
 location: "The Boathouse, Nelson, New Zealand"
 url: "https://www.opportunity.org.nz/nelson_meet_your_candidate"
-scrapedAt: "2026-06-12T16:04:10.143481"
+scrapedAt: "2026-06-13T15:05:38.274271"
 ---
 Jodie Kuntzsch is our new Opportunity Party candidate for the Nelson electorate, and this is your chance to meet her as she launches her campaign.
 

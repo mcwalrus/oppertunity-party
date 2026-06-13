@@ -7,7 +7,7 @@ venue: "Brewtown Upper Hutt"
 address: "27 Blenheim St, Maidstone, Upper Hutt 5018, New Zealand"
 location: "Brewtown Upper Hutt, Upper Hutt, New Zealand"
 url: "https://www.opportunity.org.nz/opportunity_at_brewtown_market"
-scrapedAt: "2026-06-12T16:04:07.137335"
+scrapedAt: "2026-06-13T15:05:38.239177"
 ---
 The Opportunity Party will be at the Brewtown Market!
 

@@ -4,7 +4,7 @@ slug: paul-jackson
 role: "Candidate"
 electorate: "Epsom"
 url: "https://www.opportunity.org.nz/candidate-paul-jackson"
-scrapedAt: "2026-06-12T16:04:12.004149"
+scrapedAt: "2026-06-13T15:05:38.436465"
 ---
 “Long term planning is critical in business, and the same applies to government – cross-party commitments to infrastructure, and eliminating policy see-saws that hinder our development.”
 

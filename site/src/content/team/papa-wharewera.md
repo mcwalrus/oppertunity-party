@@ -4,7 +4,7 @@ slug: papa-wharewera
 role: "Candidate"
 electorate: "Waiariki"
 url: "https://www.opportunity.org.nz/candidate-papa-wharewera"
-scrapedAt: "2026-06-12T16:04:23.435809"
+scrapedAt: "2026-06-13T15:05:38.705325"
 ---
 “Guided by evidence, informed by lived experience, and grounded in a genuine commitment to serving others.”
 

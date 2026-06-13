@@ -7,7 +7,7 @@ venue: "Postmasters"
 address: "54 Buckingham St, Arrowtown 9302, New Zealand"
 location: "Postmasters, Arrowtown, New Zealand"
 url: "https://www.opportunity.org.nz/coffee_with_your_candidate_14june"
-scrapedAt: "2026-06-12T16:04:07.867510"
+scrapedAt: "2026-06-13T15:05:38.244721"
 ---
 Curious about Opportunity Party's plan for the election, and what we'll do once we get into Parliament? Keen to make sure Queenstown's needs are understood? [Bianca Beebe](https://www.opportunity.org.nz/candidate-bianca-beebe) is your local Opportunity Party candidate, working for your Party vote in Southland. She's here to listen.
 

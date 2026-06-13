@@ -4,7 +4,7 @@ slug: 2026-01-28-submission-on-the-education-and-training-system-reform-amendmen
 date: "2026-01-28"
 author: "Policy Team"
 url: "https://www.opportunity.org.nz/education_and_training_system_reform_amendment_bill"
-scrapedAt: "2026-06-12T16:04:11.264062"
+scrapedAt: "2026-06-13T15:05:38.284777"
 ---
 ## Submission on The Education and Training (System Reform) Amendment Bill
 

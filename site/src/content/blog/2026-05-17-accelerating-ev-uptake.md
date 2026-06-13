@@ -4,7 +4,7 @@ slug: 2026-05-17-accelerating-ev-uptake
 date: "2026-05-17"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/accelerating_ev_uptake"
-scrapedAt: "2026-06-12T16:04:04.635850"
+scrapedAt: "2026-06-13T15:05:38.214363"
 ---
 ## Accelerating EV uptake
 

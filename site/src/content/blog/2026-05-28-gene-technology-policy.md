@@ -4,7 +4,7 @@ slug: 2026-05-28-gene-technology-policy
 date: "2026-05-28"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/gene_technology_policy"
-scrapedAt: "2026-06-12T16:04:03.392239"
+scrapedAt: "2026-06-13T15:05:38.197742"
 ---
 ## Gene Technology Policy
 
