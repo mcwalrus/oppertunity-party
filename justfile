@@ -1,25 +1,15 @@
 # Opportunity Party Scraper
 # Run `just` to see available recipes
+#
+# Pipeline (scrape, transform, pdfs) is managed via Dagster — run `just dev` to open the UI.
 
 # Install dependencies
 install:
     uv sync
 
-# Scrape everything and run the full transform pipeline
-scrape: install
-    uv run dagster asset materialize --select 'group:ingestion'
-
-# Run transforms only (no re-scraping)
-transform: install
-    uv run dagster asset materialize --select 'group:clean group:site'
-
 # Launch the Dagster UI dev server
 dev:
     uv run dg dev
-
-# Re-convert PDFs to markdown (no re-scrape)
-pdfs: install
-    uv run python main.py pdfs
 
 # Open scraped data in Finder
 open:
@@ -73,8 +63,8 @@ site-install:
 site-check: site-install
     cd site && pnpm check
 
-# Build the static site
-site-build: transform site-install
+# Build the static site (run pipeline via Dagster first to populate site/src/content/)
+site-build: site-install
     cd site && pnpm build
 
 # Preview the built site locally
