@@ -1,14 +1,11 @@
 """Clean layer assets — normalise raw scraper output to data/clean/."""
 
-from __future__ import annotations
-
-from typing import TYPE_CHECKING
+from pathlib import Path
 
 import dagster as dg
+from dagster import AssetExecutionContext
 
-if TYPE_CHECKING:
-    from pathlib import Path
-
+from pipeline.defs.partitions import policy_slug_partitions
 from pipeline.transforms.sources.opportunity_website import (
     CLEAN_DIR,
     regenerate_clean_index,
@@ -88,13 +85,19 @@ def clean_party_info() -> dg.MaterializeResult:
     )
 
 
-@dg.asset(group_name="clean", deps=["raw_pdfs"])
-def clean_pdfs() -> dg.MaterializeResult:
-    """Normalise raw PDF-document data → data/clean/pdf-document/."""
-    transform_opportunity_website(content_type="pdf-document")
+@dg.asset(
+    group_name="clean",
+    deps=["raw_pdfs"],
+    partitions_def=policy_slug_partitions,
+)
+def clean_pdfs(context: AssetExecutionContext) -> dg.MaterializeResult:
+    """Normalise raw PDF-document data → data/clean/pdf-document/ for a single policy slug."""
+    policy_slug = context.partition_key
+    transform_opportunity_website(content_type="pdf-document", policy_slug=policy_slug)
     output_dir = CLEAN_DIR / "pdf-document"
     return dg.MaterializeResult(
         metadata={
+            "policy_slug": policy_slug,
             "item_count": _item_count(output_dir),
             "output_path": str(output_dir),
         }

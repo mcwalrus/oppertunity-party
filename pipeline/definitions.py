@@ -31,11 +31,11 @@ from pipeline.defs.assets.site import (
     site_policies,
     site_team,
 )
-from pipeline.defs.jobs import full_pipeline, ingestion_job, transforms_job
+from pipeline.defs.jobs import full_pipeline, ingestion_job, pdf_job, transforms_job
 from pipeline.defs.schedules import weekly_full_pipeline
 
 defs = dg.Definitions(
-    jobs=[full_pipeline, ingestion_job, transforms_job],
+    jobs=[full_pipeline, ingestion_job, transforms_job, pdf_job],
     schedules=[weekly_full_pipeline],
     assets=[
         raw_policies,

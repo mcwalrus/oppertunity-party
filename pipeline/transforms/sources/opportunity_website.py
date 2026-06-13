@@ -46,6 +46,7 @@ SOURCE_TYPE = "website"
 
 def transform_opportunity_website(
     content_type: str | None = None,
+    policy_slug: str | None = None,
 ) -> list[dict[str, str]]:
     """Read content types from sources and write normalized items to data/clean/.
 
@@ -57,6 +58,9 @@ def transform_opportunity_website(
             When ``None`` (default) all types are processed and
             ``data/clean/_index.json`` is regenerated — preserving the
             existing behaviour.
+        policy_slug: When provided alongside ``content_type='pdf-document'``,
+            only PDFs belonging to that policy slug are processed.  Ignored
+            for all other content types.
 
     Returns a list of index entries suitable for ``data/clean/_index.json``.
     """
@@ -75,7 +79,7 @@ def transform_opportunity_website(
     if content_type is None or content_type == "party-information":
         index_entries += _transform_party_info(cleaned_at)
     if content_type is None or content_type == "pdf-document":
-        index_entries += _transform_pdf_documents(cleaned_at)
+        index_entries += _transform_pdf_documents(cleaned_at, policy_slug=policy_slug)
 
     if content_type is None:
         _write_index(index_entries)
@@ -461,12 +465,20 @@ def _transform_news(cleaned_at: str) -> list[dict[str, str]]:
     return entries
 
 
-def _transform_pdf_documents(cleaned_at: str) -> list[dict[str, str]]:
+def _transform_pdf_documents(
+    cleaned_at: str,
+    policy_slug: str | None = None,
+) -> list[dict[str, str]]:
     """Write data/clean/pdf-document/{slug}/ for each extracted PDF markdown file.
 
     PDF markdown files live inside ``policies/{policy-slug}/pdf-*.md`` in the
     source layer.  Each becomes its own ``pdf-document`` clean item whose slug
     is ``{policy-slug}-{pdf-type}`` (e.g. ``tax-reset-policy-overview``).
+
+    Args:
+        cleaned_at: ISO timestamp recorded as ``cleaned_at`` in each item.
+        policy_slug: When provided, only the matching policy slug is processed.
+            Omit (or pass ``None``) to process all slugs.
     """
     policies_dir = SOURCE_DIR / "policies"
     if not policies_dir.exists():
@@ -476,7 +488,10 @@ def _transform_pdf_documents(cleaned_at: str) -> list[dict[str, str]]:
     for slug_dir in sorted(policies_dir.iterdir()):
         if not slug_dir.is_dir():
             continue
-        policy_slug = slug_dir.name
+        # Skip slugs that don't match the requested partition.
+        if policy_slug is not None and slug_dir.name != policy_slug:
+            continue
+        policy_slug_val = slug_dir.name
 
         for pdf_file in sorted(slug_dir.glob("pdf-*.md")):
             raw = pdf_file.read_text(encoding="utf-8")
@@ -484,13 +499,13 @@ def _transform_pdf_documents(cleaned_at: str) -> list[dict[str, str]]:
             # Extract metadata table from PDF markdown
             pdf_meta = _extract_pdf_table_meta(raw)
             doc_type = pdf_meta.get("Document Type", pdf_file.stem.replace("pdf-", ""))
-            title_base = pdf_meta.get("Policy", policy_slug.replace("-", " ").title())
+            title_base = pdf_meta.get("Policy", policy_slug_val.replace("-", " ").title())
             title = f"{title_base} — {doc_type}" if doc_type else title_base
             ingested_at = pdf_meta.get("Downloaded", cleaned_at)
 
             # Slug: "{policy-slug}-{pdf-stem-without-pdf-prefix}"
             pdf_type = pdf_file.stem[len("pdf-") :]  # e.g. "policy-overview"
-            doc_slug = f"{policy_slug}-{pdf_type}"
+            doc_slug = f"{policy_slug_val}-{pdf_type}"
 
             body = _strip_pdf_metadata_table(raw)
 
@@ -503,7 +518,7 @@ def _transform_pdf_documents(cleaned_at: str) -> list[dict[str, str]]:
                 "ingested_at": ingested_at,
                 "cleaned_at": cleaned_at,
                 "title": title,
-                "policy_slug": policy_slug,
+                "policy_slug": policy_slug_val,
             }
             _write_clean_item("pdf-document", doc_slug, meta, body)
             print(f"  📝 clean/pdf-document/{doc_slug}/{doc_slug}.md")

@@ -1,11 +1,11 @@
 """Ingestion layer assets — raw scraper output per content type."""
 
-from __future__ import annotations
-
 import json
 
 import dagster as dg
+from dagster import AssetExecutionContext
 
+from pipeline.defs.partitions import policy_slug_partitions
 from pipeline.ingestion.blog_posts import save_blog_posts, scrape_blog_posts
 from pipeline.ingestion.client import DATA_DIR
 from pipeline.ingestion.events import save_events, scrape_events
@@ -91,17 +91,24 @@ def raw_party_info() -> dg.MaterializeResult:
     )
 
 
-@dg.asset(group_name="ingestion", deps=["raw_policies"])
-def raw_pdfs() -> dg.MaterializeResult:
-    """Download policy PDFs — depends on raw_policies being materialised first.
+@dg.asset(
+    group_name="ingestion",
+    deps=["raw_policies"],
+    partitions_def=policy_slug_partitions,
+)
+def raw_pdfs(context: AssetExecutionContext) -> dg.MaterializeResult:
+    """Download policy PDFs for a single policy slug (partition).
 
-    Loads the policy index written by ``raw_policies`` to obtain PDF URLs,
-    then delegates to :func:`~scraper.pdf_download.download_policy_pdfs`.
+    Reads the policy index written by ``raw_policies``, filters to the current
+    partition key (policy slug), then downloads any PDFs found for that policy.
     """
+    policy_slug = context.partition_key
+
     index_path = DATA_DIR / "policies" / "index.json"
+    policies: list[PolicyPage] = []
     if index_path.exists():
         data: list[dict] = json.loads(index_path.read_text(encoding="utf-8"))
-        policies: list[PolicyPage] = [
+        policies = [
             PolicyPage(
                 slug=entry["slug"],
                 title=entry["title"],
@@ -111,14 +118,14 @@ def raw_pdfs() -> dg.MaterializeResult:
                 scraped_at=entry.get("scraped_at", ""),
             )
             for entry in data
+            if entry["slug"] == policy_slug
         ]
-    else:
-        policies = []
 
     results = download_policy_pdfs(policies)
     output_dir = DATA_DIR / "pdfs"
     return dg.MaterializeResult(
         metadata={
+            "policy_slug": policy_slug,
             "item_count": len(results),
             "output_path": str(output_dir),
         }
