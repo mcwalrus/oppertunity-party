@@ -1,7 +1,0 @@
-[32m2026-06-12 16:04:01 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50477 - LOGS_CAPTURED - Capturing logs for process (pid: 50477).
-[32m2026-06-12 16:04:01 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50477 - raw_party_info - STEP_START - Started execution of step "raw_party_info".
-gdown timed out for code-of-conduct — trying curl fallback
-All download attempts failed for code-of-conduct (https://drive.google.com/file/d/1ssxdjpDF3gPNtUCsaS_IHVDuTaNQyhnU/preview)
-[32m2026-06-12 16:05:07 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50477 - raw_party_info - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
-[32m2026-06-12 16:05:07 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50477 - raw_party_info - ASSET_MATERIALIZATION - Materialized value raw_party_info.
-[32m2026-06-12 16:05:07 +1200[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bb417d62-9f90-48e2-9999-82a6a1bc2e49 - 50477 - raw_party_info - STEP_SUCCESS - Finished execution of step "raw_party_info" in 1m6s.

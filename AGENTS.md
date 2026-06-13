@@ -32,7 +32,7 @@ Run the onboarding script once on a fresh machine (macOS/Linux only):
 ./scripts/setup.sh
 ```
 
-This installs all system dependencies via Homebrew (`scripts/Brewfile`), installs [pi](https://pi.dev), configures shell hooks for `fnm` and `direnv`, installs Node + Python + site deps, and wires up git hooks.
+This installs all system dependencies via Homebrew (`scripts/Brewfile`), installs [pi](https://pi.dev), configures shell hooks for `fnm` and `direnv`, installs Node + Python + site deps, and wires up git hooks. Keep track of all tools or major dependencies going forward.
 
 ## CLI Tools
 
@@ -52,11 +52,11 @@ This installs all system dependencies via Homebrew (`scripts/Brewfile`), install
 
 ## Python Libraries
 
-| Library       | Purpose                                          |
-| ------------- | ------------------------------------------------ |
-| `yt-dlp`      | Download videos                                  |
-| `pymupdf4llm` | PDF to markdown converter (strongly vetted)      |
-| `dagster`     | ETL pipeline orchestration (asset-based)         |
+| Library       | Purpose                                     |
+| ------------- | ------------------------------------------- |
+| `yt-dlp`      | Download videos                             |
+| `pymupdf4llm` | PDF to markdown converter (strongly vetted) |
+| `dagster`     | ETL pipeline orchestration (asset-based)    |
 
 ## Node Libraries
 

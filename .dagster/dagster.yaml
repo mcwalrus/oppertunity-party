@@ -1,0 +1,7 @@
+# Dagster instance configuration
+# DAGSTER_HOME is set to the project-local .dagster/ directory via .envrc.
+# All run history, event logs, and compute logs are stored here and gitignored.
+# See: https://docs.dagster.io/deployment/dagster-instance
+
+telemetry:
+  enabled: false

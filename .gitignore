@@ -24,6 +24,13 @@ dagster/
 dagster_project/
 data/
 
+# Dagster runtime home (runs, logs, event store) — keep only the config file
+.dagster/*
+!.dagster/dagster.yaml
+
+# Dagster ephemeral temp homes (created when DAGSTER_HOME is unset)
+.tmp_dagster*/
+
 # MCP (under development)
 mcp/
 
