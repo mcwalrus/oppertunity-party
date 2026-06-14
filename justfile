@@ -95,20 +95,11 @@ hooks-install:
     @echo "Git hooks installed via lefthook."
 
 # ── Firecrawl (standalone, separate from Dagster) ────────────────────────────
-# These commands hit the live opportunity.org.nz site on demand.
-# Run `direnv allow` inside firecrawl/ first to load FIRECRAWL_API_KEY.
+# All firecrawl commands live in firecrawl/justfile — run `just` there to see them.
+# cd firecrawl && just          # list all firecrawl recipes
+# cd firecrawl && just status   # check credits + auth
+# cd firecrawl && just all      # download site + generate llms files
 
-# Map all URLs on the live site
-firecrawl-map:
-    cd firecrawl && FIRECRAWL_API_KEY=$(cat .firecrawl-api-key) ./node_modules/.bin/firecrawl map https://www.opportunity.org.nz/
-
-# Download entire site as local markdown files into firecrawl/.firecrawl/
-firecrawl-download:
-    cd firecrawl && FIRECRAWL_API_KEY=$(cat .firecrawl-api-key) bash scripts/download.sh
-
-# Build llms.txt + llms-full.txt from a previous download run
-firecrawl-generate-llms:
-    cd firecrawl && bash scripts/generate-llms.sh
-
-# Download then immediately generate llms files (full pipeline)
-firecrawl: firecrawl-download firecrawl-generate-llms
+# Full firecrawl pipeline: download live site and regenerate llms files
+firecrawl:
+    cd firecrawl && just all
