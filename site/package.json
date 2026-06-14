@@ -11,12 +11,17 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "generate:sitemap": "node scripts/generate-sitemap.mjs"
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "deploy": "astro build && wrangler deploy"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["workerd"]
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@types/node": "^25.9.2",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4"
   },
   "dependencies": {
     "astro": "^6.4.6"

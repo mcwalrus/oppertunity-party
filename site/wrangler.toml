@@ -1,0 +1,10 @@
+name = "opportunity-party"
+compatibility_date = "2026-06-13"
+
+# Static asset serving — no Worker code needed for a fully pre-rendered Astro site.
+# Once you've registered your domain, add a custom domain in the Cloudflare dashboard
+# (Workers & Pages → your worker → Settings → Domains & Routes) and update
+# the `site` field in astro.config.mjs to match.
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"
