@@ -1,0 +1,14 @@
+{
+  "name": "firecrawl",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "download": "bash scripts/download.sh",
+    "generate-llms": "bash scripts/generate-llms.sh",
+    "map": "firecrawl map https://www.opportunity.org.nz/",
+    "scrape": "firecrawl scrape"
+  },
+  "dependencies": {
+    "firecrawl-cli": "^1.19.6"
+  }
+}

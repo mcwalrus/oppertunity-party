@@ -1,0 +1,14 @@
+# pnpm dependencies
+node_modules/
+
+# Firecrawl CLI output (scraped content, search results)
+.firecrawl/
+
+# Generated LLM artefacts (commit intentionally for snapshots)
+output/
+
+# API key / environment files
+.env
+.env.local
+.env.*.local
+.firecrawl-api-key
