@@ -75,6 +75,13 @@ site-preview: site-build
 site-dev: site-install
     cd site && pnpm dev
 
+# Deploy the static site to Cloudflare Workers (builds first).
+# One-time auth: cd site && pnpm wrangler login
+# Once you have a custom domain, add it via the Cloudflare dashboard and
+# update the `site` field in site/astro.config.mjs.
+site-deploy: site-install
+    cd site && pnpm deploy
+
 # Resolve docs_site_map.md with absolute URLs.
 # Reads site/dist/docs_site_map.md and rewrites relative links using SITE_URL.
 # Requires: SITE_URL env var (or set in site/.env.local), and a prior site-build run.
@@ -86,3 +93,22 @@ site-generate-sitemap: site-install
 hooks-install:
     lefthook install
     @echo "Git hooks installed via lefthook."
+
+# ── Firecrawl (standalone, separate from Dagster) ────────────────────────────
+# These commands hit the live opportunity.org.nz site on demand.
+# Run `direnv allow` inside firecrawl/ first to load FIRECRAWL_API_KEY.
+
+# Map all URLs on the live site
+firecrawl-map:
+    cd firecrawl && FIRECRAWL_API_KEY=$(cat .firecrawl-api-key) ./node_modules/.bin/firecrawl map https://www.opportunity.org.nz/
+
+# Download entire site as local markdown files into firecrawl/.firecrawl/
+firecrawl-download:
+    cd firecrawl && FIRECRAWL_API_KEY=$(cat .firecrawl-api-key) bash scripts/download.sh
+
+# Build llms.txt + llms-full.txt from a previous download run
+firecrawl-generate-llms:
+    cd firecrawl && bash scripts/generate-llms.sh
+
+# Download then immediately generate llms files (full pipeline)
+firecrawl: firecrawl-download firecrawl-generate-llms
