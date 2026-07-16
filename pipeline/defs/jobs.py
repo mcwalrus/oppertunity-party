@@ -7,10 +7,16 @@ from pipeline.defs.partitions import policy_slug_partitions
 # PDF assets are partitioned by policy slug and managed separately via pdf_job.
 _pdf_assets = dg.AssetSelection.assets("raw_pdfs") | dg.AssetSelection.assets("clean_pdfs")
 
+# site_deploy is excluded from full_pipeline because it is a production-affecting
+# action (publishes to Cloudflare Workers).  Launch it explicitly via
+# site_deploy_job.
+_production_assets = dg.AssetSelection.assets("site_deploy")
+
 full_pipeline = dg.define_asset_job(
     name="full_pipeline",
-    # Excludes partitioned PDF assets — run pdf_job per partition for those.
-    selection=dg.AssetSelection.all() - _pdf_assets,
+    # Excludes partitioned PDF assets (run pdf_job per partition) and the
+    # production-affecting site_deploy asset (use site_deploy_job).
+    selection=dg.AssetSelection.all() - _pdf_assets - _production_assets,
 )
 
 ingestion_job = dg.define_asset_job(
@@ -33,4 +39,14 @@ pdf_job = dg.define_asset_job(
     ),
     selection=_pdf_assets,
     partitions_def=policy_slug_partitions,
+)
+
+site_deploy_job = dg.define_asset_job(
+    name="site_deploy_job",
+    description=(
+        "Deploy the static site to Cloudflare Workers via wrangler. "
+        "Production-affecting — run after site_build and site_sitemap_resolved "
+        "have materialised (full_pipeline handles both automatically)."
+    ),
+    selection=dg.AssetSelection.assets("site_deploy"),
 )

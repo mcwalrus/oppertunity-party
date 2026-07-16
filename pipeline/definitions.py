@@ -1,8 +1,7 @@
 """Root-level Dagster code location entry point.
 
 ``dg dev`` discovers this file via the ``[tool.dagster]`` section in
-``pyproject.toml``.  All assets, jobs, and schedules are wired here once
-they exist; for now the Definitions object is intentionally empty.
+``pyproject.toml``.  All assets, jobs, and schedules are wired here.
 """
 
 import dagster as dg
@@ -26,24 +25,41 @@ from pipeline.defs.assets.ingestion import (
 )
 from pipeline.defs.assets.site import (
     site_blog,
+    site_build,
+    site_deploy,
     site_events,
     site_party_info,
     site_policies,
+    site_sitemap_resolved,
     site_team,
 )
-from pipeline.defs.jobs import full_pipeline, ingestion_job, pdf_job, transforms_job
+from pipeline.defs.jobs import (
+    full_pipeline,
+    ingestion_job,
+    pdf_job,
+    site_deploy_job,
+    transforms_job,
+)
 from pipeline.defs.schedules import weekly_full_pipeline
 
 defs = dg.Definitions(
-    jobs=[full_pipeline, ingestion_job, transforms_job, pdf_job],
+    jobs=[
+        full_pipeline,
+        ingestion_job,
+        transforms_job,
+        pdf_job,
+        site_deploy_job,
+    ],
     schedules=[weekly_full_pipeline],
     assets=[
+        # ingestion layer
         raw_policies,
         raw_team,
         raw_blog,
         raw_events,
         raw_party_info,
         raw_pdfs,
+        # clean layer
         clean_policies,
         clean_team,
         clean_blog,
@@ -51,10 +67,14 @@ defs = dg.Definitions(
         clean_party_info,
         clean_pdfs,
         clean_index,
+        # site layer (content → build → sitemap → deploy)
         site_policies,
         site_blog,
         site_events,
         site_team,
         site_party_info,
+        site_build,
+        site_sitemap_resolved,
+        site_deploy,
     ],
 )
