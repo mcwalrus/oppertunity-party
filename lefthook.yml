@@ -29,10 +29,11 @@ pre-commit:
     # -------------------------------------------------------------------------
     # ty — static type checker (the lint-checker; Astral's fast type-checker)
     # Checks the whole project; ty doesn't accept individual file paths.
+    # Excludes .agents/ (vendored third-party skill code).
     # -------------------------------------------------------------------------
     ty:
       glob: "*.py"
-      run: uv run ty check --error-on-warning
+      run: uv run ty check --error-on-warning --exclude '.agents/**'
 
     # -------------------------------------------------------------------------
     # markdown-link-check — validates every link in scraped data output.
