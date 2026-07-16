@@ -1,0 +1,978 @@
+[
+  {
+    "slug": "abundant-energy",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/abundant-energy",
+    "title": "Abundant Energy",
+    "date": ""
+  },
+  {
+    "slug": "affordable-housing",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/affordable_housing",
+    "title": "Affordable Housing",
+    "date": ""
+  },
+  {
+    "slug": "charter",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Charter",
+    "date": ""
+  },
+  {
+    "slug": "citizens-voice",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/citizens-voice",
+    "title": "Citizens' Voice",
+    "date": ""
+  },
+  {
+    "slug": "clean-up-politics",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/clean_up_politics",
+    "title": "Clean up Politics",
+    "date": ""
+  },
+  {
+    "slug": "climate-action",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/climate_action",
+    "title": "Climate Action",
+    "date": ""
+  },
+  {
+    "slug": "constitution",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Constitution",
+    "date": ""
+  },
+  {
+    "slug": "future-fit-education",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/future_fit_education",
+    "title": "Future-fit Education",
+    "date": ""
+  },
+  {
+    "slug": "healthy-land",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/healthy_land",
+    "title": "Healthy Land",
+    "date": ""
+  },
+  {
+    "slug": "healthy-oceans",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/healthy-oceans",
+    "title": "Healthy Oceans",
+    "date": ""
+  },
+  {
+    "slug": "healthy-people",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/healthy_people",
+    "title": "Healthy People",
+    "date": ""
+  },
+  {
+    "slug": "honouring-te-tiriti",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/honouring_te_tiriti",
+    "title": "Honouring Te Tiriti",
+    "date": ""
+  },
+  {
+    "slug": "intergenerational-infrastructure",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/intergenerational_infrastructure",
+    "title": "Inter-generational Infrastructure",
+    "date": ""
+  },
+  {
+    "slug": "productivity-unleashed",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/productivity-unleashed",
+    "title": "Breakthrough Economy",
+    "date": ""
+  },
+  {
+    "slug": "smart-on-crime",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/smart_on_crime",
+    "title": "Smart on Crime",
+    "date": ""
+  },
+  {
+    "slug": "tax-reset",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/tax-reset",
+    "title": "Tax Reset",
+    "date": ""
+  },
+  {
+    "slug": "2025-07-20-the-opportunity-party-calls-for-bipartisanship-on-policy-costing-unit",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/policy-costing-unit",
+    "title": "The Opportunity Party calls for bipartisanship on policy costing unit",
+    "date": "2025-07-20"
+  },
+  {
+    "slug": "2025-08-21-top-stories-citizen-voice-regulatory-standards-candidate-college",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/top-stories-1",
+    "title": "TOP Stories: Citizen Voice, Regulatory Standards, Candidate College",
+    "date": "2025-08-21"
+  },
+  {
+    "slug": "2025-08-26-statement-on-the-situation-in-gaza",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/situation_in_gaza",
+    "title": "Statement on the situation in Gaza",
+    "date": "2025-08-26"
+  },
+  {
+    "slug": "2025-08-26-submission-on-the-electoral-amendment-bill",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/electoral_amendment_bill_submission",
+    "title": "Submission on the Electoral Amendment Bill",
+    "date": "2025-08-26"
+  },
+  {
+    "slug": "2025-12-21-on-the-hunt-for-new-zealands-north-star",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/on_the_hunt_for_new_zealand_s_north_star",
+    "title": "On the hunt for New Zealand’s North Star",
+    "date": "2025-12-21"
+  },
+  {
+    "slug": "2026-01-28-submission-on-the-education-and-training-system-reform-amendment-bill",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/education_and_training_system_reform_amendment_bill",
+    "title": "Submission on The Education and Training (System Reform) Amendment Bill",
+    "date": "2026-01-28"
+  },
+  {
+    "slug": "2026-02-05-q-needs-you",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/q_needs_you",
+    "title": "Q Needs You!",
+    "date": "2026-02-05"
+  },
+  {
+    "slug": "2026-02-06-qs-reflections-from-waitangi",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/5_reflections_from_waitangi",
+    "title": "Q's reflections from Waitangi",
+    "date": "2026-02-06"
+  },
+  {
+    "slug": "2026-03-02-submission-on-the-budget-policy-statement-2026",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/submission_on_the_budget_policy_statement_2026",
+    "title": "Submission on the Budget Policy Statement 2026",
+    "date": "2026-03-02"
+  },
+  {
+    "slug": "2026-03-03-call-for-government-reversal-on-lng-terminal",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/call_for_government_reversal_on_lng_terminal",
+    "title": "Call for Government reversal on LNG terminal",
+    "date": "2026-03-03"
+  },
+  {
+    "slug": "2026-03-03-statement-on-the-middle-east-crisis",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/statement_on_middle_east_crisis",
+    "title": "Statement on the Middle East Crisis",
+    "date": "2026-03-03"
+  },
+  {
+    "slug": "2026-03-23-statement-on-the-fisheries-amendment-bill",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/statement_on_the_fisheries_amendment_bill",
+    "title": "Statement on the Fisheries Amendment Bill",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "2026-03-25-meet-the-first-opportunity-candidates",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/meet_the_opportunity_candidates",
+    "title": "Meet the first Opportunity candidates",
+    "date": "2026-03-25"
+  },
+  {
+    "slug": "2026-04-09-free-public-transport",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/free_public_transport",
+    "title": "Free Public Transport",
+    "date": "2026-04-09"
+  },
+  {
+    "slug": "2026-05-04-submission-on-the-fisheries-amendment-bill",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/submission_on_the_fisheries_amendment_bill",
+    "title": "Submission on the Fisheries Amendment Bill",
+    "date": "2026-05-04"
+  },
+  {
+    "slug": "2026-05-17-accelerating-ev-uptake",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/accelerating_ev_uptake",
+    "title": "Accelerating EV uptake",
+    "date": "2026-05-17"
+  },
+  {
+    "slug": "2026-05-21-prosperity-doesnt-start-with-a-shredder",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/prosperity_doesn_t_start_with_a_shredder",
+    "title": "Prosperity doesn’t start with a shredder",
+    "date": "2026-05-21"
+  },
+  {
+    "slug": "2026-05-27-left-right-politics-is-failing-new-zealand",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/_left_right_politics_is_failing_new_zealand",
+    "title": "Left-right politics is failing New Zealand",
+    "date": "2026-05-27"
+  },
+  {
+    "slug": "2026-05-28-gene-technology-policy",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/gene_technology_policy",
+    "title": "Gene Technology Policy",
+    "date": "2026-05-28"
+  },
+  {
+    "slug": "2026-06-01-the-pray-and-delay-budget",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/the_pray_and_delay_budget",
+    "title": "The Pray and Delay Budget",
+    "date": "2026-06-01"
+  },
+  {
+    "slug": "2026-06-09-submission-on-the-definitions-of-woman-and-man-amendment-bill",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/submission_on_the_definitions_of_woman_and_man_amendment_bill",
+    "title": "Submission on the ‘Definitions of Woman and Man’ Amendment Bill",
+    "date": "2026-06-09"
+  },
+  {
+    "slug": "2026-06-15-opportunity-mps-accommodation-allowance-policy",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/opportunity_accommodation_allowance_policy",
+    "title": "Opportunity MPs accommodation allowance policy",
+    "date": "2026-06-15"
+  },
+  {
+    "slug": "2026-06-19-charitable-giving-tax-credit-cap",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/charitable_giving_tax_credit_cap",
+    "title": "Charitable giving tax credit cap",
+    "date": "2026-06-19"
+  },
+  {
+    "slug": "2026-06-19-when-the-bill-comes-due",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/when_the_bill_comes_due",
+    "title": "When the bill comes due",
+    "date": "2026-06-19"
+  },
+  {
+    "slug": "2026-07-03-submission-on-the-disability-support-services-bill",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/submission_on_the_disability_support_services_bill",
+    "title": "Submission on the Disability Support Services Bill",
+    "date": "2026-07-03"
+  },
+  {
+    "slug": "2026-07-03-whos-listening-to-our-disability-advocates",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/who_s_listening_to_our_disability_advocates",
+    "title": "Who’s listening to our disability advocates?",
+    "date": "2026-07-03"
+  },
+  {
+    "slug": "accelerating-ev-uptake",
+    "content_type": "blog-post",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/accelerating_ev_uptake",
+    "title": "Accelerating EV uptake",
+    "date": ""
+  },
+  {
+    "slug": "2026-06-08-volunteer-campaign-planning-tauranga",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/volunteer_campaign_planning",
+    "title": "Volunteer campaign planning - Tauranga",
+    "date": "2026-06-08"
+  },
+  {
+    "slug": "2026-06-09-meet-qiulae-wong-and-the-canterbury-candidates",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/meet_the_candidates_canterbury",
+    "title": "Meet Qiulae Wong and the Canterbury candidates",
+    "date": "2026-06-09"
+  },
+  {
+    "slug": "2026-06-10-northcote-electorate-catch-up",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/northcote_june",
+    "title": "Northcote Electorate Catch-up",
+    "date": "2026-06-10"
+  },
+  {
+    "slug": "2026-06-12-new-plymouth-campaign-get-together",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/np_volunteers",
+    "title": "New Plymouth campaign get together",
+    "date": "2026-06-12"
+  },
+  {
+    "slug": "2026-06-13-coffee-with-your-candidate",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/coffee_and_policy_14_6",
+    "title": "Coffee with your candidate",
+    "date": "2026-06-13"
+  },
+  {
+    "slug": "2026-06-13-dunedin-cafe-tour",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/dunedin_cafe_tour",
+    "title": "Dunedin cafe tour",
+    "date": "2026-06-13"
+  },
+  {
+    "slug": "2026-06-13-meet-robert-mason",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/meet_robert_mason",
+    "title": "Meet Robert Mason",
+    "date": "2026-06-13"
+  },
+  {
+    "slug": "2026-06-13-policy-pints-with-kayla-kingdon-bebb",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/policy_and_pints_with_kayla",
+    "title": "Policy & Pints with Kayla Kingdon-Bebb",
+    "date": "2026-06-13"
+  },
+  {
+    "slug": "2026-06-13-westport-opportunity-pop-in-clinic",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/westport_pop_in_clinic",
+    "title": "Westport Opportunity Pop-in Clinic",
+    "date": "2026-06-13"
+  },
+  {
+    "slug": "2026-06-14-coffee-with-your-candidate",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/coffee_with_your_candidate_14june",
+    "title": "Coffee With Your Candidate",
+    "date": "2026-06-14"
+  },
+  {
+    "slug": "2026-06-14-meet-qiulae-in-mt-albert",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/meet_qiulae_in_mt_albert",
+    "title": "Meet Qiulae in Mt Albert",
+    "date": "2026-06-14"
+  },
+  {
+    "slug": "2026-06-14-opportunity-at-brewtown-market",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/opportunity_at_brewtown_market",
+    "title": "Opportunity at Brewtown Market",
+    "date": "2026-06-14"
+  },
+  {
+    "slug": "2026-06-16-healthy-oceans-casual-forum",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/inv_oceans_forum",
+    "title": "Healthy Oceans Casual Forum",
+    "date": "2026-06-16"
+  },
+  {
+    "slug": "2026-06-16-healthy-oceans-public-forum",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/inv_oceans_forum",
+    "title": "Healthy Oceans Public Forum",
+    "date": "2026-06-16"
+  },
+  {
+    "slug": "2026-06-17-nelson-meet-your-candidate",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/nelson_meet_your_candidate",
+    "title": "Nelson Meet your candidate",
+    "date": "Wednesday, 17 June"
+  },
+  {
+    "slug": "2026-06-20-dunedin-cafe-tour",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/dunedin_cafe_tour_2",
+    "title": "Dunedin cafe tour",
+    "date": "2026-06-20"
+  },
+  {
+    "slug": "2026-06-21-palmerston-north-meet-your-candidate",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/palmerston-north-meet-netra",
+    "title": "Palmerston North: Meet your candidate!",
+    "date": "2026-06-21"
+  },
+  {
+    "slug": "2026-06-27-dunedin-cafe-tour",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/dunedin_cafe_tour_3",
+    "title": "Dunedin cafe tour",
+    "date": "2026-06-27"
+  },
+  {
+    "slug": "2026-06-28-meet-ben-and-luke-candidates-for-hutt-south-and-remutaka",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/meet_ben_and_luke_wainuiomata",
+    "title": "Meet Ben and Luke: Candidates for Hutt South and Remutaka",
+    "date": "2026-06-28"
+  },
+  {
+    "slug": "2026-06-28-opportunity-at-harbourside-market",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/opportunity_at_harbourside_market",
+    "title": "Opportunity at Harbourside Market",
+    "date": "2026-06-28"
+  },
+  {
+    "slug": "2026-06-28-wellington-marathon-opportunity-afterparty",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/wellington_marathon_afterparty",
+    "title": "Wellington Marathon - Opportunity Afterparty",
+    "date": "2026-06-28"
+  },
+  {
+    "slug": "2026-07-04-wellington-supporters-meetup-july",
+    "content_type": "event",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/wellington_cluster_catchup_20260704",
+    "title": "Wellington Supporters Meetup - July",
+    "date": "2026-07-04"
+  },
+  {
+    "slug": "adam-macrae-martin",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-adam-macrae-martin",
+    "title": "Adam MacRae-Martin",
+    "date": ""
+  },
+  {
+    "slug": "adrian-mee",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-adrian-mee",
+    "title": "Adrian Mee",
+    "date": ""
+  },
+  {
+    "slug": "almo-wong",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-almo-wong",
+    "title": "Almo Wong",
+    "date": ""
+  },
+  {
+    "slug": "ben-lane",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-ben-lane",
+    "title": "Ben Lane",
+    "date": ""
+  },
+  {
+    "slug": "ben-wylie-van-eerd",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd",
+    "title": "Ben Wylie-van Eerd",
+    "date": ""
+  },
+  {
+    "slug": "bianca-beebe",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-bianca-beebe",
+    "title": "Bianca Beebe",
+    "date": ""
+  },
+  {
+    "slug": "blair-smith",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-blair-smith",
+    "title": "Blair Smith",
+    "date": ""
+  },
+  {
+    "slug": "cail-smith",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-cail-smith",
+    "title": "Cail Smith",
+    "date": ""
+  },
+  {
+    "slug": "chee-khiang-sng",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-chee-khiang-sng",
+    "title": "Chee-Khiang (CK) Sng",
+    "date": ""
+  },
+  {
+    "slug": "cindie-uddstrom",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
+    "title": "Cindie Uddstrom",
+    "date": ""
+  },
+  {
+    "slug": "cody-marsh",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-cody-marsh",
+    "title": "Cody Marsh",
+    "date": ""
+  },
+  {
+    "slug": "daniel-eb",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-daniel-eb",
+    "title": "Daniel Eb",
+    "date": ""
+  },
+  {
+    "slug": "dave-bainbridge-zafar",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-dave-bainbridge-zafar",
+    "title": "Dave Bainbridge-Zafar",
+    "date": ""
+  },
+  {
+    "slug": "derrick-paull",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-derrick-paull",
+    "title": "Derrick Paull",
+    "date": ""
+  },
+  {
+    "slug": "eden-skipper",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-eden-skipper",
+    "title": "Eden Skipper",
+    "date": ""
+  },
+  {
+    "slug": "evan-french",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-evan-french",
+    "title": "Evan French",
+    "date": ""
+  },
+  {
+    "slug": "finn-liley",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-finn-liley",
+    "title": "Finn Liley",
+    "date": ""
+  },
+  {
+    "slug": "helen-tait",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-helen-tait",
+    "title": "Helen Tait",
+    "date": ""
+  },
+  {
+    "slug": "holly-knill",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-holly-knill",
+    "title": "Holly Knill",
+    "date": ""
+  },
+  {
+    "slug": "jamie-attenborough",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-jamie-attenborough",
+    "title": "Jamie Attenborough",
+    "date": ""
+  },
+  {
+    "slug": "jessica-hammond",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-jessica-hammond",
+    "title": "Jessica Hammond",
+    "date": ""
+  },
+  {
+    "slug": "jodie-kuntzsch",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-jodie-kuntzsch",
+    "title": "Jodie Kuntzsch",
+    "date": ""
+  },
+  {
+    "slug": "johan-chang",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-johan-chang",
+    "title": "Johan Chang",
+    "date": ""
+  },
+  {
+    "slug": "kayla-kingdon-bebb",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-kayla-kingdon-bebb",
+    "title": "Dr. Kayla Kingdon-Bebb",
+    "date": ""
+  },
+  {
+    "slug": "kevin-huang",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-kevin-huang",
+    "title": "Kevin Huang",
+    "date": ""
+  },
+  {
+    "slug": "luke-ross",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-luke-ross",
+    "title": "Luke Ross",
+    "date": ""
+  },
+  {
+    "slug": "mark-roach",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-mark-roach",
+    "title": "Mark Roach",
+    "date": ""
+  },
+  {
+    "slug": "mathew-phillips",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-mathew-phillips",
+    "title": "Mathew Phillips",
+    "date": ""
+  },
+  {
+    "slug": "matt-harris",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-matt-harris",
+    "title": "Matt Harris",
+    "date": ""
+  },
+  {
+    "slug": "matt-shepherd",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-matt-shepherd",
+    "title": "Matt Shepherd",
+    "date": ""
+  },
+  {
+    "slug": "michael-carter",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-michael-carter",
+    "title": "Michael Carter",
+    "date": ""
+  },
+  {
+    "slug": "naomi-pocock",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-naomi-pocock",
+    "title": "Dr. Naomi Pocock",
+    "date": ""
+  },
+  {
+    "slug": "netra-ghimire",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-netra-ghimire",
+    "title": "Netra Ghimire",
+    "date": ""
+  },
+  {
+    "slug": "papa-wharewera",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-papa-wharewera",
+    "title": "Kaperiere \"Pāpā\" Wharewera",
+    "date": ""
+  },
+  {
+    "slug": "paul-jackson",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-paul-jackson",
+    "title": "Paul Jackson",
+    "date": ""
+  },
+  {
+    "slug": "qiulae-wong",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-qiulae-wong",
+    "title": "Qiulae (Q) Wong",
+    "date": ""
+  },
+  {
+    "slug": "rachel-ward",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-rachel-ward",
+    "title": "Rachel Ward",
+    "date": ""
+  },
+  {
+    "slug": "robert-mason",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-robert-mason",
+    "title": "Robert Mason",
+    "date": ""
+  },
+  {
+    "slug": "romeo-tevaga",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-romeo-tevaga",
+    "title": "Romeo Tevaga",
+    "date": ""
+  },
+  {
+    "slug": "sacha-haskell",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-sacha-haskell",
+    "title": "Sacha Haskell",
+    "date": ""
+  },
+  {
+    "slug": "sam-plummer",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-sam-plummer",
+    "title": "Sam Plummer",
+    "date": ""
+  },
+  {
+    "slug": "sarah-lucas",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-sarah-lucas",
+    "title": "Sarah Lucas",
+    "date": ""
+  },
+  {
+    "slug": "simon-dellabarca",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-simon-dellabarca",
+    "title": "Simon DellaBarca",
+    "date": ""
+  },
+  {
+    "slug": "team",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Opportunity Party — Team & Candidates Index",
+    "date": ""
+  },
+  {
+    "slug": "about",
+    "content_type": "party-information",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/about",
+    "title": "About",
+    "date": ""
+  },
+  {
+    "slug": "charter",
+    "content_type": "party-information",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Charter",
+    "date": ""
+  },
+  {
+    "slug": "constitution",
+    "content_type": "party-information",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Constitution",
+    "date": ""
+  },
+  {
+    "slug": "meet-q",
+    "content_type": "party-information",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/meet-q",
+    "title": "Meet Q",
+    "date": ""
+  },
+  {
+    "slug": "party-information",
+    "content_type": "party-information",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/party-information",
+    "title": "Party Information",
+    "date": ""
+  },
+  {
+    "slug": "abundant-energy-policy-overview",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Abundant Energy — Policy Overview",
+    "date": ""
+  },
+  {
+    "slug": "charter-default",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Charter — default",
+    "date": ""
+  },
+  {
+    "slug": "citizens-voice-policy-overview",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Citizen’s Voice — Policy Overview",
+    "date": ""
+  },
+  {
+    "slug": "constitution-default",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Constitution — default",
+    "date": ""
+  },
+  {
+    "slug": "healthy-land-default",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Healthy Land — default",
+    "date": ""
+  },
+  {
+    "slug": "healthy-oceans-policy-overview",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Healthy Oceans — Policy Overview",
+    "date": ""
+  },
+  {
+    "slug": "tax-reset-policy-addendum",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Tax Reset — Policy Addendum",
+    "date": ""
+  },
+  {
+    "slug": "tax-reset-policy-overview",
+    "content_type": "pdf-document",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Tax Reset — Policy Overview",
+    "date": ""
+  }
+]
