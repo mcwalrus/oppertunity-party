@@ -9,6 +9,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,7 +28,7 @@ jobs:
         run: uv run python main.py --clean
 
       - name: Transform data
-        run: uv run python -m transforms.main
+        run: uv run python -m pipeline.transforms.main
 
       - name: Setup Node
         uses: pnpm/action-setup@v4
@@ -51,3 +53,16 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: opportunity-party
           directory: site/dist
+
+      - name: Commit and push regenerated content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add site/src/content
+          if git diff --cached --quiet; then
+            echo "No content changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: regenerate site content from daily pipeline run"
+          git pull --rebase origin main
+          git push origin HEAD:main
