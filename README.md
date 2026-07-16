@@ -1,6 +1,14 @@
+![Opportunity Party — Expect Better](assets/opportunity-party-expect-better.webp)
+
 # Opportunity Party
 
-A scraping and analysis pipeline for [opportunity.org.nz](https://www.opportunity.org.nz). Web content is scraped, cleaned into canonical markdown, and built into a static site — ready for future analysis or introspection of downstream tooling on the party's people, policies, or manfiest.
+[![Daily Publish](https://github.com/mcwalrus/oppertunity-party/actions/workflows/daily-publish.yml/badge.svg)](https://github.com/mcwalrus/oppertunity-party/actions/workflows/daily-publish.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org)
+[![Dagster pipeline](https://img.shields.io/badge/orchestration-Dagster-5e30a8)](https://dagster.io)
+[![Built with Astro](https://img.shields.io/badge/site-Astro-FF5D01)](https://astro.build)
+
+A scraping and analysis pipeline for [opportunity.org.nz](https://www.opportunity.org.nz). Web content is scraped, cleaned into canonical markdown, and built into a static site — ready for future analysis or introspection of downstream tooling on the party's people, policies, or manfiest. See [LICENSE](LICENSE) for terms.
 
 ## Quickstart
 
@@ -19,39 +27,22 @@ This project is shaped for AI-assisted development: every workflow is observable
 
 ```mermaid
 flowchart LR
-    subgraph Sources["data/sources/ — gitignored, raw"]
-        S1[opportunity-website<br/>Python · BeautifulSoup]
-        S2[youtube<br/>yt-dlp]
-        S3[pdfs<br/>pymupdf4llm]
-    end
-
-    subgraph Dagster["Dagster pipeline — observable assets"]
-        A1[scrape assets]
-        A2[transform assets]
-        A3[site build assets]
-    end
-
-    subgraph Clean["data/clean/ — tracked, canonical"]
-        C1["policy · blog-post · event<br/>team-member · party-information · pdf-document<br/>_index.json (cross-type search index)"]
-    end
-
-    subgraph Site["site/ — Astro SSG"]
-        SSG[static HTML]
-    end
-
-    Sources --> A1 --> A2 --> Clean
-    Clean --> A3 --> SSG
+    raw[data/sources/<br/>raw ingestor output] --> scrape[scrape]
+    scrape --> transform[transform]
+    transform --> clean[data/clean/<br/>canonical markdown]
+    clean --> build[site build]
+    build --> site[static site]
 ```
 
 ## Key tools
 
 Three things to understand before you touch anything:
 
-**Dagster** — the Python orchestrator. Every scrape, transform, and build step is an *asset* under `pipeline/defs/assets/`. New sources, transforms, and consumers are added by writing new assets and wiring them into a job. The UI (`just dev`) shows the full lineage of any output back to its raw source — useful for visualisation. AI agents can use the `dg` utility enabled by `direnv`.
+**[Dagster](https://dagster.io)** — the Python orchestrator. Every scrape, transform, and build step is an *asset* under `pipeline/defs/assets/`. New sources, transforms, and consumers are added by writing new assets and wiring them into a job. The UI (`just dev`) shows the full lineage of any output back to its raw source — useful for visualisation. AI agents can use the `dg` utility enabled by `direnv`.
 
-**direnv** — auto-loads `.envrc` when you `cd` into the project. Combined with `uv`, every shell session gets the exact pinned toolchain (and a stable `DAGSTER_HOME`) without global installs. Run `direnv allow` once after cloning.
+**[direnv](https://direnv.net)** — auto-loads `.envrc` when you `cd` into the project. Combined with `uv`, every shell session gets the exact pinned toolchain (and a stable `DAGSTER_HOME`) without global installs. Run `direnv allow` once after cloning.
 
-**pi.dev** — the AI coding harness this project is shaped for. Skills, agent context, and the Dagster observability surface are designed so an agent can pick up any task without re-explaining the codebase. Additionally I have used `npx skills@latest` for downloading useful skills for project development.
+**[pi.dev](https://pi.dev)** — the AI coding harness this project is shaped for. Skills, agent context, and the Dagster observability surface are designed so an agent can pick up any task without re-explaining the codebase. Additionally I have used `npx skills@latest` for downloading useful skills for project development.
 
 ## Working with the data
 
