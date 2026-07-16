@@ -48,6 +48,9 @@ site/.pnpm-store/
 # personal todo file
 TASKLIST.md
 
+# Local-only direnv overrides (sourced by .envrc if present)
+.envrc.local
+
 # Beads / Dolt files (added by bd init)
 .dolt/
 *.db
