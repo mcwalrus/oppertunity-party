@@ -2,11 +2,12 @@
 title: "Healthy Oceans"
 slug: healthy-oceans
 url: "https://www.opportunity.org.nz/healthy-oceans"
-scrapedAt: "2026-06-13T15:05:38.271675"
+scrapedAt: "2026-07-16T10:44:28.481337"
 pdfDownloads:
   - "https://drive.google.com/file/d/1V8TIJAxJ2EYV0vYtVewo1co4ndE6eGTq/view?usp=drive_link"
 ---
-#### The ocean defines us as Kiwis. It's time to restore our precious marine ecosystems and grow a sustainable blue economy.
+The ocean defines us as Kiwis. It's time to restore our precious
+marine ecosystems and grow a sustainable blue economy.
 
 ### Ripping up our seabeds to sell a few more boxes of fish fingers is not a strategy for prosperity.
 

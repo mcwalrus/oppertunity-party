@@ -4,7 +4,7 @@ slug: johan-chang
 role: "Candidate"
 electorate: "Auckland Central"
 url: "https://www.opportunity.org.nz/candidate-johan-chang"
-scrapedAt: "2026-06-13T15:05:38.363184"
+scrapedAt: "2026-07-16T10:44:32.342163"
 ---
 “My family and I were welcomed to this country by an amazing community with kindness and grace. I’m standing in this election because I want everyone to feel the same charity once afforded to me, and to make sure that no New Zealander is left behind by political decisions that don't feel like it’s been made with their best interest at heart.”
 

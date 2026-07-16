@@ -4,7 +4,7 @@ slug: naomi-pocock
 role: "Candidate"
 electorate: "Hamilton East"
 url: "https://www.opportunity.org.nz/candidate-naomi-pocock"
-scrapedAt: "2026-06-13T15:05:38.586041"
+scrapedAt: "2026-07-16T10:44:45.544094"
 ---
 "I’ve been inspired by Qiulae to step up for Opportunity again — for my kids, for your kids, and for the future we all share. I want to help bring a party into Parliament that will stop the political flip‑flop and work with both sides to move New Zealand forward. Opportunity will put the environment and our communities at every decision‑making table, treat every taxpayer dollar with care, and invest in the things that genuinely build a better future for all of us."
 

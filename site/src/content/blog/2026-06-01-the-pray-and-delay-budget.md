@@ -4,7 +4,7 @@ slug: 2026-06-01-the-pray-and-delay-budget
 date: "2026-06-01"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/the_pray_and_delay_budget"
-scrapedAt: "2026-06-13T15:05:38.189619"
+scrapedAt: "2026-07-16T10:44:32.890470"
 ---
 ## The Pray and Delay Budget
 

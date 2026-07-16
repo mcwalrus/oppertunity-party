@@ -4,7 +4,7 @@ slug: jodie-kuntzsch
 role: "Candidate"
 electorate: "Nelson"
 url: "https://www.opportunity.org.nz/candidate-jodie-kuntzsch"
-scrapedAt: "2026-06-13T15:05:38.456056"
+scrapedAt: "2026-07-16T10:44:39.431060"
 ---
 “I stepped into politics because I want a future where Kiwi kids look back and say, *‘They did right by us'*.”
 

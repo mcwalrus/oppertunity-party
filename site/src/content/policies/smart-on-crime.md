@@ -2,7 +2,7 @@
 title: "Smart on Crime"
 slug: smart-on-crime
 url: "https://www.opportunity.org.nz/smart_on_crime"
-scrapedAt: "2026-06-13T15:05:38.448605"
+scrapedAt: "2026-07-16T10:44:40.089262"
 ---
 **It costs all of us more than $150,000 a year to house a prisoner. For context, we spend about $9,000 educating a child for a year.**
 
@@ -21,8 +21,7 @@ Opportunity will:
   health-led response to drug issues.
 * Expand programmes that help prisoners process the harm of family
   violence in their past.
-* Raise the age of the youth court jurisdiction to 25, in line with
-  developmental science.
+* Raise the age of the youth court jurisdiction, in line with developmental science.
 * Expand drug and mental health court pilot programmes.
 
 Interested to see the detailed policy at launch? Sign-up for

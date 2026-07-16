@@ -4,7 +4,7 @@ slug: michael-carter
 role: "Candidate"
 electorate: "Tauranga"
 url: "https://www.opportunity.org.nz/candidate-michael-carter"
-scrapedAt: "2026-06-13T15:05:38.351124"
+scrapedAt: "2026-07-16T10:44:31.481434"
 ---
 “With a creative and practical mindset, I aim to make a positive difference to people and the environment through future-focused policies.”
 

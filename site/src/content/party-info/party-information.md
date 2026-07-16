@@ -2,7 +2,7 @@
 title: "Party Information"
 slug: party-information
 url: "https://www.opportunity.org.nz/party-information"
-scrapedAt: "2026-06-13T15:05:38.227364"
+scrapedAt: "2026-07-16T10:44:27.322434"
 ---
 ## Party Information
 
@@ -10,28 +10,28 @@ scrapedAt: "2026-06-13T15:05:38.227364"
 
   Meet our hard working and dedicated board.
 
-  [BOARD](/opportunity-board)
+  [Board](/opportunity-board)
 * ### Charter
 
   The inter-related elements that define the Opportunity Party mission and how we will pursue it.
 
-  [CHARTER](https://drive.google.com/file/d/1Rpkukrq-GFyMfvRgfJMuNYt4aTdijF2w/preview)
+  [Charter](https://drive.google.com/file/d/1Rpkukrq-GFyMfvRgfJMuNYt4aTdijF2w/preview)
 * ### Constitution
 
   Constitution and Rules of  
   Opportunity Party Incorporated
 
-  [CONSTITUTION](https://drive.google.com/file/d/1sVxgXWR0zhEofnoGhrbfIwgHiAFeLACx/view?usp=drive_link)
+  [Constitution](https://drive.google.com/file/d/1sVxgXWR0zhEofnoGhrbfIwgHiAFeLACx/view?usp=drive_link)
 * ### Code of Conduct
 
   The standard of conduct expected for digital supporters, members, volunteers, candidates, and staff.
 
-  [CODE OF CONDUCT](https://drive.google.com/file/d/1ssxdjpDF3gPNtUCsaS_IHVDuTaNQyhnU/preview)
+  [Code of Conduct](https://drive.google.com/file/d/1ssxdjpDF3gPNtUCsaS_IHVDuTaNQyhnU/preview)
 * ### Privacy Policy
 
   A soon to be updated statement on how we collect and use information.
 
-  [PRIVACY](/privacy_policy)
+  [Privacy](/privacy_policy)
 
 ---
 

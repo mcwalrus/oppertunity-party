@@ -4,7 +4,7 @@ slug: sam-plummer
 role: "Candidate"
 electorate: "Taupō"
 url: "https://www.opportunity.org.nz/candidate-sam-plummer"
-scrapedAt: "2026-06-13T15:05:38.576421"
+scrapedAt: "2026-07-16T10:44:44.289652"
 ---
 “I spent years working in international development and trumpeting the way we do
 things in NZ. It was disappointing to return and find that we’ve lost our way. We need

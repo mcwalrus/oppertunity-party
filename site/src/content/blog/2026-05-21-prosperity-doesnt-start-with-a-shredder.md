@@ -2,9 +2,9 @@
 title: "Prosperity doesn’t start with a shredder"
 slug: 2026-05-21-prosperity-doesnt-start-with-a-shredder
 date: "2026-05-21"
-author: "Daniel Eb"
+author: "Policy Team"
 url: "https://www.opportunity.org.nz/prosperity_doesn_t_start_with_a_shredder"
-scrapedAt: "2026-06-13T15:05:38.209299"
+scrapedAt: "2026-07-16T10:44:35.290632"
 ---
 ## Prosperity doesn’t start with a shredder
 

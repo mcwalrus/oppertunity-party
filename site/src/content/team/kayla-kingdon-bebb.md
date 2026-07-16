@@ -4,7 +4,7 @@ slug: kayla-kingdon-bebb
 role: "Candidate"
 electorate: "Wellington Bays"
 url: "https://www.opportunity.org.nz/candidate-kayla-kingdon-bebb"
-scrapedAt: "2026-06-13T15:05:38.301823"
+scrapedAt: "2026-07-16T10:44:28.894507"
 ---
 “Like so many New Zealanders, I’m tired of divisive, performative politics taking priority over issues that actually matter to us. The biggest challenges we face: child poverty, growing inequality, climate change, the alarming loss of our native biodiversity, our infrastructure deficit – these cannot be resolved in a single term of government. They require courage, consensus, and a willingness to look beyond ourselves over multiple terms. That’s exactly what Opportunity will bring to the table.”
 

@@ -4,7 +4,7 @@ slug: cail-smith
 role: "Candidate"
 electorate: "East Cape"
 url: "https://www.opportunity.org.nz/candidate-cail-smith"
-scrapedAt: "2026-06-13T15:05:38.644991"
+scrapedAt: "2026-07-16T10:44:48.582048"
 ---
 "People on the East Coast are resilient, but they should not have to be resilient just to get by. I learned resilience early because I had to. It shaped me, but it also showed me that getting by should not require constant struggle."
 

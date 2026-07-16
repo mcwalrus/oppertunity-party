@@ -3,15 +3,15 @@ name: "Opportunity Party — Team & Candidates Index"
 slug: team
 ---
 **Source**: [opportunity.org.nz/team](https://www.opportunity.org.nz/team)  
-**Generated**: 2026-06-13
+**Generated**: 2026-07-16
 
 ---
 
 ## Key Facts
 
 - **Deputy Leader**: Daniel Eb — standing in **Kaipara Ki Mahurangi**
-- **Total candidates**: 42
-- **Electorates contested**: 42
+- **Total candidates**: 41
+- **Electorates contested**: 41
 
 ## Leadership
 
@@ -52,7 +52,6 @@ slug: team
 | [Kevin Huang](kevin-huang.md) | Candidate | Pakuranga | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-kevin-huang) |
 | [Luke Ross](luke-ross.md) | Candidate | Remutaka | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-luke-ross) |
 | [Mark Roach](mark-roach.md) | Candidate | Waitākere | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-mark-roach) |
-| [Mathew Phillips](mathew-phillips.md) | Candidate | Taieri | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-mathew-phillips) |
 | [Matt Harris](matt-harris.md) | Candidate | Rangitata | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-matt-harris) |
 | [Matt Shepherd](matt-shepherd.md) | Candidate | Wairarapa | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-matt-shepherd) |
 | [Michael Carter](michael-carter.md) | Candidate | Tauranga | [opportunity.org.nz](https://www.opportunity.org.nz/candidate-michael-carter) |

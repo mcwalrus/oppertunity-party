@@ -4,7 +4,7 @@ slug: blair-smith
 role: "Candidate"
 electorate: "Hamilton West"
 url: "https://www.opportunity.org.nz/candidate-blair-smith"
-scrapedAt: "2026-06-13T15:05:38.635560"
+scrapedAt: "2026-07-16T10:44:48.098835"
 ---
 “The decisions made in Wellington show up in the lives of ordinary Kiwis every day. I have seen enough to know we can do better. It's time for a change”
 

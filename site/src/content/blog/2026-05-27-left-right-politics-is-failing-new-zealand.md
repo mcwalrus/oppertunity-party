@@ -2,9 +2,9 @@
 title: "Left-right politics is failing New Zealand"
 slug: 2026-05-27-left-right-politics-is-failing-new-zealand
 date: "2026-05-27"
-author: "Daniel Eb"
+author: "Qiulae Wong"
 url: "https://www.opportunity.org.nz/_left_right_politics_is_failing_new_zealand"
-scrapedAt: "2026-06-13T15:05:38.203800"
+scrapedAt: "2026-07-16T10:44:34.296039"
 ---
 ## Left-right politics is failing New Zealand
 

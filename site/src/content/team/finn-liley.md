@@ -4,7 +4,7 @@ slug: finn-liley
 role: "Candidate"
 electorate: "Rotorua"
 url: "https://www.opportunity.org.nz/candidate-finn-liley"
-scrapedAt: "2026-06-13T15:05:38.474393"
+scrapedAt: "2026-07-16T10:44:40.428818"
 ---
 “Having grown up in Rotorua, I recognise the importance of safeguarding and nurturing our natural environment. It is our future, and must be consistently prioritised in decision-making. Additionally, we must advocate for a green economy that promotes growth and development while still protecting our surroundings. I am standing to ensure that this is a high priority for any future government.”
 

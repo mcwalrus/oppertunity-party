@@ -2,11 +2,13 @@
 title: "Citizens' Voice"
 slug: citizens-voice
 url: "https://www.opportunity.org.nz/citizens-voice"
-scrapedAt: "2026-06-13T15:05:38.323691"
+scrapedAt: "2026-07-16T10:44:31.737768"
 pdfDownloads:
   - "https://drive.google.com/file/d/116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L/view?usp=drive_link"
 ---
-#### People are losing trust in politics. So let's do democracy differently. With Citizens' Assemblies, we can solve big issues by hearing a new voice in politics. Yours.
+People are losing trust in politics. So let's do democracy
+differently. With Citizens' Assemblies, we can solve big issues by
+hearing a new voice in politics. Yours.
 
 ## Politics as usual isn't working.
 

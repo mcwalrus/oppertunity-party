@@ -4,7 +4,7 @@ slug: ben-lane
 role: "Candidate"
 electorate: "Māngere"
 url: "https://www.opportunity.org.nz/candidate-ben-lane"
-scrapedAt: "2026-06-13T15:05:38.464932"
+scrapedAt: "2026-07-16T10:44:39.931101"
 ---
 “New Zealand’s best days are still ahead of us, but only if we start thinking longer term.”
 

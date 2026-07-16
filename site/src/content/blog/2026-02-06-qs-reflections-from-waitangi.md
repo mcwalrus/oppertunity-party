@@ -2,9 +2,9 @@
 title: "Q's reflections from Waitangi"
 slug: 2026-02-06-qs-reflections-from-waitangi
 date: "2026-02-06"
-author: "Q Wong"
+author: "Qiulae Wong"
 url: "https://www.opportunity.org.nz/5_reflections_from_waitangi"
-scrapedAt: "2026-06-13T15:05:38.269366"
+scrapedAt: "2026-07-16T10:44:43.166088"
 ---
 ## Q's reflections from Waitangi
 

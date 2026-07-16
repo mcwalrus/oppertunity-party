@@ -39,8 +39,6 @@ data/
 
 Each item contains `{slug}.md` (YAML frontmatter + cleaned body) and `meta.json` (identical provenance fields as machine-readable JSON).
 
-## Downloading fresh data
-
 
 ## Contributing
 
@@ -53,4 +51,3 @@ just check    # run linting and type checks before submitting
 For architecture and schema documentation, see:
 
 - [docs/data-architecture.md](docs/data-architecture.md) — pipeline design, layer invariants, how to add new sources/consumers
-- [docs/data-schema.md](docs/data-schema.md) — full schema reference for clean and source layers
