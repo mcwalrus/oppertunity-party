@@ -1,3 +1,9 @@
+# DISABLED — see issue #2.
+# opportunity.org.nz blocks the GitHub Actions IP range (403 since 2026-07-11),
+# so daily scraping from CI is no longer viable. The local Dagster pipeline
+# (run on a developer schedule) now owns scraping + transformation; CI is
+# reserved for rebuild + deploy on push to main. Restore the `.yml` extension
+# only after confirming the upstream block is resolved.
 name: Daily Publish
 
 on:

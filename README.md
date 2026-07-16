@@ -2,7 +2,6 @@
 
 # Opportunity Party
 
-[![Daily Publish](https://github.com/mcwalrus/oppertunity-party/actions/workflows/daily-publish.yml/badge.svg)](https://github.com/mcwalrus/oppertunity-party/actions/workflows/daily-publish.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org)
 [![Dagster pipeline](https://img.shields.io/badge/orchestration-Dagster-5e30a8)](https://dagster.io)
