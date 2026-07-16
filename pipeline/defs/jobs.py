@@ -50,3 +50,15 @@ site_deploy_job = dg.define_asset_job(
     ),
     selection=dg.AssetSelection.assets("site_deploy"),
 )
+
+validation_job = dg.define_asset_job(
+    name="validation_job",
+    description=(
+        "Validate PDF→markdown extraction quality and regenerate "
+        "docs/pdf-pipeline.md. Reads every PDF in data/sources/"
+        "opportunity-website/pdfs/ — does not modify policy content. "
+        "Run after pdf_job (per policy slug) has materialised the "
+        "extracted markdown."
+    ),
+    selection=dg.AssetSelection.assets("validate_pdf_extraction", "write_pdf_pipeline_report"),
+)

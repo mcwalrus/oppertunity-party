@@ -144,6 +144,9 @@ def _clean_body(raw_md: str) -> str:
       1. Picture placeholders  (**==> picture ... <==**)
       2. Page footers / standalone page numbers (de-bolded before matching)
       3. The one-line header block already captured by parse_header()
+      4. Zero-width / replacement glyphs that pymupdf4llm embeds when a font
+         glyph is unavailable (e.g. constitution.pdf renders "Officers" as
+         "O\u200bficers"). They break plain-text search and copy-paste.
     """
     out: list[str] = []
     for line in raw_md.split("\n"):
@@ -166,6 +169,13 @@ def _clean_body(raw_md: str) -> str:
 
     text = "\n".join(out)
     text = re.sub(r"\n{3,}", "\n\n", text)  # collapse excessive blank lines
+    # Strip zero-width chars + replacement chars (font-glyph fallbacks).
+    # Constitution.pdf uses fonts whose 'ffi' ligature / accented chars are
+    # emitted as U+FFFD or U+200B when unrenderable. Private Use Area chars
+    # between letters are also typically font-glyph fallbacks (the 'ffi'
+    # ligature in particular renders as o<PUA>icers / a<PUA>airs).
+    text = re.sub(r"[\u200b-\u200f\ufeff\ufffd\u00ad]", "", text)
+    text = re.sub(r"(?<=[A-Za-z])[\ue000-\uf8ff](?=[A-Za-z])", "", text)
     return text.strip()
 
 

@@ -23,6 +23,10 @@ from pipeline.defs.assets.ingestion import (
     raw_policies,
     raw_team,
 )
+from pipeline.defs.assets.pdf_validation import (
+    validate_pdf_extraction,
+    write_pdf_pipeline_report,
+)
 from pipeline.defs.assets.site import (
     site_blog,
     site_build,
@@ -39,6 +43,7 @@ from pipeline.defs.jobs import (
     pdf_job,
     site_deploy_job,
     transforms_job,
+    validation_job,
 )
 from pipeline.defs.schedules import weekly_full_pipeline
 
@@ -49,6 +54,7 @@ defs = dg.Definitions(
         transforms_job,
         pdf_job,
         site_deploy_job,
+        validation_job,
     ],
     schedules=[weekly_full_pipeline],
     assets=[
@@ -76,5 +82,8 @@ defs = dg.Definitions(
         site_build,
         site_sitemap_resolved,
         site_deploy,
+        # validation layer (PDF extraction quality + coverage report)
+        validate_pdf_extraction,
+        write_pdf_pipeline_report,
     ],
 )

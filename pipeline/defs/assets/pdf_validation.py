@@ -1,0 +1,333 @@
+"""Dagster assets for PDF extraction validation + coverage reporting.
+
+Two assets:
+
+- ``validate_pdf_extraction`` (group: validation): runs the two-pass
+  validation against every PDF in the source layer and writes a JSON
+  report to ``data/clean/_pdf_validation.json``.
+- ``write_pdf_pipeline_report`` (group: validation): reads the validation
+  JSON + the scraped policy index + the PDF reference registry, then
+  emits a human-readable Markdown report at ``docs/pdf-pipeline.md``.
+
+Both are read-only over the source layer; neither mutates any policy
+content. Validation output lives alongside the clean layer because it
+describes extracted-content quality — same provenance.
+"""
+
+# NOTE: do NOT add `from __future__ import annotations` here. Dagster
+# inspects the ``context`` parameter's annotation at decoration time to
+# validate it against ``AssetExecutionContext``; PEP-563 string
+# annotations break that.
+
+import json
+import logging
+from datetime import UTC, datetime
+
+import dagster as dg
+from dagster import AssetExecutionContext
+
+from pipeline.paths import CLEAN_DIR, PROJECT_ROOT
+from pipeline.transforms.pdf_validation import (
+    validate_all_pdfs,
+    write_validation_json,
+)
+
+logger = logging.getLogger(__name__)
+
+# Output paths (resolved relative to project root so Dagster can find them
+# regardless of cwd)
+VALIDATION_JSON = CLEAN_DIR / "_pdf_validation.json"
+REPORT_PATH = PROJECT_ROOT / "docs" / "pdf-pipeline.md"
+
+# Source paths (same shape as ingestors use)
+POLICY_INDEX = PROJECT_ROOT / "data" / "sources" / "opportunity-website" / "policies" / "index.json"
+PDF_REFERENCE = (
+    PROJECT_ROOT / "data" / "sources" / "opportunity-website" / "pdfs" / "reference.json"
+)
+
+
+@dg.asset(group_name="validation", deps=["raw_pdfs"])
+def validate_pdf_extraction(context: AssetExecutionContext) -> dg.MaterializeResult:
+    """Run validation against every PDF and write data/clean/_pdf_validation.json.
+
+    Two-pass extraction (pymupdf4llm vs pymupdf raw text) computes word
+    coverage + structural spot-checks. See ``pdf_validation.py`` for the
+    exact metric definitions.
+    """
+    results = validate_all_pdfs()
+    write_validation_json(results, VALIDATION_JSON)
+
+    passed = sum(1 for r in results if r.passed)
+    failed = len(results) - passed
+    context.log.info(
+        "PDF validation: %d passed, %d failed (threshold=%.2f)",
+        passed,
+        failed,
+        0.95,
+    )
+    return dg.MaterializeResult(
+        metadata={
+            "pdf_count": len(results),
+            "passed_count": passed,
+            "failed_count": failed,
+            "output_path": str(VALIDATION_JSON),
+        }
+    )
+
+
+@dg.asset(
+    group_name="validation",
+    deps=["validate_pdf_extraction", "raw_policies"],
+)
+def write_pdf_pipeline_report(context: AssetExecutionContext) -> dg.MaterializeResult:
+    """Emit docs/pdf-pipeline.md — coverage + quality report.
+
+    Lists every policy page + whether a PDF is linked, per-PDF extraction
+    quality, and known issues. Consumed by humans reviewing the pipeline
+    (not by automated systems).
+    """
+    # Load inputs
+    validation: dict = {}
+    if VALIDATION_JSON.exists():
+        validation = json.loads(VALIDATION_JSON.read_text(encoding="utf-8"))
+
+    policy_index: list[dict] = []
+    if POLICY_INDEX.exists():
+        policy_index = json.loads(POLICY_INDEX.read_text(encoding="utf-8"))
+
+    pdf_ref: dict = {}
+    if PDF_REFERENCE.exists():
+        pdf_ref = json.loads(PDF_REFERENCE.read_text(encoding="utf-8"))
+
+    # Index validation results by filename (reserved for per-PDF drill-down;
+    # not currently referenced by the report body).
+    _val_index = {r["filename"]: r for r in validation.get("results", [])}
+
+    # Map policy_slug → set of unique PDF filenames (via pdf_ref, deduped —
+    # reference.json carries both migrated and canonical entries pointing at
+    # the same file).
+    pdfs_by_slug: dict[str, set[str]] = {}
+    for entry in pdf_ref.get("downloads", {}).values():
+        slug = entry.get("policy_slug")
+        filename = entry.get("filename")
+        if slug and filename:
+            pdfs_by_slug.setdefault(slug, set()).add(filename)
+
+    # Cross-check: which policy pages have a PDF link in the scraper index
+    # but NO matching entry in pdf_ref? These are "missing PDF downloads" —
+    # the link was discovered but the download didn't materialise.
+    missing_downloads: list[tuple[str, str]] = []
+    for p in policy_index:
+        for url in p.get("pdf_downloads") or []:
+            if "drive.google.com" not in url:
+                continue
+            slug = p["slug"]
+            if slug not in pdfs_by_slug:
+                missing_downloads.append((slug, url))
+
+    # Generate the report
+    now = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
+    lines: list[str] = []
+    lines.append("# PDF Pipeline Report")
+    lines.append("")
+    lines.append(
+        "Auto-generated by the `write_pdf_pipeline_report` Dagster asset. "
+        "Run via the `validation_job` job, or `just dev` + the Dagster UI."
+    )
+    lines.append("")
+    lines.append(f"_Last regenerated: {now}_")
+    lines.append("")
+    lines.append("## What this pipeline does")
+    lines.append("")
+    lines.append(
+        "Opportunity Party publishes policy detail PDFs on Google Drive. "
+        "These PDFs are downloaded into `data/sources/opportunity-website/pdfs/` "
+        "(gitignored — never served from the web), then extracted to markdown "
+        "via [`pymupdf4llm`](https://pymupdf4llm.readthedocs.io/), normalised "
+        "into `data/clean/policy/{slug}/`, and rendered as HTML by the Astro "
+        "site at `site/dist/policies/{slug}/`. The site is the only place the "
+        "policy text appears online — no PDF file is ever served."
+    )
+    lines.append("")
+    lines.append("## Policy coverage")
+    lines.append("")
+    lines.append(
+        f"Of {len(policy_index)} policy pages on opportunity.org.nz, "
+        f"{sum(1 for p in policy_index if p.get('pdf_downloads'))} "
+        "have linked PDF documents."
+    )
+    lines.append("")
+    lines.append("| Policy | Slug | Linked PDF? | Filename |")
+    lines.append("|---|---|---|---|")
+    for p in sorted(policy_index, key=lambda x: x.get("title", "")):
+        slug = p.get("slug", "")
+        title = p.get("title", slug)
+        pdfs = p.get("pdf_downloads") or []
+        if pdfs:
+            filenames = ", ".join(sorted(pdfs_by_slug.get(slug, set())))
+            lines.append(f"| {title} | `{slug}` | yes | {filenames or '(unresolved)'} |")
+        else:
+            lines.append(f"| {title} | `{slug}` | no | — |")
+    lines.append("")
+
+    # Flag policy pages with a PDF link in the scraper index but no
+    # matching entry in pdf_ref — these need the pdf_job re-run.
+    if missing_downloads:
+        lines.append("### Missing PDF downloads")
+        lines.append("")
+        lines.append(
+            "These policy pages have a PDF link in the scraper index but no "
+            "matching entry in `pdfs/reference.json` — re-run `pdf_job` for "
+            "the listed slug(s) to fetch them."
+        )
+        lines.append("")
+        lines.append("| Slug | Link |")
+        lines.append("|---|---|")
+        for slug, url in missing_downloads:
+            lines.append(f"| `{slug}` | {url} |")
+        lines.append("")
+
+    # Governance PDFs (charter, constitution)
+    governance = list(pdfs_by_slug.get("charter", set())) + list(
+        pdfs_by_slug.get("constitution", set())
+    )
+    if governance:
+        lines.append("### Governance documents")
+        lines.append("")
+        lines.append(
+            "Charter + Constitution are stored under `party-information/` in "
+            "the clean layer but their source PDFs live alongside the policy "
+            "PDFs."
+        )
+        lines.append("")
+        lines.append("| Document | Filename |")
+        lines.append("|---|---|")
+        for fn in governance:
+            doc = "Charter" if "charter" in fn.lower() else "Constitution"
+            lines.append(f"| {doc} | `{fn}` |")
+        lines.append("")
+
+    # Per-PDF quality table
+    lines.append("## Extraction quality")
+    lines.append("")
+    results = validation.get("results", [])
+    if not results:
+        lines.append("_No validation results available._")
+        lines.append("")
+    else:
+        lines.append(
+            f"Threshold: word coverage ≥ {validation.get('threshold', 0.95):.0%} "
+            "(pymupdf4llm markdown vs pymupdf raw text). Lower coverage means "
+            "more content lost during extraction."
+        )
+        lines.append("")
+        lines.append("| PDF | Words (raw) | Words (md) | Coverage | H | T | B | Status |")
+        lines.append("|---|---|---|---|---|---|---|---|")
+        for r in sorted(results, key=lambda x: x["filename"]):
+            cov = r["word_coverage"]
+            status = "✅ pass" if r["passed"] else "⚠️ fail"
+            lines.append(
+                f"| `{r['filename']}` "
+                f"| {r['pymupdf_words']:,} "
+                f"| {r['markdown_words']:,} "
+                f"| {cov:.1%} "
+                f"| {r['headings']} "
+                f"| {r['table_rows']} "
+                f"| {r['bullets']} "
+                f"| {status} |"
+            )
+        lines.append("")
+        lines.append(
+            "_H = headings, T = table rows, B = bullet items in the cleaned markdown body._"
+        )
+        lines.append("")
+
+        # Notes per PDF
+        any_notes = any(r.get("notes") for r in results)
+        if any_notes:
+            lines.append("### Per-PDF notes")
+            lines.append("")
+            for r in sorted(results, key=lambda x: x["filename"]):
+                if r.get("notes"):
+                    lines.append(f"- **`{r['filename']}`**: " + "; ".join(r["notes"]))
+            lines.append("")
+
+    # Known issues + future improvements
+    lines.append("## Known issues & future improvements")
+    lines.append("")
+    lines.append(
+        "- **Constitution font-glyph artefacts**: the source PDF embeds "
+        "'ffi' / 'ffl' ligatures as Private Use Area chars and a few "
+        "replacement chars. `_clean_body()` in `pdf_convert.py` strips "
+        "zero-width / replacement / PUA-between-letters characters "
+        "post-extraction. Coverage stays at ~97% because the source PDF "
+        "itself is missing the letter 'i' in 'Qualifcations' — unfixable "
+        "from extraction side."
+    )
+    lines.append("")
+    lines.append(
+        "- **Tax Reset Transition Plan**: small table cells lose some text "
+        "in the markdown (98.3% coverage). The numeric values are intact; "
+        "the loss is in cell whitespace. Not worth a custom extractor for "
+        "a single document."
+    )
+    lines.append("")
+    lines.append(
+        "- **No automatic PDF discovery**: `pipeline/ingestion/policies.py` "
+        "scrapes policy pages for PDF links but a policy that links to a "
+        "PDF outside Google Drive (e.g. the `MakingZeroTheHero` report on "
+        "healthy-land) downloads via plain HTTP. New link types need to be "
+        "added there."
+    )
+    lines.append("")
+    lines.append(
+        "- **No image extraction**: PDFs have illustrations (Tax Reset "
+        "calculator, Healthy Oceans diagrams) that are dropped as `**==> "
+        "picture <==**` placeholders. Re-introducing images would require "
+        "deciding where they live — `data/sources/` for binaries (gitignored) "
+        "+ a `media_paths` field in `pdf-document` meta — plus an Astro "
+        "template change."
+    )
+    lines.append("")
+    lines.append(
+        "- **No HTML output outside Astro**: policy content is served only "
+        "after `pnpm build` produces `site/dist/`. LLM/MCP consumers that "
+        "want rendered HTML must run the build first. Adding a "
+        "`pipeline/defs/assets/pdf_html.py` asset that emits one .html per "
+        "policy (mirroring what Astro produces) would let non-Astro consumers "
+        "read HTML directly — but it's a duplicate of the build output."
+    )
+    lines.append("")
+    lines.append("## How to extend")
+    lines.append("")
+    lines.append(
+        "- **New PDF link type**: extend `pipeline/ingestion/pdf_download.py:_download_single`."
+    )
+    lines.append(
+        "- **Custom extraction rules**: `pipeline/ingestion/pdf_convert.py` "
+        "owns `parse_header` / `_clean_body` / `format_markdown`."
+    )
+    lines.append(
+        "- **Tighter validation**: lower `WORD_COVERAGE_THRESHOLD` in "
+        "`pipeline/transforms/pdf_validation.py` (currently 0.95)."
+    )
+    lines.append(
+        "- **Run validation locally**: `uv run dg launch validation_job` (or "
+        "`just dev` → UI → validation_job)."
+    )
+    lines.append("- **Run pytest suite**: `uv run pytest tests/` (also via `just test`).")
+    lines.append("")
+
+    # Write the file
+    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
+    context.log.info("Wrote %s (%d bytes)", REPORT_PATH, REPORT_PATH.stat().st_size)
+
+    return dg.MaterializeResult(
+        metadata={
+            "report_path": str(REPORT_PATH),
+            "size_bytes": REPORT_PATH.stat().st_size,
+            "pdfs_validated": len(results),
+            "policy_pages": len(policy_index),
+        }
+    )

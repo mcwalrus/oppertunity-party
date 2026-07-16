@@ -1,0 +1,111 @@
+{
+  "threshold": 0.95,
+  "pdf_count": 8,
+  "passed_count": 8,
+  "results": [
+    {
+      "filename": "MakingZeroTheHero-Summary-Report.pdf",
+      "pymupdf_words": 2159,
+      "markdown_words": 2362,
+      "unique_words_pymupdf": 721,
+      "unique_words_markdown": 719,
+      "word_coverage": 0.982,
+      "headings": 14,
+      "table_rows": 2,
+      "bullets": 40,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "Opportunity_Policy_Abundant Energy.pdf",
+      "pymupdf_words": 3338,
+      "markdown_words": 3387,
+      "unique_words_pymupdf": 1014,
+      "unique_words_markdown": 1017,
+      "word_coverage": 0.9892,
+      "headings": 28,
+      "table_rows": 12,
+      "bullets": 21,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "Opportunity_Policy_Citizens Voice.pdf",
+      "pymupdf_words": 1255,
+      "markdown_words": 1226,
+      "unique_words_pymupdf": 467,
+      "unique_words_markdown": 460,
+      "word_coverage": 0.9829,
+      "headings": 9,
+      "table_rows": 0,
+      "bullets": 8,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "Opportunity_Policy_Healthy Oceans.pdf",
+      "pymupdf_words": 4154,
+      "markdown_words": 4086,
+      "unique_words_pymupdf": 1226,
+      "unique_words_markdown": 1221,
+      "word_coverage": 0.9935,
+      "headings": 40,
+      "table_rows": 0,
+      "bullets": 79,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "Opportunity_Tax Reset_Policy Overview.pdf",
+      "pymupdf_words": 6078,
+      "markdown_words": 6003,
+      "unique_words_pymupdf": 1426,
+      "unique_words_markdown": 1429,
+      "word_coverage": 0.9972,
+      "headings": 55,
+      "table_rows": 11,
+      "bullets": 49,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "Opportunity_Tax Reset_Transition Plan.pdf",
+      "pymupdf_words": 523,
+      "markdown_words": 531,
+      "unique_words_pymupdf": 179,
+      "unique_words_markdown": 178,
+      "word_coverage": 0.9832,
+      "headings": 3,
+      "table_rows": 16,
+      "bullets": 4,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "charter.pdf",
+      "pymupdf_words": 340,
+      "markdown_words": 340,
+      "unique_words_pymupdf": 212,
+      "unique_words_markdown": 212,
+      "word_coverage": 1.0,
+      "headings": 15,
+      "table_rows": 0,
+      "bullets": 0,
+      "passed": true,
+      "notes": []
+    },
+    {
+      "filename": "constitution.pdf",
+      "pymupdf_words": 10992,
+      "markdown_words": 11014,
+      "unique_words_pymupdf": 1241,
+      "unique_words_markdown": 1237,
+      "word_coverage": 0.9678,
+      "headings": 118,
+      "table_rows": 97,
+      "bullets": 200,
+      "passed": true,
+      "notes": []
+    }
+  ]
+}

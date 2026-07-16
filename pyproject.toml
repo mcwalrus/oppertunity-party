@@ -22,6 +22,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "pytest>=8.3.0",
     "ruff>=0.15.16",
     "ty>=0.0.44",
 ]
@@ -32,7 +33,7 @@ dev = [
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-exclude = [".venv", "__pycache__"]
+exclude = [".venv", "__pycache__", ".agents"]
 
 [tool.ruff.lint]
 select = [
@@ -55,6 +56,7 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "main.py" = ["ANN"]  # top-level runner; annotations not required here
+"tests/**" = ["ANN"]  # test fixtures + parametrize don't benefit from full annotation
 
 [tool.ruff.format]
 docstring-code-format = true
