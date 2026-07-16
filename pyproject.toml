@@ -58,6 +58,8 @@ ignore = [
 [tool.ruff.lint.per-file-ignores]
 "main.py" = ["ANN"]  # top-level runner; annotations not required here
 "tests/**" = ["ANN"]  # test fixtures + parametrize don't benefit from full annotation
+"pipeline/transforms/pdf_quirks.py" = ["RUF001"]  # curly quotes reproduce literal text from source PDFs
+"tests/test_pdf_quirks.py" = ["RUF001"]  # mirrors pdf_quirks.py fixture text
 
 [tool.ruff.format]
 docstring-code-format = true

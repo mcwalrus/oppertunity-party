@@ -5,8 +5,8 @@ Each screenshot was captured from `localhost:3000` (the local Dagster UI) and
 renamed to a stable, descriptive filename. Screenshots are ordered roughly in
 the order they were taken.
 
-> **Progress:** 9 / 10 screenshots documented. Built up incrementally to avoid
-> hammering the image-read endpoint.
+> **Progress:** 10 / 10 screenshots documented. Built up incrementally to
+> avoid hammering the image-read endpoint.
 
 ## How Dagster is used in this project
 
@@ -256,4 +256,34 @@ Notable patterns:
 > pdf_html_job` — i.e. `pdf_job` is named `pdf_html_job` in code, and
 > there's an additional `validation_job` that AGENTS.md doesn't
 > mention. If the docs drift further from the code, the **Jobs** page
-> (next screenshot) is the authoritative source.
+> in the UI is the authoritative source.
+
+### 10. Asset detail — `raw_blog` materialization
+
+**File:** `10-asset-detail-raw-blog-materialization.png`
+
+The asset detail panel for `raw_blog`, opened from the lineage view by
+selecting the ingestion asset at the top of the column. Unlike entry 8
+(`site_build` failure), this asset is healthy, so the panel surfaces
+run metadata rather than a failure state.
+
+- **Description:** "Scrape blog posts and save raw data to data/sources/."
+- **Latest materialization:**
+  - **Run:** `76a6e67b` (16 Jul, 10:44) — with a `View logs` button to
+    jump to the run.
+  - **item_count:** `20` — the number of blog items scraped in this
+    run. Exposed as a metadata plot (single data point at value 20.0
+    on 16 Jul 10:44) so future runs can be compared against it.
+  - **output_path:**
+    `/Users/max.collier/Projects/Max/vault/sms/projects/oppertunity-party/data/sources/opportunity-website/blog`
+    — the canonical pointer to where raw scraped data lands. See
+    [`docs/data-architecture.md`](../data-architecture.md) for the
+    raw-vs-clean layer separation.
+
+The lineage canvas on the left shows `raw_blog` selected (blue border)
+at the top of the ingestion column, with `raw_events` (16 Jul, 10:44)
+and `raw_party_info` (16 Jul, 10:45) visible below it — all green with
+Automation schedules attached. This is the typical triage view when a
+scraper's metadata looks off: read the description, check
+`item_count` against the previous run, click `View logs` if the run
+needs closer inspection, then re-materialise from the lineage view.
