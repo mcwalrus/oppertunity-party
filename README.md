@@ -66,23 +66,16 @@ Ingestors write to `data/sources/`; everyone else reads from `data/clean/`. Addi
 
 ## Contributing
 
-### Development
+Only valiadation is running `just check` before opening a PR — it must pass. The same checks run automatically on git pre-commit. To glance over the project structure, start with [`docs/data-architecture.md`](docs/data-architecture.md) for architecture and [`docs/data-schema.md`](docs/data-schema.md) for schema questions.
 
-Run `just check` before opening a PR — it must pass. The same checks run automatically via lefthook pre-commit. Start with [`docs/data-architecture.md`](docs/data-architecture.md) for architecture and schema questions.
+### Future Roadmap
 
-### Using the corpus downstream
+The Opportunity Party is one voice among many. The most useful analysis often comes from combining this corpus with other sources rather than reading it in isolation. **Candidate sources worth adding if possible**:
 
-`data/clean/` is the canonical, git-tracked corpus — open for analysis by anyone. Each item is a folder containing `{slug}.md` (YAML frontmatter + body) and `meta.json` (provenance). A cross-type search index lives at `data/clean/_index.json`. Common downstream uses:
+- News coverage that mentions the party or its policies
+- YouTube/podcast transcripts (`youtube` ingestor is already in place)
+- Social feeds (X, Facebook, SubStack) via API clients
+- Parliamentary records, select-committee submissions
+- External newsletters and policy commentary
 
-- Search + full-text analysis across policies, blog posts, transcripts, party-info
-- Cross-referencing PDFs and their source policy pages
-- Feeding downstream RAG pipelines, notebooks, or external tools
-- Building derived analysis outputs (see `data/derived/` in [`docs/data-architecture.md`](docs/data-architecture.md))
-
-### Adding more sources
-
-The pipeline is source-agnostic — `data/sources/` (raw, gitignored) and `data/clean/` (canonical, tracked) are the only contracts. The same shape works for other New Zealand political party sites, news coverage, social feeds, or external newsletters. See [How to Add a New Source](docs/data-architecture.md#how-to-add-a-new-source) for the pattern.
-
-### Static-site markdown mirror (proposal)
-
-A browsable static site that mirrors the party's public-facing pages as plain markdown would be useful for archive and research access. If you'd like to help run or extend this, open an issue.
+A browsable static site that mirrors the party's public-facing pages as plain markdown would be useful for archive and research access — particularly when the live marketing site changes and a snapshot is needed for citation. I'd host this if there's interest. For anything else, feel free to fork or open an issue with the source URL and what you want to extract — the pattern is small and well-defined.

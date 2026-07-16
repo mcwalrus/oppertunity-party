@@ -11,23 +11,13 @@ Scrapes the New Zealand [Opportunity Party](https://www.opportunity.org.nz) webs
 | `data/sources/opportunity-website/`         | Raw scraper output — written by ingestors, never read by consumers | Ignored |
 | `data/clean/`                               | Normalized content — canonical source for all consumers            | Tracked |
 | `data/clean/_index.json`                    | Cross-type search index (regenerated each transform run)           | Tracked |
-| `data/.cache/`                              | HTTP response cache (scraper-internal, ephemeral)                  | Ignored |
-| `site/src/content/`                         | Astro SSG input — rebuilt from `data/clean/` each run              | Ignored |
 | `pipeline/`                                 | Dagster code location — wraps ingestion + transforms as assets     | —       |
-| `pipeline/definitions.py`                   | Root-level Dagster entry point (`defs = dg.Definitions(...)`)      | —       |
-| `pipeline/paths.py`                         | Shared path constants (project root, data dirs, content dir, cache) | —       |
-| `pipeline/ingestion/`                       | Python scraper modules (blog_posts, policies, team, events, …)      | —       |
-| `pipeline/transforms/`                      | Python transform modules (clean + site content writes)             | —       |
-| `pipeline/defs/assets/`                     | Dagster asset wrappers (`ingestion.py`, `clean.py`, `site.py`)     | —       |
-| `pipeline/defs/jobs.py`                     | Dagster job definitions (`full_pipeline`, `ingestion_job`, …)      | —       |
-| `pipeline/defs/partitions.py`               | Dagster partitions (e.g. PDF assets per policy slug)               | —       |
-| `pipeline/defs/resources.py`                | Dagster resources (HTTP client, etc.)                               | —       |
-| `pipeline/defs/schedules.py`                | Dagster schedules (e.g. `weekly_full_pipeline`)                    | —       |
 | `docs/data-architecture.md`                 | Pipeline design, layer invariants, how to add source/consumer      | Tracked |
 | `docs/dependencies.md`                      | Why each dependency exists (grouped by purpose)                    | Tracked |
 | `docs/reference/`                           | Reference materials used while building (Dagster course, …)        | Tracked |
 | `tasks/`                                    | PRDs and planning notes (`prd-*.md`, `campaign-website-issues/`)   | Tracked |
-| `main.py`                                   | Standalone scraper runner (used by `daily-publish.yml` CI)         | —       |
+
+TODO: add docs/data-schema.md
 
 ## Data Pipeline
 

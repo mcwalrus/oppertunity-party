@@ -22,7 +22,12 @@ scraper.log
 # Dagster project files (ignore all dagster-managed content)
 dagster/
 dagster_project/
-data/
+data/*
+data/.*/
+
+# ...except the normalized clean layer (canonical source for all consumers)
+!data/clean/
+!data/clean/**
 
 # Dagster runtime home (runs, logs, event store) — keep only the config file
 .dagster/*
@@ -42,3 +47,9 @@ site/.pnpm-store/
 
 # personal todo file
 TASKLIST.md
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
