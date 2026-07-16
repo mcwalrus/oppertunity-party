@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/climate_action"
 ingested_at: "2026-07-16T10:44:36.203577"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+cleaned_at: "2026-07-16T07:05:00.859942+00:00"
 title: "Climate Action"
 ---
 **Climate change is real, is caused by human activity and is already here. The decisions we make today will shape how we, our children and grandchildren adapt — or not — to a warming world.**

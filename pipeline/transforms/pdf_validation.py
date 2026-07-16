@@ -466,12 +466,15 @@ def render_pipeline_report(
     )
     lines.append("")
     lines.append(
-        "- **No HTML output outside Astro**: policy content is served only "
-        "after `pnpm build` produces `site/dist/`. LLM/MCP consumers that "
-        "want rendered HTML must run the build first. Adding a "
-        "`pipeline/defs/assets/pdf_html.py` asset that emits one .html per "
-        "policy (mirroring what Astro produces) would let non-Astro consumers "
-        "read HTML directly — but it's a duplicate of the build output."
+        "- **Per-item HTML output**: the `pdf_html` asset renders "
+        "`data/clean/pdf-document/{slug}/{slug}.md` → "
+        "`data/clean/pdf-document/{slug}/{slug}.html` (next to its MD, "
+        "tracked in git). LLM/MCP consumers can read rendered HTML "
+        "directly without running the Astro build. Validation "
+        "transitively covers HTML↔PDF because HTML is a deterministic "
+        "render of MD and MD↔PDF is checked above. Thin wrapper "
+        "(`<html><body>…</body></html>`, no CSS) — styling lives at "
+        "`site/dist/`."
     )
     lines.append("")
     lines.append("## How to extend")
@@ -490,6 +493,11 @@ def render_pipeline_report(
     lines.append(
         "- **Run validation locally**: `uv run dg launch validation_job` (or "
         "`just dev` → UI → validation_job)."
+    )
+    lines.append(
+        "- **Re-render PDF HTML**: `uv run dg launch pdf_html_job` (or "
+        "`just dev` → UI → pdf_html_job). Non-partitioned — covers every "
+        "existing pdf-document item."
     )
     lines.append("- **Run pytest suite**: `uv run pytest tests/` (also via `just test`).")
     lines.append("")

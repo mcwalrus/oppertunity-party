@@ -23,6 +23,7 @@ from pipeline.defs.assets.ingestion import (
     raw_policies,
     raw_team,
 )
+from pipeline.defs.assets.pdf_html import pdf_html
 from pipeline.defs.assets.pdf_validation import (
     validate_pdf_extraction,
     write_pdf_pipeline_report,
@@ -40,6 +41,7 @@ from pipeline.defs.assets.site import (
 from pipeline.defs.jobs import (
     full_pipeline,
     ingestion_job,
+    pdf_html_job,
     pdf_job,
     site_deploy_job,
     transforms_job,
@@ -53,6 +55,7 @@ defs = dg.Definitions(
         ingestion_job,
         transforms_job,
         pdf_job,
+        pdf_html_job,
         site_deploy_job,
         validation_job,
     ],
@@ -85,5 +88,7 @@ defs = dg.Definitions(
         # validation layer (PDF extraction quality + coverage report)
         validate_pdf_extraction,
         write_pdf_pipeline_report,
+        # PDF markdown → per-item HTML (runs after clean_pdfs)
+        pdf_html,
     ],
 )

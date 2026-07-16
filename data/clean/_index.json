@@ -1,133 +1,5 @@
 [
   {
-    "slug": "abundant-energy",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/abundant-energy",
-    "title": "Abundant Energy",
-    "date": ""
-  },
-  {
-    "slug": "affordable-housing",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/affordable_housing",
-    "title": "Affordable Housing",
-    "date": ""
-  },
-  {
-    "slug": "charter",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "",
-    "title": "Charter",
-    "date": ""
-  },
-  {
-    "slug": "citizens-voice",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/citizens-voice",
-    "title": "Citizens' Voice",
-    "date": ""
-  },
-  {
-    "slug": "clean-up-politics",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/clean_up_politics",
-    "title": "Clean up Politics",
-    "date": ""
-  },
-  {
-    "slug": "climate-action",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/climate_action",
-    "title": "Climate Action",
-    "date": ""
-  },
-  {
-    "slug": "constitution",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "",
-    "title": "Constitution",
-    "date": ""
-  },
-  {
-    "slug": "future-fit-education",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/future_fit_education",
-    "title": "Future-fit Education",
-    "date": ""
-  },
-  {
-    "slug": "healthy-land",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/healthy_land",
-    "title": "Healthy Land",
-    "date": ""
-  },
-  {
-    "slug": "healthy-oceans",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/healthy-oceans",
-    "title": "Healthy Oceans",
-    "date": ""
-  },
-  {
-    "slug": "healthy-people",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/healthy_people",
-    "title": "Healthy People",
-    "date": ""
-  },
-  {
-    "slug": "honouring-te-tiriti",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/honouring_te_tiriti",
-    "title": "Honouring Te Tiriti",
-    "date": ""
-  },
-  {
-    "slug": "intergenerational-infrastructure",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/intergenerational_infrastructure",
-    "title": "Inter-generational Infrastructure",
-    "date": ""
-  },
-  {
-    "slug": "productivity-unleashed",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/productivity-unleashed",
-    "title": "Breakthrough Economy",
-    "date": ""
-  },
-  {
-    "slug": "smart-on-crime",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/smart_on_crime",
-    "title": "Smart on Crime",
-    "date": ""
-  },
-  {
-    "slug": "tax-reset",
-    "content_type": "policy",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/tax-reset",
-    "title": "Tax Reset",
-    "date": ""
-  },
-  {
     "slug": "2025-07-20-the-opportunity-party-calls-for-bipartisanship-on-policy-costing-unit",
     "content_type": "blog-post",
     "source_id": "opportunity-website",
@@ -520,358 +392,6 @@
     "date": "2026-07-04"
   },
   {
-    "slug": "adam-macrae-martin",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-adam-macrae-martin",
-    "title": "Adam MacRae-Martin",
-    "date": ""
-  },
-  {
-    "slug": "adrian-mee",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-adrian-mee",
-    "title": "Adrian Mee",
-    "date": ""
-  },
-  {
-    "slug": "almo-wong",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-almo-wong",
-    "title": "Almo Wong",
-    "date": ""
-  },
-  {
-    "slug": "ben-lane",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-ben-lane",
-    "title": "Ben Lane",
-    "date": ""
-  },
-  {
-    "slug": "ben-wylie-van-eerd",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd",
-    "title": "Ben Wylie-van Eerd",
-    "date": ""
-  },
-  {
-    "slug": "bianca-beebe",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-bianca-beebe",
-    "title": "Bianca Beebe",
-    "date": ""
-  },
-  {
-    "slug": "blair-smith",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-blair-smith",
-    "title": "Blair Smith",
-    "date": ""
-  },
-  {
-    "slug": "cail-smith",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-cail-smith",
-    "title": "Cail Smith",
-    "date": ""
-  },
-  {
-    "slug": "chee-khiang-sng",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-chee-khiang-sng",
-    "title": "Chee-Khiang (CK) Sng",
-    "date": ""
-  },
-  {
-    "slug": "cindie-uddstrom",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
-    "title": "Cindie Uddstrom",
-    "date": ""
-  },
-  {
-    "slug": "cody-marsh",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-cody-marsh",
-    "title": "Cody Marsh",
-    "date": ""
-  },
-  {
-    "slug": "daniel-eb",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-daniel-eb",
-    "title": "Daniel Eb",
-    "date": ""
-  },
-  {
-    "slug": "dave-bainbridge-zafar",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-dave-bainbridge-zafar",
-    "title": "Dave Bainbridge-Zafar",
-    "date": ""
-  },
-  {
-    "slug": "derrick-paull",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-derrick-paull",
-    "title": "Derrick Paull",
-    "date": ""
-  },
-  {
-    "slug": "eden-skipper",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-eden-skipper",
-    "title": "Eden Skipper",
-    "date": ""
-  },
-  {
-    "slug": "evan-french",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-evan-french",
-    "title": "Evan French",
-    "date": ""
-  },
-  {
-    "slug": "finn-liley",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-finn-liley",
-    "title": "Finn Liley",
-    "date": ""
-  },
-  {
-    "slug": "helen-tait",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-helen-tait",
-    "title": "Helen Tait",
-    "date": ""
-  },
-  {
-    "slug": "holly-knill",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-holly-knill",
-    "title": "Holly Knill",
-    "date": ""
-  },
-  {
-    "slug": "jamie-attenborough",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-jamie-attenborough",
-    "title": "Jamie Attenborough",
-    "date": ""
-  },
-  {
-    "slug": "jessica-hammond",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-jessica-hammond",
-    "title": "Jessica Hammond",
-    "date": ""
-  },
-  {
-    "slug": "jodie-kuntzsch",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-jodie-kuntzsch",
-    "title": "Jodie Kuntzsch",
-    "date": ""
-  },
-  {
-    "slug": "johan-chang",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-johan-chang",
-    "title": "Johan Chang",
-    "date": ""
-  },
-  {
-    "slug": "kayla-kingdon-bebb",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-kayla-kingdon-bebb",
-    "title": "Dr. Kayla Kingdon-Bebb",
-    "date": ""
-  },
-  {
-    "slug": "kevin-huang",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-kevin-huang",
-    "title": "Kevin Huang",
-    "date": ""
-  },
-  {
-    "slug": "luke-ross",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-luke-ross",
-    "title": "Luke Ross",
-    "date": ""
-  },
-  {
-    "slug": "mark-roach",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-mark-roach",
-    "title": "Mark Roach",
-    "date": ""
-  },
-  {
-    "slug": "mathew-phillips",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-mathew-phillips",
-    "title": "Mathew Phillips",
-    "date": ""
-  },
-  {
-    "slug": "matt-harris",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-matt-harris",
-    "title": "Matt Harris",
-    "date": ""
-  },
-  {
-    "slug": "matt-shepherd",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-matt-shepherd",
-    "title": "Matt Shepherd",
-    "date": ""
-  },
-  {
-    "slug": "michael-carter",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-michael-carter",
-    "title": "Michael Carter",
-    "date": ""
-  },
-  {
-    "slug": "naomi-pocock",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-naomi-pocock",
-    "title": "Dr. Naomi Pocock",
-    "date": ""
-  },
-  {
-    "slug": "netra-ghimire",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-netra-ghimire",
-    "title": "Netra Ghimire",
-    "date": ""
-  },
-  {
-    "slug": "papa-wharewera",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-papa-wharewera",
-    "title": "Kaperiere \"Pāpā\" Wharewera",
-    "date": ""
-  },
-  {
-    "slug": "paul-jackson",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-paul-jackson",
-    "title": "Paul Jackson",
-    "date": ""
-  },
-  {
-    "slug": "qiulae-wong",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-qiulae-wong",
-    "title": "Qiulae (Q) Wong",
-    "date": ""
-  },
-  {
-    "slug": "rachel-ward",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-rachel-ward",
-    "title": "Rachel Ward",
-    "date": ""
-  },
-  {
-    "slug": "robert-mason",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-robert-mason",
-    "title": "Robert Mason",
-    "date": ""
-  },
-  {
-    "slug": "romeo-tevaga",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-romeo-tevaga",
-    "title": "Romeo Tevaga",
-    "date": ""
-  },
-  {
-    "slug": "sacha-haskell",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-sacha-haskell",
-    "title": "Sacha Haskell",
-    "date": ""
-  },
-  {
-    "slug": "sam-plummer",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-sam-plummer",
-    "title": "Sam Plummer",
-    "date": ""
-  },
-  {
-    "slug": "sarah-lucas",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-sarah-lucas",
-    "title": "Sarah Lucas",
-    "date": ""
-  },
-  {
-    "slug": "simon-dellabarca",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "https://www.opportunity.org.nz/candidate-simon-dellabarca",
-    "title": "Simon DellaBarca",
-    "date": ""
-  },
-  {
-    "slug": "team",
-    "content_type": "team-member",
-    "source_id": "opportunity-website",
-    "source_url": "",
-    "title": "Opportunity Party — Team & Candidates Index",
-    "date": ""
-  },
-  {
     "slug": "about",
     "content_type": "party-information",
     "source_id": "opportunity-website",
@@ -973,6 +493,486 @@
     "source_id": "opportunity-website",
     "source_url": "",
     "title": "Tax Reset — Policy Overview",
+    "date": ""
+  },
+  {
+    "slug": "abundant-energy",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/abundant-energy",
+    "title": "Abundant Energy",
+    "date": ""
+  },
+  {
+    "slug": "affordable-housing",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/affordable_housing",
+    "title": "Affordable Housing",
+    "date": ""
+  },
+  {
+    "slug": "charter",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Charter",
+    "date": ""
+  },
+  {
+    "slug": "citizens-voice",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/citizens-voice",
+    "title": "Citizens' Voice",
+    "date": ""
+  },
+  {
+    "slug": "clean-up-politics",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/clean_up_politics",
+    "title": "Clean up Politics",
+    "date": ""
+  },
+  {
+    "slug": "climate-action",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/climate_action",
+    "title": "Climate Action",
+    "date": ""
+  },
+  {
+    "slug": "constitution",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "Constitution",
+    "date": ""
+  },
+  {
+    "slug": "future-fit-education",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/future_fit_education",
+    "title": "Future-fit Education",
+    "date": ""
+  },
+  {
+    "slug": "healthy-land",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/healthy_land",
+    "title": "Healthy Land",
+    "date": ""
+  },
+  {
+    "slug": "healthy-oceans",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/healthy-oceans",
+    "title": "Healthy Oceans",
+    "date": ""
+  },
+  {
+    "slug": "healthy-people",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/healthy_people",
+    "title": "Healthy People",
+    "date": ""
+  },
+  {
+    "slug": "honouring-te-tiriti",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/honouring_te_tiriti",
+    "title": "Honouring Te Tiriti",
+    "date": ""
+  },
+  {
+    "slug": "intergenerational-infrastructure",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/intergenerational_infrastructure",
+    "title": "Inter-generational Infrastructure",
+    "date": ""
+  },
+  {
+    "slug": "productivity-unleashed",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/productivity-unleashed",
+    "title": "Breakthrough Economy",
+    "date": ""
+  },
+  {
+    "slug": "smart-on-crime",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/smart_on_crime",
+    "title": "Smart on Crime",
+    "date": ""
+  },
+  {
+    "slug": "tax-reset",
+    "content_type": "policy",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/tax-reset",
+    "title": "Tax Reset",
+    "date": ""
+  },
+  {
+    "slug": "adam-macrae-martin",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-adam-macrae-martin",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "adrian-mee",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-adrian-mee",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "almo-wong",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-almo-wong",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "ben-lane",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-ben-lane",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "ben-wylie-van-eerd",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-ben-wylie-van-eerd",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "bianca-beebe",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-bianca-beebe",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "blair-smith",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-blair-smith",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "cail-smith",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-cail-smith",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "chee-khiang-sng",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-chee-khiang-sng",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "cindie-uddstrom",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-cindie-uddstrom",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "cody-marsh",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-cody-marsh",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "daniel-eb",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-daniel-eb",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "dave-bainbridge-zafar",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-dave-bainbridge-zafar",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "derrick-paull",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-derrick-paull",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "eden-skipper",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-eden-skipper",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "evan-french",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-evan-french",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "finn-liley",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-finn-liley",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "helen-tait",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-helen-tait",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "holly-knill",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-holly-knill",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "jamie-attenborough",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-jamie-attenborough",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "jessica-hammond",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-jessica-hammond",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "jodie-kuntzsch",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-jodie-kuntzsch",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "johan-chang",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-johan-chang",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "kayla-kingdon-bebb",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-kayla-kingdon-bebb",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "kevin-huang",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-kevin-huang",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "luke-ross",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-luke-ross",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "mark-roach",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-mark-roach",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "mathew-phillips",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-mathew-phillips",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "matt-harris",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-matt-harris",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "matt-shepherd",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-matt-shepherd",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "michael-carter",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-michael-carter",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "naomi-pocock",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-naomi-pocock",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "netra-ghimire",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-netra-ghimire",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "papa-wharewera",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-papa-wharewera",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "paul-jackson",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-paul-jackson",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "qiulae-wong",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-qiulae-wong",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "rachel-ward",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-rachel-ward",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "robert-mason",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-robert-mason",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "romeo-tevaga",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-romeo-tevaga",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "sacha-haskell",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-sacha-haskell",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "sam-plummer",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-sam-plummer",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "sarah-lucas",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-sarah-lucas",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "simon-dellabarca",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "https://www.opportunity.org.nz/candidate-simon-dellabarca",
+    "title": "",
+    "date": ""
+  },
+  {
+    "slug": "team",
+    "content_type": "team-member",
+    "source_id": "opportunity-website",
+    "source_url": "",
+    "title": "",
     "date": ""
   }
 ]

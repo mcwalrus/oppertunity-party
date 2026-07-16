@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/healthy_land"
 ingested_at: "2026-07-16T10:44:35.011954"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+cleaned_at: "2026-07-16T07:05:00.859942+00:00"
 title: "Healthy Land"
 pdf_urls: ["https://www.scionresearch.com/__data/assets/pdf_file/0003/80607/MakingZeroTheHero-Summary-Report.pdf"]
 ---

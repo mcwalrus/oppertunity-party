@@ -7,5 +7,6 @@
   "ingested_at": "2026-07-16T02:06:13.010616+00:00",
   "cleaned_at": "2026-07-16T02:06:13.010616+00:00",
   "title": "Tax Reset — Policy Addendum",
-  "policy_slug": "tax-reset"
+  "policy_slug": "tax-reset",
+  "html_path": "data/clean/pdf-document/tax-reset-policy-addendum/tax-reset-policy-addendum.html"
 }

@@ -7,5 +7,6 @@
   "ingested_at": "2026-07-16T02:06:13.010616+00:00",
   "cleaned_at": "2026-07-16T02:06:13.010616+00:00",
   "title": "Charter — default",
-  "policy_slug": "charter"
+  "policy_slug": "charter",
+  "html_path": "data/clean/pdf-document/charter-default/charter-default.html"
 }

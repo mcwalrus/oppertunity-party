@@ -548,7 +548,14 @@ def _write_clean_item(
     meta: dict[str, object],
     body: str,
 ) -> None:
-    """Write ``{slug}.md`` and ``meta.json`` into ``data/clean/{content_type}/{slug}/``."""
+    """Write ``{slug}.md`` and ``meta.json`` into ``data/clean/{content_type}/{slug}/``.
+
+    ``meta.json`` is written as a merge of the existing on-disk fields
+    and the new ``meta`` dict (new fields win). This preserves
+    out-of-band fields added by downstream consumers (e.g. ``html_path``
+    written by the ``pdf_html`` asset) when the transform pipeline
+    re-materialises the item.
+    """
     item_dir = CLEAN_DIR / content_type / slug
     item_dir.mkdir(parents=True, exist_ok=True)
 
@@ -557,9 +564,21 @@ def _write_clean_item(
     md_content = frontmatter + "\n" + body.lstrip("\n")
     (item_dir / f"{slug}.md").write_text(md_content, encoding="utf-8")
 
-    # Write meta.json
-    (item_dir / "meta.json").write_text(
-        json.dumps(meta, indent=2, ensure_ascii=False),
+    # Preserve existing meta.json fields the transform didn't compute
+    # (e.g. html_path added by pdf_html after the clean layer was written).
+    meta_path = item_dir / "meta.json"
+    if meta_path.exists():
+        try:
+            existing = json.loads(meta_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing = {}
+        # New meta wins, but unknown existing fields are kept.
+        merged = {**existing, **meta}
+    else:
+        merged = meta
+
+    meta_path.write_text(
+        json.dumps(merged, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
 

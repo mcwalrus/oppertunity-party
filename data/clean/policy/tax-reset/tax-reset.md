@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/tax-reset"
 ingested_at: "2026-07-16T10:44:32.678635"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+cleaned_at: "2026-07-16T07:05:00.859942+00:00"
 title: "Tax Reset"
 pdf_urls: ["https://drive.google.com/file/d/1KgTXUgjVipAA7EcDas-EJmOr6ZkeCf9B/view?usp=drive_link", "https://drive.google.com/file/d/1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW/view?usp=drive_link"]
 ---
@@ -463,7 +463,7 @@ Done well. the transition would avoid excessive inflationary impacts or other ec
 
 ## **Overview of a possible Tax Reset implementation pathway**
 
-|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
+||**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
 |---|---|---|---|---|---|---|---|---|---|
 ||**CI/New tax**|**LVT**|||**Contributions**||**Tax exemption**|||
 |**Year**|**% of population**|**Urban land rate**<br>**applied**|**Rural land rate**<br>**applied**|**Simplifed**<br>**expected**<br>**reduction in**<br>**land values**|**Employee**|**Employer**|**Employer**|**Employee**|**Fund Income**|
@@ -599,7 +599,7 @@ To balance the Citizens’ Income, simplify the tax system, and maintain progres
 
 - 39% for income at $200,001+ p/a
 
-Combined with the Citizens’ Income, this represents a reduction in total income tax at all income levels, with the largest reductions at lower income levels where it is most needed.Those earning less than $60,000 per year will pay less income tax than the Citizens’ Income they receive.
+Combined with the Citizens’ Income, this represents a reduction in total income tax at all income levels, with the largest reductions at lower income levels where it is most needed. Those earning less than $60,000 per year will pay less income tax than the Citizens’ Income they receive.
 
 ## **1.3 A Simplified Benefit System**
 
@@ -811,9 +811,7 @@ The LVT corrects this imbalance. You still own your house. You still benefit fro
 
 We think that’s a fair deal.
 
-## **What does the Land Value Tax mean for ‘asset-rich, cash-poor’ Kiwis like**
-
-## **retirees or farmers?**
+## **What does the Land Value Tax mean for ‘asset-rich, cash-poor’ Kiwis like retirees or farmers?**
 
 To ensure that every Kiwi is supported through the Tax Reset transition - lower rates, exemptions and deferments apply. Retirees will be able to defer their Land Value Tax - making it payable by their estate. Farmers will benefit from a 0.5% Land Value Tax, be able to exempt privately owned conservation land and defer their tax payments in tough weather or economic seasons.
 
@@ -891,15 +889,11 @@ The government will still tax the gains from Kiwisaver. It means that when someo
 
 The tax exemptions will be funded by the National Superannuation Fund. In the long run, increased returns on a bigger pool of savings will more than cover that initial cost to Government.
 
-## **What was your process in designing the Tax Reset. Have independent**
-
-## **economists reviewed this?**
+## **What was your process in designing the Tax Reset. Have independent economists reviewed this?**
 
 The Tax Reset was designed by Opportunity’s team of practising and retired economists. External economists have reviewed and provided feedback on the policy.
 
-## **What about Temporary Residents and Workers. Increasing tax rates without a**
-
-## **Citizen’s Income will dramatically raise their tax bill.**
+## **What about Temporary Residents and Workers. Increasing tax rates without a Citizen’s Income will dramatically raise their tax bill.**
 
 There are small groups of workers who will require extra considerations and provisions in the Tax Reset policy - including temporary or RSE workers. We’ll work with impacted industries to ensure the Tax Reset takes these groups into consideration, while balancing the pro-domestic hiring incentive that would eventuate if a higher tax burden was placed on foreign workers.
 

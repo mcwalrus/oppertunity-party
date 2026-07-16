@@ -7,5 +7,6 @@
   "ingested_at": "2026-07-16T02:06:13.010616+00:00",
   "cleaned_at": "2026-07-16T02:06:13.010616+00:00",
   "title": "Healthy Land — default",
-  "policy_slug": "healthy-land"
+  "policy_slug": "healthy-land",
+  "html_path": "data/clean/pdf-document/healthy-land-default/healthy-land-default.html"
 }

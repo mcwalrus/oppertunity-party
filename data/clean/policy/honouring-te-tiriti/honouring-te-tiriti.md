@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/honouring_te_tiriti"
 ingested_at: "2026-07-16T10:44:33.633590"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+cleaned_at: "2026-07-16T07:05:00.859942+00:00"
 title: "Honouring Te Tiriti"
 ---
 **Opportunity takes the responsibility of the Crown as a Treaty partner seriously.**

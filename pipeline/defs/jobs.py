@@ -7,6 +7,10 @@ from pipeline.defs.partitions import policy_slug_partitions
 # PDF assets are partitioned by policy slug and managed separately via pdf_job.
 _pdf_assets = dg.AssetSelection.assets("raw_pdfs") | dg.AssetSelection.assets("clean_pdfs")
 
+# pdf_html is non-partitioned (operates over every existing pdf-document
+# item) so it stays in full_pipeline / transforms_job by default.
+_pdf_html = dg.AssetSelection.assets("pdf_html")
+
 # site_deploy is excluded from full_pipeline because it is a production-affecting
 # action (publishes to Cloudflare Workers).  Launch it explicitly via
 # site_deploy_job.
@@ -39,6 +43,17 @@ pdf_job = dg.define_asset_job(
     ),
     selection=_pdf_assets,
     partitions_def=policy_slug_partitions,
+)
+
+pdf_html_job = dg.define_asset_job(
+    name="pdf_html_job",
+    description=(
+        "Render cleaned PDF markdown to per-item HTML at "
+        "data/clean/pdf-document/{slug}/{slug}.html. Non-partitioned — "
+        "covers every existing pdf-document item. Run after pdf_job has "
+        "materialised the cleaned markdown."
+    ),
+    selection=_pdf_html,
 )
 
 site_deploy_job = dg.define_asset_job(
