@@ -95,6 +95,82 @@ def _tax_reset_policy_overview(text: str) -> str:
     return text
 
 
+def _healthy_oceans_policy_overview(text: str) -> str:
+    """Quirks for Opportunity_Policy_Healthy Oceans.pdf."""
+    # Drop the `**Oceans**` page-footer label that lands mid-paragraph on page
+    # breaks (4 occurrences). Collapse the surrounding blank lines so the
+    # surrounding paragraph rejoins.
+    text = re.sub(r"\n\n\*\*Oceans\*\*\n\n", "\n\n", text)
+    # Promote two sub-section headings that pymupdf4llm emitted as bold body
+    # text (missing `## ` prefix) to match their siblings (1.1, 1.2, 1.4, ...).
+    text = re.sub(
+        r"\*\*1\.3 Install cameras and maintain observers on all commercial fishing vessels\*\*",
+        "## **1.3 Install cameras and maintain observers on all commercial fishing vessels**",
+        text,
+    )
+    text = re.sub(
+        r"\*\*4\.3 Develop long-term regional ocean plans in partnership with communities\*\*",
+        "## **4.3 Develop long-term regional ocean plans in partnership with communities**",
+        text,
+    )
+    text = fix_sentence_space_after_period(text)
+    return text
+
+
+def _tax_reset_transition_plan(text: str) -> str:
+    """Quirks for Opportunity_Tax Reset_Transition Plan.pdf.
+
+    Drops the duplicate ``Document Type **Policy Addendum**`` header that
+    appears after the frontmatter table (already present as a table row).
+    The malformed 10-column implementation pathway table is left as-is —
+    unrecoverable from extraction; see docs/pdf-pipeline.md.
+    """
+    text = re.sub(r"\nDocument Type \*\*Policy Addendum\*\*\n\n", "\n\n", text)
+    text = fix_sentence_space_after_period(text)
+    return text
+
+
+def _abundant_energy_policy_overview(text: str) -> str:
+    """Quirks for Opportunity_Policy_Abundant Energy.pdf."""
+    # Drop the `**Energy**` page-footer label that lands mid-paragraph on page
+    # breaks (3 occurrences). Same pattern as `**Oceans**` in Healthy Oceans.
+    text = re.sub(r"\n\n\*\*Energy\*\*\n\n", "\n\n", text)
+    text = fix_sentence_space_after_period(text)
+    return text
+
+
+def _citizens_voice_policy_overview(text: str) -> str:
+    """Quirks for Opportunity_Policy_Citizens Voice.pdf."""
+    # Drop the `**Direct Democracy**` page-header label that lands mid-paragraph
+    # on page 2's break (1 occurrence). Same pattern as `**Energy**` /
+    # `**Oceans**` in the other policy overviews — the bare section name (no
+    # "Opportunity Party" prefix) slips past the page-footer stripper in
+    # ``pdf_convert.clean_body``.
+    text = re.sub(r"\n\n\*\*Direct Democracy\*\*\n\n", "\n\n", text)
+    text = fix_sentence_space_after_period(text)
+    return text
+
+
+def _making_zero_the_hero_summary(text: str) -> str:
+    """Quirks for MakingZeroTheHero-Summary-Report.pdf.
+
+    Drops an orphan empty ``##`` heading that pymupdf4llm emits at a page
+    break where the PDF's section heading text was lost — the body paragraph
+    "desirability of a pan-sector vision..." continues mid-sentence from the
+    previous page. Anchored to that unique body text so it is a no-op on
+    charter/constitution (which also write to ``pdf-default.md``).
+    """
+    # ponytail: scoped to one phrase; no generic empty-H2 stripper. Add a
+    # generic helper if a second Scion PDF hits the same artifact.
+    text = re.sub(
+        r"^##[ \t]*\n\ndesirability of a pan-sector vision",
+        "desirability of a pan-sector vision",
+        text,
+        flags=re.MULTILINE,
+    )
+    return text
+
+
 # Per-PDF quirk registry: source-layer markdown filename -> [(description, callable)]
 # Keys match `data/sources/opportunity-website/policies/{slug}/pdf-*.md` filenames.
 QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
@@ -102,6 +178,30 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
         (
             "Tax Reset Policy Overview: merge 3 wrapped H2 FAQ headings + fix sentence-space after period",
             _tax_reset_policy_overview,
+        ),
+        (
+            "Healthy Oceans Policy Overview: drop mid-paragraph `**Oceans**` footer label, promote 2 bold-only sub-headings to H2 + fix sentence-space after period",
+            _healthy_oceans_policy_overview,
+        ),
+        (
+            "Abundant Energy Policy Overview: drop mid-paragraph `**Energy**` footer label + fix sentence-space after period",
+            _abundant_energy_policy_overview,
+        ),
+        (
+            "Citizens Voice Policy Overview: drop mid-paragraph `**Direct Democracy**` page-header label + fix sentence-space after period",
+            _citizens_voice_policy_overview,
+        ),
+    ],
+    "pdf-policy-addendum.md": [
+        (
+            "Tax Reset Transition Plan: drop duplicate 'Document Type **Policy Addendum**' header + fix sentence-space after period",
+            _tax_reset_transition_plan,
+        ),
+    ],
+    "pdf-default.md": [
+        (
+            "MakingZeroTheHero Summary: drop orphan empty H2 before 'desirability...' paragraph (page-break artifact)",
+            _making_zero_the_hero_summary,
         ),
     ],
 }

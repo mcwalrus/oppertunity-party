@@ -33,6 +33,31 @@ flowchart LR
     build --> site[static site]
 ```
 
+## PDF documents
+
+Policy detail PDFs from opportunity.org.nz (hosted on Google Drive) flow through a parallel pipeline alongside the scraped HTML — downloaded, extracted as structured markdown, validated, and rendered as HTML. The source PDFs are never served; only the extracted content reaches the site.
+
+```mermaid
+flowchart LR
+    pdf[source PDFs<br/>data/sources/.../pdfs/] --> extract["pymupdf4llm: PDF to MD"]
+    extract --> clean["data/clean/pdf-document/<br/>{slug}/{slug}.md"]
+    extract -.->|validate| check["pymupdf vs pymupdf4llm: >= 95% word coverage"]
+    check -.-> report[docs/pdf-pipeline.md]
+    clean --> render["python-markdown: MD to HTML"]
+    render --> html["data/clean/pdf-document/<br/>{slug}/{slug}.html"]
+    html --> build["Astro<br/>site/dist/policies/{slug}/"]
+```
+
+**Tools:** [`pymupdf4llm`](https://pymupdf.io) extracts tables, headings, and bullet lists with no system dependencies. [`pymupdf`](https://pymupdf.readthedocs.io) provides an independent raw-text signal used only for the validation pass. [`python-markdown`](https://python-markdown.github.io/) renders the cleaned body to HTML with the `extra` extension.
+
+**Where the content lives:** `data/clean/pdf-document/{slug}/{slug}.md` (canonical markdown) and `{slug}.html` (rendered). The Astro build publishes the HTML to `site/dist/policies/{slug}/`. Each item's `meta.json` records `html_path` so consumers can find it without directory scans.
+
+**Checks:** every PDF goes through a two-pass coverage check — pymupdf4llm markdown vs pymupdf raw text — at a 95% word-coverage threshold, plus structural spot-checks (headings, table rows, bullets). Per-PDF results land in `data/clean/_pdf_validation.json`.
+
+**Reference:** [`docs/pdf-pipeline.md`](docs/pdf-pipeline.md) — auto-generated coverage report with per-PDF metrics (word counts, headings, tables, bullets, pass/fail). Regenerate by running the `validation_job` job or launching the `validate_pdf_extraction` asset from `just dev`.
+
+**For the Opportunity Party team:** the canonical markdown at `data/clean/pdf-document/` is the format to host on opportunity.org.nz — it preserves heading hierarchy, lists, and tables without any PDF binary. The rendered HTML at `site/dist/policies/` is equivalent; pick whichever format the existing CMS prefers.
+
 ## Key tools
 
 Three things to understand before you touch anything:
