@@ -1,53 +1,79 @@
 # Opportunity Party
 
-A toolkit and for exploring and understanding the New Zealand [Opportunity Party](https://www.opportunity.org.nz) (formerly TOP) through a variety of their public data sources — policies, policy documents, news, blog posts, team profiles, events, and party governance —  formatted as plaintext, markdown files. This library pulls data from a variety of other public sources across the internet. The aim is to produce a dataset supportive for AI analysis.
+A scraping and analysis pipeline for [opportunity.org.nz](https://www.opportunity.org.nz). Web content is scraped, cleaned into canonical markdown, and built into a static site — ready for future analysis or introspection of downstream tooling on the party's people, policies, or manfiest.
 
-TODO sections:
+## Quickstart
 
-* Getting Started
-* Why Dagster? (visual flow)
-* Architecture - dagster -> site -> MCP (eventually)
-* Data sources - use external doc
-* Helpful resources - weblinks + docs/reference guides
-* Contributing - Borrow general policy from elsewhere
+Requires macOS or Linux, [Homebrew](https://brew.sh), and Python 3.12+.
 
-Note, specification documents are likely out of sync. Don't bother updating them.
+```bash
+brew bundle --file=scripts/Brewfile   # direnv, fnm, uv, just, lefthook, …
+direnv allow                          # load .envrc (DAGSTER_HOME + venv PATH)
+just install                          # uv sync — Python deps
+just dev                              # open the Dagster UI
+```
 
+This project is shaped for AI-assisted development: every workflow is observable, every command is reproducible, every tool choice is deliberate. The selection of building blocks of which tools + dependencies are used are more significant. Anything that breaks I can verify through [dagster.io](https://dagster.io/), with manual validation of transformations via [obsidian.md](https://obsidian.md/).
 
+## Pipeline
 
-## The data pipeline
+```mermaid
+flowchart LR
+    subgraph Sources["data/sources/ — gitignored, raw"]
+        S1[opportunity-website<br/>Python · BeautifulSoup]
+        S2[youtube<br/>yt-dlp]
+        S3[pdfs<br/>pymupdf4llm]
+    end
 
+    subgraph Dagster["Dagster pipeline — observable assets"]
+        A1[scrape assets]
+        A2[transform assets]
+        A3[site build assets]
+    end
 
+    subgraph Clean["data/clean/ — tracked, canonical"]
+        C1["policy · blog-post · event<br/>team-member · party-information · pdf-document<br/>_index.json (cross-type search index)"]
+    end
 
+    subgraph Site["site/ — Astro SSG"]
+        SSG[static HTML]
+    end
 
+    Sources --> A1 --> A2 --> Clean
+    Clean --> A3 --> SSG
+```
 
-## The data
+## Key tools
 
-All normalized content lives in `data/clean/` (committed to git):
+Three things to understand before you touch anything:
+
+**Dagster** — the Python orchestrator. Every scrape, transform, and build step is an *asset* under `pipeline/defs/assets/`. New sources, transforms, and consumers are added by writing new assets and wiring them into a job. The UI (`just dev`) shows the full lineage of any output back to its raw source — useful for visualisation. AI agents can use the `dg` utility enabled by `direnv`.
+
+**direnv** — auto-loads `.envrc` when you `cd` into the project. Combined with `uv`, every shell session gets the exact pinned toolchain (and a stable `DAGSTER_HOME`) without global installs. Run `direnv allow` once after cloning.
+
+**pi.dev** — the AI coding harness this project is shaped for. Skills, agent context, and the Dagster observability surface are designed so an agent can pick up any task without re-explaining the codebase. Additionally I have used `npx skills@latest` for downloading useful skills for project development.
+
+## Working with the data
 
 ```
 data/
-└── clean/
-    ├── _index.json               ← cross-type search index
-    ├── policy/{slug}/            ← policy pages + full PDF text
-    ├── blog-post/{slug}/         ← blog posts and news articles
-    ├── event/{slug}/             ← upcoming events
-    ├── team-member/{slug}/       ← team and candidate profiles
-    ├── party-information/{slug}/ ← party info, about, governance
-    └── pdf-document/{slug}/      ← extracted policy PDF documents
+├── sources/    # gitignored, raw ingestor output — write-only
+└── clean/      # tracked, canonical markdown + meta.json — read by all consumers
 ```
 
-Each item contains `{slug}.md` (YAML frontmatter + cleaned body) and `meta.json` (identical provenance fields as machine-readable JSON).
+Ingestors write to `data/sources/`; everyone else reads from `data/clean/`. Adding a new source or consumer, schema details, and the layer invariants all live in [`docs/data-architecture.md`](docs/data-architecture.md).
 
+## Commands
+
+| Recipe | What it does |
+| --- | --- |
+| `just install` | `uv sync` — install Python deps |
+| `just dev` | Launch the Dagster UI |
+| `just check` | `ruff check` + `ruff format --check` + `ty check` (read-only, CI-safe) |
+| `just fix` | Auto-fix lint and reformat |
+| `just validate` | Verify links in `data/clean/**/*.md` |
+| `just hooks-install` | Wire lefthook into `.git/hooks` (once after cloning) |
 
 ## Contributing
 
-Contributions are welcome. If you notice broken scrapers, missing content, or want to improve the output format, open a pull request or file an issue.
-
-```bash
-just check    # run linting and type checks before submitting
-```
-
-For architecture and schema documentation, see:
-
-- [docs/data-architecture.md](docs/data-architecture.md) — pipeline design, layer invariants, how to add new sources/consumers
+Run `just check` before opening a PR — it must pass. The same checks run automatically via lefthook pre-commit. Start with [`docs/data-architecture.md`](docs/data-architecture.md) for architecture and schema questions.
