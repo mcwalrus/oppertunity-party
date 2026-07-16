@@ -66,4 +66,23 @@ Ingestors write to `data/sources/`; everyone else reads from `data/clean/`. Addi
 
 ## Contributing
 
+### Development
+
 Run `just check` before opening a PR — it must pass. The same checks run automatically via lefthook pre-commit. Start with [`docs/data-architecture.md`](docs/data-architecture.md) for architecture and schema questions.
+
+### Using the corpus downstream
+
+`data/clean/` is the canonical, git-tracked corpus — open for analysis by anyone. Each item is a folder containing `{slug}.md` (YAML frontmatter + body) and `meta.json` (provenance). A cross-type search index lives at `data/clean/_index.json`. Common downstream uses:
+
+- Search + full-text analysis across policies, blog posts, transcripts, party-info
+- Cross-referencing PDFs and their source policy pages
+- Feeding downstream RAG pipelines, notebooks, or external tools
+- Building derived analysis outputs (see `data/derived/` in [`docs/data-architecture.md`](docs/data-architecture.md))
+
+### Adding more sources
+
+The pipeline is source-agnostic — `data/sources/` (raw, gitignored) and `data/clean/` (canonical, tracked) are the only contracts. The same shape works for other New Zealand political party sites, news coverage, social feeds, or external newsletters. See [How to Add a New Source](docs/data-architecture.md#how-to-add-a-new-source) for the pattern.
+
+### Static-site markdown mirror (proposal)
+
+A browsable static site that mirrors the party's public-facing pages as plain markdown would be useful for archive and research access. If you'd like to help run or extend this, open an issue.
