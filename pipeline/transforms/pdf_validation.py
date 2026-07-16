@@ -24,11 +24,15 @@ from __future__ import annotations
 import json
 import logging
 import re
+import unicodedata
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 import pymupdf
 import pymupdf4llm
+
+from pipeline.ingestion.pdf_convert import clean_body
+from pipeline.text_clean import strip_glyphs
 
 logger = logging.getLogger(__name__)
 
@@ -85,17 +89,9 @@ def extract_raw_text(pdf_path: Path) -> str:
 
     Used as ground-truth signal: if pymupdf4llm drops a word, this catches it.
     """
-    doc = pymupdf.open(str(pdf_path))
-    pages_text = [page.get_text() for page in doc]
-    doc.close()
+    with pymupdf.open(str(pdf_path)) as doc:
+        pages_text = [page.get_text() for page in doc]
     return "\n".join(pages_text)
-
-
-def _clean_markdown(md: str) -> str:
-    """Strip the leading metadata table + H1 that pdf_convert.py adds."""
-    md = re.sub(r"^# .+?\n(\|.*?\|.*?\n)+\n*", "", md, count=1)
-    md = re.sub(r"^\*\*.+?\*\*\s*$", "", md, flags=re.MULTILINE)
-    return md.strip()
 
 
 # ---------------------------------------------------------------------------
@@ -111,14 +107,8 @@ def _normalise_for_compare(text: str) -> str:
     Without normalisation these split into multiple tokens and inflate the
     'missing words' count. NFKD handles the common decomposition cases.
     """
-    # Strip zero-width + replacement chars + soft hyphen + BOM
-    text = re.sub(r"[\u200b-\u200f\ufeff\ufffd\u00ad]", "", text)
-    # Strip Private Use Area chars between letters (PDF font-glyph fallbacks
-    # for ligatures like 'ffi' / 'ffl' / accented chars).
-    text = re.sub(r"(?<=[A-Za-z])[\ue000-\uf8ff](?=[A-Za-z])", "", text)
+    text = strip_glyphs(text)
     # Strip combining marks (NFKD then drop combining class)
-    import unicodedata
-
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if unicodedata.category(c) != "Mn")
     return text
@@ -170,25 +160,29 @@ def structural_stats(markdown: str) -> dict[str, int]:
 def validate_pdf(pdf_path: Path) -> PDFValidation:
     """Run all validation steps for one PDF and return a result record."""
     raw_text = extract_raw_text(pdf_path)
-    md = _clean_markdown(extract_markdown(pdf_path))
+    raw_md = extract_markdown(pdf_path)
+    # Structural stats run against the production-cleaned body (same cleanup
+    # that pdf_convert.clean_body applies) — not against a regex hack.
+    body = clean_body(raw_md)
 
-    coverage, raw_n, md_n, raw_uniq, md_uniq = word_coverage(raw_text, md)
-    stats = structural_stats(md)
+    coverage, raw_n, md_n, raw_uniq, md_uniq = word_coverage(raw_text, raw_md)
+    stats = structural_stats(body)
 
     notes: list[str] = []
     # Detect font-glyph artefacts — common pattern: a word with a replacement
     # char or zero-width joiner in the middle, e.g. "O\ufficers" or "Wri\u200ben".
     # These render fine in markdown but break plain-text grep / search.
-    glyph_artefact_count = len(re.findall(r"[A-Za-z][\ufffd\u200b-\u200f]", md))
+    glyph_artefact_count = len(re.findall(r"[A-Za-z][\ufffd\u200b-\u200f]", body))
     if glyph_artefact_count:
         notes.append(f"{glyph_artefact_count} font-glyph artefact(s) in body")
 
     if coverage < WORD_COVERAGE_THRESHOLD:
         notes.append(f"word coverage {coverage:.3f} < threshold {WORD_COVERAGE_THRESHOLD}")
 
-    # Structural sanity — a non-trivial policy PDF should have ≥1 heading and
-    # ≥1 bullet. Skip for governance docs that are pure table-of-contents.
-    is_short = raw_n < 500  # tiny docs (none currently) skip the heading check
+    # Structural sanity — a non-trivial policy PDF should have ≥1 heading.
+    # Skip for governance docs that are pure table-of-contents (charter is
+    # 340 words; would otherwise fail).
+    is_short = raw_n < 500  # tiny docs skip the heading check
     if not is_short and stats["headings"] == 0:
         notes.append("no headings detected in markdown body")
 

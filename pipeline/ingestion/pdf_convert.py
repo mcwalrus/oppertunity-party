@@ -23,6 +23,7 @@ import pymupdf4llm
 
 from pipeline.ingestion.client import save_content
 from pipeline.paths import DATA_DIR, POLICY_ASSETS_DIR, REFERENCE_FILE
+from pipeline.text_clean import strip_glyphs
 
 logger = logging.getLogger(__name__)
 
@@ -92,7 +93,7 @@ def convert_pdf(pdf_path: Path) -> dict:
     """
     raw_md = _extract_raw_markdown(pdf_path)
     header = parse_header(raw_md)
-    body_md = _clean_body(raw_md)
+    body_md = clean_body(raw_md)
 
     # Resolve slug first — needed for title fallback
     policy_slug = _get_policy_slug_from_reference(pdf_path.name)
@@ -137,7 +138,7 @@ def parse_header(raw_md: str) -> dict[str, str]:
     return header
 
 
-def _clean_body(raw_md: str) -> str:
+def clean_body(raw_md: str) -> str:
     """Strip artifacts from pymupdf4llm output and return clean body markdown.
 
     Removes:
@@ -147,6 +148,9 @@ def _clean_body(raw_md: str) -> str:
       4. Zero-width / replacement glyphs that pymupdf4llm embeds when a font
          glyph is unavailable (e.g. constitution.pdf renders "Officers" as
          "O\u200bficers"). They break plain-text search and copy-paste.
+
+    Public so the validation module can run structural analysis against the
+    same cleaned body that production keeps.
     """
     out: list[str] = []
     for line in raw_md.split("\n"):
@@ -169,13 +173,7 @@ def _clean_body(raw_md: str) -> str:
 
     text = "\n".join(out)
     text = re.sub(r"\n{3,}", "\n\n", text)  # collapse excessive blank lines
-    # Strip zero-width chars + replacement chars (font-glyph fallbacks).
-    # Constitution.pdf uses fonts whose 'ffi' ligature / accented chars are
-    # emitted as U+FFFD or U+200B when unrenderable. Private Use Area chars
-    # between letters are also typically font-glyph fallbacks (the 'ffi'
-    # ligature in particular renders as o<PUA>icers / a<PUA>airs).
-    text = re.sub(r"[\u200b-\u200f\ufeff\ufffd\u00ad]", "", text)
-    text = re.sub(r"(?<=[A-Za-z])[\ue000-\uf8ff](?=[A-Za-z])", "", text)
+    text = strip_glyphs(text)
     return text.strip()
 
 

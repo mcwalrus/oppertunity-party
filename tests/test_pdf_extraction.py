@@ -9,6 +9,10 @@ Tests are skipped automatically if the PDF directory is empty (i.e. on
 a fresh clone without raw PDFs). The threshold (0.95) is loose enough
 to pass legitimate formatting differences but tight enough to catch
 truly broken extraction (which lands at <0.90).
+
+Per-PDF validation runs once as a session-scoped fixture and is shared
+across tests, so the suite pays the extraction cost once per PDF
+instead of once per (test x PDF).
 """
 
 from __future__ import annotations
@@ -20,7 +24,10 @@ import pytest
 from pipeline.transforms.pdf_validation import (
     DEFAULT_PDF_DIR,
     WORD_COVERAGE_THRESHOLD,
+    PDFValidation,
+    load_validation_json,
     validate_pdf,
+    write_validation_json,
 )
 
 PDF_DIR = Path(DEFAULT_PDF_DIR)
@@ -31,62 +38,59 @@ pytestmark = pytest.mark.skipif(
 )
 
 
-@pytest.fixture(params=pdf_paths, ids=lambda p: p.name)
-def pdf_path(request):
-    return request.param
+@pytest.fixture(scope="session")
+def all_results():
+    """Validate every PDF once; share the results across all tests."""
+    return {p.name: validate_pdf(p) for p in pdf_paths}
 
 
-def test_validation_runs(pdf_path):
-    """Smoke test — validation completes without exceptions."""
-    result = validate_pdf(pdf_path)
-    assert result.filename == pdf_path.name
-    assert result.pymupdf_words > 0
+@pytest.fixture(params=[p.name for p in pdf_paths], ids=lambda n: n)
+def validation_result(request, all_results):
+    """Pre-computed validation result for one PDF — no per-test extraction."""
+    return all_results[request.param]
 
 
-def test_word_coverage_meets_threshold(pdf_path):
+def test_validation_runs(validation_result):
+    """Smoke test — validation completes and produces a non-empty result."""
+    assert validation_result.pymupdf_words > 0
+
+
+def test_word_coverage_meets_threshold(validation_result):
     """Every word in the raw PDF must round-trip into the markdown ≥95% of the time."""
-    result = validate_pdf(pdf_path)
-    assert result.word_coverage >= WORD_COVERAGE_THRESHOLD, (
-        f"{pdf_path.name}: coverage {result.word_coverage:.3f} "
+    assert validation_result.word_coverage >= WORD_COVERAGE_THRESHOLD, (
+        f"{validation_result.filename}: coverage {validation_result.word_coverage:.3f} "
         f"< threshold {WORD_COVERAGE_THRESHOLD}"
     )
 
 
-def test_no_font_glyph_artefacts(pdf_path):
+def test_no_font_glyph_artefacts(validation_result):
     """Zero-width / PUA / replacement characters in word interiors must be stripped.
 
     Constitution.pdf originally emitted 'O<PUA>ficers' for 'Officers'. The
-    _clean_body() fix in pdf_convert.py removes these. This test guards
-    against regressions in the stripper.
+    clean_body() fix in pdf_convert.py removes these. This test guards
+    against regressions in strip_glyphs().
     """
-    result = validate_pdf(pdf_path)
-    assert "font-glyph artefact" not in " ".join(result.notes), f"{pdf_path.name}: {result.notes}"
-
-
-def test_structural_skeleton_present(pdf_path):
-    """Non-trivial PDFs must have ≥1 heading + ≥1 bullet in the cleaned markdown.
-
-    Governance docs (charter, constitution) are also policy PDFs — charter
-    has 15 headings, constitution has 118 — so the heading threshold is
-    safe. The bullet threshold accommodates pure-table docs like the
-    transition plan (which has 4 bullets and 16 table rows).
-    """
-    result = validate_pdf(pdf_path)
-    if result.pymupdf_words < 500:  # tiny docs skip the check
-        pytest.skip("Document too short for structural spot-check")
-    assert result.headings >= 1, f"{pdf_path.name}: no headings detected"
-
-
-def test_validation_json_loadable(pdf_path, tmp_path):
-    """Round-trip through the JSON writer/loader."""
-    from pipeline.transforms.pdf_validation import (
-        load_validation_json,
-        write_validation_json,
+    assert "font-glyph artefact" not in " ".join(validation_result.notes), (
+        f"{validation_result.filename}: {validation_result.notes}"
     )
 
-    result = validate_pdf(pdf_path)
+
+def test_structural_skeleton_present(validation_result):
+    """Non-trivial PDFs must have ≥1 heading in the cleaned markdown body."""
+    if validation_result.pymupdf_words < 500:  # tiny docs skip the check
+        pytest.skip("Document too short for structural spot-check")
+    assert validation_result.headings >= 1, f"{validation_result.filename}: no headings detected"
+
+
+def test_validation_json_loadable(tmp_path):
+    """Round-trip through the JSON writer/loader — no PDF extraction.
+
+    The serialiser is a pure function; no need to pay the extraction cost
+    to test it. Synthetic PDFValidation exercises the same code path.
+    """
+    result = PDFValidation(filename="synthetic.pdf", word_coverage=0.95, passed=True)
     out = tmp_path / "validation.json"
     write_validation_json([result], out)
     loaded = load_validation_json(out)
     assert loaded["pdf_count"] == 1
-    assert loaded["results"][0]["filename"] == pdf_path.name
+    assert loaded["results"][0]["filename"] == "synthetic.pdf"
