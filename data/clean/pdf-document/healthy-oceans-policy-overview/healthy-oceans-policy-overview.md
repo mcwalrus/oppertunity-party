@@ -8,12 +8,12 @@ cleaned_at: "2026-07-16T02:06:13.010616+00:00"
 title: "Healthy Oceans — Policy Overview"
 policy_slug: "healthy-oceans"
 ---
-| Field | Value |
-|-------|-------|
-| Date | February 2026 |
-| Policy | Healthy Oceans |
-| Document Type | Policy Overview |
-| Source | `Opportunity_Policy_Healthy Oceans.pdf` |
+| Field         | Value                                   |
+| ------------- | --------------------------------------- |
+| Date          | February 2026                           |
+| Policy        | Healthy Oceans                          |
+| Document Type | Policy Overview                         |
+| Source        | `Opportunity_Policy_Healthy Oceans.pdf` |
 
 ## **Healthy Oceans**
 

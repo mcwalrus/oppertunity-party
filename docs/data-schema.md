@@ -158,8 +158,36 @@ Slug format: `{policy-slug}-{document-type}`, e.g. `tax-reset-policy-overview`.
 |---|---|---|---|
 | `title` | `string` | ✅ | Document title, e.g. `"Tax Reset — Policy Overview"` |
 | `policy_slug` | `string` | ✅ (may be empty) | Parent policy slug for cross-referencing |
+| `image_paths` | `[string]` | ✅ (may be `[]`) | Relative paths to extracted images under `data/clean/pdf-document/{slug}/images/`. Only images from pages with embedded graphics (signalled by `pymupdf4llm` picture-text blocks) are included — decorative page backgrounds are dropped. See [PDF image extraction](#pdf-image-extraction). |
+| `images_extracted_at` | ISO-8601 string | optional | When the image extraction last ran (set by the `pdf_images` Dagster asset). |
 
-The `.md` body contains the extracted text from the PDF.
+The `.md` body contains the extracted text from the PDF. Picture-text
+blocks emitted by `pymupdf4llm` (for content it couldn't OCR) are
+replaced with `![alt](images/filename.jpg)` references at transform
+time — see [PDF image extraction](#pdf-image-extraction) below.
+
+#### PDF image extraction
+
+PDFs may contain embedded charts, diagrams, and other content graphics
+that `pymupdf4llm` cannot extract as text. The `pdf_images` Dagster
+asset extracts these as JPEG files and references them in the clean
+markdown.
+
+- **Source:** the PDF at `data/sources/opportunity-website/pdfs/*.pdf`
+- **Output:** `data/clean/pdf-document/{slug}/images/img-NNN-NNN.jpg`
+  (named by page number, 1-indexed, then 0-indexed within page)
+- **Markdown:** each `**----- Start of picture text -----**` block in
+  the body is replaced with `![alt](images/img-NNN-NNN.jpg)` in
+  document order
+- **Filter:** only pages flagged by `pymupdf4llm` with a picture-text
+  block are extracted from, so decorative page backgrounds (which
+  `pymupdf4llm` doesn't flag) are dropped automatically
+
+This is a deliberate exception to the
+[Binary/Media Asset Strategy](data-architecture.md#binarymedia-asset-strategy)
+rule that media stays in `data/sources/` — PDF images are small, useful
+content illustrations (charts, diagrams) that belong with the markdown
+they describe. They are tracked in git alongside the clean text.
 
 ---
 

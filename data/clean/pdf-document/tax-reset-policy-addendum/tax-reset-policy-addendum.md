@@ -8,12 +8,12 @@ cleaned_at: "2026-07-16T02:06:13.010616+00:00"
 title: "Tax Reset — Policy Addendum"
 policy_slug: "tax-reset"
 ---
-| Field | Value |
-|-------|-------|
-| Date | May 2026 |
-| Policy | Tax Reset |
-| Document Type | Policy Addendum |
-| Source | `Opportunity_Tax Reset_Transition Plan.pdf` |
+| Field         | Value                                       |
+| ------------- | ------------------------------------------- |
+| Date          | May 2026                                    |
+| Policy        | Tax Reset                                   |
+| Document Type | Policy Addendum                             |
+| Source        | `Opportunity_Tax Reset_Transition Plan.pdf` |
 
 Document Type **Policy Addendum**
 

@@ -25,6 +25,7 @@ from pipeline.transforms.clean import (
     clean_body,
     extract_metadata_fields,
     normalise_blank_runs,
+    strip_contents_section,
     strip_footer_sections,
 )
 
@@ -703,14 +704,28 @@ def _extract_pdf_table_meta(body: str) -> dict[str, str]:
 
 
 def _strip_pdf_metadata_table(body: str) -> str:
-    """Remove the leading H1 title and metadata table from a PDF markdown file."""
+    """Remove the leading H1 title, metadata table, and Contents section from a PDF markdown file.
+
+    If a ``## **Contents**`` section (pymupdf4llm's extraction of the PDF's own
+    TOC page) is stripped, an HTML comment is prepended to the body documenting
+    the removal so the change is visible in the clean output file.
+    """
     # Strip "# Title\n| Field | Value |\n|------|\n| ... |\n..."
     body = re.sub(r"^# .+?\n(\|.*?\|.*?\n)+\n*", "", body, count=1)
     # Strip standalone bold noise lines (e.g. "**Tax**")
     body = re.sub(r"^\*\*.+?\*\*\s*$", "", body, flags=re.MULTILINE)
     # Strip H1 headings (they duplicate the clean item's title)
     body = re.sub(r"^#[^#].+$", "", body, flags=re.MULTILINE)
-    return body.lstrip("\n")
+    body = body.lstrip("\n")
+
+    # Strip the Contents (TOC) section if present and document the removal.
+    body, had_contents = strip_contents_section(body)
+    if had_contents:
+        body = (
+            "<!-- The Contents (TOC) table has been removed during transformation; "
+            "the rendered document provides its own navigation. -->\n\n" + body
+        )
+    return body
 
 
 def _load_pdf_content(pdf_files: list[Path]) -> str:

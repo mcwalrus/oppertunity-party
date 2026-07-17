@@ -4,9 +4,16 @@
   "source_id": "opportunity-website",
   "source_type": "website",
   "source_url": "",
-  "ingested_at": "2026-07-16T02:06:13.010616+00:00",
-  "cleaned_at": "2026-07-16T02:06:13.010616+00:00",
+  "ingested_at": "2026-07-17T04:04:34.382676+00:00",
+  "cleaned_at": "2026-07-17T04:04:34.382676+00:00",
   "title": "Healthy Land — default",
   "policy_slug": "healthy-land",
+  "image_paths": [
+    "data/clean/pdf-document/healthy-land-default/images/img-001-000.jpg",
+    "data/clean/pdf-document/healthy-land-default/images/img-003-001.jpg",
+    "data/clean/pdf-document/healthy-land-default/images/img-004-002.jpg",
+    "data/clean/pdf-document/healthy-land-default/images/img-005-003.jpg"
+  ],
+  "images_extracted_at": "2026-07-17T04:04:34.385369+00:00",
   "html_path": "data/clean/pdf-document/healthy-land-default/healthy-land-default.html"
 }

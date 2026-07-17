@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from pipeline.transforms.clean import strip_contents_section
 from pipeline.transforms.pdf_quirks import (
     QUIRKS_BY_FILENAME,
     apply_quirks,
@@ -539,3 +540,83 @@ def test_apply_quirks_tax_reset_addendum_fills_empty_cells():
     assert "|H1|**H2**|**H3**|**H4|**H5**|" in result  # header unchanged (no empty cells)
     # Original row had 4 empty cells interspersed — all become '-'
     assert "|-|**CI/New tax**|**LVT**|-|-|**Contributions**|-|**Tax exemption**|-|-|" in result
+
+
+# ---------------------------------------------------------------------------
+# strip_contents_section — drop the '## **Contents**' TOC table from PDF bodies
+# ---------------------------------------------------------------------------
+
+
+def test_strip_contents_section_removes_toc_table():
+    """The '## **Contents**' heading and its following TOC table are removed.
+
+    pymupdf4llm emits a TOC table for PDFs that have one (constitution.pdf).
+    The rendered document provides its own navigation, so the duplicated table
+    is dropped during the source→clean transform.
+    """
+    text = (
+        "## **Contents**\n"
+        "\n"
+        "|1.|Formation ................................................. 3|\n"
+        "|---|---|\n"
+        "||Name and establishment......................................3|\n"
+        "\n"
+        "## **1. Formation**\n"
+        "\n"
+        "Body content here.\n"
+    )
+    stripped, removed = strip_contents_section(text)
+    assert removed is True
+    assert "## **Contents**" not in stripped
+    assert "|1.|Formation" not in stripped
+    # The next content section is preserved
+    assert "## **1. Formation**" in stripped
+    assert "Body content here." in stripped
+
+
+def test_strip_contents_section_no_match_returns_false():
+    """When no Contents section is present, returns the body unchanged and removed=False."""
+    text = "## **Some heading**\n\nBody content.\n"
+    stripped, removed = strip_contents_section(text)
+    assert removed is False
+    assert stripped == text
+
+
+def test_strip_contents_section_idempotent():
+    """Re-running on already-stripped text returns (body, False) — no double-stripping."""
+    text = (
+        "## **Contents**\n"
+        "\n"
+        "|1.|Formation ................................................. 3|\n"
+        "\n"
+        "## **1. Formation**\n"
+    )
+    once, removed_once = strip_contents_section(text)
+    twice, removed_twice = strip_contents_section(once)
+    assert removed_once is True
+    assert removed_twice is False
+    assert once == twice
+
+
+def test_strip_contents_section_preserves_trailing_content():
+    """Content after the TOC table is preserved verbatim (no trailing whitespace churn)."""
+    text = (
+        "Intro paragraph.\n"
+        "\n"
+        "## **Contents**\n"
+        "\n"
+        "|1.|Formation ................................................. 3|\n"
+        "\n"
+        "## **1. Formation**\n"
+        "\n"
+        "Body content.\n"
+    )
+    stripped, removed = strip_contents_section(text)
+    assert removed is True
+    # Intro before Contents preserved
+    assert stripped.startswith("Intro paragraph.\n")
+    # TOC removed
+    assert "## **Contents**" not in stripped
+    assert "|1.|Formation" not in stripped
+    # Content section after TOC preserved
+    assert "## **1. Formation**\n\nBody content.\n" in stripped

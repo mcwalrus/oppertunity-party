@@ -7,6 +7,11 @@ from pipeline.defs.partitions import policy_slug_partitions
 # PDF assets are partitioned by policy slug and managed separately via pdf_job.
 _pdf_assets = dg.AssetSelection.assets("raw_pdfs") | dg.AssetSelection.assets("clean_pdfs")
 
+# pdf_images is partitioned by policy slug alongside the PDF assets it
+# depends on — keeps it inside pdf_job so per-slug runs include image
+# extraction in the same launch.
+_pdf_images = dg.AssetSelection.assets("pdf_images")
+
 # pdf_html is non-partitioned (operates over every existing pdf-document
 # item) so it stays in full_pipeline / transforms_job by default.
 _pdf_html = dg.AssetSelection.assets("pdf_html")
@@ -38,10 +43,11 @@ transforms_job = dg.define_asset_job(
 pdf_job = dg.define_asset_job(
     name="pdf_job",
     description=(
-        "Download and clean PDFs for a single policy slug. "
+        "Download and clean PDFs for a single policy slug — extraction, "
+        "quirk patches, source→clean transform, image extraction. "
         "Select a partition (policy slug) when launching this job."
     ),
-    selection=_pdf_assets,
+    selection=_pdf_assets | _pdf_images,
     partitions_def=policy_slug_partitions,
 )
 

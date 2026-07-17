@@ -3,8 +3,8 @@ slug: "healthy-land-default"
 content_type: "pdf-document"
 source_id: "opportunity-website"
 source_type: "website"
-ingested_at: "2026-07-16T02:06:13.010616+00:00"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+ingested_at: "2026-07-17T04:04:34.382676+00:00"
+cleaned_at: "2026-07-17T04:04:34.382676+00:00"
 title: "Healthy Land — default"
 policy_slug: "healthy-land"
 ---
@@ -12,8 +12,8 @@ policy_slug: "healthy-land"
 |-------|-------|
 | Source | `MakingZeroTheHero-Summary-Report.pdf` |
 
-**----- Start of picture text -----**<br>
-Making zero<br>the hero<br>**----- End of picture text -----**<br>
+![img-001-000](images/img-001-000.jpg)
+
 
 A roadmap towards sustainable plastics use in New Zealand
 
@@ -59,8 +59,8 @@ This summary, and a more comprehensive document, present a roadmap towards a new
 
 Plastics are an essential part of how the world operates in applications from cars to construction, electronics to eyeglasses.
 
-**----- Start of picture text -----**<br>
-NPE NPE NPE<br>strategy strategy strategy<br>d<br>i i i<br>n<br>e<br>a<br>in<br>h h h<br>e<br>d<br>r a<br>n n n<br>u e<br>n<br>t v h v<br>T<br>o<br>o m<br>k T T<br>c<br>k k<br>t<br>c e l<br>l - i<br>n<br>t<br>a<br>u v<br>s<br>o y<br>n<br>e<br>t<br>l e<br>u<br>tr p<br>e<br>u<br>y<br>p<br>m<br>f<br>I<br>s m<br>S<br>ri<br>t<br>m<br>m p<br>n<br>if<br>a<br>ri u p<br>t<br>e<br>fr<br>u<br>e<br>D<br>e<br>u<br>y<br>p o<br>fr n<br>D<br>t a<br>S<br>l<br>n n t<br>p<br>a e if lv<br>t<br>ly s<br>I<br>f o<br>tr<br>v<br>r r r<br>m v<br>- e u<br>e u<br>e e e<br>d c d si<br>c<br>P P P<br>h n t<br>n o<br>v v v<br>i<br>a e<br>u<br>l l l<br>a n<br>a<br>i i i<br>i r<br>r<br>l a l a l a<br>n u<br>h e<br>n t a<br>c<br>e e e<br>o e c n<br>n n n<br>i v u d - d<br>s e<br>D o D yl D<br>p v<br>u tr<br>f l s m e<br>v<br>if e a a p l<br>D t u o<br>m rf u S<br>e n ir p<br>I t m<br>n y<br>t e<br>tn<br>**----- End of picture text -----**<br>
+![img-003-001](images/img-003-001.jpg)
+
 
 ## Infrastructure development
 
@@ -138,8 +138,8 @@ From an industry point of view, New Zealand faces fundamentally different challe
 
 - industry is almost completely dependent on global material innovation trends and available supply.
 
-**----- Start of picture text -----**<br>
-u<br>fu<br>e<br>e s<br>s<br>R e<br>R e<br>le R<br>k<br>e<br>R<br>c<br>in e<br>y p<br>h d<br>l<br>t u<br>c<br>e<br>a<br>R c<br>e<br>e<br>R ce<br>**----- End of picture text -----**<br>
+![img-004-002](images/img-004-002.jpg)
+
 
 - With the global plastics production centred in China,
 
@@ -183,8 +183,8 @@ Only with the courage to invest in the short, medium and long term can a New Pla
 
 Pan-sectoral industry and industry-government collaboration is an essential enabler for a transition towards new systems. Central and regional governments have an indispensable role to play as a funding provider and in developing guiding policy.
 
-**----- Start of picture text -----**<br>
-4% Not intending to<br>4% Not at all<br>(constrained by<br>resources)<br>35% Investigating<br>feasibility<br>19% Transition (starting<br>to implement<br>following others’<br>examples)<br>23% Transition (well into<br>transition, aiming to<br>be seen as leader)<br>15% Other<br>**----- End of picture text -----**<br>
+![img-005-003](images/img-005-003.jpg)
+
 
 Infrastructure investment in plastic collection, sorting and re-processing technology is an initial requirement to enable private sector engagement. Economic enablers, for example, tax credits or accelerated capital depreciation, would further initiate change.
 
@@ -192,8 +192,6 @@ Technical closed-loop systems need to sit alongside new business models for re-u
 
 A perceived lack of understanding of circular economy principles by consumers and brands beyond populist ‘plastic elimination’ and ‘plastic substitution’ concerns the sector, especially when New Zealand’s carbon neutral visions and targets are taken into consideration.
 
-**----- Start of picture text -----**<br>
-A true circularity of plastic creation, use and<br> re-use, taking advantage of its wonderful properties<br>while mitigating its undesirable impacts,<br>can be created.<br>But it won’t be easy, nor will it<br>be instantaneous.<br>**----- End of picture text -----**<br>
 
 ## Putting it all together
 

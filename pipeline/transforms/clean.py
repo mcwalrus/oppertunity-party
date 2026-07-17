@@ -3,6 +3,32 @@
 import re
 
 
+def strip_contents_section(body: str) -> tuple[str, bool]:
+    """Remove a ``## **Contents**`` section and its TOC table from a PDF markdown body.
+
+    pymupdf4llm emits a ``## **Contents**`` heading followed by a dot-leader TOC
+    table for any PDF that has a TOC page (e.g. constitution.pdf). The rendered
+    document provides its own navigation, so the duplicated table is dropped
+    during the source→clean transform.
+
+    Returns ``(stripped_body, removed_flag)``. The flag is ``True`` when a
+    Contents section was actually removed; callers can use it to emit a comment
+    explaining the removal.
+
+    Idempotent: re-running on already-stripped text returns ``(body, False)``
+    because the ``## **Contents**`` heading no longer matches.
+    """
+    # ponytail: one pattern, one replacement. The lookahead anchors at the next
+    # `\n## ` (the first real content section) or end-of-string so we don't
+    # swallow unrelated content. False positives only if a PDF body has another
+    # `## **Contents**` heading unrelated to a TOC — none observed.
+    pattern = r"## \*\*Contents\*\*\s*\n(?:.*\n)*?(?=\n## |\Z)"
+    match = re.search(pattern, body)
+    if not match:
+        return body, False
+    return body[: match.start()] + body[match.end() :], True
+
+
 def strip_metadata_blockquote(body: str) -> str:
     """Remove leading '> **URL**: ...' and '> **Scraped**: ...' blockquote lines."""
     lines = body.split("\n")

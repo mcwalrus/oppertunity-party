@@ -63,7 +63,13 @@ def test_html_contains_markdown_body(slug):
         (
             line.strip()[:80]
             for line in body.splitlines()
-            if line.strip() and not line.lstrip().startswith("|") and "picture" not in line.lower()
+            if line.strip()
+            and not line.lstrip().startswith("|")
+            and "picture" not in line.lower()
+            and not line.lstrip().startswith("![")
+            # Skip HTML comments (e.g. transform-applied notes like the Contents
+            # removal comment on constitution-default) — they don't render to text.
+            and not line.lstrip().startswith("<!--")
         ),
         "",
     )

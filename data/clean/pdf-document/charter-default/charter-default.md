@@ -8,8 +8,8 @@ cleaned_at: "2026-07-16T02:06:13.010616+00:00"
 title: "Charter — default"
 policy_slug: "charter"
 ---
-| Field | Value |
-|-------|-------|
+| Field  | Value         |
+| ------ | ------------- |
 | Source | `charter.pdf` |
 
 ## **CHARTER**

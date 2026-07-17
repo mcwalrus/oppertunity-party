@@ -198,6 +198,23 @@ Large binary files (audio, video, raw images) follow these rules:
   `has_transcript: false`, `media_path: null`) before the binary is
   downloaded.
 
+### Exception: PDF extracted images
+
+PDFs may contain embedded charts, diagrams, and other content graphics
+that `pymupdf4llm` cannot extract as text. The `pdf_images` Dagster
+asset extracts these as JPEG files and references them in the clean
+markdown — see [`pdf-document` schema](data-schema.md#pdf-document)
+for details. This is the one place binary media lives in `data/clean/`:
+
+- **Path:** `data/clean/pdf-document/{slug}/images/img-NNN-NNN.jpg`
+- **Naming:** `img-{page}-{index}.jpg` (page is 1-indexed, index is
+  0-indexed within page — matches `pdfimages -j -p` output).
+- **Tracked in git** alongside the markdown — they're small (typically
+  <100 KB each) and useful illustrations of the policy content.
+- **Filter:** only images from pages that `pymupdf4llm` flagged with a
+  picture-text block are kept, so decorative page backgrounds are
+  dropped automatically.
+
 ---
 
 ## Transform Modules Reference

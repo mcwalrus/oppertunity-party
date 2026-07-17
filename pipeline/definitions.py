@@ -24,6 +24,7 @@ from pipeline.defs.assets.ingestion import (
     raw_team,
 )
 from pipeline.defs.assets.pdf_html import pdf_html
+from pipeline.defs.assets.pdf_images import pdf_images
 from pipeline.defs.assets.pdf_validation import (
     validate_pdf_extraction,
     write_pdf_pipeline_report,
@@ -90,5 +91,7 @@ defs = dg.Definitions(
         write_pdf_pipeline_report,
         # PDF markdown → per-item HTML (runs after clean_pdfs)
         pdf_html,
+        # PDF image extraction → clean/pdf-document/{slug}/images/
+        pdf_images,
     ],
 )
