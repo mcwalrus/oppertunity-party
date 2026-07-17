@@ -4,7 +4,26 @@ version = "0.1.0"
 description = "Scraper and MCP server for the Opportunity Party website"
 readme = "README.md"
 requires-python = ">=3.12"
+
+# ---------------------------------------------------------------------------
+# Pinned: format-conversion deps.
+#
+# These three produce content that flows directly into data/clean/ and the
+# rendered site. Their output shifts between versions (PDF→MD parsing,
+# HTML→MD conversion, MD rendering), so we pin to exact versions and only
+# bump when we deliberately re-scrape + re-build to absorb the change.
+# Dependabot (see .github/dependabot.yml) batches them into a single
+# "conversion-pinned" PR so the bump is a deliberate choice, not drift.
+# ---------------------------------------------------------------------------
+# Loose: orchestration, scraping, downloads, CLI, MCP. Rolled forward on an
+# ongoing basis by dependabot. Ponytail: `>=` lets these roll forward
+# without ceremony; pin when a specific release actually breaks something.
+# ---------------------------------------------------------------------------
 dependencies = [
+    "pymupdf4llm==1.27.2.3",
+    "markdown==3.10.2",
+    "markdownify==1.2.2",
+
     "beautifulsoup4>=4.15.0",
     "dagster>=1.13.9",
     "dagster-dg-cli>=1.13.9",
@@ -12,10 +31,7 @@ dependencies = [
     "gdown>=6.1.0",
     "httpx>=0.28.1",
     "lxml>=6.1.1",
-    "markdown>=3.10.2",
-    "markdownify>=1.2.2",
     "mcp>=1.27.2",
-    "pymupdf4llm>=1.27.2.3",
     "questionary>=2.1.1",
     "rich>=15.0.0",
     "yt-dlp>=2026.6.9",

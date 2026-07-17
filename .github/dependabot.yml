@@ -1,0 +1,76 @@
+# Dependabot — weekly review of Python + Node dependencies.
+#
+# Strategy:
+#   - "conversion-pinned" group is the only one expected to be reviewed by
+#     hand: pymupdf4llm, markdown, markdownify are pinned to exact versions
+#     in pyproject.toml because their output flows directly into data/clean/
+#     and the rendered site. Bumping them re-bakes every markdown artefact,
+#     so it is a deliberate choice, not an automatic merge.
+#   - All other groups (orchestration, scraping, downloads, CLI, MCP, dev)
+#     use `>=` in pyproject.toml and can roll forward on their own cadence.
+
+version: 2
+
+updates:
+  # -----------------------------------------------------------------------
+  # Python — pyproject.toml at repo root
+  # -----------------------------------------------------------------------
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Pacific/Auckland"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "python"
+    groups:
+      conversion-pinned:
+        patterns:
+          - "pymupdf4llm"
+          - "markdown"
+          - "markdownify"
+      orchestration:
+        patterns:
+          - "dagster"
+          - "dagster-dg-cli"
+          - "dagster-webserver"
+      web-scraping:
+        patterns:
+          - "beautifulsoup4"
+          - "lxml"
+          - "httpx"
+      downloads:
+        patterns:
+          - "yt-dlp"
+          - "gdown"
+      cli:
+        patterns:
+          - "questionary"
+          - "rich"
+      mcp:
+        patterns:
+          - "mcp"
+      dev:
+        dependency-type: "development"
+        patterns:
+          - "pytest"
+          - "ruff"
+          - "ty"
+
+  # -----------------------------------------------------------------------
+  # Node — site/package.json (Astro + wrangler)
+  # -----------------------------------------------------------------------
+  - package-ecosystem: "npm"
+    directory: "/site"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Pacific/Auckland"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "site"
