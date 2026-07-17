@@ -8,12 +8,12 @@ cleaned_at: "2026-07-17T04:11:58.973688+00:00"
 title: "Abundant Energy — Policy Overview"
 policy_slug: "abundant-energy"
 ---
-| Field | Value |
-|-------|-------|
-| Date | February 2026 |
-| Policy | Abundant Energy |
-| Document Type | Policy Overview |
-| Source | `Opportunity_Policy_Abundant Energy.pdf` |
+| Field         | Value                                    |
+| ------------- | ---------------------------------------- |
+| Date          | February 2026                            |
+| Policy        | Abundant Energy                          |
+| Document Type | Policy Overview                          |
+| Source        | `Opportunity_Policy_Abundant Energy.pdf` |
 
 ## **Abundant Energy**
 
