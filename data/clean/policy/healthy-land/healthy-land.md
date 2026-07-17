@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/healthy_land"
 ingested_at: "2026-07-16T10:44:35.011954"
-cleaned_at: "2026-07-16T07:05:00.859942+00:00"
+cleaned_at: "2026-07-17T04:45:01.350777+00:00"
 title: "Healthy Land"
 pdf_urls: ["https://www.scionresearch.com/__data/assets/pdf_file/0003/80607/MakingZeroTheHero-Summary-Report.pdf"]
 ---
@@ -44,12 +44,7 @@ Interested to see the detailed policy at launch? Sign-up for
 |-------|-------|
 | Source | `MakingZeroTheHero-Summary-Report.pdf` |
 
-**----- Start of picture text -----**<br>
-Making zero<br>the hero<br>**----- End of picture text -----**<br>
-
 A roadmap towards sustainable plastics use in New Zealand
-
-##
 
 desirability of a pan-sector vision for plastic’s use in New Zealand as a sustainable resource rather than as pollutive and extractive waste.
 
@@ -169,9 +164,6 @@ From an industry point of view, New Zealand faces fundamentally different challe
 - With no raw (virgin) plastics production in New Zealand, the
 
 - industry is almost completely dependent on global material innovation trends and available supply.
-
-**----- Start of picture text -----**<br>
-u<br>fu<br>e<br>e s<br>s<br>R e<br>R e<br>le R<br>k<br>e<br>R<br>c<br>in e<br>y p<br>h d<br>l<br>t u<br>c<br>e<br>a<br>R c<br>e<br>e<br>R ce<br>**----- End of picture text -----**<br>
 
 - With the global plastics production centred in China,
 

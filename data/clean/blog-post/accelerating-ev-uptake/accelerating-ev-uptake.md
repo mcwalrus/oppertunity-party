@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/accelerating_ev_uptake"
 ingested_at: "2026-06-08T13:26:26.866695"
-cleaned_at: "2026-07-16T07:05:00.739230+00:00"
+cleaned_at: "2026-07-17T04:45:01.078098+00:00"
 title: "Accelerating EV uptake"
 ---
 ## Accelerating EV uptake

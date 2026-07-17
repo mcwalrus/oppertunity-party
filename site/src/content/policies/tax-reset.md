@@ -461,9 +461,9 @@ Done well. the transition would avoid excessive inflationary impacts or other ec
 
 ## **Overview of a possible Tax Reset implementation pathway**
 
-||**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
+|-|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
 |---|---|---|---|---|---|---|---|---|---|
-||**CI/New tax**|**LVT**|||**Contributions**||**Tax exemption**|||
+|-|**CI/New tax**|**LVT**|-|-|**Contributions**|-|**Tax exemption**|-|-|
 |**Year**|**% of population**|**Urban land rate**<br>**applied**|**Rural land rate**<br>**applied**|**Simplifed**<br>**expected**<br>**reduction in**<br>**land values**|**Employee**|**Employer**|**Employer**|**Employee**|**Fund Income**|
 |0|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|
 |1|0.00%|0.00%|0.00%|5.00%|0.00%|0.00%|0.00%|0.00%|0.00%|
@@ -543,25 +543,25 @@ Together these create a package that puts more money in New Zealanders’ pocket
 
 ## **The problems we’re solving**
 
-## **The cost-of-living crisis is crushing working families**
+### **The cost-of-living crisis is crushing working families**
 
 When butter, cheese, fruit, and vegetables are increasingly out of reach for everyday New Zealanders, something is fundamentally broken. Working families struggle to afford rent, power bills, and groceries despite being employed. Their work is heavily taxed while untaxed capital gains on housing enrich property owners at the expense of renters and first-home buyers.
 
-## **Welfare isn’t working—it traps people in poverty**
+### **Welfare isn’t working—it traps people in poverty**
 
 The current benefit system punishes work through devastating effective marginal tax rates. When someone on Jobseeker Support picks up a few hours at the local café, they can lose up to 90 cents of every dollar they earn. This isn’t a pathway out of poverty; it’s a trap that keeps people stuck on benefits.
 
 The system subjects beneficiaries to intrusive monitoring that costs hundreds of millions annually and is degrading to those who need support. This money could be going directly to families in need. It is also needlessly complex, so that even experts struggle to navigate it. This complexity enables fraud, increases compliance costs, and leaves people in debt from accidental overpayments.
 
-## **An outdated tax and welfare system is not fit for hard times**
+### **An outdated tax and welfare system is not fit for hard times**
 
 Our tax and welfare system was designed for a different economy. It cannot handle the shocks ahead of us: AI-driven job losses, extreme weather events, and economic uncertainty. We need a straightforward system that will support New Zealanders to adapt to job-loss, and permit flexible work and training. These are the realities future workers will need to adapt to in response to a changing and less stable world.
 
-## **A broken housing system locks Kiwi families out of stability and security**
+### **A broken housing system locks Kiwi families out of stability and security**
 
 A home should provide security and stability—the foundation for a productive life. Yet our tax system has put home ownership out of reach for an entire generation. House prices have risen dramatically since 2000, driven by speculation and untaxed capital gains rather than the productive use of land. Our tax settings incentivise holding land for capital appreciation rather than building dense housing or investing in businesses. This creates an economy where money flows into property speculation instead of the innovation and hiring that drive real prosperity.
 
-## **Our retirement income is on an unsustainable trajectory**
+### **Our retirement income is on an unsustainable trajectory**
 
 New Zealand’s current retirement income system is on an unsustainable path with today’s benefits funded entirely from current tax revenue. As our population ages, this model faces mounting pressure. Treasury projects that, without reform, National Superannuation expenditure will rise from 15% of government revenue today to approximately 22% by 2065.
 
@@ -573,7 +573,7 @@ At the same time, New Zealand’s low national savings rate limits our capacity 
 
 The Citizen’s Income is a tax-free universal payment that ensures every New Zealander has the financial foundation to participate fully in society.
 
-## **1.1 The Citizen’s Income**
+### **1.1 The Citizen’s Income**
 
 Every New Zealand Citizen and resident aged 18 and over receives an annual amount equivalent to the Jobseeker benefit; currently $19,400 annually, paid fortnightly into their bank account. No forms to fill in, no Work and Income appointments, no relationship status checks—just a guaranteed payment that provides the basics.
 
@@ -587,7 +587,7 @@ The Citizen’s Income replaces many main benefits, including:
 
 - Supported Living Allowance
 
-## **1.2 Income Tax Realignment**
+### **1.2 Income Tax Realignment**
 
 To balance the Citizens’ Income, simplify the tax system, and maintain progressivity, current income tax rates will be replaced with three straightforward income tax brackets:
 
@@ -599,7 +599,7 @@ To balance the Citizens’ Income, simplify the tax system, and maintain progres
 
 Combined with the Citizens’ Income, this represents a reduction in total income tax at all income levels, with the largest reductions at lower income levels where it is most needed. Those earning less than $60,000 per year will pay less income tax than the Citizens’ Income they receive.
 
-## **1.3 A Simplified Benefit System**
+### **1.3 A Simplified Benefit System**
 
 For most people, the Citizens’ Income will not be enough to live on. Many New Zealanders need additional income to support themselves and their families, and can not necessarily be expected to obtain it from employment. The current system of benefits and tax credits is complex, punitive, and expensive to administer. We will replace the bulk of it with the following universal supplementary supports:
 
@@ -645,7 +645,7 @@ This represents a massive redirection of investment from unproductive land holdi
 
 With an estimated total land value of approximately $1.7 trillion nationally, the LVT generates approximately $24 billion annually. This is what enables the Citizens’ Income changes above.
 
-## **2.1 A Land Value Tax of 1.75% on urban and 0.5% on rural land.**
+### **2.1 A Land Value Tax of 1.75% on urban and 0.5% on rural land.**
 
 An annual tax on the unimproved value of all urban land set at 1.75%. Critically, this does not include the value of buildings or other improvements.
 
@@ -653,7 +653,7 @@ We already know the land value of much of our land: it’s included in Council r
 
 Rural land is more challenging to value, and the revenue of many rural businesses are subject to changes in global prices and extreme weather events. A lower land value tax rate of 0.5% is therefore appropriate.
 
-## **2.2 Exemptions for public functions**
+### **2.2 Exemptions for public functions**
 
 A land value tax is designed to shift land-use towards more efficient uses such as higher-density housing. However, there are some land uses that deliver public benefit or that it would be otherwise inappropriate to impose a land value tax on.
 
@@ -671,7 +671,7 @@ Exemptions to the land value tax will apply for:
 
 - Social housing.
 
-## **2.3 Deferrals protect older people and farmers**
+### **2.3 Deferrals protect older people and farmers**
 
 Similar to the land uses for exemption, there are some landowners for whom the LVT risks imposing undue hardship.
 
@@ -687,7 +687,7 @@ We will transition from the current pay-as-you-go National Superannuation to a c
 
 This addresses the unsustainable trajectory of superannuation costs while creating a trillion-dollar pool of capital to finance our infrastructure and investment in productive Kiwi firms.
 
-## **3.1 Compulsory and universal Kiwisaver 2.0**
+### **3.1 Compulsory and universal Kiwisaver 2.0**
 
 KiwiSaver 2.0 will be fully compulsory for all eligible workers. Once fully implemented (after 8 years) contributions will total 12% of gross earnings: 6% employer contribution and 6% employee contribution. To minimise disruption to workers and businesses, contribution rates will increase gradually; by 0.5 percentage points per year for each of employer and employee contributions.
 
@@ -695,7 +695,7 @@ KiwiSaver 2.0 will be entirely separate from the existing voluntary KiwiSaver sc
 
 Unlike current Kiwisaver balances, Kiwisaver 2.0 will not be able to be withdrawn for hardship or first-home deposits. However, we will enable bank loans over balances to support first home buyers to access lending.
 
-## **3.3 Full tax exemption**
+### **3.3 Full tax exemption**
 
 Once fully phased in, the entire 12% contribution (6% employer + 6% employee) will be exempt from income tax. This provides substantial tax relief whilst encouraging long-term retirement savings. Tax on income earned within KiwiSaver 2.0 funds will be progressively reduced, with all fund income becoming tax-exempt after twenty years.
 
@@ -705,17 +705,17 @@ Once fully phased in, the entire 12% contribution (6% employer + 6% employee) wi
 
 The policy as a whole is fiscally positive. Based on 2024 numbers, the Land Value Tax pays for the Citizen’s Income with around $4 billion extra annually in net Crown revenue.
 
-|revenue.|||||
+|revenue.|-|-|-|-|
 |---|---|---|---|---|
-|**Cost**||**$m**|**Revenue**|**$m**|
-|**Net cost of CI**||**15788**|**Land Value Tax**|**24323**|
-|Headline CI Cost|69648||**Administration Savings**<br>**(MSD, IRD)**|**3825**|
-|Less Income Tax Clawback|(23381)||||
-|Less Main beneft replacement (Jobseeker,<br>NZ Super, Supported Living, Sole Parent,<br>Student Allowance)|(30479)||||
-|**Net Supplementary Support cost**||**8279**|||
-|Additional benefts cost|15614||||
-|Less additional benefts replaced|(7335)||||
-|**Total cost**||**24067**|**Total revenue**|**28148**|
+|**Cost**|-|**\$m**|**Revenue**|**\$m**|
+|**Net cost of CI**|-|**15788**|**Land Value Tax**|**24323**|
+|Headline CI Cost|69648|-|**Administration Savings**<br>**(MSD, IRD)**|**3825**|
+|Less Income Tax Clawback|(23381)|-|-|-|
+|Less Main beneft replacement (Jobseeker,<br>NZ Super, Supported Living, Sole Parent,<br>Student Allowance)|(30479)|-|-|-|
+|**Net Supplementary Support cost**|-|**8279**|-|-|
+|Additional benefts cost|15614|-|-|-|
+|Less additional benefts replaced|(7335)|-|-|-|
+|**Total cost**|-|**24067**|**Total revenue**|**28148**|
 
 A previous version of this table used incorrect data that did not materially alter the overall balance. This was amended on 19/05/2026
 

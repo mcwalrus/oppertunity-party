@@ -3,7 +3,7 @@ slug: "charter"
 content_type: "party-information"
 source_id: "opportunity-website"
 source_type: "website"
-cleaned_at: "2026-07-16T07:05:00.828966+00:00"
+cleaned_at: "2026-07-17T04:45:01.225474+00:00"
 title: "Charter"
 ---
 > **Source**: https://drive.google.com/file/d/1Rpkukrq-GFyMfvRgfJMuNYt4aTdijF2w/preview

@@ -3,7 +3,7 @@ slug: "charter"
 content_type: "policy"
 source_id: "opportunity-website"
 source_type: "website"
-cleaned_at: "2026-07-16T07:05:00.859942+00:00"
+cleaned_at: "2026-07-17T04:45:01.350777+00:00"
 title: "Charter"
 ---
 | Field | Value |

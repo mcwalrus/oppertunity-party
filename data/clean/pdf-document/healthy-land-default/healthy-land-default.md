@@ -174,12 +174,7 @@ Only with the courage to invest in the short, medium and long term can a New Pla
 
 Pan-sectoral industry and industry-government collaboration is an essential enabler for a transition towards new systems. Central and regional governments have an indispensable role to play as a funding provider and in developing guiding policy.
 
-![img-005-003](images/img-005-003.jpg)
-
-TODO: wrong graphic. This is useless. The text that covers the graphic should be extracted. This is:
-
-"A true circularity of plastic creation, use and re-use, taking advantage of its wonderful properties while mitigating its undesirable impacts, can be created. But it won’t be easy, nor will it be instantaneous."
-
+"A true circularity of plastic creation, use and re-use, taking advantage of its wonderful properties while mitigating its undesirable impacts, can be created. But it won't be easy, nor will it be instantaneous."
 
 Infrastructure investment in plastic collection, sorting and re-processing technology is an initial requirement to enable private sector engagement. Economic enablers, for example, tax credits or accelerated capital depreciation, would further initiate change.
 
@@ -239,7 +234,7 @@ Financial support for this project was received from the Waste Minimisation Fund
 
 use of this work is permitted without the prior consent of the copyright holder(s).
 
-In collaboration with
+In collaboration with Plastics New Zealand, Packaging New Zealand, and WasteMINZ.
 
 Published by: Scion, Private Bag 3020, Rotorua 3046, New Zealand. www.scionresearch.com Contact: Marc Gaugler, Portfolio Leader Distributed and Circular Manufacturing. Email marc.gaugler@scionresearch.com Telephone: +64 7 343 5393
 

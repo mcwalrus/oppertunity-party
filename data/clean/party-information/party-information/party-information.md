@@ -5,7 +5,7 @@ source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/party-information"
 ingested_at: "2026-07-16T10:44:27.322434"
-cleaned_at: "2026-07-16T07:05:00.828966+00:00"
+cleaned_at: "2026-07-17T04:45:01.225474+00:00"
 title: "Party Information"
 ---
 ## Party Information
