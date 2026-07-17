@@ -67,6 +67,77 @@ def merge_split_h2_headings(text: str, pairs: list[tuple[str, str]]) -> str:
     return text
 
 
+def fix_mapped_table_cells(text: str) -> str:
+    """Fix data rows in mapped markdown tables so they render cleanly.
+
+    Two fixes applied per data row:
+
+    - ``$m`` (the ``$millions`` column unit) → ``\\$m`` so renderers with math
+      support don't treat the header as inline math.
+    - Empty cells (``||``) → ``|-`` so they show as a visible placeholder
+      instead of an invisible gap in the rendered table.
+
+    Detection uses markdown table blocks: a separator row (``|---|---|...``)
+    plus the rows adjacent to it. Single-cell TOC-style lines (which start
+    with ``||`` but only have 2 cells — a title and a page number) are
+    skipped because they lack both the 4+ pipe count and the separator
+    adjacency. Idempotent — re-running produces the same output.
+    """
+    sep_re = re.compile(r"^\|[\s\-:|]+\|$")
+    lines = text.split("\n")
+
+    # Find separator row indices (table block anchors).
+    sep_indices = [
+        i
+        for i, line in enumerate(lines)
+        if sep_re.match(line.strip()) and line.strip().count("|") >= 3
+    ]
+
+    # Mark header (line above each separator) and all data rows below it.
+    process_indices: set[int] = set()
+    for sep_idx in sep_indices:
+        if sep_idx > 0:
+            process_indices.add(sep_idx - 1)
+        j = sep_idx + 1
+        while j < len(lines) and _is_table_data_row(lines[j]):
+            process_indices.add(j)
+            j += 1
+
+    for i in process_indices:
+        _rewrite_table_row(lines, i)
+
+    return "\n".join(lines)
+
+
+def _is_table_data_row(line: str) -> bool:
+    """True if *line* looks like a markdown table data row (not a separator or TOC entry)."""
+    stripped = line.strip()
+    if not stripped.startswith("|") or not stripped.endswith("|"):
+        return False
+    # 4+ pipes = 3+ cells; this skips TOC entries like `||Title...Pg|` (3 pipes).
+    if stripped.count("|") < 4:
+        return False
+    # Skip separator rows like `|---|---|---|`.
+    return not re.match(r"^\|[\s\-:|]+\|$", stripped)
+
+
+def _rewrite_table_row(lines: list[str], i: int) -> None:
+    """Fill empty cells with '-' and escape ``$m`` in *lines[i]* in place."""
+    line = lines[i]
+    m = re.match(r"^(\s*)(.*?)(\s*)$", line)
+    if not m:
+        return
+    leading, content, trailing = m.group(1), m.group(2), m.group(3)
+    if not _is_table_data_row(content):
+        return
+    cells = content.split("|")[1:-1]
+    cells = [c if c else "-" for c in cells]
+    # Escape `$m` to `\$m`, but skip already-escaped `\$m` so the function is
+    # idempotent (a plain `.replace` double-escapes on the second pass).
+    cells = [re.sub(r"(?<!\\)\$m", "\\$m", c) for c in cells]
+    lines[i] = f"{leading}|{'|'.join(cells)}|{trailing}"
+
+
 # ---------------------------------------------------------------------------
 # Per-PDF patches
 # ---------------------------------------------------------------------------
@@ -122,8 +193,9 @@ def _tax_reset_transition_plan(text: str) -> str:
 
     Drops the duplicate ``Document Type **Policy Addendum**`` header that
     appears after the frontmatter table (already present as a table row).
-    The malformed 10-column implementation pathway table is left as-is —
-    unrecoverable from extraction; see docs/pdf-pipeline.md.
+    The malformed 10-column implementation pathway table column structure is
+    unrecoverable from extraction; ``fix_mapped_table_cells`` (registered
+    separately) fills its empty cells with ``-`` so it still renders.
     """
     text = re.sub(r"\nDocument Type \*\*Policy Addendum\*\*\n\n", "\n\n", text)
     text = fix_sentence_space_after_period(text)
@@ -180,6 +252,10 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
             _tax_reset_policy_overview,
         ),
         (
+            "Tax Reset Policy Overview: fix mapped table cells ($m escape + empty-cell fill)",
+            fix_mapped_table_cells,
+        ),
+        (
             "Healthy Oceans Policy Overview: drop mid-paragraph `**Oceans**` footer label, promote 2 bold-only sub-headings to H2 + fix sentence-space after period",
             _healthy_oceans_policy_overview,
         ),
@@ -196,6 +272,10 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
         (
             "Tax Reset Transition Plan: drop duplicate 'Document Type **Policy Addendum**' header + fix sentence-space after period",
             _tax_reset_transition_plan,
+        ),
+        (
+            "Tax Reset Transition Plan: fix mapped table cells (empty-cell fill in implementation pathway table)",
+            fix_mapped_table_cells,
         ),
     ],
     "pdf-default.md": [

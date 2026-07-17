@@ -5,6 +5,7 @@ from __future__ import annotations
 from pipeline.transforms.pdf_quirks import (
     QUIRKS_BY_FILENAME,
     apply_quirks,
+    fix_mapped_table_cells,
     fix_sentence_space_after_period,
     merge_split_h2_headings,
 )
@@ -219,3 +220,121 @@ def test_apply_quirks_making_zero_the_hero_no_match_is_passthrough():
     filename = "pdf-default.md"
     sample = "# Charter\n\n## **VISION**\n\nSome body text.\n"
     assert apply_quirks(filename, sample) == sample
+
+
+# ---------------------------------------------------------------------------
+# fix_mapped_table_cells — fix $m escape + empty-cell fill in data tables
+# ---------------------------------------------------------------------------
+
+
+def test_fix_mapped_table_cells_fills_empty_cells():
+    """Empty cells in table data rows become '-' so they display as placeholders."""
+    text = "|**Cost**||**15788**|**Revenue**|**24323**|\n|---|---|---|---|\n|**Less**|(23381)||||\n"
+    result = fix_mapped_table_cells(text)
+    # Header: empty cell 2 becomes '-'
+    assert "|**Cost**|-|**15788**|**Revenue**|**24323**|" in result
+    # Data row: trailing empty cells become '-'
+    assert "|**Less**|(23381)|-|-|-|" in result
+
+
+def test_fix_mapped_table_cells_escapes_dollar_m():
+    """$m column header is escaped to \\$m so markdown renderers don't treat it as math."""
+    text = (
+        "|**Cost**||**$m**|**Revenue**|**$m**|\n|---|---|---|---|\n|**Net**||15788|**LVT**|24323|\n"
+    )
+    result = fix_mapped_table_cells(text)
+    assert "|**Cost**|-|**\\$m**|**Revenue**|**\\$m**|" in result
+    assert "|**Net**|-|15788|**LVT**|24323|" in result
+    # The $m itself must not appear unescaped in any data-row cell
+    assert "**$m**" not in result
+
+
+def test_fix_mapped_table_cells_skips_separator_rows():
+    """Separator rows like |---|---|---|--- are not modified."""
+    text = "|**Cost**||**$m**|\n|---|---|\n|**Net**||15788|\n"
+    result = fix_mapped_table_cells(text)
+    # Separator unchanged
+    assert "|---|---|\n" in result
+
+
+def test_fix_mapped_table_cells_skips_toc_lines():
+    """Single-cell TOC-style lines (||...| with dot-leaders) pass through unchanged.
+
+    TOC entries are extracted as ``||Title......Pg|`` — only 3 pipes, 2 cells.
+    Real tables have 4+ pipes (3+ cells). The detection gate uses pipe count.
+    """
+    text = (
+        "## **Contents**\n"
+        "\n"
+        "|1.|Formation ................................................. 3|\n"
+        "|---|---|\n"
+        "||Name and establishment......................................3|\n"
+    )
+    result = fix_mapped_table_cells(text)
+    # TOC lines unchanged — empty cell NOT filled, dot-leaders preserved
+    assert "||Name and establishment......................................3|" in result
+    assert "|1.|Formation ................................................. 3|" in result
+    # The TOC's separator is also untouched
+    assert "|---|---|\n" in result
+
+
+def test_fix_mapped_table_cells_skips_non_table_lines():
+    """Regular prose lines containing '$m' or '|' are not modified."""
+    text = "Some prose text mentioning $m and |pipes| in it.\nAnother line.\n"
+    assert fix_mapped_table_cells(text) == text
+
+
+def test_fix_mapped_table_cells_idempotent():
+    """Running the fix twice produces the same result as running once."""
+    text = (
+        "|**Cost**||**$m**|**Revenue**|**$m**|\n"
+        "|---|---|---|---|\n"
+        "|**Net**||15788|**LVT**|24323|\n"
+        "|**Less**|(23381)||||\n"
+    )
+    once = fix_mapped_table_cells(text)
+    twice = fix_mapped_table_cells(once)
+    assert once == twice
+
+
+def test_apply_quirks_tax_reset_overview_fixes_mapped_table():
+    """Tax Reset Overview: the 'How will you pay' table is fixed (empty cells + $m)."""
+    filename = "pdf-policy-overview.md"
+    sample = (
+        "## **How will you pay for the Citizen’s Income?**\n"
+        "\n"
+        "Some intro text.\n"
+        "\n"
+        "|revenue.|||||\n"
+        "|---|---|---|---|---|\n"
+        "|**Cost**||**$m**|**Revenue**|**$m**|\n"
+        "|**Net cost of CI**||**15788**|**Land Value Tax**|**24323**|\n"
+        "|**Total cost**||**24067**|**Total revenue**|**28148**|\n"
+        "\n"
+        "A previous version of this table was incorrect.\n"
+    )
+    result = apply_quirks(filename, sample)
+    # Header escaped
+    assert "|**\\$m**|" in result
+    # Empty cells filled
+    assert "|revenue.|-|-|-|-|" in result
+    assert "|**Cost**|-|**\\$m**|" in result
+    assert "|**Net cost of CI**|-|**15788**|" in result
+    assert "|**Total cost**|-|**24067**|" in result
+
+
+def test_apply_quirks_tax_reset_addendum_fills_empty_cells():
+    """Tax Reset Transition Plan: empty cells in the implementation pathway table get filled."""
+    filename = "pdf-policy-addendum.md"
+    sample = (
+        "## **Overview**\n"
+        "\n"
+        "|H1|**H2**|**H3**|**H4|**H5**|\n"
+        "|---|---|---|---|---|\n"
+        "||**CI/New tax**|**LVT**|||**Contributions**||**Tax exemption**|||\n"
+    )
+    result = apply_quirks(filename, sample)
+    # All empty cells filled with '-'
+    assert "|H1|**H2**|**H3**|**H4|**H5**|" in result  # header unchanged (no empty cells)
+    # Original row had 4 empty cells interspersed — all become '-'
+    assert "|-|**CI/New tax**|**LVT**|-|-|**Contributions**|-|**Tax exemption**|-|-|" in result

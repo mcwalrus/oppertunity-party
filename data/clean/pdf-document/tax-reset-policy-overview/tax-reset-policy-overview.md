@@ -239,17 +239,17 @@ Once fully phased in, the entire 12% contribution (6% employer + 6% employee) wi
 
 The policy as a whole is fiscally positive. Based on 2024 numbers, the Land Value Tax pays for the Citizen’s Income with around $4 billion extra annually in net Crown revenue.
 
-|revenue.|||||
+|revenue.|-|-|-|-|
 |---|---|---|---|---|
-|**Cost**||**$m**|**Revenue**|**$m**|
-|**Net cost of CI**||**15788**|**Land Value Tax**|**24323**|
-|Headline CI Cost|69648||**Administration Savings**<br>**(MSD, IRD)**|**3825**|
-|Less Income Tax Clawback|(23381)||||
-|Less Main beneft replacement (Jobseeker,<br>NZ Super, Supported Living, Sole Parent,<br>Student Allowance)|(30479)||||
-|**Net Supplementary Support cost**||**8279**|||
-|Additional benefts cost|15614||||
-|Less additional benefts replaced|(7335)||||
-|**Total cost**||**24067**|**Total revenue**|**28148**|
+|**Cost**|-|**\$m**|**Revenue**|**\$m**|
+|**Net cost of CI**|-|**15788**|**Land Value Tax**|**24323**|
+|Headline CI Cost|69648|-|**Administration Savings**<br>**(MSD, IRD)**|**3825**|
+|Less Income Tax Clawback|(23381)|-|-|-|
+|Less Main beneft replacement (Jobseeker,<br>NZ Super, Supported Living, Sole Parent,<br>Student Allowance)|(30479)|-|-|-|
+|**Net Supplementary Support cost**|-|**8279**|-|-|
+|Additional benefts cost|15614|-|-|-|
+|Less additional benefts replaced|(7335)|-|-|-|
+|**Total cost**|-|**24067**|**Total revenue**|**28148**|
 
 A previous version of this table used incorrect data that did not materially alter the overall balance. This was amended on 19/05/2026
 

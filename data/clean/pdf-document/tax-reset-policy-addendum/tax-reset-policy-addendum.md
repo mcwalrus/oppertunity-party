@@ -41,7 +41,7 @@ Done well. the transition would avoid excessive inflationary impacts or other ec
 
 |**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
 |---|---|---|---|---|---|---|---|---|---|
-||**CI/New tax**|**LVT**|||**Contributions**||**Tax exemption**|||
+|-|**CI/New tax**|**LVT**|-|-|**Contributions**|-|**Tax exemption**|-|-|
 |**Year**|**% of population**|**Urban land rate**<br>**applied**|**Rural land rate**<br>**applied**|**Simplifed**<br>**expected**<br>**reduction in**<br>**land values**|**Employee**|**Employer**|**Employer**|**Employee**|**Fund Income**|
 |0|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|0.00%|
 |1|0.00%|0.00%|0.00%|5.00%|0.00%|0.00%|0.00%|0.00%|0.00%|
