@@ -5,6 +5,7 @@ from __future__ import annotations
 from pipeline.transforms.pdf_quirks import (
     QUIRKS_BY_FILENAME,
     apply_quirks,
+    demote_h2_subnumbering,
     fix_mapped_table_cells,
     fix_sentence_space_after_period,
     merge_split_h2_headings,
@@ -40,6 +41,87 @@ def test_merge_split_h2_headings_no_match_is_noop():
     """Pairs that don't appear in the text don't change it."""
     text = "## **Some other heading**\n\nBody text.\n"
     assert merge_split_h2_headings(text, [("Not in text", "also not")]) == text
+
+
+def test_demote_h2_subnumbering_basic():
+    """A bolded H2 with sub-numbering like '## **1.1 ...**' becomes an H3."""
+    text = "## **1.1 The Citizen's Income**\n"
+    assert demote_h2_subnumbering(text) == "### **1.1 The Citizen's Income**\n"
+
+
+def test_demote_h2_subnumbering_multiple_subsections():
+    """All sub-numbered H2 lines in a block are demoted in one pass."""
+    text = (
+        "## **1. Give every Kiwi the basics to live well and contribute**\n\n"
+        "## **1.1 The Citizen's Income**\n\n"
+        "## **1.2 Income Tax Realignment**\n\n"
+        "## **1.3 A Simplified Benefit System**\n"
+    )
+    expected = (
+        "## **1. Give every Kiwi the basics to live well and contribute**\n\n"
+        "### **1.1 The Citizen's Income**\n\n"
+        "### **1.2 Income Tax Realignment**\n\n"
+        "### **1.3 A Simplified Benefit System**\n"
+    )
+    assert demote_h2_subnumbering(text) == expected
+
+
+def test_demote_h2_subnumbering_preserves_single_numbered_h2():
+    """A bolded H2 with a single number like '## **1. ...**' is a top-level section — keep as H2."""
+    text = "## **1. Give every Kiwi the basics to live well and contribute**\n"
+    assert demote_h2_subnumbering(text) == text
+
+
+def test_demote_h2_subnumbering_preserves_unbolded_h2():
+    """Unbolded '## 1.1 ...' (no ** markers) is not touched — only bolded sub-numbered H2s are demoted."""
+    text = "## 1.1 Some unbolded heading\n"
+    assert demote_h2_subnumbering(text) == text
+
+
+def test_demote_h2_subnumbering_handles_deeper_subnumbering():
+    """Three-level numbering '## **1.1.1 ...**' is also demoted — the regex doesn't bound to two digits."""
+    text = "## **1.1.1 Nested sub-numbered heading**\n"
+    assert demote_h2_subnumbering(text) == "### **1.1.1 Nested sub-numbered heading**\n"
+
+
+def test_demote_h2_subnumbering_idempotent():
+    """Re-running the function on already-demoted output is a no-op (no double-demotion)."""
+    text = "### **1.1 The Citizen's Income**\n"
+    assert demote_h2_subnumbering(text) == text
+
+
+def test_apply_quirks_demotes_subnumbering_in_policy_overview():
+    """pdf-policy-overview.md runs demote_h2_subnumbering: ## **N.M ...** → ### **N.M ...**."""
+    filename = "pdf-policy-overview.md"
+    assert filename in QUIRKS_BY_FILENAME
+
+    sample = (
+        "## **1. Give every Kiwi the basics to live well and contribute**\n"
+        "\n"
+        "The Citizen's Income is a tax-free universal payment.\n"
+        "\n"
+        "## **1.1 The Citizen's Income**\n"
+        "\n"
+        "Every New Zealand Citizen and resident aged 18 and over.\n"
+        "\n"
+        "## **2. Make housing affordable through a Land Value Tax**\n"
+        "\n"
+        "## **2.1 A Land Value Tax of 1.75% on urban and 0.5% on rural land.**\n"
+    )
+    result = apply_quirks(filename, sample)
+
+    # Top-level numbered H2s preserved
+    assert "## **1. Give every Kiwi the basics to live well and contribute**" in result
+    assert "## **2. Make housing affordable through a Land Value Tax**" in result
+
+    # Sub-numbered H2s demoted to H3 (full line begins with `### **N.M`)
+    assert "### **1.1 The Citizen's Income**" in result
+    assert "### **2.1 A Land Value Tax of 1.75% on urban and 0.5% on rural land.**" in result
+
+    # The demoted lines no longer exist as a full H2 line (anchored on `\n## **N.M`,
+    # not a substring — `### **` contains `## **` and would falsely match)
+    assert "\n## **1.1 The Citizen's Income**\n" not in result
+    assert "\n## **2.1 A Land Value Tax of 1.75% on urban and 0.5% on rural land.**\n" not in result
 
 
 def test_apply_quirks_tax_reset_overview():
@@ -88,9 +170,9 @@ def test_apply_quirks_healthy_oceans_policy_overview():
     assert "**Oceans**" not in result
     assert "coral reefs\n\nand seafloor ecosystems" in result
 
-    # 1.3 promoted to proper H2 heading (full line begins with `## `)
+    # 1.3 promoted to a heading then demoted to H3 (sub-numbered under section 1)
     assert (
-        "## **1.3 Install cameras and maintain observers on all commercial fishing vessels**"
+        "### **1.3 Install cameras and maintain observers on all commercial fishing vessels**"
         in result
     )
     assert (
@@ -98,9 +180,9 @@ def test_apply_quirks_healthy_oceans_policy_overview():
         not in result
     )
 
-    # 4.3 promoted to proper H2 heading (full line begins with `## `)
+    # 4.3 promoted to a heading then demoted to H3 (sub-numbered under section 4)
     assert (
-        "## **4.3 Develop long-term regional ocean plans in partnership with communities**"
+        "### **4.3 Develop long-term regional ocean plans in partnership with communities**"
         in result
     )
     assert (

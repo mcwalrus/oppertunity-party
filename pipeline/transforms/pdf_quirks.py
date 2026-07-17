@@ -67,6 +67,27 @@ def merge_split_h2_headings(text: str, pairs: list[tuple[str, str]]) -> str:
     return text
 
 
+def demote_h2_subnumbering(text: str) -> str:
+    """Demote bolded sub-numbered H2 headings like ``## **1.1 ...**`` to H3.
+
+    pymupdf4llm emits every numbered heading at the same level, so a document
+    with sections like ``1.`` / ``1.1`` / ``1.2`` / ``2.`` / ``2.1`` lands as
+    a flat list of H2s. Top-level sections (``## **1. ...**``) stay H2; their
+    children (``## **1.1 ...**``) get demoted one level so the heading tree
+    reflects the document's numbering hierarchy.
+
+    Anchored on ``## **`` + ``\\d+\\.\\d+`` so:
+    - Single-numbered headings (``## **1. ...**``) are not touched.
+    - Unbolded headings (``## 1.1 ...``) are not touched.
+    - Already-demoted H3s (``### **1.1 ...**``) are not re-demoted (the
+      ``##`` marker doesn't match).
+    """
+    # ponytail: one-line regex. False positives only if a top-level H2 happens
+    # to be bolded and starts with "N.M text" — add a check for the preceding
+    # blank line + body context if one surfaces.
+    return re.sub(r"^## \*\*(\d+\.\d+)", r"### **\1", text, flags=re.MULTILINE)
+
+
 def fix_mapped_table_cells(text: str) -> str:
     """Fix data rows in mapped markdown tables so they render cleanly.
 
@@ -266,6 +287,10 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
         (
             "Citizens Voice Policy Overview: drop mid-paragraph `**Direct Democracy**` page-header label + fix sentence-space after period",
             _citizens_voice_policy_overview,
+        ),
+        (
+            "Policy Overview: demote bolded sub-numbered ## **N.M ...** headings to ### so sub-sections nest under their N. parent",
+            demote_h2_subnumbering,
         ),
     ],
     "pdf-policy-addendum.md": [
