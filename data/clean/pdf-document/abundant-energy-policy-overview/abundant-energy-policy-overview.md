@@ -3,17 +3,17 @@ slug: "abundant-energy-policy-overview"
 content_type: "pdf-document"
 source_id: "opportunity-website"
 source_type: "website"
-ingested_at: "2026-07-16T02:06:13.010616+00:00"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+ingested_at: "2026-07-17T04:11:58.973688+00:00"
+cleaned_at: "2026-07-17T04:11:58.973688+00:00"
 title: "Abundant Energy — Policy Overview"
 policy_slug: "abundant-energy"
 ---
-| Field         | Value                                    |
-| ------------- | ---------------------------------------- |
-| Date          | February 2026                            |
-| Policy        | Abundant Energy                          |
-| Document Type | Policy Overview                          |
-| Source        | `Opportunity_Policy_Abundant Energy.pdf` |
+| Field | Value |
+|-------|-------|
+| Date | February 2026 |
+| Policy | Abundant Energy |
+| Document Type | Policy Overview |
+| Source | `Opportunity_Policy_Abundant Energy.pdf` |
 
 ## **Abundant Energy**
 

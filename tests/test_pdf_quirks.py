@@ -6,12 +6,73 @@ from pipeline.transforms.clean import strip_contents_section
 from pipeline.transforms.pdf_quirks import (
     QUIRKS_BY_FILENAME,
     apply_quirks,
+    demote_faq_question_headings,
     demote_h2_subnumbering,
     demote_h2_under_problems_we_are_solving,
+    drop_picture_text_block,
     fix_mapped_table_cells,
     fix_sentence_space_after_period,
+    fix_stripped_ligatures,
     merge_split_h2_headings,
 )
+
+
+def test_fix_stripped_ligatures_expands_double_letter_pairs():
+    """Restore double-letter ligatures that pymupdf4llm stripped from the constitution PDF."""
+    text = (
+        "## **5. Oicers**\n\n"
+        "- 5.4 An oicer is interested in a maer.\n"
+        "- 6.10.1 a signed leer from the candidate.\n"
+        "- 6.34 the board may appoint commiees of the Party.\n"
+        "- 8.2.3 a wrien reference.\n"
+        "- 2.5.4 **Eicacy** – we are our results.\n"
+        "- The nominee would be a sound ElectorateCandidate.\n"
+        "- Any act, maer or thing done, or suered in good faith.\n"
+        "- Provision of financial gain may be an oence under the Act.\n"
+        "- ex oicio member of the board.\n"
+        "- measure eectiveness by influence.\n"
+        "- the aairs of the Party.\n"
+        "- 6.32 Wrien resolution.\n"
+    )
+    out = fix_stripped_ligatures(text)
+    # Plurals + capitals restored
+    assert "## **5. Officers**" in out
+    assert "## **6. Officers**" not in out  # heading 5 only
+    assert "An officer is interested in a matter." in out
+    assert "a signed letter from the candidate." in out
+    assert "appoint committees of the Party." in out
+    assert "a written reference." in out
+    assert "**Efficacy**" in out
+    assert "Electorate Candidate" in out
+    assert "Any act, matter or thing done, or suffered in good faith." in out
+    assert "may be an offence under the Act." in out
+    assert "ex officio member of the board." in out
+    assert "measure effectiveness by influence." in out
+    assert "the affairs of the Party." in out
+    assert "Written resolution" in out
+
+
+def test_fix_stripped_ligatures_leaves_real_words_alone():
+    """Words that contain the broken-pattern letters as substrings are preserved."""
+    text = (
+        "Voice your choice — don't rejoice in invoice errors.\n"
+        "The coherent, inherent argument is self-evident.\n"
+        "Later, the letter will be delivered.\n"
+    )
+    out = fix_stripped_ligatures(text)
+    assert out == text
+
+
+def test_fix_stripped_ligatures_is_idempotent():
+    """Re-running on already-fixed text is a no-op."""
+    text = (
+        "An officer is interested in a matter.\n"
+        "## **Officers**\n"
+        "Written resolution by the committee.\n"
+    )
+    once = fix_stripped_ligatures(text)
+    twice = fix_stripped_ligatures(once)
+    assert once == twice
 
 
 def test_fix_sentence_space_after_period():
@@ -425,6 +486,169 @@ def test_apply_quirks_making_zero_the_hero_no_match_is_passthrough():
 
 
 # ---------------------------------------------------------------------------
+# drop_picture_text_block — drop a picture-text block by content fingerprint
+#
+# Rule: only info-graphics (data-bearing visualizations: charts, diagrams,
+# data infographics) should be referenced in markdown. Pure graphics
+# (decorative cover imagery, word art, logos) are dropped using this function.
+# ---------------------------------------------------------------------------
+
+
+def test_drop_picture_text_block_removes_matching_block():
+    """A picture-text block whose content contains the fingerprint is removed."""
+    text = (
+        "Some intro.\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "Making zero<br>the hero<br>"
+        "**----- End of picture text -----**<br>\n"
+        "\n"
+        "Body text after.\n"
+    )
+    result = drop_picture_text_block(text, "Making zero<br>the hero")
+    assert "Start of picture text" not in result
+    assert "Making zero" not in result
+    # Surrounding body text is preserved
+    assert "Some intro." in result
+    assert "Body text after." in result
+
+
+def test_drop_picture_text_block_preserves_non_matching_blocks():
+    """Picture-text blocks whose content does not contain the fingerprint are preserved."""
+    text = (
+        "**----- Start of picture text -----**<br>\n"
+        "NPE strategy<br>diagram<br>**----- End of picture text -----**<br>\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "4% Not intending<br>**----- End of picture text -----**<br>\n"
+    )
+    result = drop_picture_text_block(text, "le R<br>k<br>e<br>R<br>c")
+    # Neither block matches the fingerprint — both survive
+    assert "NPE strategy" in result
+    assert "4% Not intending" in result
+
+
+def test_drop_picture_text_block_drops_only_matching_in_mixed_set():
+    """In a mixed set of blocks, only the matching one is dropped."""
+    text = (
+        "**----- Start of picture text -----**<br>\n"
+        "NPE strategy<br>diagram<br>**----- End of picture text -----**<br>\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "u<br>le R<br>k<br>e<br>R<br>c<br>**----- End of picture text -----**<br>\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "4% Not intending<br>**----- End of picture text -----**<br>\n"
+    )
+    result = drop_picture_text_block(text, "le R<br>k<br>e<br>R<br>c")
+    # The matching block (vertical word art) is dropped
+    assert "le R" not in result
+    # The other blocks survive
+    assert "NPE strategy" in result
+    assert "4% Not intending" in result
+
+
+def test_drop_picture_text_block_handles_multiline_content():
+    """Picture-text blocks with long single-line content (many <br>) are handled.
+
+    pymupdf4llm emits all content on a single line (with ``<br>`` separators
+    within the line), even when the OCR'd text is long. The regex anchors on
+    line boundaries (``^\n`` and ``<br>\n``) so multi-line content works.
+    """
+    text = (
+        "**----- Start of picture text -----**<br>\n"
+        "NPE NPE NPE<br>strategy strategy strategy<br>d<br>i i i<br>n<br>e<br>a<br>"
+        "in<br>h h h<br>e<br>d<br>r a<br>n n n<br>u e<br>n<br>t v h v<br>"
+        "tn<br>**----- End of picture text -----**<br>\n"
+    )
+    result = drop_picture_text_block(text, "le R<br>k<br>e<br>R<br>c")
+    # Fingerprint doesn't match — block preserved
+    assert "NPE NPE NPE" in result
+    assert "End of picture text" in result
+
+
+def test_drop_picture_text_block_idempotent():
+    """Re-running drop on already-dropped text is a no-op (no second drop)."""
+    text = (
+        "**----- Start of picture text -----**<br>\n"
+        "Making zero<br>the hero<br>**----- End of picture text -----**<br>\n"
+    )
+    once = drop_picture_text_block(text, "Making zero<br>the hero")
+    twice = drop_picture_text_block(once, "Making zero<br>the hero")
+    assert once == twice
+    assert once == ""
+
+
+def test_drop_picture_text_block_no_fingerprint_match_is_passthrough():
+    """When no block contains the fingerprint, the input is unchanged."""
+    text = (
+        "**----- Start of picture text -----**<br>\n"
+        "Making zero<br>the hero<br>**----- End of picture text -----**<br>\n"
+    )
+    assert drop_picture_text_block(text, "not in any block") == text
+
+
+def test_apply_quirks_making_zero_the_hero_drops_decorative_blocks():
+    """MakingZeroTheHero Summary: drops the page-1 cover graphic and the page-4
+    vertical word art, keeping the page-3 NPE diagram and page-5 survey chart.
+
+    Rule applied: only info-graphics (data-bearing visualizations) are
+    referenced in markdown; pure graphics (decorative cover imagery, word
+    art) are dropped.
+    """
+    filename = "pdf-default.md"
+    assert filename in QUIRKS_BY_FILENAME
+
+    sample = (
+        "# Healthy Land\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "Making zero<br>the hero<br>**----- End of picture text -----**<br>\n"
+        "\n"
+        "A roadmap towards sustainable plastics use in New Zealand\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "NPE NPE NPE<br>strategy strategy strategy<br>tn<br>"
+        "**----- End of picture text -----**<br>\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "u<br>le R<br>k<br>e<br>R<br>c<br>**----- End of picture text -----**<br>\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "4% Not intending to<br>**----- End of picture text -----**<br>\n"
+    )
+    result = apply_quirks(filename, sample)
+
+    # Decorative blocks dropped
+    assert "Making zero" not in result  # page-1 cover graphic
+    assert "le R<br>k" not in result  # page-4 word art
+
+    # Info-graphic blocks kept
+    assert "NPE NPE NPE" in result  # page-3 NPE diagram
+    assert "4% Not intending to" in result  # page-5 survey chart
+
+    # The two surviving blocks each keep their start/end markers
+    assert result.count("Start of picture text") == 2
+    assert result.count("End of picture text") == 2
+
+
+def test_apply_quirks_making_zero_the_hero_charter_passthrough():
+    """Charter/constitution share ``pdf-default.md`` with MakingZeroTheHero but
+    have no decorative picture-text blocks. The quirk's fingerprint drops
+    only match the MakingZeroTheHero PDF — charter content passes through."""
+    filename = "pdf-default.md"
+    sample = (
+        "# Charter\n"
+        "\n"
+        "**----- Start of picture text -----**<br>\n"
+        "Charter signature image<br>**----- End of picture text -----**<br>\n"
+    )
+    # No fingerprint matches → no drop. The other quirk (orphan empty H2) is
+    # scoped to 'desirability of a pan-sector vision', so charter passes through.
+    assert apply_quirks(filename, sample) == sample
+
+
+# ---------------------------------------------------------------------------
 # fix_mapped_table_cells — fix $m escape + empty-cell fill in data tables
 # ---------------------------------------------------------------------------
 
@@ -620,3 +844,102 @@ def test_strip_contents_section_preserves_trailing_content():
     assert "|1.|Formation" not in stripped
     # Content section after TOC preserved
     assert "## **1. Formation**\n\nBody content.\n" in stripped
+
+
+def test_demote_faq_question_headings_basic():
+    """FAQ question H2s under the parent wrapper are demoted; wrapper stays H2.
+
+    Each policy overview ends with ``## **<Policy>—Frequently Asked Questions**``
+    followed by 5-30 bolded question headings. pymupdf4llm emits the questions
+    as H2, so this quirk demotes them to H3 so they nest under the wrapper.
+    """
+    text = (
+        "## **Healthy Oceans—Frequently Asked Questions**\n"
+        "\n"
+        "## **How much will this cost?**\n"
+        "\n"
+        "Body for the first FAQ.\n"
+        "\n"
+        "## **How will this affect recreational fishers?**\n"
+        "\n"
+        "Body for the second FAQ.\n"
+    )
+    result = demote_faq_question_headings(text)
+    assert "## **Healthy Oceans—Frequently Asked Questions**" in result  # wrapper preserved
+    assert "### **How much will this cost?**" in result
+    assert "### **How will this affect recreational fishers?**" in result
+    # No remaining H2 line for the questions (### is a substring of ##, so anchor at line start)
+    import re as _re
+
+    assert not _re.search(r"^## \*\*How much will this cost\?\*\*", result, flags=_re.M)
+
+
+def test_demote_faq_question_headings_preserves_h2_outside_faq():
+    """Headings before the FAQ wrapper are left alone — only the FAQ subtree is demoted."""
+    text = (
+        "## **Top section**\n"
+        "\n"
+        "Body.\n"
+        "\n"
+        "## **The problems we're solving**\n"
+        "\n"
+        "## **A problem statement**\n"
+        "\n"
+        "Problem body.\n"
+        "\n"
+        "## **Healthy Oceans—Frequently Asked Questions**\n"
+        "\n"
+        "## **First question?**\n"
+        "\n"
+        "FAQ body.\n"
+    )
+    result = demote_faq_question_headings(text)
+    # Pre-FAQ H2s untouched (these are handled by demote_h2_under_problems_we_are_solving, not this quirk)
+    assert "## **Top section**" in result
+    assert "## **The problems we're solving**" in result
+    assert "## **A problem statement**" in result
+    # FAQ question demoted
+    assert "### **First question?**" in result
+
+
+def test_demote_faq_question_headings_no_wrapper_is_passthrough():
+    """Documents without an FAQ section are returned unchanged."""
+    text = "## **Top section**\n\n## **Subsection**\n\nBody.\n"
+    assert demote_faq_question_headings(text) == text
+
+
+def test_demote_faq_question_headings_idempotent():
+    """Re-running on already-demoted text produces the same output."""
+    text = (
+        "## **Healthy Oceans—Frequently Asked Questions**\n"
+        "\n"
+        "## **First question?**\n"
+        "\n"
+        "Body.\n"
+        "\n"
+        "## **Second question?**\n"
+        "\n"
+        "More body.\n"
+    )
+    once = demote_faq_question_headings(text)
+    twice = demote_faq_question_headings(once)
+    assert once == twice
+
+
+def test_apply_quirks_demotes_faq_questions_in_policy_overview():
+    """The FAQ quirk is registered for pdf-policy-overview.md and applied via apply_quirks."""
+    filename = "pdf-policy-overview.md"
+    assert filename in QUIRKS_BY_FILENAME
+    # Quick sanity check that the function appears in the registered quirks.
+    quirk_fns = [fn for _, fn in QUIRKS_BY_FILENAME[filename]]
+    assert demote_faq_question_headings in quirk_fns
+
+    sample = (
+        "## **Healthy Oceans—Frequently Asked Questions**\n"
+        "\n"
+        "## **Why not keep the status quo?**\n"
+        "\n"
+        "Body.\n"
+    )
+    result = apply_quirks(filename, sample)
+    assert "### **Why not keep the status quo?**" in result

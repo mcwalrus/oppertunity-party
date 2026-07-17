@@ -3,17 +3,17 @@ slug: "tax-reset-policy-overview"
 content_type: "pdf-document"
 source_id: "opportunity-website"
 source_type: "website"
-ingested_at: "2026-07-16T02:06:13.010616+00:00"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+ingested_at: "2026-07-17T04:12:23.966837+00:00"
+cleaned_at: "2026-07-17T04:12:23.966837+00:00"
 title: "Tax Reset — Policy Overview"
 policy_slug: "tax-reset"
 ---
-| Field         | Value                                       |
-| ------------- | ------------------------------------------- |
-| Date          | May 2026                                    |
-| Policy        | Tax Reset                                   |
-| Document Type | Policy Overview                             |
-| Source        | `Opportunity_Tax Reset_Policy Overview.pdf` |
+| Field | Value |
+|-------|-------|
+| Date | May 2026 |
+| Policy | Tax Reset |
+| Document Type | Policy Overview |
+| Source | `Opportunity_Tax Reset_Policy Overview.pdf` |
 
 ## **It’s time for a Tax Reset**
 
@@ -129,7 +129,7 @@ To balance the Citizens’ Income, simplify the tax system, and maintain progres
 
 - 39% for income at $200,001+ p/a
 
-Combined with the Citizens’ Income, this represents a reduction in total income tax at all income levels, with the largest reductions at lower income levels where it is most needed.Those earning less than $60,000 per year will pay less income tax than the Citizens’ Income they receive.
+Combined with the Citizens’ Income, this represents a reduction in total income tax at all income levels, with the largest reductions at lower income levels where it is most needed. Those earning less than $60,000 per year will pay less income tax than the Citizens’ Income they receive.
 
 
 ### **1.3 A Simplified Benefit System**
@@ -239,16 +239,17 @@ Once fully phased in, the entire 12% contribution (6% employer + 6% employee) wi
 
 The policy as a whole is fiscally positive. Based on 2024 numbers, the Land Value Tax pays for the Citizen’s Income with around $4 billion extra annually in net Crown revenue.
 
-| **Cost**                                                                                                   | -       | **\$m**   | **Revenue**                                  | **\$m**   |
-| ---------------------------------------------------------------------------------------------------------- | ------- | --------- | -------------------------------------------- | --------- |
-| **Net cost of CI**                                                                                         | -       | **15788** | **Land Value Tax**                           | **24323** |
-| Headline CI Cost                                                                                           | 69648   | -         | **Administration Savings**<br>**(MSD, IRD)** | **3825**  |
-| Less Income Tax Clawback                                                                                   | (23381) | -         | -                                            | -         |
-| Less Main beneft replacement (Jobseeker,<br>NZ Super, Supported Living, Sole Parent,<br>Student Allowance) | (30479) | -         | -                                            | -         |
-| **Net Supplementary Support cost**                                                                         | -       | **8279**  | -                                            | -         |
-| Additional benefts cost                                                                                    | 15614   | -         | -                                            | -         |
-| Less additional benefts replaced                                                                           | (7335)  | -         | -                                            | -         |
-| **Total cost**                                                                                             | -       | **24067** | **Total revenue**                            | **28148** |
+|revenue.|-|-|-|-|
+|---|---|---|---|---|
+|**Cost**|-|**\$m**|**Revenue**|**\$m**|
+|**Net cost of CI**|-|**15788**|**Land Value Tax**|**24323**|
+|Headline CI Cost|69648|-|**Administration Savings**<br>**(MSD, IRD)**|**3825**|
+|Less Income Tax Clawback|(23381)|-|-|-|
+|Less Main beneft replacement (Jobseeker,<br>NZ Super, Supported Living, Sole Parent,<br>Student Allowance)|(30479)|-|-|-|
+|**Net Supplementary Support cost**|-|**8279**|-|-|
+|Additional benefts cost|15614|-|-|-|
+|Less additional benefts replaced|(7335)|-|-|-|
+|**Total cost**|-|**24067**|**Total revenue**|**28148**|
 
 A previous version of this table used incorrect data that did not materially alter the overall balance. This was amended on 19/05/2026
 
@@ -343,9 +344,7 @@ The LVT corrects this imbalance. You still own your house. You still benefit fro
 
 We think that’s a fair deal.
 
-## **What does the Land Value Tax mean for ‘asset-rich, cash-poor’ Kiwis like**
-
-## **retirees or farmers?**
+## **What does the Land Value Tax mean for ‘asset-rich, cash-poor’ Kiwis like retirees or farmers?**
 
 To ensure that every Kiwi is supported through the Tax Reset transition - lower rates, exemptions and deferments apply. Retirees will be able to defer their Land Value Tax - making it payable by their estate. Farmers will benefit from a 0.5% Land Value Tax, be able to exempt privately owned conservation land and defer their tax payments in tough weather or economic seasons.
 
@@ -426,15 +425,11 @@ The government will still tax the gains from Kiwisaver. It means that when someo
 
 The tax exemptions will be funded by the National Superannuation Fund. In the long run, increased returns on a bigger pool of savings will more than cover that initial cost to Government.
 
-## **What was your process in designing the Tax Reset. Have independent**
-
-## **economists reviewed this?**
+## **What was your process in designing the Tax Reset. Have independent economists reviewed this?**
 
 The Tax Reset was designed by Opportunity’s team of practising and retired economists. External economists have reviewed and provided feedback on the policy.
 
-## **What about Temporary Residents and Workers. Increasing tax rates without a**
-
-## **Citizen’s Income will dramatically raise their tax bill.**
+## **What about Temporary Residents and Workers. Increasing tax rates without a Citizen’s Income will dramatically raise their tax bill.**
 
 There are small groups of workers who will require extra considerations and provisions in the Tax Reset policy - including temporary or RSE workers. We’ll work with impacted industries to ensure the Tax Reset takes these groups into consideration, while balancing the pro-domestic hiring incentive that would eventuate if a higher tax burden was placed on foreign workers.
 

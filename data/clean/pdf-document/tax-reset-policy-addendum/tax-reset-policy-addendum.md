@@ -3,17 +3,17 @@ slug: "tax-reset-policy-addendum"
 content_type: "pdf-document"
 source_id: "opportunity-website"
 source_type: "website"
-ingested_at: "2026-07-16T02:06:13.010616+00:00"
-cleaned_at: "2026-07-16T02:06:13.010616+00:00"
+ingested_at: "2026-07-17T04:12:23.966837+00:00"
+cleaned_at: "2026-07-17T04:12:23.966837+00:00"
 title: "Tax Reset — Policy Addendum"
 policy_slug: "tax-reset"
 ---
-| Field         | Value                                       |
-| ------------- | ------------------------------------------- |
-| Date          | May 2026                                    |
-| Policy        | Tax Reset                                   |
-| Document Type | Policy Addendum                             |
-| Source        | `Opportunity_Tax Reset_Transition Plan.pdf` |
+| Field | Value |
+|-------|-------|
+| Date | May 2026 |
+| Policy | Tax Reset |
+| Document Type | Policy Addendum |
+| Source | `Opportunity_Tax Reset_Transition Plan.pdf` |
 
 Document Type **Policy Addendum**
 
@@ -39,7 +39,7 @@ Done well. the transition would avoid excessive inflationary impacts or other ec
 
 ## **Overview of a possible Tax Reset implementation pathway**
 
-|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
+|-|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Income and LVT**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|**Superannuation**|
 |---|---|---|---|---|---|---|---|---|---|
 |-|**CI/New tax**|**LVT**|-|-|**Contributions**|-|**Tax exemption**|-|-|
 |**Year**|**% of population**|**Urban land rate**<br>**applied**|**Rural land rate**<br>**applied**|**Simplifed**<br>**expected**<br>**reduction in**<br>**land values**|**Employee**|**Employer**|**Employer**|**Employee**|**Fund Income**|

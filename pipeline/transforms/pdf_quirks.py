@@ -88,6 +88,36 @@ def demote_h2_subnumbering(text: str) -> str:
     return re.sub(r"^## \*\*(\d+\.\d+)", r"### **\1", text, flags=re.MULTILINE)
 
 
+def demote_faq_question_headings(text: str) -> str:
+    """Demote bolded H2 question headings that follow a ``*—Frequently Asked Questions`` wrapper.
+
+    Policy overview PDFs (Tax Reset, Abundant Energy, Healthy Oceans) close
+    with a ``## **<Policy>—Frequently Asked Questions**`` wrapper that
+    introduces 5-30 bolded question headings. pymupdf4llm emits every one as
+    H2, so they sit as siblings of the wrapper instead of nesting under it.
+    This quirk demotes them to H3 so they nest correctly.
+
+    FAQs are always the last section of a policy overview, so we split on
+    the FAQ parent heading and demote every subsequent ``## **`` until the
+    document ends. Idempotent: a second pass over already-demoted text is a
+    no-op (``### **`` doesn't match ``## **``).
+    """
+    # ponytail: split is cheaper than scanning; FAQs always close the doc so
+    # no boundary detection is needed. False positives only if a non-FAQ
+    # bolded H2 follows an unrelated "Frequently Asked Questions" mention —
+    # none observed.
+    parts = re.split(
+        r"(## \*\*[^*]*Frequently Asked Questions[^*]*\*\*)",
+        text,
+        maxsplit=1,
+    )
+    if len(parts) < 3:
+        return text
+    before, head, after = parts
+    after = re.sub(r"^## \*\*", "### **", after, flags=re.MULTILINE)
+    return before + head + after
+
+
 def demote_h2_under_problems_we_are_solving(text: str) -> str:
     """Demote bolded H2 sub-headings that follow the ``The problems we're solving`` wrapper.
 
@@ -165,6 +195,98 @@ def _next_h2_immediate(lines: list[str], start: int) -> str | None:
             return m.group(1)
         return None  # non-blank, non-heading content — too far away
     return None
+
+
+def fix_stripped_ligatures(text: str) -> str:
+    """Re-expand ligatures that pymupdf4llm stripped during PDF→markdown extraction.
+
+    For the Opportunity Party constitution PDF, pymupdf4llm sometimes drops
+    double-character ligatures (``ff``, ``tt``) entirely instead of expanding
+    them to their component letters, producing broken words like ``oicer``
+    (officer), ``maer`` (matter), ``Commiee`` (Committee). This restores them.
+
+    Each broken form is unambiguously not a legitimate English word, so
+    applying this to other text is a no-op — only the constitution PDF is
+    known to contain them. Word boundaries prevent matching inside legitimate
+    words (``voice``, ``choice``, ``invoice``, ``rejoice`` for ``oice``;
+    ``coherent``, ``inherent`` for ``erent``).
+
+    Longer forms (``oicers``, ``Commiees``) are listed before their stems
+    (``oicer``, ``Commiee``) so the more specific match wins first.
+    """
+    # ponytail: pure regex rewrite. If a new PDF surfaces a stripped-ligature
+    # type, add a pattern here. False positives only happen if another real
+    # word happens to end with a dropped pair (none known).
+    replacements = [
+        # Longer / plural / capitalized forms first so they win against stems.
+        (r"\bElectorateCandidate\b", "Electorate Candidate"),
+        (r"\bCommiees\b", "Committees"),
+        (r"\bcommiees\b", "committees"),
+        (r"\bCommiee\b", "Committee"),
+        (r"\bcommiee\b", "committee"),
+        (r"\bOicers\b", "Officers"),
+        (r"\bWrien\b", "Written"),
+        (r"\boicers\b", "officers"),
+        (r"\bmaers\b", "matters"),
+        (r"\beective\b", "effective"),
+        (r"\beectiveness\b", "effectiveness"),
+        (r"\beects\b", "effects"),
+        (r"\bleers\b", "letters"),
+        (r"\baairs\b", "affairs"),
+        # Stems — ``leer`` is the only real-word false-positive risk (verb:
+        # to look sideways); context-anchored to the constitution's "letter"
+        # phrasings so it stays a no-op on text containing the verb.
+        (r"\bleer (from|would|was|of|to|that)\b", r"letter \1"),
+        (r"\boicer\b", "officer"),
+        (r"\boicio\b", "officio"),
+        (r"\boice\b", "office"),
+        (r"\bmaer\b", "matter"),
+        (r"\beect\b", "effect"),
+        (r"\bwrien\b", "written"),
+        (r"\baair\b", "affair"),
+        (r"\bsuered\b", "suffered"),
+        (r"\boence\b", "offence"),
+        (r"\bEicacy\b", "Efficacy"),
+        (r"\bciency\b", "efficiency"),
+        (r"\blaer\b", "latter"),
+        (r"\bsiing\b", "sitting"),
+        (r"\bainment\b", "attainment"),
+        (r"\berent\b", "different"),
+        (r"\bregardinga\b", "regarding a"),
+    ]
+    for pattern, repl in replacements:
+        text = re.sub(pattern, repl, text)
+    return text
+
+
+def drop_picture_text_block(text: str, content_fingerprint: str) -> str:
+    """Drop a ``----- Start/End of picture text -----`` block whose OCR'd content contains *content_fingerprint*.
+
+    Rule: only info-graphics (data-bearing visualizations — charts, diagrams,
+    data infographics) should be referenced in markdown. Pure graphics
+    (decorative cover imagery, word art, logos) carry no information that
+    prose can replace and inflate the image count, so they're dropped using
+    this function. The fingerprint anchors on a unique substring of the
+    block's OCR'd content so re-runs are idempotent and the pattern is
+    portable across future PDFs that have the same decorative-vs-data split.
+
+    Matches pymupdf4llm's picture-text block layout: a single-line content
+    body (with ``<br>`` separators within the line, no raw newlines) between
+    two marker lines.
+    """
+    pattern = re.compile(
+        r"^\*\*----- Start of picture text -----\*\*<br>\n"
+        r"([^\n]*?)"
+        r"\*\*----- End of picture text -----\*\*<br>\n",
+        re.MULTILINE,
+    )
+
+    def _maybe_drop(match: re.Match[str]) -> str:
+        if content_fingerprint in match.group(1):
+            return ""
+        return match.group(0)
+
+    return pattern.sub(_maybe_drop, text)
 
 
 def fix_mapped_table_cells(text: str) -> str:
@@ -326,11 +448,34 @@ def _citizens_voice_policy_overview(text: str) -> str:
 def _making_zero_the_hero_summary(text: str) -> str:
     """Quirks for MakingZeroTheHero-Summary-Report.pdf.
 
-    Drops an orphan empty ``##`` heading that pymupdf4llm emits at a page
-    break where the PDF's section heading text was lost — the body paragraph
-    "desirability of a pan-sector vision..." continues mid-sentence from the
-    previous page. Anchored to that unique body text so it is a no-op on
-    charter/constitution (which also write to ``pdf-default.md``).
+    Two fixes applied:
+
+    1. Drops an orphan empty ``##`` heading that pymupdf4llm emits at a page
+       break where the section heading text was lost — the body paragraph
+       "desirability of a pan-sector vision..." continues mid-sentence from
+       the previous page. Anchored to that unique body text so it is a no-op
+       on charter/constitution (which also write to ``pdf-default.md``).
+
+    2. Drops decorative picture-text blocks so pdf_images only references
+       info-graphics in the clean markdown. See ``drop_picture_text_block``.
+
+       Rule: only info-graphics (data-bearing visualizations) should be
+       referenced in markdown — pure graphics (decorative cover imagery,
+       word art) carry no information and inflate the image count. This
+       PDF's embedded images are:
+
+       - Page 1 cover (stock photos + "Making zero the hero" title) — graphic.
+       - Page 3 NPE strategy circular diagram (3 sectors with text labels)
+         — info-graphic. Keep.
+       - Page 4 vertical "REDUCE / REUSE / RECYCLE" word art — graphic.
+       - Page 5 survey engagement pie chart (6 percentages) — info-graphic.
+         Keep.
+
+       The styled-text pull-quote block (no embedded image) is already
+       dropped by pdf_images when blocks outnumber images.
+
+       Idempotent: re-running on already-patched text is a no-op (the
+       fingerprint strings don't match after the block is removed).
     """
     # ponytail: scoped to one phrase; no generic empty-H2 stripper. Add a
     # generic helper if a second Scion PDF hits the same artifact.
@@ -340,6 +485,17 @@ def _making_zero_the_hero_summary(text: str) -> str:
         text,
         flags=re.MULTILINE,
     )
+
+    # Drop the page-1 cover graphic (decorative; no info content). The
+    # "Making zero<br>the hero" title is the unique anchor — no other
+    # picture-text block in any PDF carries that text.
+    text = drop_picture_text_block(text, "Making zero<br>the hero")
+
+    # Drop the page-4 vertical "REDUCE / REUSE / RECYCLE" word art (decorative;
+    # no data). The "le R<br>k<br>e<br>R<br>c" letter signature anchors on
+    # the "RECYCLE" vertical letters and is unique to this block.
+    text = drop_picture_text_block(text, "le R<br>k<br>e<br>R<br>c")
+
     return text
 
 
@@ -372,6 +528,10 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
             demote_h2_under_problems_we_are_solving,
         ),
         (
+            "Policy Overview: demote ## ** question headings under '## **<Policy>—Frequently Asked Questions**' to ### so FAQs nest under their wrapper",
+            demote_faq_question_headings,
+        ),
+        (
             "Policy Overview: demote bolded sub-numbered ## **N.M ...** headings to ### so sub-sections nest under their N. parent",
             demote_h2_subnumbering,
         ),
@@ -387,6 +547,10 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
         ),
     ],
     "pdf-default.md": [
+        (
+            "Constitution: re-expand stripped PDF ligatures (oicer→officer, maer→matter, Commiee→Committee, etc.) — no-op on other pdf-default.md files",
+            fix_stripped_ligatures,
+        ),
         (
             "MakingZeroTheHero Summary: drop orphan empty H2 before 'desirability...' paragraph (page-break artifact)",
             _making_zero_the_hero_summary,

@@ -63,13 +63,13 @@ After the pipeline runs, every PDF that's been extracted has a corresponding MD 
 For each PDF, open the markdown side-by-side with the source PDF and confirm: heading hierarchy matches, tables render correctly, bullet lists are intact, no text is missing or garbled. Reference: [`docs/screenshots/11-manual-qa-policy-documents.png`](screenshots/11-manual-qa-policy-documents.png).
 
 - [ ] Abundant Energy — `abundant-energy-policy-overview`
-- [ ] Citizens' Voice — `citizens-voice-policy-overview`
+- [x] Citizens' Voice — `citizens-voice-policy-overview`
 - [ ] Healthy Land — `healthy-land-default`
-- [ ] Healthy Oceans — `healthy-oceans-policy-overview`
+- [x] Healthy Oceans — `healthy-oceans-policy-overview`
 - [x] Tax Reset (Policy Overview) — `tax-reset-policy-overview`
 - [x] Tax Reset (Transition Plan) — `tax-reset-policy-addendum`
 - [x] Charter — `charter-default`
-- [ ] Constitution — `constitution-default`
+- [x] Constitution — `constitution-default`
 
 Also run `uv run pytest tests/` — covers MD↔PDF coverage thresholds transitively (HTML is a deterministic render of MD, so HTML↔PDF is validated indirectly).
 
