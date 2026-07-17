@@ -4,7 +4,7 @@ slug: 2026-07-03-whos-listening-to-our-disability-advocates
 date: "2026-07-03"
 author: "Qiulae Wong"
 url: "https://www.opportunity.org.nz/who_s_listening_to_our_disability_advocates"
-scrapedAt: "2026-07-16T10:44:27.774846"
+scrapedAt: "2026-07-17T18:02:19.926943"
 ---
 ## Who’s listening to our disability advocates?
 

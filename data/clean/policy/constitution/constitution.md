@@ -3,7 +3,7 @@ slug: "constitution"
 content_type: "policy"
 source_id: "opportunity-website"
 source_type: "website"
-cleaned_at: "2026-07-17T04:45:01.350777+00:00"
+cleaned_at: "2026-07-17T08:02:44.913363+00:00"
 title: "Constitution"
 ---
 <!-- The Contents (TOC) table has been removed during transformation; the rendered document provides its own navigation. -->

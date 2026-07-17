@@ -4,7 +4,7 @@ slug: 2026-06-15-opportunity-mps-accommodation-allowance-policy
 date: "2026-06-15"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/opportunity_accommodation_allowance_policy"
-scrapedAt: "2026-07-16T10:44:30.665975"
+scrapedAt: "2026-07-17T18:02:28.111553"
 ---
 ## Opportunity MPs accommodation allowance policy
 

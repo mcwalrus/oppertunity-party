@@ -4,7 +4,7 @@ slug: 2026-06-19-charitable-giving-tax-credit-cap
 date: "2026-06-19"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/charitable_giving_tax_credit_cap"
-scrapedAt: "2026-07-16T10:44:29.483337"
+scrapedAt: "2026-07-17T18:02:24.327411"
 ---
 ## Charitable giving tax credit cap
 

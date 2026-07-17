@@ -4,7 +4,7 @@ slug: sacha-haskell
 role: "Candidate"
 electorate: "Tāmaki"
 url: "https://www.opportunity.org.nz/candidate-sacha-haskell"
-scrapedAt: "2026-07-16T10:44:35.614258"
+scrapedAt: "2026-07-17T18:02:44.801208"
 ---
 “The future of New Zealand can be bright, but we are a nation stagnating from short term political ping pong - with no plan, in a rapidly changing environment.
 Opportunity provide innovative, fresh, long term thinking and are clear on how to create a more productive, affordable and inclusive New Zealand - creating opportunities for future generations. Use your vote to create change for good."

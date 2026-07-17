@@ -4,7 +4,7 @@ slug: 2026-05-04-submission-on-the-fisheries-amendment-bill
 date: "2026-05-04"
 author: "Policy Team"
 url: "https://www.opportunity.org.nz/submission_on_the_fisheries_amendment_bill"
-scrapedAt: "2026-07-16T10:44:37.051773"
+scrapedAt: "2026-07-17T18:02:40.832279"
 ---
 ## Submission on the Fisheries Amendment Bill
 

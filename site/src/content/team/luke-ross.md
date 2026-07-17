@@ -4,7 +4,7 @@ slug: luke-ross
 role: "Candidate"
 electorate: "Remutaka"
 url: "https://www.opportunity.org.nz/candidate-luke-ross"
-scrapedAt: "2026-07-16T10:44:46.555649"
+scrapedAt: "2026-07-17T18:03:18.489235"
 ---
 “We need to change our approach. The way we live is out of balance with our natural environment. Our collective focus is faltering under an oversaturated and stretched media environment, we’re overworked and we’re disconnected from our local communities. Politics needs a refresh. It’s exciting to think how we could use evidence-based, rational thinking to make our lives better.”
 

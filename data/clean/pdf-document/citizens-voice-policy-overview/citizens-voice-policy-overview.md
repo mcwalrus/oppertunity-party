@@ -3,21 +3,21 @@ slug: "citizens-voice-policy-overview"
 content_type: "pdf-document"
 source_id: "opportunity-website"
 source_type: "website"
-ingested_at: "2026-07-17T04:12:02.777049+00:00"
-cleaned_at: "2026-07-17T04:12:02.777049+00:00"
+ingested_at: "2026-07-17T08:03:17.105143+00:00"
+cleaned_at: "2026-07-17T08:03:17.105143+00:00"
 title: "Citizen’s Voice — Policy Overview"
 policy_slug: "citizens-voice"
 ---
-| Field         | Value                                   |
-| ------------- | --------------------------------------- |
-| Date          | June 2025                               |
-| Policy        | Citizen’s Voice                         |
-| Document Type | Policy Overview                         |
-| Source        | `Opportunity_Policy_Citizens Voice.pdf` |
+| Field | Value |
+|-------|-------|
+| Date | June 2025 |
+| Policy | Citizen’s Voice |
+| Document Type | Policy Overview |
+| Source | `Opportunity_Policy_Citizens Voice.pdf` |
 
 ## **Direct democracy**
 
-Right now, big decisions are often made without fully hearing from the public—or only from the loudest or most powerful voices. Polarisation, fuelled by politicians from both sides, makes it ever harder to find common ground. Many New Zealanders feel alienated or demoralised by politics; political participation is in long-term decline.
+Right now, big decisions are often made without fully hearing from the public—or only from the loudest or most powerful voices. Polarisation, fueled by politicians from both sides, makes it ever harder to find common ground. Many New Zealanders feel alienated or demoralised by politics; political participation is in long-term decline.
 
 Our political system is also not well equipped to address long-term issues. Politicians are naturally focused on the three-year electoral cycle. But the most important issues for New Zealand are often longer term, like climate change, the impacts of an ageing population or our constitutional future.
 

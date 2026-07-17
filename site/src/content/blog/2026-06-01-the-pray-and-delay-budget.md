@@ -2,9 +2,9 @@
 title: "The Pray and Delay Budget"
 slug: 2026-06-01-the-pray-and-delay-budget
 date: "2026-06-01"
-author: "Daniel Eb"
+author: "Qiulae Wong"
 url: "https://www.opportunity.org.nz/the_pray_and_delay_budget"
-scrapedAt: "2026-07-16T10:44:32.890470"
+scrapedAt: "2026-07-17T18:02:31.544183"
 ---
 ## The Pray and Delay Budget
 

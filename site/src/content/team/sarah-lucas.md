@@ -4,7 +4,7 @@ slug: sarah-lucas
 role: "Candidate"
 electorate: "New Plymouth"
 url: "https://www.opportunity.org.nz/candidate-sarah-lucas"
-scrapedAt: "2026-07-16T10:44:40.890656"
+scrapedAt: "2026-07-17T18:03:01.726738"
 ---
 “I’m standing because New Zealand needs leadership that is collaborative, practical, and
 evidence-based — leadership that builds a stronger, fairer country for the next generation.”

@@ -3,7 +3,7 @@ name: "Opportunity Party — Team & Candidates Index"
 slug: team
 ---
 **Source**: [opportunity.org.nz/team](https://www.opportunity.org.nz/team)  
-**Generated**: 2026-07-16
+**Generated**: 2026-07-17
 
 ---
 

@@ -4,7 +4,7 @@ slug: 2026-06-19-when-the-bill-comes-due
 date: "2026-06-19"
 author: "Qiulae Wong"
 url: "https://www.opportunity.org.nz/when_the_bill_comes_due"
-scrapedAt: "2026-07-16T10:44:30.032365"
+scrapedAt: "2026-07-17T18:02:25.948957"
 ---
 ## When the bill comes due
 

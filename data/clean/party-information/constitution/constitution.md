@@ -3,7 +3,7 @@ slug: "constitution"
 content_type: "party-information"
 source_id: "opportunity-website"
 source_type: "website"
-cleaned_at: "2026-07-17T04:45:01.225474+00:00"
+cleaned_at: "2026-07-17T08:03:26.305517+00:00"
 title: "Constitution"
 ---
 > **Source**: https://drive.google.com/file/d/1sVxgXWR0zhEofnoGhrbfIwgHiAFeLACx/view?usp=drive_link

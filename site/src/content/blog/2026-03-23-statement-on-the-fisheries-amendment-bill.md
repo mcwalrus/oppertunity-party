@@ -4,7 +4,7 @@ slug: 2026-03-23-statement-on-the-fisheries-amendment-bill
 date: "2026-03-23"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/statement_on_the_fisheries_amendment_bill"
-scrapedAt: "2026-07-16T10:44:39.766814"
+scrapedAt: "2026-07-17T18:02:46.554451"
 ---
 ## Statement on the Fisheries Amendment Bill
 

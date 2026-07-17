@@ -4,7 +4,7 @@ slug: matt-harris
 role: "Candidate"
 electorate: "Rangitata"
 url: "https://www.opportunity.org.nz/candidate-matt-harris"
-scrapedAt: "2026-07-16T10:44:35.010409"
+scrapedAt: "2026-07-17T18:02:43.260331"
 ---
 “Progress depends on our willingness to think differently. I’m standing because I believe New Zealand needs more evidence‑based, long‑term decision‑making, and less of the short-term ping-pong politics that leads to poor outcomes. We need to focus on what actually works and what improves everyday life for people.”
 

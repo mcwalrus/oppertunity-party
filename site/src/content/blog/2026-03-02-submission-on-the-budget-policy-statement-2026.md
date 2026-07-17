@@ -4,7 +4,7 @@ slug: 2026-03-02-submission-on-the-budget-policy-statement-2026
 date: "2026-03-02"
 author: "Policy Team"
 url: "https://www.opportunity.org.nz/submission_on_the_budget_policy_statement_2026"
-scrapedAt: "2026-07-16T10:44:42.224144"
+scrapedAt: "2026-07-17T18:02:51.368803"
 ---
 ## Submission on the Budget Policy Statement 2026
 

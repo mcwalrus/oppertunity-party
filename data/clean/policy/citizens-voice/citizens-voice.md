@@ -4,8 +4,8 @@ content_type: "policy"
 source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/citizens-voice"
-ingested_at: "2026-07-16T10:44:31.737768"
-cleaned_at: "2026-07-17T04:45:01.350777+00:00"
+ingested_at: "2026-07-17T18:02:27.428438"
+cleaned_at: "2026-07-17T08:02:44.913363+00:00"
 title: "Citizens' Voice"
 pdf_urls: ["https://drive.google.com/file/d/116Yio6J2_IVsGUpXzjCQxxaf-fl-8N2L/view?usp=drive_link"]
 ---

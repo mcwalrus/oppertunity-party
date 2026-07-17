@@ -4,8 +4,8 @@ content_type: "policy"
 source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/future_fit_education"
-ingested_at: "2026-07-16T10:44:34.159989"
-cleaned_at: "2026-07-17T04:45:01.350777+00:00"
+ingested_at: "2026-07-17T18:02:33.547113"
+cleaned_at: "2026-07-17T08:02:44.913363+00:00"
 title: "Future-fit Education"
 ---
 **The world our children will grow up in will be challenging and complex. Education needs to change with the times to ensure our young people are ready.**

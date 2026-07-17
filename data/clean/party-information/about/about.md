@@ -4,8 +4,8 @@ content_type: "party-information"
 source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/about"
-ingested_at: "2026-07-16T10:44:27.950357"
-cleaned_at: "2026-07-17T04:45:01.225474+00:00"
+ingested_at: "2026-07-17T18:02:22.299902"
+cleaned_at: "2026-07-17T08:03:26.305517+00:00"
 title: "About"
 ---
 ## We stand for opportunity for every Kiwi.

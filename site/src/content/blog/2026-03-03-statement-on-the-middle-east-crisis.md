@@ -4,7 +4,7 @@ slug: 2026-03-03-statement-on-the-middle-east-crisis
 date: "2026-03-03"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/statement_on_middle_east_crisis"
-scrapedAt: "2026-07-16T10:44:40.507200"
+scrapedAt: "2026-07-17T18:02:48.288775"
 ---
 ## Statement on the Middle East Crisis
 

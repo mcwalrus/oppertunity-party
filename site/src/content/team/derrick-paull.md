@@ -4,7 +4,7 @@ slug: derrick-paull
 role: "Candidate"
 electorate: "Maungakiekie"
 url: "https://www.opportunity.org.nz/candidate-derrick-paull"
-scrapedAt: "2026-07-16T10:44:43.805772"
+scrapedAt: "2026-07-17T18:03:12.660437"
 ---
 “In a world increasingly focused on ideological silos that determine the outcomes for nations, Opportunity Party provides sensible, evidence-based policy that transcends ideology and party politics. Our country needs balanced, logical policy-making, and that’s why I choose to invest in the success of the Opportunity Party in 2026. Together we can build a stronger, sustainable future for our country.”
 

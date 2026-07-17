@@ -4,7 +4,7 @@ slug: adrian-mee
 role: "Candidate"
 electorate: "Selwyn"
 url: "https://www.opportunity.org.nz/candidate-adrian-mee"
-scrapedAt: "2026-07-16T10:44:43.251433"
+scrapedAt: "2026-07-17T18:03:09.206082"
 ---
 “Using health terms, our current political system is sick and our democracy is unhealthy.
 The Opportunity Party needs your support to make things better for all New Zealanders.

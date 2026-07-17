@@ -4,8 +4,8 @@ content_type: "policy"
 source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/clean_up_politics"
-ingested_at: "2026-07-16T10:44:33.159138"
-cleaned_at: "2026-07-17T04:45:01.350777+00:00"
+ingested_at: "2026-07-17T18:02:30.143996"
+cleaned_at: "2026-07-17T08:02:44.913363+00:00"
 title: "Clean up Politics"
 ---
 **Democracy works when everyone – rich or poor – is represented equally.**

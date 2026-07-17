@@ -4,11 +4,11 @@ content_type: "blog-post"
 source_id: "opportunity-website"
 source_type: "website"
 source_url: "https://www.opportunity.org.nz/the_pray_and_delay_budget"
-ingested_at: "2026-07-16T10:44:32.890470"
-cleaned_at: "2026-07-17T04:45:01.078098+00:00"
+ingested_at: "2026-07-17T18:02:31.544183"
+cleaned_at: "2026-07-17T08:03:02.373914+00:00"
 title: "The Pray and Delay Budget"
 date: "2026-06-01"
-author: "Daniel Eb"
+author: "Qiulae Wong"
 ---
 ## The Pray and Delay Budget
 

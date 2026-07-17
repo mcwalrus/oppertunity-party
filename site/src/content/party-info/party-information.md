@@ -2,7 +2,7 @@
 title: "Party Information"
 slug: party-information
 url: "https://www.opportunity.org.nz/party-information"
-scrapedAt: "2026-07-16T10:44:27.322434"
+scrapedAt: "2026-07-17T18:02:17.773241"
 ---
 ## Party Information
 

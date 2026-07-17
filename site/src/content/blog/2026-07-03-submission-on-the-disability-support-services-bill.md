@@ -4,7 +4,7 @@ slug: 2026-07-03-submission-on-the-disability-support-services-bill
 date: "2026-07-03"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/submission_on_the_disability_support_services_bill"
-scrapedAt: "2026-07-16T10:44:29.011696"
+scrapedAt: "2026-07-17T18:02:22.284997"
 ---
 ## Submission on the Disability Support Services Bill
 

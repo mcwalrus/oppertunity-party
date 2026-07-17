@@ -3,17 +3,19 @@ slug: "healthy-land-default"
 content_type: "pdf-document"
 source_id: "opportunity-website"
 source_type: "website"
-ingested_at: "2026-07-17T04:04:34.382676+00:00"
-cleaned_at: "2026-07-17T04:04:34.382676+00:00"
+ingested_at: "2026-07-17T08:03:21.296439+00:00"
+cleaned_at: "2026-07-17T08:03:21.296439+00:00"
 title: "Healthy Land — default"
 policy_slug: "healthy-land"
 ---
-| Field  | Value                                  |
-| ------ | -------------------------------------- |
+| Field | Value |
+|-------|-------|
 | Source | `MakingZeroTheHero-Summary-Report.pdf` |
 
 
-A roadmap towards sustainable plastics use in New Zealanddesirability of a pan-sector vision for plastic’s use in New Zealand as a sustainable resource rather than as pollutive and extractive waste.
+A roadmap towards sustainable plastics use in New Zealand
+
+desirability of a pan-sector vision for plastic’s use in New Zealand as a sustainable resource rather than as pollutive and extractive waste.
 
 ## Kate Kreba
 
@@ -53,8 +55,8 @@ This summary, and a more comprehensive document, present a roadmap towards a new
 
 Plastics are an essential part of how the world operates in applications from cars to construction, electronics to eyeglasses.
 
-![img-003-001](images/img-003-001.jpg)
-
+**----- Start of picture text -----**<br>
+NPE NPE NPE<br>strategy strategy strategy<br>d<br>i i i<br>n<br>e<br>a<br>in<br>h h h<br>e<br>d<br>r a<br>n n n<br>u e<br>n<br>t v h v<br>T<br>o<br>o m<br>k T T<br>c<br>k k<br>t<br>c e l<br>l - i<br>n<br>t<br>a<br>u v<br>s<br>o y<br>n<br>e<br>t<br>l e<br>u<br>tr p<br>e<br>u<br>y<br>p<br>m<br>f<br>I<br>s m<br>S<br>ri<br>t<br>m<br>m p<br>n<br>if<br>a<br>ri u p<br>t<br>e<br>fr<br>u<br>e<br>D<br>e<br>u<br>y<br>p o<br>fr n<br>D<br>t a<br>S<br>l<br>n n t<br>p<br>a e if lv<br>t<br>ly s<br>I<br>f o<br>tr<br>v<br>r r r<br>m v<br>- e u<br>e u<br>e e e<br>d c d si<br>c<br>P P P<br>h n t<br>n o<br>v v v<br>i<br>a e<br>u<br>l l l<br>a n<br>a<br>i i i<br>i r<br>r<br>l a l a l a<br>n u<br>h e<br>n t a<br>c<br>e e e<br>o e c n<br>n n n<br>i v u d - d<br>s e<br>D o D yl D<br>p v<br>u tr<br>f l s m e<br>v<br>if e a a p l<br>D t u o<br>m rf u S<br>e n ir p<br>I t m<br>n y<br>t e<br>tn<br>**----- End of picture text -----**<br>
 
 ## Infrastructure development
 
@@ -132,6 +134,7 @@ From an industry point of view, New Zealand faces fundamentally different challe
 
 - industry is almost completely dependent on global material innovation trends and available supply.
 
+
 - With the global plastics production centred in China,
 
 - greater Asia, and North America, the New Zealand plastics industry can be expected to feel market, regulatory and social changes that affect production, material availability, and material price in these regions. There are only limited viable mitigation strategies in the absence of a local production or production infrastructure.
@@ -174,7 +177,8 @@ Only with the courage to invest in the short, medium and long term can a New Pla
 
 Pan-sectoral industry and industry-government collaboration is an essential enabler for a transition towards new systems. Central and regional governments have an indispensable role to play as a funding provider and in developing guiding policy.
 
-"A true circularity of plastic creation, use and re-use, taking advantage of its wonderful properties while mitigating its undesirable impacts, can be created. But it won't be easy, nor will it be instantaneous."
+**----- Start of picture text -----**<br>
+4% Not intending to<br>4% Not at all<br>(constrained by<br>resources)<br>35% Investigating<br>feasibility<br>19% Transition (starting<br>to implement<br>following others’<br>examples)<br>23% Transition (well into<br>transition, aiming to<br>be seen as leader)<br>15% Other<br>**----- End of picture text -----**<br>
 
 Infrastructure investment in plastic collection, sorting and re-processing technology is an initial requirement to enable private sector engagement. Economic enablers, for example, tax credits or accelerated capital depreciation, would further initiate change.
 
@@ -182,6 +186,8 @@ Technical closed-loop systems need to sit alongside new business models for re-u
 
 A perceived lack of understanding of circular economy principles by consumers and brands beyond populist ‘plastic elimination’ and ‘plastic substitution’ concerns the sector, especially when New Zealand’s carbon neutral visions and targets are taken into consideration.
 
+**----- Start of picture text -----**<br>
+A true circularity of plastic creation, use and<br> re-use, taking advantage of its wonderful properties<br>while mitigating its undesirable impacts,<br>can be created.<br>But it won’t be easy, nor will it<br>be instantaneous.<br>**----- End of picture text -----**<br>
 
 ## Putting it all together
 
@@ -227,14 +233,14 @@ Suggested long-term action focuses on the of any niche technologies or materials
 
 The authors of this document express their gratitude to the many contributors for their time and expertise. The authors are also thankful to the contributors who asked to remain anonymous.
 
-| Adept Ltd<br>Alchemy Agencies Ltd<br>Aotearoa NZ Made Ltd<br>Aotea Plastics Industries<br>ARMoulding<br>Astron Sustainability<br>Australasian Rotational Moulders Association<br>BJ Ball Ltd<br>Chemiplas NZ<br>Convex NZ Ltd<br>Datamars Ltd (NZ)<br>EPL Group<br>ES Plastics Ltd<br>Fisher & Paykel Healthcare Ltd<br>Flight Plastics Packaging Ltd<br>Friendlypak<br>Gallagher Group Ltd<br>Gyro Plastics Ltd<br>Huhtamaki NZ<br>Integrated Packaging<br>Lamprint Packaging Ltd<br>Lane Plastics Ltd | Ministry for the Environment<br>Matrix Polymers NZ<br>Packaging New Zealand<br>Pharmapac Ltd<br>Plasback Ltd<br>Plastics New Zealand<br>Poynter Agencies Ltd<br>PPL Plastic Solutions<br>Progressive Plastics Ltd<br>QE Equipment Group Ltd<br>Ravago NZ Ltd<br>Salt of the Earth Packaging Ltd<br>Sealed Air (NZ)<br>Stratex (NZ) Ltd<br>Sustainable Business Network<br>Talbot Advanced Technologies Ltd<br>TCL Hunt Ltd<br>thinkstep-anz<br>Visy Industries<br>Waipak NZ Ltd<br>WasteMINZ |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|Adept Ltd<br>Alchemy Agencies Ltd<br>Aotearoa NZ Made Ltd<br>Aotea Plastics Industries<br>ARMoulding<br>Astron Sustainability<br>Australasian Rotational Moulders Association<br>BJ Ball Ltd<br>Chemiplas NZ<br>Convex NZ Ltd<br>Datamars Ltd (NZ)<br>EPL Group<br>ES Plastics Ltd<br>Fisher & Paykel Healthcare Ltd<br>Flight Plastics Packaging Ltd<br>Friendlypak<br>Gallagher Group Ltd<br>Gyro Plastics Ltd<br>Huhtamaki NZ<br>Integrated Packaging<br>Lamprint Packaging Ltd<br>Lane Plastics Ltd|Ministry for the Environment<br>Matrix Polymers NZ<br>Packaging New Zealand<br>Pharmapac Ltd<br>Plasback Ltd<br>Plastics New Zealand<br>Poynter Agencies Ltd<br>PPL Plastic Solutions<br>Progressive Plastics Ltd<br>QE Equipment Group Ltd<br>Ravago NZ Ltd<br>Salt of the Earth Packaging Ltd<br>Sealed Air (NZ)<br>Stratex (NZ) Ltd<br>Sustainable Business Network<br>Talbot Advanced Technologies Ltd<br>TCL Hunt Ltd<br>thinkstep-anz<br>Visy Industries<br>Waipak NZ Ltd<br>WasteMINZ|
+|---|---|
 
 Financial support for this project was received from the Waste Minimisation Fund, which is administered by the Ministry for the Environment. The Ministry for the Environment does not necessarily endorse or support the content of the publication in any way.
 
 use of this work is permitted without the prior consent of the copyright holder(s).
 
-In collaboration with Plastics New Zealand, Packaging New Zealand, and WasteMINZ.
+In collaboration with
 
 Published by: Scion, Private Bag 3020, Rotorua 3046, New Zealand. www.scionresearch.com Contact: Marc Gaugler, Portfolio Leader Distributed and Circular Manufacturing. Email marc.gaugler@scionresearch.com Telephone: +64 7 343 5393
 

@@ -4,7 +4,7 @@ slug: 2026-06-09-submission-on-the-definitions-of-woman-and-man-amendment-bill
 date: "2026-06-09"
 author: "Daniel Eb"
 url: "https://www.opportunity.org.nz/submission_on_the_definitions_of_woman_and_man_amendment_bill"
-scrapedAt: "2026-07-16T10:44:31.602972"
+scrapedAt: "2026-07-17T18:02:30.140479"
 ---
 ## Submission on the ‘Definitions of Woman and Man’ Amendment Bill
 
