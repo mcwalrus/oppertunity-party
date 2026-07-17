@@ -88,6 +88,85 @@ def demote_h2_subnumbering(text: str) -> str:
     return re.sub(r"^## \*\*(\d+\.\d+)", r"### **\1", text, flags=re.MULTILINE)
 
 
+def demote_h2_under_problems_we_are_solving(text: str) -> str:
+    """Demote bolded H2 sub-headings that follow the ``The problems we're solving`` wrapper.
+
+    The Tax Reset / Abundant Energy / Healthy Oceans policy overviews share a
+    structural pattern: a ``## **The problems we're solving**`` wrapper that
+    introduces 3-5 bolded problem-statement sub-headings. pymupdf4llm emits
+    every one as H2, so they sit as siblings of the wrapper instead of nested
+    under it. This quirk demotes them to H3 so they nest correctly.
+
+    Boundary detection — demotion stops at the first of:
+    - A numbered H2 (``## **1. ...**``) — that's a top-level section, ends the
+      wrapper scope.
+    - A label H2 (``## **Our reforms will:**``) — that's a bullet-list label.
+    - A question H2 (``## **How will you pay for...?``) — that's an FAQ item.
+    - A look-ahead-detected next-section wrapper: an H2 whose next H2 is
+      numbered (e.g. ``## **The X policy pillars**`` followed by
+      ``## **1. ...**``) — that's a wrapper for the next section, not part of
+      "the problems we're solving".
+
+    Idempotent: re-running on already-demoted text is a no-op (the leading
+    ``##`` doesn't match ``### **...**``).
+    """
+    lines = text.split("\n")
+    wrapper_re = re.compile(r"^## \*\*The problems we\u2019re solving\*\*\s*$")
+    h2_re = re.compile(r"^## \*\*([^*]+)\*\*\s*$")
+
+    # Find the wrapper line; bail out early if absent.
+    wrapper_idx = next(
+        (i for i, line in enumerate(lines) if wrapper_re.match(line.strip())),
+        None,
+    )
+    if wrapper_idx is None:
+        return text
+
+    for j in range(wrapper_idx + 1, len(lines)):
+        stripped = lines[j].strip()
+        m = h2_re.match(stripped)
+        if not m:
+            continue
+        heading_text = m.group(1)
+        # Stop at numbered H2 (top-level section)
+        if re.match(r"^\d+\.", heading_text):
+            break
+        # Stop at label H2 (bullet-list label) or question H2 (FAQ)
+        if heading_text.rstrip().endswith(":") or heading_text.rstrip().endswith("?"):
+            break
+        # Look-ahead: if the IMMEDIATELY NEXT H2 (no body content between) is
+        # numbered, current is a wrapper for the next section — stop demoting
+        # (e.g. '## **The X policy pillars**' → '## **1. ...**').
+        next_heading = _next_h2_immediate(lines, j + 1)
+        if next_heading is not None and re.match(r"^\d+\.", next_heading):
+            break
+        # Demote this sub-heading
+        lines[j] = lines[j].replace("##", "###", 1)
+
+    return "\n".join(lines)
+
+
+def _next_h2_immediate(lines: list[str], start: int) -> str | None:
+    """Return the text of the next H1/H2 heading separated from *start* by blank lines only.
+
+    Used to distinguish a sub-heading (followed by body paragraphs) from a
+    wrapper-for-next-section (followed by another heading). A wrapper like
+    '## **The X policy pillars**' is immediately followed by '## **1. ...**'
+    (with only blank lines between); a sub-heading is followed by body
+    content before the next H2.
+    """
+    heading_re = re.compile(r"^#{1,2} \*\*([^*]+)\*\*\s*$")
+    for k in range(start, len(lines)):
+        stripped = lines[k].strip()
+        if stripped == "":
+            continue  # allow blank lines between heading and next heading
+        m = heading_re.match(stripped)
+        if m:
+            return m.group(1)
+        return None  # non-blank, non-heading content — too far away
+    return None
+
+
 def fix_mapped_table_cells(text: str) -> str:
     """Fix data rows in mapped markdown tables so they render cleanly.
 
@@ -287,6 +366,10 @@ QUIRKS_BY_FILENAME: dict[str, list[tuple[str, Callable]]] = {
         (
             "Citizens Voice Policy Overview: drop mid-paragraph `**Direct Democracy**` page-header label + fix sentence-space after period",
             _citizens_voice_policy_overview,
+        ),
+        (
+            "Policy Overview: demote unnumbered ## **...** sub-headings under '## **The problems we're solving**' to ### so they nest under that wrapper",
+            demote_h2_under_problems_we_are_solving,
         ),
         (
             "Policy Overview: demote bolded sub-numbered ## **N.M ...** headings to ### so sub-sections nest under their N. parent",

@@ -65,7 +65,7 @@ Our reforms will:
 
 ## **The problems we’re solving**
 
-## **We are letting our marine ecosystems be pillaged for short-term gain**
+### **We are letting our marine ecosystems be pillaged for short-term gain**
 
 The government reports that 87% of fish stocks are in “good shape” but local communities and recreational fishers are watching their catch decline year after year. The disconnect stems from alarmingly low measures of sustainability for our fish species. Instead of making sure our children inherit thriving, abundant ecosystems, we’ve locked in a management system that encourages depletion. At the heart of the problem is our quota management system, which is not functional.
 
@@ -76,13 +76,13 @@ and seafloor ecosystems, noise and light pollution and sediment plumes promise d
 
 The standards we impose on the fishing industry are poorly enforced. Despite clear evidence that cameras dramatically improve transparency and accountability, the current government refuses to install them on deep-sea trawlers—the very vessels operating in the most remote and ecologically sensitive areas.
 
-## **The real economic gains from a blue economy are left on the table**
+### **The real economic gains from a blue economy are left on the table**
 
 New Zealand’s current short-sighted approach to managing our blue economy locks us into extractive industries that add less value than they could to the wider economy. Between 60% and 90% of our commercial catch is exported, much of it without any value-add processing. Frozen fish fingers are not a route to national prosperity.
 
 Our blue economy is brimming with potential: increased value-add for fish and other marine products, aquaculture, tourism and biotechnology. These industries offer growth and well-paid jobs, while at the same time ensuring a healthy marine environment for generations to come.
 
-## **Our oceans are managed in silos, not as ecosystems**
+### **Our oceans are managed in silos, not as ecosystems**
 
 New Zealand’s marine environment is governed by a fragmented web of agencies and legislation. This siloed approach means no single agency is responsible for the health of our ocean as an integrated ecosystem.
 

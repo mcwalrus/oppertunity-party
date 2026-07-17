@@ -74,25 +74,25 @@ Together these create a package that puts more money in New Zealanders’ pocket
 
 ## **The problems we’re solving**
 
-## **The cost-of-living crisis is crushing working families**
+### **The cost-of-living crisis is crushing working families**
 
 When butter, cheese, fruit, and vegetables are increasingly out of reach for everyday New Zealanders, something is fundamentally broken. Working families struggle to afford rent, power bills, and groceries despite being employed. Their work is heavily taxed while untaxed capital gains on housing enrich property owners at the expense of renters and first-home buyers.
 
-## **Welfare isn’t working—it traps people in poverty**
+### **Welfare isn’t working—it traps people in poverty**
 
 The current benefit system punishes work through devastating effective marginal tax rates. When someone on Jobseeker Support picks up a few hours at the local café, they can lose up to 90 cents of every dollar they earn. This isn’t a pathway out of poverty; it’s a trap that keeps people stuck on benefits.
 
 The system subjects beneficiaries to intrusive monitoring that costs hundreds of millions annually and is degrading to those who need support. This money could be going directly to families in need. It is also needlessly complex, so that even experts struggle to navigate it. This complexity enables fraud, increases compliance costs, and leaves people in debt from accidental overpayments.
 
-## **An outdated tax and welfare system is not fit for hard times**
+### **An outdated tax and welfare system is not fit for hard times**
 
 Our tax and welfare system was designed for a different economy. It cannot handle the shocks ahead of us: AI-driven job losses, extreme weather events, and economic uncertainty. We need a straightforward system that will support New Zealanders to adapt to job-loss, and permit flexible work and training. These are the realities future workers will need to adapt to in response to a changing and less stable world.
 
-## **A broken housing system locks Kiwi families out of stability and security**
+### **A broken housing system locks Kiwi families out of stability and security**
 
 A home should provide security and stability—the foundation for a productive life. Yet our tax system has put home ownership out of reach for an entire generation. House prices have risen dramatically since 2000, driven by speculation and untaxed capital gains rather than the productive use of land. Our tax settings incentivise holding land for capital appreciation rather than building dense housing or investing in businesses. This creates an economy where money flows into property speculation instead of the innovation and hiring that drive real prosperity.
 
-## **Our retirement income is on an unsustainable trajectory**
+### **Our retirement income is on an unsustainable trajectory**
 
 New Zealand’s current retirement income system is on an unsustainable path with today’s benefits funded entirely from current tax revenue. As our population ages, this model faces mounting pressure. Treasury projects that, without reform, National Superannuation expenditure will rise from 15% of government revenue today to approximately 22% by 2065.
 

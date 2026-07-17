@@ -8,12 +8,12 @@ cleaned_at: "2026-07-16T02:06:13.010616+00:00"
 title: "Abundant Energy — Policy Overview"
 policy_slug: "abundant-energy"
 ---
-| Field | Value |
-|-------|-------|
-| Date | February 2026 |
-| Policy | Abundant Energy |
-| Document Type | Policy Overview |
-| Source | `Opportunity_Policy_Abundant Energy.pdf` |
+| Field         | Value                                    |
+| ------------- | ---------------------------------------- |
+| Date          | February 2026                            |
+| Policy        | Abundant Energy                          |
+| Document Type | Policy Overview                          |
+| Source        | `Opportunity_Policy_Abundant Energy.pdf` |
 
 ## **Abundant Energy**
 
@@ -59,7 +59,7 @@ This is an investment in lower household bills, more manufacturing, higher wages
 
 ## **The problems we’re solving**
 
-## **Market design that drives prices up and investment down**
+### **Market design that drives prices up and investment down**
 
 The current design of our market incentivises low investment. It is designed to deliver “just in time” investment to meet the needs of a steady-state economy. But we’re supposed to be going through an energy transition, and much more will be needed.
 
@@ -67,14 +67,14 @@ Investors wait for prices to rise rather than building new capacity ahead of dem
 
 It’s a vicious cycle that needs to be broken.
 
-## **Lack of ambition for our future**
+### **Lack of ambition for our future**
 
 Energy will be a critical building block of the new economy in years to come; whether powering next generation public transport, AI implementation, primary processing or new industries that haven’t yet been invented. Whatever the future looks like, it’s clear that it will involve significant demand for renewable energy.
 
 
 The Government’s flagship reform programme Electrify NZ is a good start towards a renewable future, but does not go nearly far enough. The recent announcement of a new LNG terminal by 2027 also calls into question the current Government’s commitment to their stated goal of doubling renewable generation by 2050.
 
-## **Fragmented regulation and red tape**
+### **Fragmented regulation and red tape**
 
 Multiple agencies operating under different statutory regimes oversee the energy sector, leading to jurisdictional gaps, duplication, and missed opportunities for coordination. The complexity and volume of regulatory requirements—spanning network consents, pricing rules, connection standards, and disclosure obligations— create barriers to entry for new generators and impose disproportionate compliance burdens on smaller distributors. Frontier Economics found that this regulatory fragmentation “no longer fits the purpose” of a converged energy system and creates risk of “unintended consequences concentrated in areas of gaps,” while stakeholders report that overlapping rules on distribution pricing, connection processes, and demand response have created confusion and delayed critical infrastructure investment.
 

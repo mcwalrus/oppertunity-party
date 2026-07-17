@@ -6,6 +6,7 @@ from pipeline.transforms.pdf_quirks import (
     QUIRKS_BY_FILENAME,
     apply_quirks,
     demote_h2_subnumbering,
+    demote_h2_under_problems_we_are_solving,
     fix_mapped_table_cells,
     fix_sentence_space_after_period,
     merge_split_h2_headings,
@@ -122,6 +123,124 @@ def test_apply_quirks_demotes_subnumbering_in_policy_overview():
     # not a substring — `### **` contains `## **` and would falsely match)
     assert "\n## **1.1 The Citizen's Income**\n" not in result
     assert "\n## **2.1 A Land Value Tax of 1.75% on urban and 0.5% on rural land.**\n" not in result
+
+
+# ---------------------------------------------------------------------------
+# demote_h2_under_problems_we_are_solving — demote unnumbered ## **...** sub-headings
+# that follow the '## **The problems we're solving**' wrapper down to H3.
+# ---------------------------------------------------------------------------
+
+
+def test_demote_h2_under_problems_we_are_solving_basic():
+    """Sub-headings under 'The problems we're solving' are demoted; wrapper stays H2.
+
+    Sub-headings are distinguished from wrappers by having body content
+    between them and the next H2 — wrappers are immediately followed by
+    another heading (typically a numbered top-level). Note: PDF-extracted
+    markdown uses curly apostrophes (\u2019), so the wrapper regex matches
+    that form.
+    """
+    text = (
+        "## **The problems we\u2019re solving**\n"
+        "\n"
+        "Some intro text.\n"
+        "\n"
+        "## **The cost-of-living crisis is crushing working families**\n"
+        "\n"
+        "Body content here.\n"
+        "\n"
+        "## **Welfare isn't working\u2014it traps people in poverty**\n"
+        "\n"
+        "More body content.\n"
+        "\n"
+        "## **1. Give every Kiwi the basics**\n"
+    )
+    result = demote_h2_under_problems_we_are_solving(text)
+    assert "## **The problems we\u2019re solving**" in result  # wrapper preserved
+    assert "### **The cost-of-living crisis is crushing working families**" in result
+    assert "### **Welfare isn't working\u2014it traps people in poverty**" in result
+    assert "## **1. Give every Kiwi the basics**" in result  # numbered top-level preserved
+
+
+def test_demote_h2_under_problems_we_are_solving_stops_at_numbered_h2():
+    """Stops demoting at the first numbered H2 (## **1. ...**) — that ends the section."""
+    text = (
+        "## **The problems we\u2019re solving**\n"
+        "\n"
+        "## **Problem one**\n"
+        "\n"
+        "Body text for problem one.\n"
+        "\n"
+        "## **Problem two**\n"
+        "\n"
+        "Body text for problem two.\n"
+        "\n"
+        "## **1. Top-level section**\n"
+        "\n"
+        "## **1.1 Sub of top-level**\n"
+    )
+    result = demote_h2_under_problems_we_are_solving(text)
+    # Both problems demoted
+    assert "### **Problem one**" in result
+    assert "### **Problem two**" in result
+    # Numbered H2 not touched
+    assert "\n## **1. Top-level section**\n" in result
+    assert "\n## **1.1 Sub of top-level**\n" in result
+
+
+def test_demote_h2_under_problems_we_are_solving_stops_at_label_h2():
+    """Stops at a colon-label H2 ('Our reforms will:') — that's a bullet-list label, not a sub-heading."""
+    text = (
+        "## **The problems we\u2019re solving**\n"
+        "\n"
+        "## **Problem one**\n"
+        "\n"
+        "Body text for problem one.\n"
+        "\n"
+        "## **Our reforms will:**\n"
+        "\n"
+        "- bullet one\n"
+        "\n"
+        "- bullet two\n"
+    )
+    result = demote_h2_under_problems_we_are_solving(text)
+    assert "### **Problem one**" in result
+    # Label H2 not demoted
+    assert "\n## **Our reforms will:**\n" in result
+    assert "\n### **Our reforms will:**\n" not in result
+
+
+def test_demote_h2_under_problems_we_are_solving_stops_at_policy_pillars_wrapper():
+    """Stops at an H2 wrapper for the next section (e.g. '## **The X policy pillars**') when
+    the wrapper is immediately followed by a numbered H2 (no body content between) — that
+    wrapper belongs to the next section, not to 'The problems we're solving'."""
+    text = (
+        "## **The problems we\u2019re solving**\n"
+        "\n"
+        "## **Problem one**\n"
+        "\n"
+        "Body text for problem one.\n"
+        "\n"
+        "## **Problem two**\n"
+        "\n"
+        "Body text for problem two.\n"
+        "\n"
+        "## **The Abundant Energy policy pillars**\n"
+        "\n"
+        "## **1. Boost Renewable Generation**\n"
+    )
+    result = demote_h2_under_problems_we_are_solving(text)
+    assert "### **Problem one**" in result
+    assert "### **Problem two**" in result
+    # 'policy pillars' wrapper stays as H2 (it's a wrapper for the next numbered section)
+    assert "\n## **The Abundant Energy policy pillars**\n" in result
+    assert "\n### **The Abundant Energy policy pillars**\n" not in result
+
+
+def test_demote_h2_under_problems_we_are_solving_no_wrapper_is_passthrough():
+    """When the wrapper isn't in the text, the function returns the input unchanged."""
+    text = "## **Some other heading**\n\n## **Another heading**\n"
+    assert demote_h2_under_problems_we_are_solving(text) == text
 
 
 def test_apply_quirks_tax_reset_overview():
