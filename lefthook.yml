@@ -53,3 +53,15 @@ pre-commit:
     markdown-link-check:
       glob: "data/**/*.md"
       run: for f in {staged_files}; do npx --yes markdown-link-check --config .markdown-link-check.json "$f" || exit 1; done
+
+    # -------------------------------------------------------------------------
+    # hyperlink (https://github.com/untitaker/hyperlink) — fast static-site
+    # link checker for docs/**/*.md. Renders docs/ to HTML and runs the
+    # Rust binary (`npx --yes @untitaker/hyperlink`) on the result, then
+    # HEAD-checks extracted external URLs with curl. Catches policy-page
+    # 404s (e.g. dropped `/policies/` prefix, retired subpages) before they
+    # land in the repo.
+    # -------------------------------------------------------------------------
+    hyperlink-docs:
+      glob: "docs/**/*.md"
+      run: uv run python scripts/check_docs_links.py

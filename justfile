@@ -38,6 +38,13 @@ validate:
     @echo "Running markdown-link-check on clean layer..."
     @find data/clean -name '*.md' | sort | xargs -I{} npx --yes markdown-link-check --config .markdown-link-check.json {}
 
+# Validate docs/**/*.md links via hyperlink (internal) + curl (external).
+# Catches 404 policy-page URLs (e.g. dropped /policies/ prefix, retired subpages)
+# before they land. Renders docs/ to HTML on the fly; mirrors data/clean/
+# alongside so relative doc-to-data links resolve.
+validate-docs:
+    @uv run python scripts/check_docs_links.py
+
 # Run pytest suite (PDF extraction validation, etc.). Skips automatically when
 # data/sources/opportunity-website/pdfs/ is empty (fresh clone without raw PDFs).
 test: install

@@ -13,7 +13,7 @@ canonical version pins, see `pyproject.toml`, `scripts/Brewfile`, and
 | [`pnpm`](https://pnpm.io) | Node package manager (used by `site/`) |
 | [`uv`](https://docs.astral.sh/uv) | Python toolchain + dependency manager (reads `.python-version`) |
 | [`just`](https://github.com/casey/just) | Task runner — see `justfile` for recipes |
-| [`lefthook`](https://lefthook.com) | Git hook manager (pre-commit: ruff, ty, markdown-link-check, astro check) |
+| [`lefthook`](https://lefthook.com) | Git hook manager (pre-commit: ruff, ty, markdown-link-check, hyperlink, astro check) |
 
 ## Pipeline orchestration
 
@@ -21,7 +21,7 @@ canonical version pins, see `pyproject.toml`, `scripts/Brewfile`, and
 | --- | --- |
 | [`dagster`](https://dagster.io) | Asset-based pipeline orchestrator — gives every artefact lineage + observability |
 | [`dagster-webserver`](https://dagster.io) | Dagster UI (the `just dev` surface) |
-| [`dagster-dg-cli`](https://docs.dagster.io/api/clis/dg) | Project scaffolding + asset/job launch (`dg launch`) |
+| [`dagster-dg-cli`](https://docs.dagster.io/api/clis/dg-cli/dg-cli-reference) | Project scaffolding + asset/job launch (`dg launch`) |
 
 ## Web scraping (ingestion layer)
 
@@ -34,7 +34,7 @@ canonical version pins, see `pyproject.toml`, `scripts/Brewfile`, and
 | [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) | YouTube video + metadata + subtitle download |
 | [`pymupdf4llm`](https://pymupdf.io) | PDF → Markdown for policy documents |
 | [`gdown`](https://github.com/wkentaro/gdown) | Google Drive downloads |
-| [`questionary`](https://github.com/twentyfortysix/questionary) | Interactive CLI prompts (e.g. `--clean`) |
+| [`questionary`](https://github.com/tmbo/questionary) | Interactive CLI prompts (e.g. `--clean`) |
 | [`rich`](https://rich.readthedocs.io) | Terminal output formatting + progress |
 
 ## Site generation
@@ -51,6 +51,13 @@ canonical version pins, see `pyproject.toml`, `scripts/Brewfile`, and
 | --- | --- |
 | [`ruff`](https://docs.astral.sh/ruff) | Linter + formatter (replaces black, isort, flake8) |
 | [`ty`](https://github.com/astral-sh/ty) | Static type checker (pre-commit strict) |
+
+## Link validation
+
+| Tool | Purpose |
+| --- | --- |
+| [`markdown-link-check`](https://github.com/tcort/markdown-link-check) | Node CLI used for `data/clean/**/*.md` (NationBuilder-relative paths) |
+| [`hyperlink`](https://github.com/untitaker/hyperlink) | Rust CLI used for `docs/**/*.md` — fast static-site link checker; rendered from markdown to HTML on the fly via `python-markdown`, then external URLs are HEAD-checked with `curl`. Run via `just validate-docs` or `lefthook run pre-commit`. |
 
 ## MCP server (optional, not part of the README pipeline)
 

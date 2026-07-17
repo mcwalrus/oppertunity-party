@@ -72,7 +72,7 @@ This installs all system dependencies via Homebrew (`scripts/Brewfile`), install
 | `just`     | Task runner — see `justfile` for recipes (lint, dev, open)         |
 | `ruff`     | Linter and formatter for Python                                    |
 | `ty`       | Static type checker for Python                                     |
-| `lefthook` | Git hook manager (pre-commit runs ruff + ty + markdown-link-check) |
+| `lefthook` | Git hook manager (pre-commit runs ruff + ty + markdown-link-check + hyperlink) |
 | `fnm`      | Node.js version manager (reads `.node-version`)                    |
 | `pnpm`     | Node package manager (used by `site/`)                             |
 | `direnv`   | Per-directory env vars — run `direnv allow` after cloning          |
@@ -118,6 +118,7 @@ just install        # uv sync
 just check          # ruff check + ruff format --check + ty check (read-only, CI-safe)
 just fix            # ruff check --fix + ruff format
 just validate       # markdown-link-check on all data/clean/**/*.md
+just validate-docs  # hyperlink on docs/**/*.md (internal) + curl HEAD on external URLs
 just open           # Open scraped data in Finder
 just hooks-install  # Wire lefthook into .git/hooks (once after cloning)
 ```
@@ -128,4 +129,4 @@ just hooks-install  # Wire lefthook into .git/hooks (once after cloning)
 just check   # Must pass before committing
 ```
 
-Pre-commit hooks (via lefthook) run ruff-lint, ruff-format, ty, and markdown-link-check automatically on staged files.
+Pre-commit hooks (via lefthook) run ruff-lint, ruff-format, ty, markdown-link-check (on `data/**`), and hyperlink (on `docs/**`) automatically on staged files. `hyperlink` is a Rust static-site link checker; docs are rendered to HTML on the fly via `python-markdown`, then external URLs are HEAD-checked with `curl`. See `docs/dependencies.md`.

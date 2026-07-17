@@ -155,7 +155,7 @@ For a new team: **start with OSS on a single VM or Dagster+** — the operationa
 overhead of Kubernetes is not worth it until you have multiple code locations or
 heavy concurrent runs.
 
-> Grounded in: [Dagster deployment documentation](https://docs.dagster.io/guides/deploy)
+> Grounded in: [Dagster deployment documentation](https://docs.dagster.io/deployment)
 
 ---
 
