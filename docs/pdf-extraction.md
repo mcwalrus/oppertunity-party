@@ -20,15 +20,6 @@ flowchart LR
 - [`docs/data-architecture.md`](data-architecture.md) — layer invariants (`sources/` → `clean/` → site).
 - [`docs/data-schema.md`](data-schema.md) — meta.json schema for clean items.
   
-## Tools
-
-| Tool                                                    | Role                                                                                                                                                     |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`pymupdf4llm`](https://pymupdf.io)                     | PDF → Markdown extraction. Captures tables, headings, and bullet lists with no system dependencies.                                                      |
-| [`pymupdf`](https://pymupdf.readthedocs.io)             | Independent raw-text extraction. Used only for the validation pass — provides the ground-truth signal that the production extractor is compared against. |
-| [`python-markdown`](https://python-markdown.github.io/) | Markdown → HTML rendering with the `extra` extension (tables, footnotes).                                                                                |
-| [`gdown`](https://github.com/wkentaro/gdown)            | Google Drive download for the raw layer (`data/sources/opportunity-website/pdfs/`).                                                                      |
-
 ## For the Opportunity Party team
 
 The canonical markdown at `data/clean/pdf-document/` is the format to host on opportunity.org.nz — it preserves heading hierarchy, lists, and tables without any PDF binary. The rendered HTML at `site/dist/policies/` is equivalent; pick whichever format the existing CMS prefers.
@@ -66,6 +57,17 @@ For each policy, the PR needs to touch: the website page (drop the Google Drive 
 | Tax Reset (Transition Plan) | opportunity.org.nz/policies/tax-reset/ | [Drive](https://drive.google.com/file/d/1c0gMASTHrVvZI87WGFV9NNKyGj1WzpgW/view) | [md](../data/clean/pdf-document/tax-reset-policy-addendum/tax-reset-policy-addendum.md) | [html](../data/clean/pdf-document/tax-reset-policy-addendum/tax-reset-policy-addendum.html) |
 | Charter | opportunity.org.nz/party-information/charter/ | [Drive](https://drive.google.com/file/d/1Rpkukrq-GFyMfvRgfJMuNYt4aTdijF2w/preview) | [md](../data/clean/pdf-document/charter-default/charter-default.md) | [html](../data/clean/pdf-document/charter-default/charter-default.html) |
 | Constitution | opportunity.org.nz/party-information/constitution/ | [Drive](https://drive.google.com/file/d/1sVxgXWR0zhEofnoGhrbfIwgHiAFeLACx/view) | [md](../data/clean/pdf-document/constitution-default/constitution-default.md) | [html](../data/clean/pdf-document/constitution-default/constitution-default.html) |
+
+## Tools
+
+Key conversion dependencies used:
+
+| Tool                                                    | Role                                                                                                                                                     |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`pymupdf4llm`](https://pymupdf.io)                     | PDF → Markdown extraction. Captures tables, headings, and bullet lists with no system dependencies.                                                      |
+| [`pymupdf`](https://pymupdf.readthedocs.io)             | Independent raw-text extraction. Used only for the validation pass — provides the ground-truth signal that the production extractor is compared against. |
+| [`python-markdown`](https://python-markdown.github.io/) | Markdown → HTML rendering with the `extra` extension (tables, footnotes).                                                                                |
+| [`gdown`](https://github.com/wkentaro/gdown)            | Google Drive download for the raw layer (`data/sources/opportunity-website/pdfs/`).                                                                      |
 
 ### Additional
 
