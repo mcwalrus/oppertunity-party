@@ -3,9 +3,9 @@
 Onboarding and reviewer guide for the Opportunity Party PDF → MD → HTML pipeline. This document explains how policy PDFs from opportunity.org.nz are processed to be mirrored as
 markdown and HTML so AI agents can access them from the campaign site can serve them over HTTPS, and how reviewers can verify the work locally.
 
-## What this workflow is
+## What is this workflow?
 
-Opportunity Party's policy detail PDFs are hosted on Google Drive, where AI agents can't fetch the full content. This workflow mirrors each PDF into the repo as markdown and HTML so the policy text is served over HTTPS — readable by AI agents from `data/clean/pdf-document/`, deployable by the campaign site — without exposing the original PDFs. For setup, follow the project README's [Quickstart](../../README.md#quickstart) (Homebrew + direnv + uv).
+Opportunity Party's policy detail PDFs are hosted on Google Drive, where AI agents can't fetch the full content. This workflow mirrors each PDF into the repo as markdown and HTML so the policy text is served over HTTPS — readable by AI agents from `data/clean/pdf-document/`, deployable by the campaign site — without exposing the original PDFs. 
 
 ## Pipeline shape
 
@@ -17,33 +17,40 @@ flowchart LR
     render --> html["data/clean/pdf-document/<br/>{slug}/{slug}.html"]
 ```
 
-Three layers, each with a clear owner and contract:
-
-| Layer | Path | Owner | Tracked? |
-|---|---|---|---|
-| Sources | `data/sources/opportunity-website/pdfs/` | ingestors | no (gitignored) |
-| Clean | `data/clean/pdf-document/{slug}/` | transform pipeline | yes |
-| Site | `site/dist/policies/{slug}/` | Astro build | built artifact |
-
-The clean layer is the canonical surface: every consumer (campaign site, AI
-agent, MCP server, future analysis) reads from there. Manual QA on the clean
-layer is what reviewers verify.
-
 ## Tools and choices
 
-| Tool                                                    | Role                      | Why this one                                                                      |
-| ------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------------------- |
-| [`pymupdf4llm`](https://pymupdf.io)                     | PDF → Markdown extraction | Captures tables, headings, and bullet lists with no system dependencies           |
-| [`pymupdf`](https://pymupdf.readthedocs.io)             | Raw-text extraction       | Independent ground-truth signal that the production extractor is compared against |
-| [`python-markdown`](https://python-markdown.github.io/) | Markdown → HTML rendering | With the `extra` extension (tables, footnotes); same renderer for every MD file   |
-| [`gdown`](https://github.com/wkentaro/gdown)            | Google Drive download     | Handles Drive's auth flow and redirects for the raw layer                         |
-| [`dagster`](https://dagster.io)                         | Pipeline orchestration    | Asset-based DAG with full observability via UI + `dg` CLI                         |
+| Tool                                                    | Role                      | Why this one                                                                    |
+| ------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------- |
+| [`pymupdf4llm`](https://pymupdf.io)                     | PDF → Markdown extraction | Captures tables, headings, and bullet lists with no system dependencies         |
+| [`python-markdown`](https://python-markdown.github.io/) | Markdown → HTML rendering | With the `extra` extension (tables, footnotes); same renderer for every MD file |
+| [`gdown`](https://github.com/wkentaro/gdown)            | Google Drive download     | Handles Drive's auth flow and redirects for the raw layer                       |
+| [`dagster`](https://dagster.io)                         | Pipeline orchestration    | Asset-based DAG with full observability via UI + `dg` CLI                       |
 
-Each dependency was chosen for a specific reason — see
-[`docs/dependencies.md`](../dependencies.md) for the full rationale and
-alternatives considered.
+## Reviewing the output
 
-## Observability with Dagster
+I recommend manual QA always — for every PDF, open the markdown side-by-side
+with the source PDF and confirm the basics: heading hierarchy matches, tables
+render correctly, bullet lists are intact, no text is missing or garbled.
+
+[Obsidian.md](https://obsidian.md) is the tool I use for this — a local-first
+markdown editor with side-by-side panes and a clean MD renderer. The cleaned
+files in `data/clean/pdf-document/{slug}/{slug}.md` open directly without any
+plugin setup. 
+
+![Manual QA workflow — opening MD side-by-side with the source PDF](../screenshots/11-manual-qa-policy-documents.png)
+
+### What to confirm per PDF
+
+- **Heading hierarchy** — matches the PDF structure
+- **Tables** — rows + columns intact
+- **Bullet lists** — preserved (no merged/collapsed items)
+- **No garbled text** — no ligature artefacts or missing words
+
+Manual QA is the actual review gate — `just check` is a baseline sanity
+signal, not a substitute. The per-policy QA status lives in the PR-prep checklist of
+[`pdf-extraction.md`](../pdf-extraction.md) and converted documents
+
+## Dagster - PDF → MD → HTML
 
 Dagster is the framework this pipeline runs on. It models each pipeline step as
 an **asset** — a Python function whose output is a persistent artifact on disk
@@ -55,15 +62,18 @@ reading code. For a general view of our use case, this might look like:
 
 ![Dagster Overview](../screenshots/12-dagster-overview.png)
 
+
+For setup, follow the project README's [Quickstart](../../README.md#quickstart) (Homebrew + direnv + uv).
+
 ### Asset groups in this project
 
 Assets are split into three layers by their `group_name`:
 
-| Group | Role | PDF-pipeline assets |
-|---|---|---|
-| `ingestion` | raw scraping | `raw_pdfs` |
-| `clean` | normalization | `clean_pdfs`, `pdf_images` |
-| `site` | build + deploy | `pdf_html` |
+| Group       | Role           | PDF-pipeline assets        |
+| ----------- | -------------- | -------------------------- |
+| `ingestion` | raw scraping   | `raw_pdfs`                 |
+| `clean`     | normalization  | `clean_pdfs`, `pdf_images` |
+| `site`      | build + deploy | `pdf_html`                 |
 
 The DAG shape is `ingestion → clean → site`, with PDF assets sitting alongside
 the website scrapers. The high-level view shows the layer split at a glance:
@@ -126,33 +136,9 @@ just check
 Read-only — runs the lint, format-check, type-check, and test suite. Use as a
 baseline sanity check; the manual QA checklist is useful to provide on changes.
 
-## Reviewing the output
-
-I recommend manual QA always — for every PDF, open the markdown side-by-side
-with the source PDF and confirm the basics: heading hierarchy matches, tables
-render correctly, bullet lists are intact, no text is missing or garbled.
-
-[Obsidian.md](https://obsidian.md) is the tool I use for this — a local-first
-markdown editor with side-by-side panes and a clean MD renderer. The cleaned
-files in `data/clean/pdf-document/{slug}/{slug}.md` open directly without any
-plugin setup.
-
-![Manual QA workflow — opening MD side-by-side with the source PDF](../screenshots/11-manual-qa-policy-documents.png)
-
-### What to confirm per PDF
-
-- **Heading hierarchy** — matches the PDF structure
-- **Tables** — rows + columns intact
-- **Bullet lists** — preserved (no merged/collapsed items)
-- **No garbled text** — no ligature artefacts or missing words
-
-Manual QA is the actual review gate — `just check` is a baseline sanity
-signal, not a substitute. The per-policy QA status lives in the PR-prep checklist of
-[`pdf-extraction.md`](../pdf-extraction.md).
-
 ## Where to read more
 
-- [`docs/pdf-extraction.md`](../pdf-extraction.md) — full PR-prep checklist and per-policy table
+- [`docs/pdf-extraction.md`](../pdf-extraction.md) — full PR-prep checklist
 - [`docs/pdf-pipeline.md`](../pdf-pipeline.md) — auto-generated coverage report
 - [`docs/data-architecture.md`](../data-architecture.md) — layer invariants (`sources/` → `clean/` → site)
 - [`docs/data-schema.md`](../data-schema.md) — meta.json schema for clean items
