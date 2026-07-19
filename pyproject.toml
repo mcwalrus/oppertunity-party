@@ -20,9 +20,9 @@ requires-python = ">=3.12"
 # without ceremony; pin when a specific release actually breaks something.
 # ---------------------------------------------------------------------------
 dependencies = [
-    "pymupdf4llm==1.27.2.3",
+    "pymupdf4llm==1.28.0",
     "markdown==3.10.2",
-    "markdownify==1.2.2",
+    "markdownify==1.2.3",
 
     "beautifulsoup4>=4.15.0",
     "dagster>=1.13.9",
