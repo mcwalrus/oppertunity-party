@@ -25,9 +25,9 @@ dependencies = [
     "markdownify==1.2.2",
 
     "beautifulsoup4>=4.15.0",
-    "dagster>=1.13.9",
-    "dagster-dg-cli>=1.13.9",
-    "dagster-webserver>=1.13.9",
+    "dagster>=1.13.14",
+    "dagster-dg-cli>=1.13.14",
+    "dagster-webserver>=1.13.14",
     "gdown>=6.1.0",
     "httpx>=0.28.1",
     "lxml>=6.1.1",
