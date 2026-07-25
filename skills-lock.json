@@ -1,6 +1,18 @@
 {
   "version": 1,
   "skills": {
+    "backpressure": {
+      "source": "mcwalrus/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/backpressure/SKILL.md",
+      "computedHash": "3051993000eed377382111f7bacb1255641958fee8c029c291ab782be6b138eb"
+    },
+    "code-review": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "computedHash": "31d149a480eaa68c11e32f5ee77f0fd0b98a906834d531d881d502352edd0b8e"
+    },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -12,6 +24,12 @@
       "sourceType": "github",
       "skillPath": "skills/doc-coauthoring/SKILL.md",
       "computedHash": "b964e4c3ffe13f66f76dd7919073e60c7aec622cd8a8363bb36323188100cf8e"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "f361db4e15e6bfd562a9282b1dccda513910a50061f9e838ce017be9c69dde3f"
     },
     "handoff": {
       "source": "mattpocock/skills",
@@ -30,6 +48,12 @@
       "sourceType": "github",
       "skillPath": "skills/mcp-builder/SKILL.md",
       "computedHash": "826e46adf81e1372282e205c34e1a2ee876e72148007726e4a2512599d2fef7b"
+    },
+    "mermaid-diagrams": {
+      "source": "mcwalrus/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/mermaid-diagrams/SKILL.md",
+      "computedHash": "53a1e4dd7a44aac40a892aae6a6b69734be8181a8abed5a4f032166439312a13"
     },
     "pdf": {
       "source": "anthropics/skills",
@@ -55,6 +79,18 @@
       "skillPath": "skills/engineering/tdd/SKILL.md",
       "computedHash": "81eca2a5b53a63f481c0849be7a663a8cd43d5cf53f32b644ec0a2f50cf91aa2"
     },
+    "tech-course": {
+      "source": "mcwalrus/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tech-course/SKILL.md",
+      "computedHash": "c81ccf091dbbb7c65fc748bf03de7af56326042ea0cc5a3d3613a55aff5c5a66"
+    },
+    "tech-guide": {
+      "source": "mcwalrus/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tech-guide/SKILL.md",
+      "computedHash": "a0fafec3595616a6964bd492ecbf2fed0e081026cb667db7270b086023d34b8d"
+    },
     "to-spec": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -65,7 +101,7 @@
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/to-tickets/SKILL.md",
-      "computedHash": "5d79577541b5cf6dade61c69844432ea20ce7b12527cdda1dd4d6fe8d59a135d"
+      "computedHash": "0349eee265e7005e667b4543de849672106c46d545e998f37d3319300bb07751"
     }
   }
 }
