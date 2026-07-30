@@ -56,3 +56,6 @@ TASKLIST.md
 *.db
 .beads-credential-key
 .beads/proxieddb/
+
+# Other Python-generated
+graphify-out/cache
