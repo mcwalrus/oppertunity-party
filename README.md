@@ -59,14 +59,14 @@ Ingestors write to `data/sources/`; everyone else reads from `data/clean/`. Addi
 
 ## Commands
 
-| Recipe | What it does |
-| --- | --- |
-| `just install` | `uv sync` — install Python deps |
-| `just dev` | Launch the Dagster UI |
-| `just check` | `ruff check` + `ruff format --check` + `ty check` (read-only, CI-safe) |
-| `just fix` | Auto-fix lint and reformat |
-| `just validate` | Verify links in `data/clean/**/*.md` |
-| `just hooks-install` | Wire lefthook into `.git/hooks` (once after cloning) |
+| Recipe               | What it does                                                           |
+| -------------------- | ---------------------------------------------------------------------- |
+| `just install`       | `uv sync` — install Python deps                                        |
+| `just dev`           | Launch the Dagster UI                                                  |
+| `just check`         | `ruff check` + `ruff format --check` + `ty check` (read-only, CI-safe) |
+| `just fix`           | Auto-fix lint and reformat                                             |
+| `just validate`      | Verify links in `data/clean/**/*.md`                                   |
+| `just hooks-install` | Wire lefthook into `.git/hooks` (once after cloning)                   |
 
 ## Contributing
 
