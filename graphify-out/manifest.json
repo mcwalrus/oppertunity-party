@@ -340,19 +340,19 @@
     "semantic_hash": "794f50b5680aa4310b9c5ccdd081683a"
   },
   "AGENTS.md": {
-    "mtime": 1785421501.744027,
-    "ast_hash": "1125601b7c5980b12488c8b0bb86ac42",
-    "semantic_hash": "1125601b7c5980b12488c8b0bb86ac42"
+    "mtime": 1785848944.7942865,
+    "ast_hash": "0f03c85b2edfe03877c06eb177dea7e6",
+    "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1785421501.744027,
-    "ast_hash": "1125601b7c5980b12488c8b0bb86ac42",
-    "semantic_hash": "1125601b7c5980b12488c8b0bb86ac42"
+    "mtime": 1785848944.7942865,
+    "ast_hash": "0f03c85b2edfe03877c06eb177dea7e6",
+    "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785421501.745224,
-    "ast_hash": "28976e51b0d3e261f561efc00e10e394",
-    "semantic_hash": "28976e51b0d3e261f561efc00e10e394"
+    "mtime": 1785848997.3444202,
+    "ast_hash": "18af8c57a4f9876c3e468ae2d1d10b4a",
+    "semantic_hash": ""
   },
   "docs/data-architecture.md": {
     "mtime": 1785421501.8329098,
@@ -723,5 +723,2050 @@
     "mtime": 1785421501.91122,
     "ast_hash": "7d94ba63d6847826306d7fcfe73e41c0",
     "semantic_hash": "7d94ba63d6847826306d7fcfe73e41c0"
+  },
+  ".agents/skills/diagnosing-bugs/scripts/hitl-loop.template.sh": {
+    "mtime": 1785421501.7219481,
+    "ast_hash": "46a2a00761be2785e59661f0e3c11471",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/scripts/connections.py": {
+    "mtime": 1785421501.7271523,
+    "ast_hash": "577a5757c0f687ad4a84eb48eac9d514",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/scripts/evaluation.py": {
+    "mtime": 1785421501.7275915,
+    "ast_hash": "d7a7d604b8b38544084820bea3da71f5",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mermaid-diagrams/scripts/validate-diagrams.sh": {
+    "mtime": 1785421501.7313962,
+    "ast_hash": "52c6e09d27f46556b325853d5ce39504",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/check_bounding_boxes.py": {
+    "mtime": 1785421501.733682,
+    "ast_hash": "4881282f5ee2cec4ef14bb2e6f97580b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/check_fillable_fields.py": {
+    "mtime": 1785421501.7340403,
+    "ast_hash": "dfd8fb1119d2e5cca6459d4952207152",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/convert_pdf_to_images.py": {
+    "mtime": 1785421501.7344358,
+    "ast_hash": "ffb030446a456af226e45d4bb3be1ed3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/create_validation_image.py": {
+    "mtime": 1785421501.7346215,
+    "ast_hash": "527e62a9472a8487f92de0ee48cec2ef",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/extract_form_field_info.py": {
+    "mtime": 1785421501.7348921,
+    "ast_hash": "cc12f7fa4605f8372fc03260d1eb714f",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/extract_form_structure.py": {
+    "mtime": 1785421501.7351766,
+    "ast_hash": "f7caff6368c1da075b44eaf50c93a7b0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/fill_fillable_fields.py": {
+    "mtime": 1785421501.7354841,
+    "ast_hash": "4757d341ec091b703e736b3858a1bdc2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/scripts/fill_pdf_form_with_annotations.py": {
+    "mtime": 1785421501.7356853,
+    "ast_hash": "fbcedce5fc5cb848fb681fa878d3bb42",
+    "semantic_hash": ""
+  },
+  "data/clean/_index.json": {
+    "mtime": 1785421501.7471843,
+    "ast_hash": "3b9098f19d01855a3f3da453f6543079",
+    "semantic_hash": ""
+  },
+  "data/clean/_pdf_validation.json": {
+    "mtime": 1785421501.7476382,
+    "ast_hash": "49b722f061daaeb069d46ad37f8dbb49",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-07-20-the-opportunity-party-calls-for-bipartisanship-on-policy-costing-unit/meta.json": {
+    "mtime": 1785421501.7484722,
+    "ast_hash": "d646c6c765b4ff4107404cc4c8f8e99c",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-08-21-top-stories-citizen-voice-regulatory-standards-candidate-college/meta.json": {
+    "mtime": 1785421501.7490847,
+    "ast_hash": "10052fb0ff1ef525e0890896d7bbcbe7",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-08-26-statement-on-the-situation-in-gaza/meta.json": {
+    "mtime": 1785421501.7496002,
+    "ast_hash": "c935d76da743f7068411d6b626c342a2",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-08-26-submission-on-the-electoral-amendment-bill/meta.json": {
+    "mtime": 1785421501.750471,
+    "ast_hash": "25d35fb9baa0bc4fb63a18f61fdb8915",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-12-21-on-the-hunt-for-new-zealands-north-star/meta.json": {
+    "mtime": 1785421501.7512624,
+    "ast_hash": "39d17642ddc649e42a52dd60b5249cc7",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-01-28-submission-on-the-education-and-training-system-reform-amendment-bill/meta.json": {
+    "mtime": 1785421501.7518187,
+    "ast_hash": "f1abb4b87fa34fb2a38d7eb35f4ddcd6",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-02-05-q-needs-you/meta.json": {
+    "mtime": 1785421501.7525413,
+    "ast_hash": "35e32bcba87b6ad0b8c98bc31631a9c9",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-02-06-qs-reflections-from-waitangi/meta.json": {
+    "mtime": 1785421501.7530742,
+    "ast_hash": "af11bf1c07694a471b7eee14c552ac50",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-02-submission-on-the-budget-policy-statement-2026/meta.json": {
+    "mtime": 1785421501.7536964,
+    "ast_hash": "937c34efa93a02da65fc264da9046dc0",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-03-call-for-government-reversal-on-lng-terminal/meta.json": {
+    "mtime": 1785421501.7543128,
+    "ast_hash": "92456c9376f8118b1376be4c62966202",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-03-statement-on-the-middle-east-crisis/meta.json": {
+    "mtime": 1785421501.7549655,
+    "ast_hash": "d2c882dcfeb23d5040a80ee8b640234c",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-23-statement-on-the-fisheries-amendment-bill/meta.json": {
+    "mtime": 1785421501.7555788,
+    "ast_hash": "e92c846986f8a4094b2d6831a1b3b323",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-25-meet-the-first-opportunity-candidates/meta.json": {
+    "mtime": 1785421501.7562685,
+    "ast_hash": "666243c9fb93b9180fb00ad880d96559",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-04-09-free-public-transport/meta.json": {
+    "mtime": 1785421501.7568576,
+    "ast_hash": "73a9f7c3eb79390b5fa8ecf3e87f6f56",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-04-submission-on-the-fisheries-amendment-bill/meta.json": {
+    "mtime": 1785421501.7574914,
+    "ast_hash": "d7db2b81a6f04fa9ca3722a81a17bbfa",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-17-accelerating-ev-uptake/meta.json": {
+    "mtime": 1785421501.7579763,
+    "ast_hash": "01e573ff495417fd90bab6c80e219ab1",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-21-prosperity-doesnt-start-with-a-shredder/meta.json": {
+    "mtime": 1785421501.7586355,
+    "ast_hash": "50d0ee8278080728c398063c74b585a0",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-27-left-right-politics-is-failing-new-zealand/meta.json": {
+    "mtime": 1785421501.7591774,
+    "ast_hash": "0ca2fb40a25eb38e905657424e8b130f",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-28-gene-technology-policy/meta.json": {
+    "mtime": 1785421501.7597828,
+    "ast_hash": "cc3a2766b9c206e53707ace4d3b69ede",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-01-the-pray-and-delay-budget/meta.json": {
+    "mtime": 1785421501.7604265,
+    "ast_hash": "73c8e458757f05603e6f3c8505ecb366",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-09-submission-on-the-definitions-of-woman-and-man-amendment-bill/meta.json": {
+    "mtime": 1785421501.7610934,
+    "ast_hash": "3849ce32c9fa9c5ac51ce3288b52c4f8",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-15-opportunity-mps-accommodation-allowance-policy/meta.json": {
+    "mtime": 1785421501.7616231,
+    "ast_hash": "f8336858a42b8e89fff62f08b229308d",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-19-charitable-giving-tax-credit-cap/meta.json": {
+    "mtime": 1785421501.7621415,
+    "ast_hash": "28715c184d4233af4cbb520668d58a6c",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-19-when-the-bill-comes-due/meta.json": {
+    "mtime": 1785421501.7627873,
+    "ast_hash": "1cf6124ae58acad6100ae23142d2a15f",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-07-03-submission-on-the-disability-support-services-bill/meta.json": {
+    "mtime": 1785421501.7635975,
+    "ast_hash": "d674df41ebd5f3163a2cfd15f9fb6b9d",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-07-03-whos-listening-to-our-disability-advocates/meta.json": {
+    "mtime": 1785421501.7642982,
+    "ast_hash": "e1afd86747bbbc483969277d97db9490",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/accelerating-ev-uptake/meta.json": {
+    "mtime": 1785421501.7648356,
+    "ast_hash": "ee41770c722ff40a0f28674d0ae69487",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-08-volunteer-campaign-planning-tauranga/meta.json": {
+    "mtime": 1785421501.7654326,
+    "ast_hash": "0774b1547fa20d2fed7b95acfc4235fa",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-09-meet-qiulae-wong-and-the-canterbury-candidates/meta.json": {
+    "mtime": 1785421501.7660928,
+    "ast_hash": "11b51e78e18ca187fec40fb6fb3fb3ee",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-10-northcote-electorate-catch-up/meta.json": {
+    "mtime": 1785421501.766692,
+    "ast_hash": "f486246828b30eb1f949a79f1e98f2e4",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-12-new-plymouth-campaign-get-together/meta.json": {
+    "mtime": 1785421501.76733,
+    "ast_hash": "ee76f311f78468a4b8d4976fde209529",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-coffee-with-your-candidate/meta.json": {
+    "mtime": 1785421501.7678013,
+    "ast_hash": "daa005ed82bb4a36971d0142681a7843",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-dunedin-cafe-tour/meta.json": {
+    "mtime": 1785421501.7682447,
+    "ast_hash": "059cb27336dff777a99bd989d8ef165d",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-meet-robert-mason/meta.json": {
+    "mtime": 1785421501.7687228,
+    "ast_hash": "133d8c82f4524378c8461e3ecdcf3e47",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-policy-pints-with-kayla-kingdon-bebb/meta.json": {
+    "mtime": 1785421501.769457,
+    "ast_hash": "0332335d02e61a791d26a781291c1dce",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-westport-opportunity-pop-in-clinic/meta.json": {
+    "mtime": 1785421501.7701094,
+    "ast_hash": "4e842a4437cbdde5dee76f3b1ce4dba4",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-14-coffee-with-your-candidate/meta.json": {
+    "mtime": 1785421501.7707684,
+    "ast_hash": "3c47fa2fdacafb16ffae676982ec00e6",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-14-meet-qiulae-in-mt-albert/meta.json": {
+    "mtime": 1785421501.7713711,
+    "ast_hash": "231481819861156fcc26737a3e943856",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-14-opportunity-at-brewtown-market/meta.json": {
+    "mtime": 1785421501.771963,
+    "ast_hash": "0f9a05094e48f8a9e51183d128fbdd5a",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-16-healthy-oceans-casual-forum/meta.json": {
+    "mtime": 1785421501.772628,
+    "ast_hash": "3d2b18f949b4825ee6faa06f8a568ff6",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-16-healthy-oceans-public-forum/meta.json": {
+    "mtime": 1785421501.773103,
+    "ast_hash": "2289e07c9ba43efeeb0762c542451df7",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-17-nelson-meet-your-candidate/meta.json": {
+    "mtime": 1785421501.7735841,
+    "ast_hash": "d72ad1b2942e93a29a57280705e4ca50",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-20-dunedin-cafe-tour/meta.json": {
+    "mtime": 1785421501.774035,
+    "ast_hash": "2fdae34a9a31672bda83c7787fdb9246",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-21-palmerston-north-meet-your-candidate/meta.json": {
+    "mtime": 1785421501.774617,
+    "ast_hash": "61af8590adf0cf0a21131c514ffb7d6b",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-27-dunedin-cafe-tour/meta.json": {
+    "mtime": 1785421501.7752182,
+    "ast_hash": "6193eb9a2aa0a7f03834054083d639dc",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-28-meet-ben-and-luke-candidates-for-hutt-south-and-remutaka/meta.json": {
+    "mtime": 1785421501.7757142,
+    "ast_hash": "7cc6d844edbeeb4eff0abe7d8994eaab",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-28-opportunity-at-harbourside-market/meta.json": {
+    "mtime": 1785421501.7762136,
+    "ast_hash": "78ed73a24e6d1ad1b9da573b07e1887d",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-28-wellington-marathon-opportunity-afterparty/meta.json": {
+    "mtime": 1785421501.7766764,
+    "ast_hash": "a902849d041af3839e17b37a401b0aa6",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-07-04-wellington-supporters-meetup-july/meta.json": {
+    "mtime": 1785421501.7771416,
+    "ast_hash": "b7c22167030b4b5bd93c54479e499d53",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/about/meta.json": {
+    "mtime": 1785421501.777815,
+    "ast_hash": "8fcf09e90360d2654408de24dbf5b516",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/charter/meta.json": {
+    "mtime": 1785421501.7782803,
+    "ast_hash": "a62bb8bfb5462929ee83019a074ad390",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/constitution/meta.json": {
+    "mtime": 1785421501.7791445,
+    "ast_hash": "ae5faf46a353e95ab0cfcdc6b7ee4f1d",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/meet-q/meta.json": {
+    "mtime": 1785421501.7798383,
+    "ast_hash": "372684db315719674b7aaaa4eded1fbf",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/party-information/meta.json": {
+    "mtime": 1785421501.7801044,
+    "ast_hash": "a586d54bff7ab0a8d5a4f45e652d6351",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/abundant-energy-policy-overview/meta.json": {
+    "mtime": 1785421501.7819374,
+    "ast_hash": "27762be6ec6cc00d67e0b3dac06be1b9",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/charter-default/meta.json": {
+    "mtime": 1785421501.783594,
+    "ast_hash": "2d08c4b9f66ec206bedeb1a7e8a63efd",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/citizens-voice-policy-overview/meta.json": {
+    "mtime": 1785421501.7846322,
+    "ast_hash": "914771bd91ea8566024b022eac2165b1",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/constitution-default/meta.json": {
+    "mtime": 1785421501.7861605,
+    "ast_hash": "2470f2fd693a39968ca84bf1c8f9ef1d",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-land-default/meta.json": {
+    "mtime": 1785421501.788562,
+    "ast_hash": "14567a8908c0c38c5d1873e72df55004",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-oceans-policy-overview/meta.json": {
+    "mtime": 1785421501.7897394,
+    "ast_hash": "79bf34e710ee7d62125bc6935a2f005c",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/tax-reset-policy-addendum/meta.json": {
+    "mtime": 1785421501.790119,
+    "ast_hash": "fac05bcd4e088e0cb7898ad6c357ff98",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/tax-reset-policy-overview/meta.json": {
+    "mtime": 1785421501.7910714,
+    "ast_hash": "b2adb26e34bdc9ab0440ebeb3875034a",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/abundant-energy/meta.json": {
+    "mtime": 1785421501.7926989,
+    "ast_hash": "c5ab0ab78b531d59a90d2a9fd1af92ef",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/affordable-housing/meta.json": {
+    "mtime": 1785421501.793326,
+    "ast_hash": "fb4764892983f5a30cbe01de14c9c70d",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/charter/meta.json": {
+    "mtime": 1785421501.7937715,
+    "ast_hash": "470340cc990ebf0210ac3419a876bd55",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/citizens-voice/meta.json": {
+    "mtime": 1785421501.7944822,
+    "ast_hash": "3352a5709270203f551eb869e997af02",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/clean-up-politics/meta.json": {
+    "mtime": 1785421501.7949126,
+    "ast_hash": "aa9a954cdb7d72d3f34eb22f766100a2",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/climate-action/meta.json": {
+    "mtime": 1785421501.7953904,
+    "ast_hash": "230c1d2f8997862d49e99d495d594595",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/constitution/meta.json": {
+    "mtime": 1785421501.7963474,
+    "ast_hash": "0787a976887717730495c33d80449f74",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/future-fit-education/meta.json": {
+    "mtime": 1785421501.7970588,
+    "ast_hash": "02edd387307610f5efa59901df708b28",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/healthy-land/meta.json": {
+    "mtime": 1785421501.7977514,
+    "ast_hash": "4c56d3fefe1fa91a9c0797b9281961e6",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/healthy-oceans/meta.json": {
+    "mtime": 1785421501.7984698,
+    "ast_hash": "655bf6c97b90f37f9a4f67fde29e9e2d",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/healthy-people/meta.json": {
+    "mtime": 1785421501.7989194,
+    "ast_hash": "ce4458a9de439657cb93ff40ce58987b",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/honouring-te-tiriti/meta.json": {
+    "mtime": 1785421501.799435,
+    "ast_hash": "2cbedb5e1147453004a26695cd651b05",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/intergenerational-infrastructure/meta.json": {
+    "mtime": 1785421501.8001335,
+    "ast_hash": "8f7c56651c0db87a93b71724c9d21219",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/productivity-unleashed/meta.json": {
+    "mtime": 1785421501.8004243,
+    "ast_hash": "164745dd34000461c7a5b4a53a490321",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/smart-on-crime/meta.json": {
+    "mtime": 1785421501.8010058,
+    "ast_hash": "0f8bf6fc9f7f2c15b931cfb808579f08",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/tax-reset/meta.json": {
+    "mtime": 1785421501.8014665,
+    "ast_hash": "fecab2ce174f564511f238a503349c9b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/adam-macrae-martin/meta.json": {
+    "mtime": 1785421501.802526,
+    "ast_hash": "528ec139fe2efc05e90e92612cc0a310",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/adrian-mee/meta.json": {
+    "mtime": 1785421501.8036304,
+    "ast_hash": "df86a4127b1cab2a7d2f705ac81e4f48",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/almo-wong/meta.json": {
+    "mtime": 1785421501.8042207,
+    "ast_hash": "d10e4623ba20e05e30cb65468184a585",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/ben-lane/meta.json": {
+    "mtime": 1785421501.8048465,
+    "ast_hash": "a5db475e2c99f1a45bb2b3901f7b40a2",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/ben-wylie-van-eerd/meta.json": {
+    "mtime": 1785421501.8053753,
+    "ast_hash": "b6c60c4c389234121faa7b4aaa495f08",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/bianca-beebe/meta.json": {
+    "mtime": 1785421501.8064666,
+    "ast_hash": "9bcd2af3a7da93a3c653321a866431eb",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/blair-smith/meta.json": {
+    "mtime": 1785421501.8072543,
+    "ast_hash": "885fb9ed6582f64700783f9feb157854",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/cail-smith/meta.json": {
+    "mtime": 1785421501.807762,
+    "ast_hash": "f3a392a7b82e9a3449f5fe479a605202",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/chee-khiang-sng/meta.json": {
+    "mtime": 1785421501.8082428,
+    "ast_hash": "b238e33cb53758ae8507cd72703a4910",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/cindie-uddstrom/meta.json": {
+    "mtime": 1785421501.8086836,
+    "ast_hash": "47e959e6c1d77b608c24b4f570d1f399",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/cody-marsh/meta.json": {
+    "mtime": 1785421501.8092198,
+    "ast_hash": "3bc724894bee4c67501ffe41e412a7ca",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/daniel-eb/meta.json": {
+    "mtime": 1785421501.8098686,
+    "ast_hash": "be5812bfef6e6d056fe01da03e0ab2be",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/dave-bainbridge-zafar/meta.json": {
+    "mtime": 1785421501.8103824,
+    "ast_hash": "eecdf45bf1dce35ac698dfa8f1d419fa",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/derrick-paull/meta.json": {
+    "mtime": 1785421501.8110797,
+    "ast_hash": "3ac7543e6151fab90cb67718b52f0c94",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/eden-skipper/meta.json": {
+    "mtime": 1785421501.8115916,
+    "ast_hash": "2c779f093caa1f07849234223965d12b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/evan-french/meta.json": {
+    "mtime": 1785421501.812244,
+    "ast_hash": "f7c2636906bd91006c66958ce44caee3",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/finn-liley/meta.json": {
+    "mtime": 1785421501.8127875,
+    "ast_hash": "7dc4871bac402d499230347185cb102e",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/helen-tait/meta.json": {
+    "mtime": 1785421501.8136942,
+    "ast_hash": "22e6117ff6c4a31801ae91ae16ef7326",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/holly-knill/meta.json": {
+    "mtime": 1785421501.8145978,
+    "ast_hash": "a6199881d80bece23a70a75ab6d84c64",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/jamie-attenborough/meta.json": {
+    "mtime": 1785421501.815297,
+    "ast_hash": "b4dd3ad1efc74a49632c2b074951edb5",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/jessica-hammond/meta.json": {
+    "mtime": 1785421501.8162165,
+    "ast_hash": "8cb727e41e1fe426f5d1a2029df1566f",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/jodie-kuntzsch/meta.json": {
+    "mtime": 1785421501.8170435,
+    "ast_hash": "78d9b70cfb9aa0f362f6ed3c87a91288",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/johan-chang/meta.json": {
+    "mtime": 1785421501.8177373,
+    "ast_hash": "c11764833c768236aaa4b375be1c00d6",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/kayla-kingdon-bebb/meta.json": {
+    "mtime": 1785421501.8184059,
+    "ast_hash": "55210ac1e9d7cdb4c333871fba8fe721",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/kevin-huang/meta.json": {
+    "mtime": 1785421501.8189397,
+    "ast_hash": "aad41c90bbc369c42b9511f1e411bde5",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/luke-ross/meta.json": {
+    "mtime": 1785421501.8195777,
+    "ast_hash": "3bd22ac959a404d5aaa4589528feec74",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/mark-roach/meta.json": {
+    "mtime": 1785421501.8200445,
+    "ast_hash": "b3bc3a7c77e8d91218e05d5b627f72cb",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/mathew-phillips/meta.json": {
+    "mtime": 1785421501.8205183,
+    "ast_hash": "e5a7f50dc5eda82841e9b079cef5feb5",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/matt-harris/meta.json": {
+    "mtime": 1785421501.8209703,
+    "ast_hash": "9e524929984df16038fc1dfe5a7ece02",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/matt-shepherd/meta.json": {
+    "mtime": 1785421501.8218296,
+    "ast_hash": "cdb4865f2abac2c7b22b9b7737838fba",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/michael-carter/meta.json": {
+    "mtime": 1785421501.8222442,
+    "ast_hash": "2f956ca10170fc8a3fcd838006335314",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/naomi-pocock/meta.json": {
+    "mtime": 1785421501.8228,
+    "ast_hash": "7e13423795f4bfa916fde5a7376b82a5",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/netra-ghimire/meta.json": {
+    "mtime": 1785421501.8234992,
+    "ast_hash": "40387440963161545c24e1e346b14afc",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/papa-wharewera/meta.json": {
+    "mtime": 1785421501.8241754,
+    "ast_hash": "36787f16be7f9005d83c3a4032911088",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/paul-jackson/meta.json": {
+    "mtime": 1785421501.824801,
+    "ast_hash": "13d4d51ae0ef50012eb9058371cc1b6b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/qiulae-wong/meta.json": {
+    "mtime": 1785421501.8257604,
+    "ast_hash": "b3ef041c068e8a015877267f2762fd31",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/rachel-ward/meta.json": {
+    "mtime": 1785421501.8264432,
+    "ast_hash": "cef87cf980859dc65da269ff42b40ef6",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/robert-mason/meta.json": {
+    "mtime": 1785421501.827256,
+    "ast_hash": "6d81905478b0113319bca5cdd09d91ac",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/romeo-tevaga/meta.json": {
+    "mtime": 1785421501.8280642,
+    "ast_hash": "47e74e723a3df53c6fa558b2d1956046",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/sacha-haskell/meta.json": {
+    "mtime": 1785421501.8289037,
+    "ast_hash": "3ee1dbd90bf8fb8fe7aab81a442123cc",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/sam-plummer/meta.json": {
+    "mtime": 1785421501.8296723,
+    "ast_hash": "10840684e9531423b67c7c344a1c84d5",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/sarah-lucas/meta.json": {
+    "mtime": 1785421501.8301265,
+    "ast_hash": "e6277626fc9186cff90e32028a7cdf42",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/simon-dellabarca/meta.json": {
+    "mtime": 1785421501.830605,
+    "ast_hash": "d9521caf430657dcb79b34153d7a5216",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/team/meta.json": {
+    "mtime": 1785421501.8311722,
+    "ast_hash": "5094e3588510420fd875c69f3094a88f",
+    "semantic_hash": ""
+  },
+  "pipeline/defs/assets/pdf_html.py": {
+    "mtime": 1785421501.8753915,
+    "ast_hash": "26ade2742716ce73c7c506fa0f3d3247",
+    "semantic_hash": ""
+  },
+  "pipeline/defs/assets/pdf_images.py": {
+    "mtime": 1785421501.875937,
+    "ast_hash": "d08f1de328a0da1024591048fe72a3d3",
+    "semantic_hash": ""
+  },
+  "pipeline/defs/assets/pdf_quirks.py": {
+    "mtime": 1785421501.8764448,
+    "ast_hash": "b943c2f6e6d5dc660034219f8cbbb6c7",
+    "semantic_hash": ""
+  },
+  "pipeline/defs/assets/pdf_validation.py": {
+    "mtime": 1785421501.8770401,
+    "ast_hash": "8697f2e0fdfeba12f64afb2df25b51e4",
+    "semantic_hash": ""
+  },
+  "pipeline/text_clean.py": {
+    "mtime": 1785421501.8789759,
+    "ast_hash": "84c99f336beda84904e4cca33ebc1577",
+    "semantic_hash": ""
+  },
+  "pipeline/transforms/pdf_images.py": {
+    "mtime": 1785421501.8798468,
+    "ast_hash": "9eef683258b205af952dfc0931c0834c",
+    "semantic_hash": ""
+  },
+  "pipeline/transforms/pdf_quirks.py": {
+    "mtime": 1785421501.8803377,
+    "ast_hash": "d28507de671b3bda63b3c478639ea7d7",
+    "semantic_hash": ""
+  },
+  "pipeline/transforms/pdf_to_html.py": {
+    "mtime": 1785421501.8807833,
+    "ast_hash": "c946edb393134755421910a3b1b07dfd",
+    "semantic_hash": ""
+  },
+  "pipeline/transforms/pdf_validation.py": {
+    "mtime": 1785421501.8813176,
+    "ast_hash": "3b38d604aca639157dfc1c3f77c97431",
+    "semantic_hash": ""
+  },
+  "scripts/check_docs_links.py": {
+    "mtime": 1785421501.8824506,
+    "ast_hash": "80e71345b7ccd88f5468029fe1a747d8",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1785421501.9116294,
+    "ast_hash": "96f75f75b2355e309b5ee86f42f246a0",
+    "semantic_hash": ""
+  },
+  "tests/conftest.py": {
+    "mtime": 1785421501.9132726,
+    "ast_hash": "3393ee802ea23e0140e82c998b7f7a3f",
+    "semantic_hash": ""
+  },
+  "tests/test_pdf_extraction.py": {
+    "mtime": 1785421501.913628,
+    "ast_hash": "d0231d5f98eb9538bab6f29c2288a96b",
+    "semantic_hash": ""
+  },
+  "tests/test_pdf_html.py": {
+    "mtime": 1785421501.9140797,
+    "ast_hash": "65b118eb61b7b6994d071ac344da6d16",
+    "semantic_hash": ""
+  },
+  "tests/test_pdf_quirks.py": {
+    "mtime": 1785421501.9144747,
+    "ast_hash": "1d2cf7fc0018df25d724247d4e1a00ca",
+    "semantic_hash": ""
+  },
+  ".agents/skills/backpressure/SKILL.md": {
+    "mtime": 1785421501.7197468,
+    "ast_hash": "4662fde1acf42b002e6fea0fdaae72b6",
+    "semantic_hash": ""
+  },
+  ".agents/skills/code-review/SKILL.md": {
+    "mtime": 1785421501.7203267,
+    "ast_hash": "6dd105e464896f4964c3844f5a53f341",
+    "semantic_hash": ""
+  },
+  ".agents/skills/code-review/agents/openai.yaml": {
+    "mtime": 1785421501.7206802,
+    "ast_hash": "41726fb93a74bbeab2f643a27d6452d2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/diagnosing-bugs/SKILL.md": {
+    "mtime": 1785421501.7212415,
+    "ast_hash": "77f2ef3211c1cff2e9c7a45fa234e54c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/diagnosing-bugs/agents/openai.yaml": {
+    "mtime": 1785421501.7215836,
+    "ast_hash": "52e474f87cddee193c6d9f0bca1fcdb4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/doc-coauthoring/SKILL.md": {
+    "mtime": 1785421501.7224083,
+    "ast_hash": "2b2974d6c73233fc15242d248c1c2d9b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/grill-me/SKILL.md": {
+    "mtime": 1785421501.722732,
+    "ast_hash": "d07c47e3f0ffefd2c28354eb81a1e831",
+    "semantic_hash": ""
+  },
+  ".agents/skills/grill-me/agents/openai.yaml": {
+    "mtime": 1785421501.7230675,
+    "ast_hash": "aff7b6f7b10220e3b4537c42a2d08917",
+    "semantic_hash": ""
+  },
+  ".agents/skills/handoff/SKILL.md": {
+    "mtime": 1785421501.7235792,
+    "ast_hash": "4b41ddea5fe8bec9aaf6de6d00a70353",
+    "semantic_hash": ""
+  },
+  ".agents/skills/handoff/agents/openai.yaml": {
+    "mtime": 1785421501.723996,
+    "ast_hash": "4be8ae2848843907cb2c73c3abed107c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/implement/SKILL.md": {
+    "mtime": 1785421501.724237,
+    "ast_hash": "7cc3e48c97c3a5f287601f87015d02b2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/implement/agents/openai.yaml": {
+    "mtime": 1785421501.7244742,
+    "ast_hash": "67981219ee02544ca054221195e85d41",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/LICENSE.txt": {
+    "mtime": 1785421501.724903,
+    "ast_hash": "0ee6429f4c66920b6744d818225fb58f",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/SKILL.md": {
+    "mtime": 1785421501.7252665,
+    "ast_hash": "595dcfd738e6aabe7fbbc35929baa7a6",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/reference/evaluation.md": {
+    "mtime": 1785421501.7256675,
+    "ast_hash": "4aa903da7d9c289eb167dce2747140f2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/reference/mcp_best_practices.md": {
+    "mtime": 1785421501.7259974,
+    "ast_hash": "e7cd50e7527877687efebcd3877e3e9a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/reference/node_mcp_server.md": {
+    "mtime": 1785421501.7263176,
+    "ast_hash": "214713cb0cfdf6ea4aa8eda85e2c6959",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/reference/python_mcp_server.md": {
+    "mtime": 1785421501.726733,
+    "ast_hash": "af767546b4697efbb7348f5c06a6b071",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mcp-builder/scripts/requirements.txt": {
+    "mtime": 1785421501.7281733,
+    "ast_hash": "3ec2de45c75cadfbf997821049c09fbd",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mermaid-diagrams/SKILL.md": {
+    "mtime": 1785421501.7286344,
+    "ast_hash": "d2ad094b164c052451089e5daadae65c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mermaid-diagrams/references/audience-examples.md": {
+    "mtime": 1785421501.7294617,
+    "ast_hash": "a1fb9f1bb3bf376b78fa7b52ac7165a1",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mermaid-diagrams/references/diagram-options.md": {
+    "mtime": 1785421501.7300646,
+    "ast_hash": "3688ca05fcf0be59582ee451d6111ce0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mermaid-diagrams/references/patterns.md": {
+    "mtime": 1785421501.730771,
+    "ast_hash": "7c46382fdd30f5d680baddbb9e1e4e9d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/mermaid-diagrams/references/validation.md": {
+    "mtime": 1785421501.7311294,
+    "ast_hash": "50246325823f1e42f3fdbc12dfbd545a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/LICENSE.txt": {
+    "mtime": 1785421501.7322896,
+    "ast_hash": "f8515c3694eb11622110ca76c7c15d1b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/SKILL.md": {
+    "mtime": 1785421501.7326663,
+    "ast_hash": "1c07e7fc21a8ad77c257900350a61098",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/forms.md": {
+    "mtime": 1785421501.7330287,
+    "ast_hash": "17def1f9054156caec43e0db22dfeb2d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/pdf/reference.md": {
+    "mtime": 1785421501.7333272,
+    "ast_hash": "c98b5ac274243622da3712daa2f859f5",
+    "semantic_hash": ""
+  },
+  ".agents/skills/prototype/LOGIC.md": {
+    "mtime": 1785421501.7362115,
+    "ast_hash": "4c27a0861fb9d81e0a8bd36ef0dfc10b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/prototype/SKILL.md": {
+    "mtime": 1785421501.7365003,
+    "ast_hash": "86d04d3f9b52f556aa71a2a2e4face89",
+    "semantic_hash": ""
+  },
+  ".agents/skills/prototype/UI.md": {
+    "mtime": 1785421501.7371354,
+    "ast_hash": "0531f4c5365f312b7faad44b88adcf38",
+    "semantic_hash": ""
+  },
+  ".agents/skills/prototype/agents/openai.yaml": {
+    "mtime": 1785421501.7374256,
+    "ast_hash": "f52e5df8465a544537396ffa1d2a11a4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/research/SKILL.md": {
+    "mtime": 1785421501.737793,
+    "ast_hash": "506b3477669c57820d944af5766105cc",
+    "semantic_hash": ""
+  },
+  ".agents/skills/research/agents/openai.yaml": {
+    "mtime": 1785421501.7380338,
+    "ast_hash": "ea8c2769bf46410cc6b302b291bb7b9d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tdd/SKILL.md": {
+    "mtime": 1785421501.738272,
+    "ast_hash": "a78e613a36731153b960491c24b06106",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tdd/agents/openai.yaml": {
+    "mtime": 1785421501.738521,
+    "ast_hash": "e37e499fa0b017cde536bacb0ebaae67",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tdd/mocking.md": {
+    "mtime": 1785421501.738725,
+    "ast_hash": "c5505e8da8f516c7dacebd01c58a4c2c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tdd/tests.md": {
+    "mtime": 1785421501.738958,
+    "ast_hash": "0a462499661825df11a0852c42382f10",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tech-course/SKILL.md": {
+    "mtime": 1785421501.739486,
+    "ast_hash": "002678e5f218fba640be3fda704cadae",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tech-course/references/grounding-workflow.md": {
+    "mtime": 1785421501.7399893,
+    "ast_hash": "cdf138eeae01b88d604d763a066b361d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/tech-guide/SKILL.md": {
+    "mtime": 1785421501.740442,
+    "ast_hash": "e46e9562ff941fece5274b8658e0dd19",
+    "semantic_hash": ""
+  },
+  ".agents/skills/to-spec/SKILL.md": {
+    "mtime": 1785421501.7407274,
+    "ast_hash": "ea27053babcbd7e7524056f8219e76d0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/to-spec/agents/openai.yaml": {
+    "mtime": 1785421501.741011,
+    "ast_hash": "886d06b1f83b51e39bd2874b75730f87",
+    "semantic_hash": ""
+  },
+  ".agents/skills/to-tickets/SKILL.md": {
+    "mtime": 1785421501.7414336,
+    "ast_hash": "17129aa76a67e96f192aeb8446cb71dd",
+    "semantic_hash": ""
+  },
+  ".agents/skills/to-tickets/agents/openai.yaml": {
+    "mtime": 1785421501.7417922,
+    "ast_hash": "6c4d19c426617a41441e84aacf2786d6",
+    "semantic_hash": ""
+  },
+  ".github/dependabot.yml": {
+    "mtime": 1785421501.7424645,
+    "ast_hash": "e643d2d1024687877e45f0589bb1c6b5",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-07-20-the-opportunity-party-calls-for-bipartisanship-on-policy-costing-unit/2025-07-20-the-opportunity-party-calls-for-bipartisanship-on-policy-costing-unit.md": {
+    "mtime": 1785421501.7481978,
+    "ast_hash": "8e02ef1d62c4949b5e925cc8683dd814",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-08-21-top-stories-citizen-voice-regulatory-standards-candidate-college/2025-08-21-top-stories-citizen-voice-regulatory-standards-candidate-college.md": {
+    "mtime": 1785421501.7488558,
+    "ast_hash": "1ab07746cbcd0d6c267b17a7e29a2ccc",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-08-26-statement-on-the-situation-in-gaza/2025-08-26-statement-on-the-situation-in-gaza.md": {
+    "mtime": 1785421501.7493541,
+    "ast_hash": "a461f17156030b16cf357ad6b0b49e3b",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-08-26-submission-on-the-electoral-amendment-bill/2025-08-26-submission-on-the-electoral-amendment-bill.md": {
+    "mtime": 1785421501.7501557,
+    "ast_hash": "84895f1c3fceb691fbe9ce3e9ca64bb4",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2025-12-21-on-the-hunt-for-new-zealands-north-star/2025-12-21-on-the-hunt-for-new-zealands-north-star.md": {
+    "mtime": 1785421501.7509022,
+    "ast_hash": "58b40b5dcae9c57437ca80d3d5a120a8",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-01-28-submission-on-the-education-and-training-system-reform-amendment-bill/2026-01-28-submission-on-the-education-and-training-system-reform-amendment-bill.md": {
+    "mtime": 1785421501.7516136,
+    "ast_hash": "9bf57a8a5e1e25fdbfa453b8bdf1925d",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-02-05-q-needs-you/2026-02-05-q-needs-you.md": {
+    "mtime": 1785421501.75217,
+    "ast_hash": "4b44aa0891061e6ae5d21f2f14cba216",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-02-06-qs-reflections-from-waitangi/2026-02-06-qs-reflections-from-waitangi.md": {
+    "mtime": 1785421501.752844,
+    "ast_hash": "237a10627f74a9bce2460064bc65349b",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-02-submission-on-the-budget-policy-statement-2026/2026-03-02-submission-on-the-budget-policy-statement-2026.md": {
+    "mtime": 1785421501.753464,
+    "ast_hash": "a7816176ca13eb362be2414dd73c159c",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-03-call-for-government-reversal-on-lng-terminal/2026-03-03-call-for-government-reversal-on-lng-terminal.md": {
+    "mtime": 1785421501.754038,
+    "ast_hash": "d49f1937fe2d3c3a01599ed014a550bf",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-03-statement-on-the-middle-east-crisis/2026-03-03-statement-on-the-middle-east-crisis.md": {
+    "mtime": 1785421501.7546268,
+    "ast_hash": "7b1ee20410c9a64f68ef4bcfd90953a4",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-23-statement-on-the-fisheries-amendment-bill/2026-03-23-statement-on-the-fisheries-amendment-bill.md": {
+    "mtime": 1785421501.755355,
+    "ast_hash": "0c35dac4c06e24f5cdd70519bfe9b906",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-03-25-meet-the-first-opportunity-candidates/2026-03-25-meet-the-first-opportunity-candidates.md": {
+    "mtime": 1785421501.755949,
+    "ast_hash": "34f18e7c23be9460cc10e1bc2b67ac48",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-04-09-free-public-transport/2026-04-09-free-public-transport.md": {
+    "mtime": 1785421501.7566478,
+    "ast_hash": "04da3ba4bbbf05da907bc0d652179e10",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-04-submission-on-the-fisheries-amendment-bill/2026-05-04-submission-on-the-fisheries-amendment-bill.md": {
+    "mtime": 1785421501.7572803,
+    "ast_hash": "30faf77be5968e8df258d2d824e8a87b",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-17-accelerating-ev-uptake/2026-05-17-accelerating-ev-uptake.md": {
+    "mtime": 1785421501.7577567,
+    "ast_hash": "d487bdb4cc79af055cba7917726f1be0",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-21-prosperity-doesnt-start-with-a-shredder/2026-05-21-prosperity-doesnt-start-with-a-shredder.md": {
+    "mtime": 1785421501.75841,
+    "ast_hash": "2934e74f31c33be63f96cf049009edf9",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-27-left-right-politics-is-failing-new-zealand/2026-05-27-left-right-politics-is-failing-new-zealand.md": {
+    "mtime": 1785421501.7589498,
+    "ast_hash": "59ac26ee11beea3e3ad9dd9afde22344",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-05-28-gene-technology-policy/2026-05-28-gene-technology-policy.md": {
+    "mtime": 1785421501.7595518,
+    "ast_hash": "01cabcfde7daca57088c5ac34db64406",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-01-the-pray-and-delay-budget/2026-06-01-the-pray-and-delay-budget.md": {
+    "mtime": 1785421501.760193,
+    "ast_hash": "fafa71d67fdb266ce66307f51b50fdd0",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-09-submission-on-the-definitions-of-woman-and-man-amendment-bill/2026-06-09-submission-on-the-definitions-of-woman-and-man-amendment-bill.md": {
+    "mtime": 1785421501.7607296,
+    "ast_hash": "3e7b55db010c2dca83fced2218b78ce5",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-15-opportunity-mps-accommodation-allowance-policy/2026-06-15-opportunity-mps-accommodation-allowance-policy.md": {
+    "mtime": 1785421501.7613907,
+    "ast_hash": "f523f4d50a94e85f5660ef45d4de7c92",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-19-charitable-giving-tax-credit-cap/2026-06-19-charitable-giving-tax-credit-cap.md": {
+    "mtime": 1785421501.761928,
+    "ast_hash": "be7066a86eabcd99db4dd5384f4f0e4f",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-06-19-when-the-bill-comes-due/2026-06-19-when-the-bill-comes-due.md": {
+    "mtime": 1785421501.762545,
+    "ast_hash": "10d0ec63cd01df3537bcd33403a78dd7",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-07-03-submission-on-the-disability-support-services-bill/2026-07-03-submission-on-the-disability-support-services-bill.md": {
+    "mtime": 1785421501.7633438,
+    "ast_hash": "4851f0889a42e045ad4ca8bd04c7b7c0",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/2026-07-03-whos-listening-to-our-disability-advocates/2026-07-03-whos-listening-to-our-disability-advocates.md": {
+    "mtime": 1785421501.763973,
+    "ast_hash": "4a1c90aa639ae2daa9b6bb081a37e1ea",
+    "semantic_hash": ""
+  },
+  "data/clean/blog-post/accelerating-ev-uptake/accelerating-ev-uptake.md": {
+    "mtime": 1785421501.7645998,
+    "ast_hash": "2b47eb271ceefcb79847cd333fe2c1d0",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-08-volunteer-campaign-planning-tauranga/2026-06-08-volunteer-campaign-planning-tauranga.md": {
+    "mtime": 1785421501.76521,
+    "ast_hash": "668c4510608e36bd0fa2ef55d81b74f7",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-09-meet-qiulae-wong-and-the-canterbury-candidates/2026-06-09-meet-qiulae-wong-and-the-canterbury-candidates.md": {
+    "mtime": 1785421501.7658148,
+    "ast_hash": "6d2550dd7faa1be98ae353831a281017",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-10-northcote-electorate-catch-up/2026-06-10-northcote-electorate-catch-up.md": {
+    "mtime": 1785421501.7664275,
+    "ast_hash": "24c71956fab42b921eff599768edf652",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-12-new-plymouth-campaign-get-together/2026-06-12-new-plymouth-campaign-get-together.md": {
+    "mtime": 1785421501.767118,
+    "ast_hash": "a96347c7e0950ae67dcc3bc5d0d388ce",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-coffee-with-your-candidate/2026-06-13-coffee-with-your-candidate.md": {
+    "mtime": 1785421501.7675984,
+    "ast_hash": "6533f95dd53cbd107e30dcc7e2486b31",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-dunedin-cafe-tour/2026-06-13-dunedin-cafe-tour.md": {
+    "mtime": 1785421501.7680452,
+    "ast_hash": "169bbc78b2ae5974f2b3bb08bd1797a2",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-meet-robert-mason/2026-06-13-meet-robert-mason.md": {
+    "mtime": 1785421501.768508,
+    "ast_hash": "fe917f88ada09db468f9efd156483897",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-policy-pints-with-kayla-kingdon-bebb/2026-06-13-policy-pints-with-kayla-kingdon-bebb.md": {
+    "mtime": 1785421501.7692158,
+    "ast_hash": "b2c5540e6886137bbcc6972842e9168a",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-13-westport-opportunity-pop-in-clinic/2026-06-13-westport-opportunity-pop-in-clinic.md": {
+    "mtime": 1785421501.7698677,
+    "ast_hash": "23fcb16cf961bcbef2e3c4f154ee6ff3",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-14-coffee-with-your-candidate/2026-06-14-coffee-with-your-candidate.md": {
+    "mtime": 1785421501.7704554,
+    "ast_hash": "bb8521af6068e76e4d6cc2b80643e454",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-14-meet-qiulae-in-mt-albert/2026-06-14-meet-qiulae-in-mt-albert.md": {
+    "mtime": 1785421501.7711465,
+    "ast_hash": "7447dffa24a1bf0b04a839950d7f648e",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-14-opportunity-at-brewtown-market/2026-06-14-opportunity-at-brewtown-market.md": {
+    "mtime": 1785421501.7716553,
+    "ast_hash": "533fe99844e35958e1c8019c821e4f00",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-16-healthy-oceans-casual-forum/2026-06-16-healthy-oceans-casual-forum.md": {
+    "mtime": 1785421501.7722795,
+    "ast_hash": "7805b83d5c34fc22da9120cca7677a83",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-16-healthy-oceans-public-forum/2026-06-16-healthy-oceans-public-forum.md": {
+    "mtime": 1785421501.7729065,
+    "ast_hash": "c0be86f14575072e0d66dc8e4a89eadf",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-17-nelson-meet-your-candidate/2026-06-17-nelson-meet-your-candidate.md": {
+    "mtime": 1785421501.7733848,
+    "ast_hash": "860c9fab40557fee1eb15ef943a3793a",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-20-dunedin-cafe-tour/2026-06-20-dunedin-cafe-tour.md": {
+    "mtime": 1785421501.7738388,
+    "ast_hash": "60be763577bf8b4a32bb78cc5e9e1a2e",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-21-palmerston-north-meet-your-candidate/2026-06-21-palmerston-north-meet-your-candidate.md": {
+    "mtime": 1785421501.7743347,
+    "ast_hash": "ff541b333d00638f311b105fadf41bed",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-27-dunedin-cafe-tour/2026-06-27-dunedin-cafe-tour.md": {
+    "mtime": 1785421501.7749376,
+    "ast_hash": "af39d5c9761fef982a7461320a3c15ee",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-28-meet-ben-and-luke-candidates-for-hutt-south-and-remutaka/2026-06-28-meet-ben-and-luke-candidates-for-hutt-south-and-remutaka.md": {
+    "mtime": 1785421501.7755125,
+    "ast_hash": "2392f3271b34264dba402a1c60b1994f",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-28-opportunity-at-harbourside-market/2026-06-28-opportunity-at-harbourside-market.md": {
+    "mtime": 1785421501.7759771,
+    "ast_hash": "dca22d3df7adda59a3dc97ebf5de5fec",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-06-28-wellington-marathon-opportunity-afterparty/2026-06-28-wellington-marathon-opportunity-afterparty.md": {
+    "mtime": 1785421501.776475,
+    "ast_hash": "b013d486109aaaef3462b0c2267f6f65",
+    "semantic_hash": ""
+  },
+  "data/clean/event/2026-07-04-wellington-supporters-meetup-july/2026-07-04-wellington-supporters-meetup-july.md": {
+    "mtime": 1785421501.7769349,
+    "ast_hash": "a8e382df5047e74b8d8e7c069a799b54",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/about/about.md": {
+    "mtime": 1785421501.7776022,
+    "ast_hash": "953c92c4e56f4686311a6dad841e121f",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/charter/charter.md": {
+    "mtime": 1785421501.7780855,
+    "ast_hash": "8260cd5c5be08cfffbd9f41001a4f48c",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/constitution/constitution.md": {
+    "mtime": 1785421501.7788653,
+    "ast_hash": "95b933d1a088a5a776539fe3310e7f47",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/meet-q/meet-q.md": {
+    "mtime": 1785421501.7795465,
+    "ast_hash": "33e3fa711f336bd09e424661b4fee111",
+    "semantic_hash": ""
+  },
+  "data/clean/party-information/party-information/party-information.md": {
+    "mtime": 1785421501.7804813,
+    "ast_hash": "11c7d20012c86703f2184466b5e9ccab",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/abundant-energy-policy-overview/abundant-energy-policy-overview.html": {
+    "mtime": 1785421501.7811773,
+    "ast_hash": "8626dcfecf7b1a99176c8ab6fa087ed6",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/abundant-energy-policy-overview/abundant-energy-policy-overview.md": {
+    "mtime": 1785421501.781692,
+    "ast_hash": "fbaf349e5045597233cfd4b8e4ae081a",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/charter-default/charter-default.html": {
+    "mtime": 1785421501.7826166,
+    "ast_hash": "f4c0f1915264826416fe8b9d2a7e6f7a",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/charter-default/charter-default.md": {
+    "mtime": 1785421501.7830322,
+    "ast_hash": "74126010387ec466478fae51fe653868",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/citizens-voice-policy-overview/citizens-voice-policy-overview.html": {
+    "mtime": 1785421501.7840934,
+    "ast_hash": "da9479ddf50512c720199742f874bf9c",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/citizens-voice-policy-overview/citizens-voice-policy-overview.md": {
+    "mtime": 1785421501.784417,
+    "ast_hash": "ddd769cc979f0742bd244881186160f3",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/constitution-default/constitution-default.html": {
+    "mtime": 1785421501.7854161,
+    "ast_hash": "35734973524a7094f164cbbbad4836c3",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/constitution-default/constitution-default.md": {
+    "mtime": 1785421501.7858827,
+    "ast_hash": "204d97e788db078afc94928f1b06b8ca",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-land-default/healthy-land-default.html": {
+    "mtime": 1785421501.7865493,
+    "ast_hash": "4049fd7ff02eead12d47d91ab95c124b",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-land-default/healthy-land-default.md": {
+    "mtime": 1785421501.7868645,
+    "ast_hash": "bbefbf5d60ca7b76c7ffa9bec21ba977",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-oceans-policy-overview/healthy-oceans-policy-overview.html": {
+    "mtime": 1785421501.7891161,
+    "ast_hash": "5a27a7914988d38861f0061b6cbc8c92",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-oceans-policy-overview/healthy-oceans-policy-overview.md": {
+    "mtime": 1785421501.78953,
+    "ast_hash": "239866d87d8d5d73cd5086b2638c9472",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/tax-reset-policy-addendum/tax-reset-policy-addendum.html": {
+    "mtime": 1785421501.790614,
+    "ast_hash": "17d22ad1946211c379084c93fced7e88",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/tax-reset-policy-addendum/tax-reset-policy-addendum.md": {
+    "mtime": 1785421501.7908237,
+    "ast_hash": "f7f60df2d8c02898ef1eb170ea274afc",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/tax-reset-policy-overview/tax-reset-policy-overview.html": {
+    "mtime": 1785421501.791516,
+    "ast_hash": "cf21c5d0224b18c993bf60532f1885ff",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/tax-reset-policy-overview/tax-reset-policy-overview.md": {
+    "mtime": 1785421501.7919235,
+    "ast_hash": "a862181b3c38205560493e3af66d59f0",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/abundant-energy/abundant-energy.md": {
+    "mtime": 1785421501.7923925,
+    "ast_hash": "c26739e0ab1304efc1d8e6fbac472a84",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/affordable-housing/affordable-housing.md": {
+    "mtime": 1785421501.7930007,
+    "ast_hash": "1439039784f5b0d1e81dff8cefa1a37d",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/charter/charter.md": {
+    "mtime": 1785421501.7935717,
+    "ast_hash": "565e1c596a536e8c025f9913944e5e4d",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/citizens-voice/citizens-voice.md": {
+    "mtime": 1785421501.7942796,
+    "ast_hash": "fafe25540951ed843de2bdb7d743e350",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/clean-up-politics/clean-up-politics.md": {
+    "mtime": 1785421501.7947254,
+    "ast_hash": "dcb9ea2e6475d20cf4099678194fccea",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/climate-action/climate-action.md": {
+    "mtime": 1785421501.7951543,
+    "ast_hash": "478c8da937f8556edf814cd6ddf72203",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/constitution/constitution.md": {
+    "mtime": 1785421501.7960203,
+    "ast_hash": "33b993c0d9aa48d8b7b5e45a22b31ee5",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/future-fit-education/future-fit-education.md": {
+    "mtime": 1785421501.7966485,
+    "ast_hash": "82387fb39b9b66f3bceb76b98666d93c",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/healthy-land/healthy-land.md": {
+    "mtime": 1785421501.7975178,
+    "ast_hash": "c6447a89e3050e6e22644b5387f512fb",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/healthy-oceans/healthy-oceans.md": {
+    "mtime": 1785421501.7982368,
+    "ast_hash": "aed57045d55e3dec3eb7cfd35e176798",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/healthy-people/healthy-people.md": {
+    "mtime": 1785421501.798728,
+    "ast_hash": "1563588239a2a494b29f12f150d92e9b",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/honouring-te-tiriti/honouring-te-tiriti.md": {
+    "mtime": 1785421501.7992072,
+    "ast_hash": "b632c1f4a87d26fc337bedf60f37521f",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/intergenerational-infrastructure/intergenerational-infrastructure.md": {
+    "mtime": 1785421501.7997167,
+    "ast_hash": "365a920de97834d5521e362825c26de0",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/productivity-unleashed/productivity-unleashed.md": {
+    "mtime": 1785421501.8007317,
+    "ast_hash": "1833e72259c4e1b404d2ec15ec23d1ae",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/smart-on-crime/smart-on-crime.md": {
+    "mtime": 1785421501.8012083,
+    "ast_hash": "0f0cf3b24beed4990c70b9665c5c80fb",
+    "semantic_hash": ""
+  },
+  "data/clean/policy/tax-reset/tax-reset.md": {
+    "mtime": 1785421501.8018868,
+    "ast_hash": "056561693324615b6ae325c928ade31f",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/adam-macrae-martin/adam-macrae-martin.md": {
+    "mtime": 1785421501.802269,
+    "ast_hash": "05573e68f7a10c7f21eeb70fbe4a6954",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/adrian-mee/adrian-mee.md": {
+    "mtime": 1785421501.8032992,
+    "ast_hash": "acbfc363a9f0be7e7f10cd0c94b419e8",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/almo-wong/almo-wong.md": {
+    "mtime": 1785421501.8039613,
+    "ast_hash": "ff459edfc83741705a813eb0525a4e8b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/ben-lane/ben-lane.md": {
+    "mtime": 1785421501.8045573,
+    "ast_hash": "d9058eff8a37b6b19ea71f1c28dbc3ef",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/ben-wylie-van-eerd/ben-wylie-van-eerd.md": {
+    "mtime": 1785421501.8051453,
+    "ast_hash": "ae12ed822d4c11f0a1906be49d986ed8",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/bianca-beebe/bianca-beebe.md": {
+    "mtime": 1785421501.805765,
+    "ast_hash": "9fb70cb586b3caa06d14286b046b81cf",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/blair-smith/blair-smith.md": {
+    "mtime": 1785421501.806913,
+    "ast_hash": "80db7463a1af18fa8c11e29d23b44490",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/cail-smith/cail-smith.md": {
+    "mtime": 1785421501.807544,
+    "ast_hash": "d81f2e5e04ca06d9ca28353572b33b4b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/chee-khiang-sng/chee-khiang-sng.md": {
+    "mtime": 1785421501.8080223,
+    "ast_hash": "84d58b6165150e52a7e52113afbe2349",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/cindie-uddstrom/cindie-uddstrom.md": {
+    "mtime": 1785421501.808494,
+    "ast_hash": "42d4f46de2128be9a38a8b7fc5c21ff1",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/cody-marsh/cody-marsh.md": {
+    "mtime": 1785421501.8089304,
+    "ast_hash": "dfec90150e480a3b57342aad55543640",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/daniel-eb/daniel-eb.md": {
+    "mtime": 1785421501.8095176,
+    "ast_hash": "c17a0dd6f0d89dd9e1d7134b4ea363f9",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/dave-bainbridge-zafar/dave-bainbridge-zafar.md": {
+    "mtime": 1785421501.8101652,
+    "ast_hash": "26ab3b7ce87c04fb2b47055c98f8ffb3",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/derrick-paull/derrick-paull.md": {
+    "mtime": 1785421501.810773,
+    "ast_hash": "2599dcd9450942b8e9b332a362cc2f5c",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/eden-skipper/eden-skipper.md": {
+    "mtime": 1785421501.8113782,
+    "ast_hash": "2152347101f19f726335c735b8903215",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/evan-french/evan-french.md": {
+    "mtime": 1785421501.811883,
+    "ast_hash": "281679ee531c75e7d3c3c5135614c939",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/finn-liley/finn-liley.md": {
+    "mtime": 1785421501.812503,
+    "ast_hash": "5ffd2ddb76017eee3470c9979924cd32",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/helen-tait/helen-tait.md": {
+    "mtime": 1785421501.81323,
+    "ast_hash": "7cc18ba0038cbaf5c18fda90da06a28b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/holly-knill/holly-knill.md": {
+    "mtime": 1785421501.8143013,
+    "ast_hash": "229616b539a2297701df9fa53cd9b4d5",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/jamie-attenborough/jamie-attenborough.md": {
+    "mtime": 1785421501.8150187,
+    "ast_hash": "33437606a80f506053243c73284fc3cd",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/jessica-hammond/jessica-hammond.md": {
+    "mtime": 1785421501.8158557,
+    "ast_hash": "909a18a5021d523408656cb82f07cf41",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/jodie-kuntzsch/jodie-kuntzsch.md": {
+    "mtime": 1785421501.816666,
+    "ast_hash": "1bf82aaf08ba67ed61a6fe151b48ad93",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/johan-chang/johan-chang.md": {
+    "mtime": 1785421501.8173978,
+    "ast_hash": "8a718efa689b07f9548b42b971b7be42",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/kayla-kingdon-bebb/kayla-kingdon-bebb.md": {
+    "mtime": 1785421501.8181138,
+    "ast_hash": "63ca86d989168f42062feae7263e3a9c",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/kevin-huang/kevin-huang.md": {
+    "mtime": 1785421501.8187153,
+    "ast_hash": "72eececf3fae208081d8ae3abe082801",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/luke-ross/luke-ross.md": {
+    "mtime": 1785421501.8193672,
+    "ast_hash": "e5309c19c0f6a5f43828d1b19d3c7fae",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/mark-roach/mark-roach.md": {
+    "mtime": 1785421501.8198442,
+    "ast_hash": "b245a0ef882233d0f37d9490a8f25509",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/mathew-phillips/mathew-phillips.md": {
+    "mtime": 1785421501.8202984,
+    "ast_hash": "961e254f19c8964f7c1c0a8f62728460",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/matt-harris/matt-harris.md": {
+    "mtime": 1785421501.8207853,
+    "ast_hash": "71d008738e6c71933944abd19efd9e3f",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/matt-shepherd/matt-shepherd.md": {
+    "mtime": 1785421501.8212376,
+    "ast_hash": "0d150c9aa589ce9634f426d5a2a7f75a",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/michael-carter/michael-carter.md": {
+    "mtime": 1785421501.8225296,
+    "ast_hash": "5b1b91bb8ff98fa4ece743e98fd5521c",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/naomi-pocock/naomi-pocock.md": {
+    "mtime": 1785421501.8230832,
+    "ast_hash": "a22d359a1db227418b8cfc7ac724bf8e",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/netra-ghimire/netra-ghimire.md": {
+    "mtime": 1785421501.8238194,
+    "ast_hash": "df7b9b4f9eb279b3110d980d70ea58fe",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/papa-wharewera/papa-wharewera.md": {
+    "mtime": 1785421501.8244221,
+    "ast_hash": "b84441f2937b76a4a17d66e4207edab8",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/paul-jackson/paul-jackson.md": {
+    "mtime": 1785421501.825348,
+    "ast_hash": "c8afa3bcfa322a9d4b030756d6103977",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/qiulae-wong/qiulae-wong.md": {
+    "mtime": 1785421501.826103,
+    "ast_hash": "f7c862ec7c20e67c17a0b5f20028949b",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/rachel-ward/rachel-ward.md": {
+    "mtime": 1785421501.826829,
+    "ast_hash": "9b6fc4bf6430f803713add7af268cced",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/robert-mason/robert-mason.md": {
+    "mtime": 1785421501.8276806,
+    "ast_hash": "9db76eeb85ab9818a2331d22692e5702",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/romeo-tevaga/romeo-tevaga.md": {
+    "mtime": 1785421501.828344,
+    "ast_hash": "315ef32286d9c925e2a53a343b2f9c66",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/sacha-haskell/sacha-haskell.md": {
+    "mtime": 1785421501.8292143,
+    "ast_hash": "7eb9686d23643b0c8a7d511dc0c88abf",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/sam-plummer/sam-plummer.md": {
+    "mtime": 1785421501.8298786,
+    "ast_hash": "e3b4dfbf21a08cdce5feb16dab55ccb9",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/sarah-lucas/sarah-lucas.md": {
+    "mtime": 1785421501.8303242,
+    "ast_hash": "6c9dcce2c3f199af6079d0120585c0c6",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/simon-dellabarca/simon-dellabarca.md": {
+    "mtime": 1785421501.830839,
+    "ast_hash": "ae9e18dab88e5653725c77657e2ad9f6",
+    "semantic_hash": ""
+  },
+  "data/clean/team-member/team/team.md": {
+    "mtime": 1785421501.8315935,
+    "ast_hash": "128adb0b821a9eee0e0d2565679c08b5",
+    "semantic_hash": ""
+  },
+  "docs/blog/pdf-extraction-workflow.md": {
+    "mtime": 1785421501.8322089,
+    "ast_hash": "842fa92764a30d329cdddc831ea2e9d9",
+    "semantic_hash": ""
+  },
+  "docs/dependencies.md": {
+    "mtime": 1785421501.8338125,
+    "ast_hash": "02aa10ab4f929dcebf824b1d4450f338",
+    "semantic_hash": ""
+  },
+  "docs/pdf-extraction.md": {
+    "mtime": 1785421501.8344016,
+    "ast_hash": "743373a5db39da95f471c31ce9e46226",
+    "semantic_hash": ""
+  },
+  "docs/pdf-pipeline.md": {
+    "mtime": 1785421501.834866,
+    "ast_hash": "de5901006a99411c4ba6bfa03408eb48",
+    "semantic_hash": ""
+  },
+  "docs/reference/dagster-course/course/09-production-patterns/README.md": {
+    "mtime": 1785421501.8353908,
+    "ast_hash": "bc10a1d041f8c565cc033392f0b0eabd",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/index.md": {
+    "mtime": 1785421501.8733299,
+    "ast_hash": "9643b039af53c3c2c44e3be082c35d2f",
+    "semantic_hash": ""
+  },
+  "graphify/ACTIONS.md": {
+    "mtime": 1785423736.152841,
+    "ast_hash": "2704a2f949981cc52dc98362893c28e9",
+    "semantic_hash": ""
+  },
+  "graphify/CHEATSHEET.md": {
+    "mtime": 1785424148.449304,
+    "ast_hash": "e03875363474dbe717a59644fc53eb8a",
+    "semantic_hash": ""
+  },
+  "graphify/NEXT_STEPS.md": {
+    "mtime": 1785422475.3499415,
+    "ast_hash": "7306841eb9b4d2c725cbfa967dc8290d",
+    "semantic_hash": ""
+  },
+  "site/README.md": {
+    "mtime": 1781228163.6067278,
+    "ast_hash": "af00c547232ebc9e9cd058029661a641",
+    "semantic_hash": ""
+  },
+  "site/pnpm-workspace.yaml": {
+    "mtime": 1781403103.2054694,
+    "ast_hash": "26b2fa19575e17d6828d42bdc513737f",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2025-07-20-the-opportunity-party-calls-for-bipartisanship-on-policy-costing-unit.md": {
+    "mtime": 1784275383.7267618,
+    "ast_hash": "53acc292bba0e1d8c73252f5bc62e24d",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2025-08-21-top-stories-citizen-voice-regulatory-standards-candidate-college.md": {
+    "mtime": 1784275383.7270696,
+    "ast_hash": "d2cac60ed42df254eeac3d6f82395a83",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2025-08-26-statement-on-the-situation-in-gaza.md": {
+    "mtime": 1784275383.7273097,
+    "ast_hash": "d937cd84161b2bb954fb6ec9605d9bee",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2025-08-26-submission-on-the-electoral-amendment-bill.md": {
+    "mtime": 1784275383.7276235,
+    "ast_hash": "3304e4144adb6bbcaf14d12fb4b4787d",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2025-12-21-on-the-hunt-for-new-zealands-north-star.md": {
+    "mtime": 1784275383.7279437,
+    "ast_hash": "efceb8d7532b48a61d4d8b9bc7ea9f0d",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-01-28-submission-on-the-education-and-training-system-reform-amendment-bill.md": {
+    "mtime": 1784275383.7282312,
+    "ast_hash": "e5cda31b377050e7f3aa0bc5ef24e2ce",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-02-05-q-needs-you.md": {
+    "mtime": 1785421501.8829834,
+    "ast_hash": "9554018e5ea989dcfae4fbaccc40ef23",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-02-06-qs-reflections-from-waitangi.md": {
+    "mtime": 1785421501.8833425,
+    "ast_hash": "519e13307bd2df7b49f57f598eba0014",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-03-02-submission-on-the-budget-policy-statement-2026.md": {
+    "mtime": 1785421501.8839247,
+    "ast_hash": "0352b2e6a945949031f5f6a8472660c3",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-03-03-call-for-government-reversal-on-lng-terminal.md": {
+    "mtime": 1785421501.8842285,
+    "ast_hash": "0f8234bccf71969e6ed686e53833c8c0",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-03-03-statement-on-the-middle-east-crisis.md": {
+    "mtime": 1785421501.8846338,
+    "ast_hash": "ed019c463c654ca5dadec881b278f0af",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-03-23-statement-on-the-fisheries-amendment-bill.md": {
+    "mtime": 1785421501.8850155,
+    "ast_hash": "c34455ba9130cf15fbd49c141db28b85",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-03-25-meet-the-first-opportunity-candidates.md": {
+    "mtime": 1785421501.8852997,
+    "ast_hash": "b9f36f0e61373241923b6bd95415b508",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-04-09-free-public-transport.md": {
+    "mtime": 1785421501.88579,
+    "ast_hash": "e3c70995d4f1269be0c9ea9a5ad03c07",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-05-04-submission-on-the-fisheries-amendment-bill.md": {
+    "mtime": 1785421501.8861976,
+    "ast_hash": "49697b4042c480bb647d8f7ddfa611b9",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-05-17-accelerating-ev-uptake.md": {
+    "mtime": 1785421501.8864634,
+    "ast_hash": "dfb47d23dcc70fd0fb40e0c78db5926f",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-05-21-prosperity-doesnt-start-with-a-shredder.md": {
+    "mtime": 1785421501.8867302,
+    "ast_hash": "80e746eb4a19592110a8acf910279614",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-05-27-left-right-politics-is-failing-new-zealand.md": {
+    "mtime": 1785421501.8869963,
+    "ast_hash": "39fecdb4c302d204808c1deb851bc4ce",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-05-28-gene-technology-policy.md": {
+    "mtime": 1785421501.8875558,
+    "ast_hash": "c32ab15cd20b53372e92df93b7e4e647",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-06-01-the-pray-and-delay-budget.md": {
+    "mtime": 1785421501.8879244,
+    "ast_hash": "359df87281d8de2f5da8c48570e9a3d9",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-06-09-submission-on-the-definitions-of-woman-and-man-amendment-bill.md": {
+    "mtime": 1785421501.8882098,
+    "ast_hash": "cf075dfb867c2dd36295596ed87e7bd9",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-06-15-opportunity-mps-accommodation-allowance-policy.md": {
+    "mtime": 1785421501.888411,
+    "ast_hash": "7d2697386eb58a8fea77ee84af558868",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-06-19-charitable-giving-tax-credit-cap.md": {
+    "mtime": 1785421501.8886182,
+    "ast_hash": "e4bbc4156150eef51a6338de8a4d5aa4",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-06-19-when-the-bill-comes-due.md": {
+    "mtime": 1785421501.8890545,
+    "ast_hash": "89ce6a5bb4f77c18d64627f42431fb22",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-07-03-submission-on-the-disability-support-services-bill.md": {
+    "mtime": 1785421501.8893638,
+    "ast_hash": "3512881fc7bdecd4abbcc42f62d785e4",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/2026-07-03-whos-listening-to-our-disability-advocates.md": {
+    "mtime": 1785421501.8896663,
+    "ast_hash": "cf14e865bb096a44ec246ab949eb6b48",
+    "semantic_hash": ""
+  },
+  "site/src/content/blog/accelerating-ev-uptake.md": {
+    "mtime": 1784275383.7342162,
+    "ast_hash": "d9228c076b0e9099513aa50bcb4d5460",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-08-volunteer-campaign-planning-tauranga.md": {
+    "mtime": 1784275340.7819464,
+    "ast_hash": "c2b4ca6743577fe563a07fed9c2ec115",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-09-meet-qiulae-wong-and-the-canterbury-candidates.md": {
+    "mtime": 1784275340.782276,
+    "ast_hash": "fa6bdf5bd99c2cf3315298f44fb90644",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-10-northcote-electorate-catch-up.md": {
+    "mtime": 1784275340.7825267,
+    "ast_hash": "5b2f7d9da1f0ec5813fb9660482e09e8",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-12-new-plymouth-campaign-get-together.md": {
+    "mtime": 1784275340.782831,
+    "ast_hash": "50efc61b989038c3d4541211fd9b47a8",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-13-coffee-with-your-candidate.md": {
+    "mtime": 1784275340.7830796,
+    "ast_hash": "f26c8fa30aa4b5e034c92413f02af558",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-13-dunedin-cafe-tour.md": {
+    "mtime": 1784275340.7833157,
+    "ast_hash": "89a095b19df2798cf3064da038484b53",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-13-meet-robert-mason.md": {
+    "mtime": 1784275340.7835681,
+    "ast_hash": "22a4712615120251f32fcab0742e233f",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-13-policy-pints-with-kayla-kingdon-bebb.md": {
+    "mtime": 1784275340.7838595,
+    "ast_hash": "565091bee92c0aad3bb51547cc01a7b8",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-13-westport-opportunity-pop-in-clinic.md": {
+    "mtime": 1784275340.7840908,
+    "ast_hash": "344f81ad48a14a531e11cb4dec35b911",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-14-coffee-with-your-candidate.md": {
+    "mtime": 1784275340.7843132,
+    "ast_hash": "853805e4e08484d1eafd6b71eaaa0088",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-14-meet-qiulae-in-mt-albert.md": {
+    "mtime": 1784275340.7845447,
+    "ast_hash": "6715ac7ea56835cbadcdf0c068243cfe",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-14-opportunity-at-brewtown-market.md": {
+    "mtime": 1784275340.7847776,
+    "ast_hash": "259d132e0a17777e9309d0fc97408eb0",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-16-healthy-oceans-casual-forum.md": {
+    "mtime": 1784275340.7849836,
+    "ast_hash": "d833f3e50d746550d205e61cbb3cd2b9",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-16-healthy-oceans-public-forum.md": {
+    "mtime": 1784275340.7851784,
+    "ast_hash": "b731f68d853bff983a4d5d992b839078",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-17-nelson-meet-your-candidate.md": {
+    "mtime": 1784275340.7853904,
+    "ast_hash": "6b00ef5777e40c1839c28b48a1d87902",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-20-dunedin-cafe-tour.md": {
+    "mtime": 1784275340.7856305,
+    "ast_hash": "7cedb2fb1ee29733ab4117452989324e",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-21-palmerston-north-meet-your-candidate.md": {
+    "mtime": 1784275340.7858534,
+    "ast_hash": "13f4c0c63d86e6b503e98ea1d9679eb0",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-27-dunedin-cafe-tour.md": {
+    "mtime": 1784275340.7860756,
+    "ast_hash": "81e2310302172e4a8367365d23f66ddb",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-28-meet-ben-and-luke-candidates-for-hutt-south-and-remutaka.md": {
+    "mtime": 1784275340.7863123,
+    "ast_hash": "081cbe3c6239b6f712c67f25cc63dc9c",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-28-opportunity-at-harbourside-market.md": {
+    "mtime": 1784275340.7865105,
+    "ast_hash": "11c50a96ec28c646c8f11d07da3ab8b7",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-06-28-wellington-marathon-opportunity-afterparty.md": {
+    "mtime": 1784275340.78671,
+    "ast_hash": "cf2fc4443b1416de0bec35ef7fa0cc53",
+    "semantic_hash": ""
+  },
+  "site/src/content/events/2026-07-04-wellington-supporters-meetup-july.md": {
+    "mtime": 1784275340.7869115,
+    "ast_hash": "c5c9bcff62de8f792ecedc85cc5672b2",
+    "semantic_hash": ""
+  },
+  "site/src/content/party-info/about.md": {
+    "mtime": 1785421501.8899517,
+    "ast_hash": "3e3c5e96b412f7d3dba6a257672cd94b",
+    "semantic_hash": ""
+  },
+  "site/src/content/party-info/charter.md": {
+    "mtime": 1784275407.9612556,
+    "ast_hash": "7581d14258bb9025d8a8f795bed5a692",
+    "semantic_hash": ""
+  },
+  "site/src/content/party-info/constitution.md": {
+    "mtime": 1784275407.9620662,
+    "ast_hash": "b167d3fc6ec835fbd4842dd90a5c2e44",
+    "semantic_hash": ""
+  },
+  "site/src/content/party-info/meet-q.md": {
+    "mtime": 1785421501.890198,
+    "ast_hash": "6d4d9cfe2ed8c2126266613be51e7d2e",
+    "semantic_hash": ""
+  },
+  "tasks/mcp-tool-spec.md": {
+    "mtime": 1785421501.912225,
+    "ast_hash": "c3eb832d28cf2b215939835fea4fde23",
+    "semantic_hash": ""
+  },
+  "tasks/pdf-pipeline-hardening-handoff.md": {
+    "mtime": 1785421501.9129028,
+    "ast_hash": "c2a568fbb8155f5915985d0f10e48857",
+    "semantic_hash": ""
+  },
+  "assets/opportunity-party-expect-better.webp": {
+    "mtime": 1785421501.74647,
+    "ast_hash": "59fb273faccb87ba1e48a197823f1e51",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-land-default/images/img-003-001.jpg": {
+    "mtime": 1785421501.7879279,
+    "ast_hash": "1462e6f5f3549288aef228f6e57f9cef",
+    "semantic_hash": ""
+  },
+  "data/clean/pdf-document/healthy-land-default/images/img-005-003.jpg": {
+    "mtime": 1785421501.7883549,
+    "ast_hash": "3ef6f5cbe56f9e076fa202dae6376bb6",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/01-lineage-validation-group.png": {
+    "mtime": 1785421501.8381186,
+    "ast_hash": "39b15b855622026a397975f07bb86854",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/02-lineage-groups-overview.png": {
+    "mtime": 1785421501.8407273,
+    "ast_hash": "1a69103baa8fff6a2fa8310806243583",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/03-lineage-ingestion-expanded.png": {
+    "mtime": 1785421501.843499,
+    "ast_hash": "30d5f068f042f975936253d864e42561",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/04-lineage-clean-expanded.png": {
+    "mtime": 1785421501.8459501,
+    "ast_hash": "ecc1436b9d49d9f0174061998f194ca2",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/05-lineage-validation-expanded-fresh.png": {
+    "mtime": 1785421501.8483775,
+    "ast_hash": "5605b8a5a6280ce2dbb6cbcc256fb088",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/06-lineage-site-expanded.png": {
+    "mtime": 1785421501.8518107,
+    "ast_hash": "0eda78223e885125fac056f9f00ae533",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/07-lineage-site-detail-cards.png": {
+    "mtime": 1785421501.8549423,
+    "ast_hash": "d320e535d5dc78c0927ce170ed2cd79e",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/08-asset-detail-site-build-failure.png": {
+    "mtime": 1785421501.8575037,
+    "ast_hash": "17b81937473b9403a62df3d9ed9b9fa9",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/09-runs-list.png": {
+    "mtime": 1785421501.8604648,
+    "ast_hash": "f99d1ede310f106f2434672f12155f1a",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/10-asset-detail-raw-blog-materialization.png": {
+    "mtime": 1785421501.8641448,
+    "ast_hash": "274398f53caa40c927a05e9c4a1e4859",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/11-manual-qa-policy-documents.png": {
+    "mtime": 1785421501.8693593,
+    "ast_hash": "0dcef4f6f24e28eac424c908a8bd7056",
+    "semantic_hash": ""
+  },
+  "docs/screenshots/12-dagster-overview.png": {
+    "mtime": 1785421501.8727512,
+    "ast_hash": "091ac676745198ee2ed333593fbc8986",
+    "semantic_hash": ""
+  },
+  "site/public/favicon.svg": {
+    "mtime": 1781112417.0,
+    "ast_hash": "8c13f40658976ea1dfb8ba37a8be0e8d",
+    "semantic_hash": ""
   }
 }
